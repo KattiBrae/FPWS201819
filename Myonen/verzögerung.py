@@ -25,17 +25,16 @@ T=np.sqrt(v)
 
 plt.errorbar(u, v, yerr=T, fmt="none", capsize=5, capthick=2, ms=9, markerfacecolor="red")
 
-
-r=58601+0*s
-plt.plot(s,label=r'Halbwertsbreite')
-
+#s=0.02234091
+#r=0.03080493+0*s
+#plt.plot(s,label=r'Halbwertsbreite')
 
 
 plt.figure(1)
 plt.plot(x,y,'x')
 plt.plot(u,v,'x')
 plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
-plt.xlabel('Verzögerungszeit ' r'$T_{VZ}/s$ durch die Kabel')
+plt.xlabel('Verzögerungszeit ' r'$T_{VZ}/ 10^{-9} s$ durch die Kabel')
 plt.ylabel('Zählrate ' r'N/$\frac{1}{s}$ mit Messzeit $t=10s$')
 plt.grid()
 plt.legend()

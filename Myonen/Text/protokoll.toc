@@ -7,5 +7,5 @@
 \contentsline {section}{\numberline {4}Auswertung}{5}
 \contentsline {subsection}{\numberline {4.1}Einregeln der optimalen Verzögerungszeit}{5}
 \contentsline {subsection}{\numberline {4.2}Kalibrierung des Multi-Channel-Analysers}{6}
-\contentsline {subsection}{\numberline {4.3}Messung der Lebensdauer}{9}
-\contentsline {section}{\numberline {5}Diskussion}{10}
+\contentsline {subsection}{\numberline {4.3}Messung der Lebensdauer}{7}
+\contentsline {section}{\numberline {5}Diskussion}{9}

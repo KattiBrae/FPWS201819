@@ -1,4 +1,8 @@
 \subsection{Einregeln der optimalen Verzögerungszeit}
+Da die Leitungen von den SEV zur Koinzidenzschaltung nicht zwingend gleich schnell sind, wird die Verzögerung zwischen den beiden Seiten optimiert.
+Die Verzögerungszeit kann in beiden Leitungen separat erhöht werden, indem Kabel mit definierten Verzögerungen zugeschaltet werden.
+Eine Verzögerung bei der einen Kabelleitung bewirkt eine relative 'Beschleunigung' der anderen Kabelleitung.
+Die Zählrate $N$ wird in Abhängigkeit verschiedener Verzögerungszeiten $T_{\text{VZ}}$ gemessen (Tabelle \ref{tab:verzögerung}, Abbildung \ref{fig:verzögerung}).
 \input{tabelleverzögerung.tex}
 \begin{figure}[h!]
   \centering
@@ -6,19 +10,23 @@
   \caption{Optimierung der Verzögerungszeit: Verzögerungszeit $T_{\text{VZ}}$ gegen Spannungsimpuls $U$}
   \label{fig:verzögerung}
 \end{figure}
-Fit
+Es wird eine Ausgleichsrechnung der Form
 \begin{equation*}
   N = -a \left( T_{\text{VZ}} +b \right)^4+c
 \end{equation*}
-Fitparameter
+mit Python \textbf{HIER NOCH DIE VERSION ETC} vorgenommen.
+Die Parameter ergeben sich zu
 \begin{align*}
-  a &=& \SI{4.82149138 \pm 0.236142743e-04}{}\\
-  b &=& \SI{2.08543593 \pm 0.229205656}{}\\
-  c &=& \SI{208.001211 \pm 3.50366199}{}\\
+  a &=& \SI{4.82149138 \pm 0.236142743e-40}{\frac{1}{s^5}}\\
+  b &=& \SI{2.08543593 \pm 0.229205656e-09}{s}\\
+  c &=& \SI{208.001211 \pm 3.50366199}{\frac{1}{s}}.\\
 \end{align*}
-
+Dabei beschreibt $b$ die seitliche Verschiebung des Maximums und damit den Wert, der fortan als Verzögerung der Leitung gewählt wird.
+Damit sind die Signale aus den SEV annähernd gleichzeitig an der Koinzidenzschaltung.
 \FloatBarrier
 \subsection{Kalibrierung des Multi-Channel-Analysers}
+Um vom Channel des Multi-Channel-Analysers auf die zugehörige Zeit zwischen den Impulsen schließen zu können, wird der Multi-Channel-Analyser kalibriert.
+Die Channel werden in Abhängigkeit ... vom Doppelimpulsgenerator gegebenen 
 \input{tabellekalibrierung.tex}
 \begin{figure}[h!]
   \centering

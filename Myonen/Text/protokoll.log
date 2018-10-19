@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  19 OCT 2018 08:07
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  19 OCT 2018 19:13
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.227 seconds
+luaotfload | main : initialization completed in 0.249 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2307,47 +2307,42 @@ Language ngerman already loaded; id is 8)
 ) [2
 
 ] (./Zielsetzung.txt)
-(./Theorie.tex) [3] (./Durchführung.tex) [4] (./Auswertung.tex
-(./tabelleverzögerung.tex(load luc: /Users/katti/Library/texlive/2017/texmf-var
-/luatex-cache/generic/fonts/otl/lmroman8-regular.luc)(load luc: /Users/katti/Lib
-rary/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
-) <figverzögerung.pdf, id=18, 462.52798pt x 346.89601pt>
+(./Theorie.tex) [3] (./Durchführung.tex) [4] (./Auswertung.tex(load luc: /Users
+/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-re
+gular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/ge
+neric/fonts/otl/lmroman6-regular.luc) (./tabelleverzögerung.tex)
+<figverzögerung.pdf, id=18, 462.52798pt x 346.89601pt>
 File: figverzögerung.pdf Graphic file (type pdf)
 
 <use figverzögerung.pdf>
-Package luatex.def Info: figverzögerung.pdf used on input line 5.
+Package luatex.def Info: figverzögerung.pdf used on input line 9.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5] (./tabellekalibrierung.tex
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) <figkalibrierung.pdf, id=25, 462.52798pt x 346.89601pt>
+[5] (./tabellekalibrierung.tex)
+<figkalibrierung.pdf, id=26, 462.52798pt x 346.89601pt>
 File: figkalibrierung.pdf Graphic file (type pdf)
 
 <use figkalibrierung.pdf>
-Package luatex.def Info: figkalibrierung.pdf used on input line 25.
+Package luatex.def Info: figkalibrierung.pdf used on input line 30.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
+ [6<./figverzögerung.pdf>]
+<figmyonen.pdf, id=90, 1445.4pt x 722.7pt>
+File: figmyonen.pdf Graphic file (type pdf)
+ <use figmyonen.pdf>
+Package luatex.def Info: figmyonen.pdf used on input line 49.
+(luatex.def)             Requested size: 418.25555pt x 209.1255pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6<./figverzögerung.pdf>] [7] [8<./figkalibrierung.pdf>]
-<figmyonen.pdf, id=138, 1445.4pt x 722.7pt>
-File: figmyonen.pdf Graphic file (type pdf)
- <use figmyonen.pdf>
-Package luatex.def Info: figmyonen.pdf used on input line 44.
-(luatex.def)             Requested size: 418.25555pt x 209.1255pt.
-) [9
-
-<./figmyonen.pdf>] (./Diskussion.tex)
+[7<./figkalibrierung.pdf>]) [8<./figmyonen.pdf>] (./Diskussion.tex)
 
 LaTeX Warning: Empty bibliography on input line 33.
 
-[10] (./protokoll.aux
+[9] (./protokoll.aux
 Language ngerman already loaded; id is 8)
 
 LaTeX Warning: There were undefined references.
@@ -2366,16 +2361,17 @@ Package logreq Info: Writing requests to 'protokoll.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30893 strings out of 494481
+ 30894 strings out of 494481
  100000,1373583 words of node,token memory allocated
  603 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 10 attribute, 76 glue_spec, 10 attr
 ibute_list, 1 write nodes
-   avail lists: 1:4,2:795,3:108,4:13,5:62,6:820,7:604,8:108,9:362,10:11,11:61,12
+   avail lists: 1:4,2:761,3:97,4:22,5:93,6:1239,7:682,8:89,9:310,10:16,11:137,12
 :1
- 34123 multiletter control sequences out of 65536+600000
- 82 fonts using 21135591 bytes
+ 34124 multiletter control sequences out of 65536+600000
+ 82 fonts using 21135767 bytes
  67i,14n,106p,8836b,789s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
 th.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-reg
 ular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latin
@@ -2383,10 +2379,10 @@ modern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmr
 oman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/
 lmroman12-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/
 lm/lmsans10-bold.otf>
-Output written on protokoll.pdf (10 pages, 80491 bytes).
+Output written on protokoll.pdf (9 pages, 85216 bytes).
 
-PDF statistics: 232 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+PDF statistics: 237 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

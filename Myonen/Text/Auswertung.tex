@@ -14,19 +14,20 @@ Es wird eine Ausgleichsrechnung der Form
 \begin{equation*}
   N = -a \left( T_{\text{VZ}} +b \right)^4+c
 \end{equation*}
-mit Python \textbf{HIER NOCH DIE VERSION ETC} vorgenommen.
+mit Python 3.6.3 vorgenommen.
 Die Parameter ergeben sich zu
+%a mit 10^{-40} s^{-5} oder 10^{41} s^{-5}
 \begin{align*}
-  a &=& \SI{4.82149138 \pm 0.236142743e-40}{\frac{1}{s^5}}\\
-  b &=& \SI{2.08543593 \pm 0.229205656e-09}{s}\\
-  c &=& \SI{208.001211 \pm 3.50366199}{\frac{1}{s}}.\\
+  a &=& \SI{4.82149138 \pm 0.236142743 e41}{\frac{1}{s^5}}\\
+  b &=& \SI{2.08543593 \pm 0.229205656 e-9}{s}\\
+  c &=& \SI{208.001211 \pm 3.50366199 e9}{\frac{1}{s}}.\\
 \end{align*}
 Dabei beschreibt $b$ die seitliche Verschiebung des Maximums und damit den Wert, der fortan als Verzögerung der Leitung gewählt wird.
 Damit sind die Signale aus den SEV annähernd gleichzeitig an der Koinzidenzschaltung.
 \FloatBarrier
 \subsection{Kalibrierung des Multi-Channel-Analysers}
 Um vom Channel des Multi-Channel-Analysers auf die zugehörige Zeit zwischen den Impulsen schließen zu können, wird der Multi-Channel-Analyser kalibriert.
-Die Channel werden in Abhängigkeit ... vom Doppelimpulsgenerator gegebenen 
+Die Channel werden in Abhängigkeit des zeitlichen Abstands der Signale vom Doppelimpulsgenerator gemessen (Tabelle \ref{tab:kalibrierung}, Abbildung \ref{fig:kalibrierung}).
 \input{tabellekalibrierung.tex}
 \begin{figure}[h!]
   \centering
@@ -34,33 +35,36 @@ Die Channel werden in Abhängigkeit ... vom Doppelimpulsgenerator gegebenen
   \caption{Kalibrierung des Multi-Channel-Analysers: Zeitlicher Abstand des Doppelimpulses $\Delta$ t gegen den zugehörigen Channel}
   \label{fig:kalibrierung}
 \end{figure}
-Fit: C $\widehat{=}$ Channel
+Die lineare Regression hat die Form
 \begin{equation*}
 \Delta t = a \cdot C + b
 \end{equation*}
-Fitparameter:
+und ergibt die folgenden Parameter:
 \begin{align*}
-a  &=&  \SI{ 0.02234091 \pm 1.28401231692e-05}{\frac{1}{s}}  \\
-b  &=&  \SI{-0.03080493 \pm 0.00345318109864 }{}  \\
+a  &=&  \SI{ 2.234091   \pm 0.00128401231692 e-11}{s}  \\
+b  &=&  \SI{-3.080493 \pm 0.345318109864 e-11}{s}.  \\
 \end{align*}
-
+Mit diesen $a$ und $b$ wird im folgenden aus dem Channel die jeweilige Lebensdauer berechnet.
 \FloatBarrier
 
 \subsection{Messung der Lebensdauer}
+Die Messdaten zur Lebensdauer der Myonen sind in Tabelle \ref{tab:myonen} notiert.
+Die Messdaten sind in Abbildung \ref{fig:myonen} aufgetragen.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{figmyonen.pdf}
   \caption{Häufigkeit der Myonenzerfälle in Abhängigkeit ihrer Lebensdauer}
   \label{fig:myonen}
 \end{figure}
-Fit
+Die Ausgleichsrechnung der Form
 \begin{equation*}
-y = a \exp{(-x b)}+c
+y = a \exp{(-b t)}+c
 \end{equation*}
-Fitparameter
+bringt die Parameter
 \begin{align*}
 a  &=&  \SI{51.81005345 \pm 0.9677403}{}\\
 b  &=&  \SI{0.52824244 \pm 0.01864355}{}\\
-c  &=&  \SI{0.74055349 \pm 0.31446226}{}\\
+c  &=&  \SI{0.74055349 \pm 0.31446226}{}.\\
 \end{align*}
+
 \FloatBarrier

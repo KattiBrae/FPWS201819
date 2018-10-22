@@ -7,7 +7,8 @@ from pylab import figure, axes, pie, title, show
 
 print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
-y, x = np.loadtxt('tabkalibrierung.txt', unpack=True,delimiter=',')
+Y, x = np.loadtxt('tabkalibrierung.txt', unpack=True,delimiter=',')
+y=Y*1e-9
 
 def f(x,a,b):
     return a*x+b
@@ -18,18 +19,18 @@ print(np.sqrt(np.diag(pcov)))
 
 x_new = np.linspace(x[0], x[-1], 5000)
 
-v, u = np.loadtxt('tabkalibrierung.txt', unpack=True,delimiter=',')
+#V, u = np.loadtxt('tabkalibrierung.txt', unpack=True,delimiter=',')
 
-T=np.sqrt(v)
-plt.errorbar(u, v, yerr=T, fmt="none", capsize=5, capthick=2, ms=9, markerfacecolor="red")
+#T=np.sqrt(v)
+#plt.errorbar(u, v, yerr=T, fmt="none", capsize=5, capthick=2, ms=9, markerfacecolor="red")
 
 
 plt.figure(1)
 plt.plot(x,y,'x')
-plt.plot(u,v,'x')
+#plt.plot(u,v,'x')
 plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
 plt.xlabel('Channel')
-plt.ylabel('$\Delta t/s$')
+plt.ylabel(r'$\Delta t/ s$')
 plt.grid()
 plt.legend()
 

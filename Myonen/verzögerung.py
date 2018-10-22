@@ -10,7 +10,7 @@ print('Steigung','Y-Achsenabschnitt')
 x, y = np.loadtxt('Verzögerungfit.txt', unpack=True,delimiter=',')
 
 def f(x,a,b,c):
-    return -a*(x+b)**4+c
+    return a*(x+b)**4+c
 popt, pcov = curve_fit(f, x, y)
 print(popt)
 print(np.sqrt(np.diag(pcov)))

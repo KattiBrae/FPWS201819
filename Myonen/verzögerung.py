@@ -18,22 +18,26 @@ print(np.sqrt(np.diag(pcov)))
 x_new = np.linspace(x[0], x[-1], 500)
 
 u, v = np.loadtxt('Verzögerung.txt', unpack=True,delimiter=',')
-
 u_new = np.linspace(u[0], u[-1], 500)
-
 T=np.sqrt(v)
-
 plt.errorbar(u, v, yerr=T, fmt="none", capsize=5, capthick=2, ms=9, markerfacecolor="red")
 
-#s=0.02234091
-#r=0.03080493+0*s
-#plt.plot(s,label=r'Halbwertsbreite')
+m=(  -23.5 ,   19.2 )
+n=( 104 , 104 )
+def g(m,d,e):
+    return d*m+e
+aopt, acov = curve_fit(g, m, n)
+print(aopt)
+print(np.diag(acov**(1/2)))
+m_new = np.linspace(m[0], m[-1], 500)
 
 
 plt.figure(1)
-plt.plot(x,y,'x')
+#plt.plot(x,y,'x')
 plt.plot(u,v,'x')
+#plt.plot(m,n,'x')
 plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
+plt.plot(m_new,g(m_new,*aopt),'-', label='Halbwertsbreite')
 plt.xlabel('Verzögerungszeit ' r'$T_{VZ}/ 10^{-9} s$ durch die Kabel')
 plt.ylabel('Zählrate ' r'N/$\frac{1}{s}$ mit Messzeit $t=10s$')
 plt.grid()

@@ -9,9 +9,10 @@ print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
 x, y = np.loadtxt('Verzögerungfit.txt', unpack=True,delimiter=',')
 
+
 def f(x,a,b,c):
     return a*(x+b)**4+c
-popt, pcov = curve_fit(f, x, y)
+popt, pcov = curve_fit(f, x, y, p0=[4.8214, 2.0854, 208.00])
 print(popt)
 print(np.sqrt(np.diag(pcov)))
 
@@ -36,10 +37,10 @@ plt.figure(1)
 #plt.plot(x,y,'x')
 plt.plot(u,v,'x')
 #plt.plot(m,n,'x')
-plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
+plt.plot(x_new,f(x_new,*popt),'-', label='Ausgleichsrechnung ' r'$N \propto T_{VZ}^4$')
 plt.plot(m_new,g(m_new,*aopt),'-', label='Halbwertsbreite')
 plt.xlabel('Verzögerungszeit ' r'$T_{VZ}/ 10^{-9} s$ durch die Kabel')
-plt.ylabel('Zählrate ' r'N/$\frac{1}{s}$ mit Messzeit $t=10s$')
+plt.ylabel('Zählrate ' r'N/$\frac{1}{s}$, Messzeit $t=10s$')
 plt.grid()
 plt.legend()
 

@@ -21,7 +21,6 @@ def f(x,a,b,c):
     return a*np.exp(-x*b)+c
 popt, pcov = curve_fit(f, x, y)
 
-print('#Funktion = b*e^(-x*a)#')
 #print('#a','b#')
 print(popt)
 #print('#Fehler#')
@@ -33,7 +32,7 @@ x_new = np.linspace(x[0], x[-1], 5000)
 
 plt.figure(1)
 #plt.plot(x,y,'x')
-plt.plot(x_new,f(x_new,*popt),'-', label='Fit-Funktion')
+plt.plot(x_new,f(x_new,*popt),'-', label='Ausgleichsrechnung ' r'$\propto e^{t}$')
 plt.xlabel(r'Lebensdauer $t/ 10^{-9} s$')
 plt.ylabel('Häufigkeit')
 plt.grid()

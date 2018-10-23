@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  23 OCT 2018 16:38
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  23 OCT 2018 18:47
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.230 seconds
+luaotfload | main : initialization completed in 0.250 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -1584,13 +1584,14 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout4 = protokoll.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'protokoll.bbl' not found.
+Package biblatex Info: ... file 'protokoll.bbl' found.
 
-No file protokoll.bbl.
+(./protokoll.bbl)
 Package biblatex Info: Reference section=0 on input line 2.
 Package biblatex Info: Reference segment=0 on input line 2.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+
 *************************************************
 * unicode-math warning: "mathtools-overbracket"
 * 
@@ -2341,51 +2342,37 @@ File: figmyonen.pdf Graphic file (type pdf)
 <use figmyonen.pdf>
 Package luatex.def Info: figmyonen.pdf used on input line 60.
 (luatex.def)             Requested size: 418.25555pt x 209.1255pt.
- [8<./figmyonen.pdf>]) [9] (./Diskussion.tex(load luc: /Users/katti/Library/texl
-ive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-bold.luc)(load luc: /
-Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroma
-n6-bold.luc))
-
-LaTeX Warning: Empty bibliography on input line 33.
-
-[10] (./protokoll.aux
+ [8<./figmyonen.pdf>]) [9] (./Diskussion.tex) [10]
+(./protokoll.aux
 Language ngerman already loaded; id is 8)
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                protokoll
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'protokoll.run.xml'.
 
 \openout1 = protokoll.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 30901 strings out of 494481
+ 31096 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 622 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 75 glue_spec, 16 attr
+ 627 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 76 glue_spec, 16 attr
 ibute_list, 1 write nodes
-   avail lists: 1:4,2:736,3:95,4:26,5:121,6:1558,7:747,8:65,9:299,10:12,11:185,1
+   avail lists: 1:4,2:755,3:98,4:29,5:123,6:1558,7:747,8:64,9:315,10:12,11:185,1
 2:1
- 34129 multiletter control sequences out of 65536+600000
- 84 fonts using 21399143 bytes
- 67i,14n,106p,8836b,789s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
-</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.ot
-f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-
-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-r
-egular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/lat
-inmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/l
-mroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/l
-m/lmroman12-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publi
-c/lm/lmsans10-bold.otf>
-Output written on protokoll.pdf (10 pages, 97208 bytes).
+ 34321 multiletter control sequences out of 65536+600000
+ 82 fonts using 21135415 bytes
+ 67i,14n,106p,8836b,2665s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.ot
+f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
+otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8
+-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/l
+atinmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm
+/lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public
+/lm/lmroman12-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pub
+lic/lm/lmsans10-bold.otf>
+Output written on protokoll.pdf (10 pages, 100817 bytes).
 
-PDF statistics: 254 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 253 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)

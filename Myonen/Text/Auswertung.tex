@@ -12,19 +12,19 @@ Die Zählrate $N$ wird in Abhängigkeit verschiedener Verzögerungszeiten $T_{\t
 \end{figure}
 Es wird eine Ausgleichsrechnung der Form
 \begin{equation*}
-  N = -a \left( T_{\text{VZ}} +b \right)^4+c
+  N = -a \left( T_{\text{VZ}} + \Delta T_{\text{VZ}} \right)^4+N_{\text{max}}
 \end{equation*}
 mit Python 3.6.3 vorgenommen.
 Die Parameter ergeben sich zu
 \begin{align*}
-  a &=& \SI{  4.8215 \pm 0.2361 e41}{\frac{1}{s^5}}\\
-  b &=& \SI{  2.0854 \pm 0.2292 e-9}{s}\\
-  c &=& \SI{208.0012 \pm 3.5037 e9}{\frac{1}{s}}.\\
+  a                     &=& \SI{  4.8215 \pm 0.2361 e32}{\frac{1}{s^4}}\\
+  \Delta T_{\text{VZ}}  &=& \SI{  2.0854 \pm 0.2292 e-9}{s}\\
+  N_{\text{max}}        &=& \SI{208.0012 \pm 3.5037 }{}.\\
 \end{align*}
-Dabei beschreibt $b$ die seitliche Verschiebung des Maximums und damit den Wert, der fortan als Verzögerung der Leitung gewählt wird.
-Damit sind die Signale aus den SEV annähernd gleichzeitig an der Koinzidenzschaltung. $c$ ist die berechete maximale Zählrate.\\
+Dabei beschreibt $\Delta T_{\text{VZ}}$ die seitliche Verschiebung des Maximums und damit den Wert, der fortan als Verzögerung der Leitung gewählt wird.
+Damit sind die Signale aus den SEV annähernd gleichzeitig an der Koinzidenzschaltung. $N_{\text{max}}$ ist die berechete maximale Zählrate.\\
 Desweiteren wird die Halbwertsbreite der Zählrate bestimmt.
-Die Halbwertsbreite ist im Diagramm durch eine Konstante bei $\frac{c}{2}=\SI{104.0006 e-9}{\frac{1}{s}}$ dargestellt.
+Die Halbwertsbreite ist im Diagramm durch eine Konstante bei $\frac{N_{\text{max}}}{2}=\SI{104.0006}{}$ dargestellt.
 Die Halbwertsbreite wird als
 \begin{equation*}
   w_{\text{N/2}}= \SI{42.7e-9}{s}
@@ -43,14 +43,14 @@ Die Channel werden in Abhängigkeit des zeitlichen Abstands der Signale vom Dopp
 \end{figure}
 Die lineare Regression hat die Form
 \begin{equation*}
-  \Delta t = d \cdot C + e
+  \Delta t = b \cdot C + \Delta t_{0}
 \end{equation*}
 und ergibt die folgenden Parameter:
 \begin{align*}
-  d  &=&  \SI{ 2.2341 \pm 0.0013 e-11}{s}  \\
-  e  &=&  \SI{-3.0805 \pm 0.3453 e-11}{s}.  \\
+  b             &=&  \SI{ 2.2341 \pm 0.0013 e-8}{\frac{s}{Channel}}  \\
+  \Delta t_{0}  &=&  \SI{-3.0805 \pm 0.3453 e-8}{s}.  \\
 \end{align*}
-Mit diesen $d$ und $e$ wird im folgenden aus dem Channel die jeweilige Lebensdauer berechnet.
+Mit diesen $b$ und $\Delta t_{0}$ wird im folgenden aus dem Channel die jeweilige Lebensdauer berechnet.
 \FloatBarrier
 
 \subsection{Messung der Lebensdauer}
@@ -63,16 +63,37 @@ Die Messdaten zur Lebensdauern der Myonen sind in Abbildung \ref{fig:myonen} auf
 \end{figure}
 Die Ausgleichsrechnung der Form
 \begin{equation*}
-  y = f \exp{(-g t)}+h
+  N = N_{0} \exp{(- \lambda t)}+U_{\text{0,exp}}
 \end{equation*}
 bringt die Parameter
 \begin{align*}
-  f  &=&  \SI{51.8101 \pm 0.9677}{}\\
-  g  &=&  \SI{0.5282 \pm 0.01864 e9}{\frac{1}{s}}\\
-  h  &=&  \SI{0.7406 \pm 0.3145}{}.\\
+  N_{0}              &=&  \SI{51.8101 \pm 0.9677}{}\\
+  \lambda            &=&  \SI{0.5282 \pm 0.01864 e06}{\frac{1}{s}}\\
+  U_{\text{0,exp}}   &=&  \SI{0.7406 \pm 0.3145}{}.\\
 \end{align*}
-Aus dem Parameter $g$ wird die Lebensdauer $\tau$ bestimmt:
+Aus dem Parameter $\lambda$ wird die Lebensdauer $\tau$ bestimmt:
 \begin{equation*}
-  \Tau=\frac{1}{g}=\SI{1.8932e-09}{s}
+  \tau_{\text{exp}}=\frac{1}{\lambda}=\SI{1.8932e-06}{s}.
+\end{equation*}
+Der Parameter $U_{0,exp}$ entspricht der gemessenen Untergrundrate.
+Die Untergrundrate wird auch auf anderem Weg berechnet.
+Hier werden weitere Größen der Messung benötigt:
+\begin{align*}
+  \text{Gesamte Messzeit}  && T_{\text{G}}      &=\SI{73966}{s} \\
+  \text{Suchzeit}          && T_{\text{S}}      &=\SI{10e-6}{s} \\
+  \text{Zählrate Start}    && N_{\text{Start}}  &=\SI{}{} \\
+  \text{Zählrate Stop}     && N_{\text{Stop}}   &=\SI{}{} \\
+\end{align*}
+Hierzu wird berechnet, wie viele Myonen $N_{\text{S}}$ pro Suchzeit $T_{\text{S}}$ in die Apparatur kommen:
+\begin{equation*}
+  N_{\text{S}}= T_{\text{S}}\frac{N_{\text{Start}} \pm \sqrt{ N_{\text{Start}}} }{T_{\text{G}}}.
+\end{equation*}
+Mit dieser Zählrate wird die Wahrscheinlichkeit $P$ berechnet, dass sich genau ein Myon in der Apparatur befindet.
+\begin{equation*}
+  P(1)= N_{\text{S}} \exp{(-N_{\text{S}})}
+\end{equation*}
+Die Untergrundrate berechnet sich dann durch
+\begin{equation*}
+  U_{\text{0,theo}}= P(1) \frac{ N_{\text{Start}} \pm \sqrt{ N_{\text{Start}} }}{\# Channel}
 \end{equation*}
 \FloatBarrier

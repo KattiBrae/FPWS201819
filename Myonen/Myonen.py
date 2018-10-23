@@ -32,7 +32,7 @@ x_new = np.linspace(x[0], x[-1], 5000)
 
 plt.figure(1)
 #plt.plot(x,y,'x')
-plt.plot(x_new,f(x_new,*popt),'-', label='Ausgleichsrechnung ' r'$\propto e^{t}$')
+plt.plot(x_new,f(x_new,*popt),'-', label='Ausgleichsrechnung ' r'$\propto e^{-\lambda t}$')
 plt.xlabel(r'Lebensdauer $t/ 10^{-9} s$')
 plt.ylabel('Häufigkeit')
 plt.grid()

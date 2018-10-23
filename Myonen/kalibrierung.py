@@ -7,8 +7,7 @@ from pylab import figure, axes, pie, title, show
 
 print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
-Y, x = np.loadtxt('tabkalibrierung.txt', unpack=True,delimiter=',')
-y=Y*1e-9
+y, x = np.loadtxt('tabkalibrierung.txt', unpack=True,delimiter=',')
 
 def f(x,a,b):
     return a*x+b
@@ -30,7 +29,7 @@ plt.plot(x,y,'x')
 #plt.plot(u,v,'x')
 plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
 plt.xlabel('Channel')
-plt.ylabel(r'$\Delta t/ s$')
+plt.ylabel(r'$\Delta t/ 10^{-9} s$')
 plt.grid()
 plt.legend()
 

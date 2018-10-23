@@ -40,7 +40,7 @@ plt.plot(u,v,'x')
 plt.plot(x_new,f(x_new,*popt),'-', label='Ausgleichsrechnung ' r'$N \propto T_{VZ}^4$')
 plt.plot(m_new,g(m_new,*aopt),'-', label='Halbwertsbreite')
 plt.xlabel('Verzögerungszeit ' r'$T_{VZ}/ 10^{-9} s$ durch die Kabel')
-plt.ylabel('Zählrate ' r'N/$\frac{1}{s}$, Messzeit $t=10s$')
+plt.ylabel('Zählrate ' r'N, Messzeit $t=10s$')
 plt.grid()
 plt.legend()
 

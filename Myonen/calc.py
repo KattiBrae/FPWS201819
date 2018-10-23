@@ -9,5 +9,5 @@ from pylab import figure, axes, pie, title, show, array
 #N=np.sqrt() print(N)
 #N=np.sqrt() print(N)
 
-N=1/0.5282e9
-print(N)
+NS=TS*(NG + np.sqrt(NG)/TG
+print(NS)

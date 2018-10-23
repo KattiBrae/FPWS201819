@@ -29,7 +29,7 @@ plt.plot(x,y,'x')
 #plt.plot(u,v,'x')
 plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
 plt.xlabel('Channel')
-plt.ylabel(r'$\Delta t/ 10^{-9} s$')
+plt.ylabel(r'$\Delta t/ 10^{-6} s$')
 plt.grid()
 plt.legend()
 

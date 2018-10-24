@@ -19,3 +19,22 @@ und durch das zerfallen dieses Myons im Szintilatormaterial entsteht,
 wird an ein Zeit-Amplituden-Konverter (TAC) weitergegeben.
 Dieser misst die Zeit zwischen den Signalen und gibt diese als Impulshöhe aus.
 Mit Hilfe eines Vielkanalanalysator werden die Impulshöhen der Häufigkeit nach sortiert.
+
+Da einige Störfaktoren hinzukommen muss die Apperatur erweitert werden.
+Im SEV können sich einzelnen Elektronen lösen und ebenfals ein Signal implizieren.
+Die Amplitude diser Rauschsignale ist hingegen meist geringer und kann so mit einer Diskriminatorschwelle herausgefiltert werden.
+Der Diskriminator normiert die eingehenden Signale zusätzlich auf eine einheitliche Höhe und Länge.
+Eine weitere möglichkeit der Rauschunterdrückung wird mit einer Koinzidenzschaltung verwirklicht.
+Ein emitiertes Photon wird von beiden SEV gemessen.
+Die resultierende Impulse werden über seperate Kabel und Diskriminatoren in eine Koinzidenzschaltung geführt.
+Da die Leitfähigkeit elektrische beuteile Variieren kann,
+können mit einer Verzögerungsleitung die Impulse aufeinander abgepasst werden.
+Der Koinzidenzschalter gibt nur dann ein Signal weiter wenn an beiden Eingängen ein Impuls ankommt.
+Die Warscheinlichkeit, dass beide SEV gleichzeitig ein stakes Rauschsignal empfangen ist sehr gering.
+
+Ein weiteres Problem ist, dass nur ein kleiner Teil der Myonen welche in der Szintilator eindringen dort auch zerfallen.
+Das bedeutet das der TAC ein Startsignal bekommt aber ein Stopsignal.
+Da bei unendlich langer Suchzeit das ein neu eintreffendes Myon ein Stopsignal geben würed anstand ein neues Startsignal,
+muss die Suchzeit T_S nach einer gewissen Zeit abgebrochen werden.
+Der Suchzeitgeber wird mit einer monostabilen Kippstufe oder auch univibrator verwirklicht.
+Nach Aktivierung bleibt die Kippstufe über die Zeit T_S in einem angeregen Zustand und spring dann in seinen Grundzustand zurück.

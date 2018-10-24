@@ -21,6 +21,13 @@ Die Parameter ergeben sich zu
   \Delta T_{\text{VZ}}  &=& \SI{  2.0854 \pm 0.2292 e-9}{s}\\
   N_{\text{max}}        &=& \SI{208.0012 \pm 3.5037 }{}.\\
 \end{align*}
+%die Parameter mit allen Nachkommastellen
+%a     = -4.82149139e-04*1e36
+%DTV   = 2.08543590*1e-9
+%Nmax  = 208.001211
+%da    = 2.36142749e-05*1e36
+%dDTV  = 0.229205675*1e-9
+%dNmax = 3.50366201
 Dabei beschreibt $\Delta T_{\text{VZ}}$ die seitliche Verschiebung des Maximums und damit den Wert, der fortan als Verzögerung der Leitung gewählt wird.
 Damit sind die Signale aus den SEV annähernd gleichzeitig an der Koinzidenzschaltung. $N_{\text{max}}$ ist die berechete maximale Zählrate.\\
 Desweiteren wird die Halbwertsbreite der Zählrate bestimmt.
@@ -50,6 +57,11 @@ und ergibt die folgenden Parameter:
   b             &=&  \SI{ 2.2341 \pm 0.0013 e-8}{\frac{s}{Channel}}  \\
   \Delta t_{0}  &=&  \SI{-3.0805 \pm 0.3453 e-8}{s}.  \\
 \end{align*}
+%die Parameter mit allen Nachkommastellen
+%b    = 0.02234091*1e-6
+%Dt0  = -0.03080493*1e-6
+%db   = 1.28401232e-05*1e-6
+%dDt0 = 3.45318110e-03*1e-6
 Mit diesen $b$ und $\Delta t_{0}$ wird im folgenden aus dem Channel die jeweilige Lebensdauer berechnet.
 \FloatBarrier
 
@@ -71,6 +83,13 @@ bringt die Parameter
   \lambda            &=&  \SI{0.5282 \pm 0.01864 e06}{\frac{1}{s}}\\
   U_{\text{0,exp}}   &=&  \SI{0.7406 \pm 0.3145}{}.\\
 \end{align*}
+%die Parameter mit allen Nachkommastellen
+%N0      = 51.81005345
+%lambda  = 0.52824244
+%U0      = 0.74055349
+%dN0     = 0.9677403
+%dlambda = 0.01864355
+%dU0     = 0.31446226
 Aus dem Parameter $\lambda$ wird die Lebensdauer $\tau$ bestimmt:
 \begin{equation*}
   \tau_{\text{exp}}=\frac{1}{\lambda}=\SI{1.8932e-06}{s}.
@@ -84,16 +103,24 @@ Hier werden weitere Größen der Messung benötigt:
   \text{Zählrate Start}    && N_{\text{Start}}  &=\SI{1397196}{} \\
   \text{Zählrate Stop}     && N_{\text{Stop}}   &=\SI{4719}{} \\
 \end{align*}
-Hierzu wird berechnet, wie viele Myonen $N_{\text{S}}$ pro Suchzeit $T_{\text{S}}$ in die Apparatur kommen:
+Hierzu wird berechnet, wie viele Myonen $N_{\text{S}}$ pro Suchzeit $T_{\text{S}}$ in die Apparatur kommen. Der Fehler wird als Poissonfehler berechnet.
 \begin{equation*}
-  N_{\text{S}} = T_{\text{S}}\frac{N_{\text{Start}} \pm \sqrt{ N_{\text{Start}}} }{T_{\text{G}}} = \SI{1.8888408187545629 \pm 0.0159801780233 e-06}{}.
+  N_{\text{S}} = T_{\text{S}}\frac{N_{\text{Start}} \pm \sqrt{ N_{\text{Start}}} }{T_{\text{G}}} = \SI{0.00018889706081172433 \pm 0.0137439827129}{}.
 \end{equation*}
 Mit dieser Zählrate wird die Wahrscheinlichkeit $P$ berechnet, dass sich genau ein Myon in der Apparatur befindet.
 \begin{equation*}
-  P(1) = N_{\text{S}} \exp{(-N_{\text{S}})} = \SI{1.8888372510382939 \pm 0.0159801780233e-06}{}.
+  P(1) = N_{\text{S}} \exp{(-N_{\text{S}})} = \SI{0.000188861382082 \pm 0.0137426846752}{}.
 \end{equation*}
-Die Untergrundrate berechnet sich dann mit den $\# Channel=\SI{508}{}$ durch
+Die Untergrundrate berechnet sich dann mit der Anzahl der einbezogenen Channel $C=\SI{508}{}$ durch
 \begin{equation*}
-  U_{\text{0,theo}}= P(1) \frac{ N_{\text{Start}} \pm \sqrt{ N_{\text{Start}} }}{\# Channel} = \SI{7.009259135059507 \pm 0.083863653416 e-15}{}.
+  U_{\text{0,theo}}= P(1) \frac{ N_{\text{Start}} \pm \sqrt{ N_{\text{Start}} }}{C} = \SI{0.5194416685028387 \pm 0.720723017881}{}.
 \end{equation*}
+%die letzten drei Werte mit allen Nachkommastellen
+%NS  = 0.00018889706081172433
+%P   = 0.000188861382082
+%U   = 0.5194416685028387
+%dNS = 0.0137439827129
+%dP  = 0.0137426846752
+%dU  = 0.720723017881
+
 \FloatBarrier

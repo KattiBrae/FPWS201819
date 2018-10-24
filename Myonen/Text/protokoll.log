@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  23 OCT 2018 22:44
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  24 OCT 2018 09:37
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.252 seconds
+luaotfload | main : initialization completed in 0.234 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2326,7 +2326,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figkalibrierung.pdf Graphic file (type pdf)
 
 <use figkalibrierung.pdf>
-Package luatex.def Info: figkalibrierung.pdf used on input line 40.
+Package luatex.def Info: figkalibrierung.pdf used on input line 47.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
@@ -2340,14 +2340,10 @@ Overfull \vbox (40.04349pt too high) has occurred while \output is active []
 File: figmyonen.pdf Graphic file (type pdf)
 
 <use figmyonen.pdf>
-Package luatex.def Info: figmyonen.pdf used on input line 60.
+Package luatex.def Info: figmyonen.pdf used on input line 72.
 (luatex.def)             Requested size: 418.25555pt x 209.1255pt.
- [8<./figmyonen.pdf>]
-Overfull \hbox (3.21678pt too wide) detected at line 98
-\l_fontspec_font 𝑈[] = 𝑃(1)[] = [][][][][].
- []
-
-) [9] (./Diskussion.tex) [10] (./protokoll.aux
+ [8<./figmyonen.pdf>]) [9] (./Diskussion.tex) [10]
+(./protokoll.aux
 Language ngerman already loaded; id is 8)
 Package logreq Info: Writing requests to 'protokoll.run.xml'.
 
@@ -2360,8 +2356,8 @@ Here is how much of LuaTeX's memory you used:
  627 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 76 glue_spec, 16 attr
 ibute_list, 1 write nodes
-   avail lists: 1:4,2:762,3:125,4:36,5:123,6:1558,7:747,8:109,9:324,10:12,11:185
-,12:4
+   avail lists: 1:4,2:762,3:119,4:36,5:123,6:1558,7:747,8:107,9:324,10:12,11:187
+,12:2
  34321 multiletter control sequences out of 65536+600000
  82 fonts using 21135591 bytes
  67i,14n,106p,8836b,2744s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -2374,7 +2370,7 @@ atinmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm
 /lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public
 /lm/lmroman12-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pub
 lic/lm/lmsans10-bold.otf>
-Output written on protokoll.pdf (10 pages, 101354 bytes).
+Output written on protokoll.pdf (10 pages, 100478 bytes).
 
 PDF statistics: 253 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream

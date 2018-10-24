@@ -1,20 +1,34 @@
-Relative Abweichung
+Initial lässt sich sagen, dass der Versuch gut verlaufen ist.
+Alle gemessenen Werte sind in der passenden Größenordnung.
+%Die Kalibrierung des Multichannelanalysers führt zu einkanaligen Messergebnissen und muss daher nicht gemittelt werden.
+Zum Vergleich der Werte wird die relative Abweichung berechet durch:
 \begin{equation*}
-  f=\frac{x_{\text{exp}}-x_{\text{theo}}}{x_{\text{theo}}}
+  f=\frac{x_{\text{exp}}-x_{\text{theo}}}{x_{\text{theo}}}.
 \end{equation*}
-Lebensdauer
+Die Lebensdauer der Myonen wird als $\tau_{\text{exp}}$ gemessen und mit dem Literaturwert $\tau_{\text{theo}}$ \cite{Demtröder} verglichen.
 \begin{align*}
-  \tau_{\text{exp}}   &=&   \SI{1.8932e-06}{s}  &\\
-  \tau_{\text{theo}}  &=&   \SI{2.199e-06}{s}   &\text{\cite{Demtröder}}\\
-  f_{\tau}            &=&   \SI{13.91}{\%}      &\\
+  \tau_{\text{exp}}   &=&   \SI{1.8932e-06}{s}  \\
+  \tau_{\text{theo}}  &=&   \SI{2.199e-06}{s}   \\
+  f_{\tau}            &=&   \SI{13.91}{\%}      \\
 \end{align*}
-Untergrundrate
+Die Abweichung der Lebensdauern lässt sich unter anderem durch folgendes erklären.
+In die Messaparatur werden mehrere Bauteile gebaut um die Messung genauer zu gestalten.
+So wird die Messung über zwei Photokathoden und zwei SEV an dem Szintillatortank gemacht.
+Das Auftrennen und wieder Zusammenführen der beiden Signale über die AND-Gatter selektiert die Signale zugunsten der Signale der einzelnen, im Tank zerfallenden, Myonen.
+Dennoch kann durch den Aufbau der Messung das Auftreten zweier fast hochenergetischer Myonen mit dem passenden zeitlichen Abstand des Eintritts in den Szintillatortanks nicht vollständig ausgeschlossen werden.\\
+Die Untergrundrate ergibt sich als $U_{\text{0,exp}}$ aus den Fitparametern und wird mit dem theoretischen, berechneten Wert $U_{\text{0,theo}}$ verglichen:
 \begin{align*}
-  U_{\text{0,exp}}    &=&  \SI{0.7406 \pm 0.3145}{} &\\
-  U_{\text{0,theo}}   &=&  \SI{0.5194416685028387 \pm 0.720723017881}{}   &\\
-  f_{\text{U}}        &=&  \SI{0}{\%} &\\
+  U_{\text{0,exp}}    &=&  \SI{0.7406 \pm 0.3145}{} \\
+  U_{\text{0,theo}}   &=&  \SI{0.5194416685028387 \pm 0.720723017881}{}   \\
+  f_{\text{U}}        &=&  \SI{42.58}{\%}. \\
 \end{align*}
-\begin{itemize}
-  \item Abweichung Untergrundrate --> Differenz Start-Stop-Zählrate --> geringe Auflösung Multi-Channel-Analyser
-  \item
-\end{itemize}
+Die Abweichung der Untergrundrate ist unerwartet groß.
+Auffällig ist außerdem die große Differenz der Zählwerke:
+\begin{align*}
+  \text{Zählrate Start}    && N_{\text{Start}}  &=\SI{1397196}{} \\
+  \text{Zählrate Stop}     && N_{\text{Stop}}   &=\SI{4719}{} \\
+  \text{Differenz}         && \Delta N          &=\SI{1392477}{}.\\
+\end{align*}
+Zwischen dem TAC und dem MCA gehen $\SI{99.66}{\%}$ der Startsignale verloren.
+Eine mögliche Erklärung ist, dass der Multichannelanalyser eine zu geringe Auflösung hat und sehr gerine Zeitabstände zwischen dem Start- und dem Stopsignal nicht darstellen kann.
+Außerdem wird die theoretische Untergrundrate nur durch die Zählrate der Startsignale berechnet, während der experimentelle Wert durch die Signale berechnet wird, bei denen sowohl Start- und Stopsignal vorhanden sind.

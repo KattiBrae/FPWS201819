@@ -4,10 +4,13 @@ import sympy
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from pylab import figure, axes, pie, title, show, array
-
+NN=1397196-4719
+print(NN)
 #N=np.sqrt() print(N)
-
-
+e=1392477
+t=1397196
+f=100*(e)/t
+print(f)
 #NS=1397196
 #TS=10e-6
 #TG=73966
@@ -46,3 +49,11 @@ print(dP)
 print('dU')
 dU=np.sqrt(U)
 print(dU)
+
+
+print('ab hier mit poisson mit angempasstem komma')
+#e-4
+B=5.194416685028387
+print(B)
+dB=np.sqrt(B)
+print(dB)

@@ -4,13 +4,23 @@ import sympy
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from pylab import figure, axes, pie, title, show, array
-NN=1397196-4719
-print(NN)
+
+N=np.sqrt(0.00018889706081172433)
+print(N)
+N=np.sqrt(0.000188861382082)
+print(N)
+N=np.sqrt(0.5194416685028387)
+print(N)
+
+print('blablabla')
+
+#NN=1397196-4719
+#print(NN)
 #N=np.sqrt() print(N)
-e=1392477
-t=1397196
-f=100*(e)/t
-print(f)
+#e=1392477
+#t=1397196
+#f=100*(e)/t
+#print(f)
 #NS=1397196
 #TS=10e-6
 #TG=73966

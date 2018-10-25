@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  24 OCT 2018 18:51
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  25 OCT 2018 05:49
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.254 seconds
+luaotfload | main : initialization completed in 0.266 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2272,43 +2272,39 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 
 (./Titelseite.tex(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-c
-ache/generic/fonts/otl/lmsans10-regular.luc)
+ache/generic/fonts/otl/lmroman12-regular.luc)(load luc: /Users/katti/Library/tex
+live/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc)
+[1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])(load lu
+c: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lm
+sans10-regular.luc)
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 (load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
-s/otl/lmsans10-bold.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-var/l
-uatex-cache/generic/fonts/otl/lmroman12-regular.luc)
-LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 14.4002pt on input line 6.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 6.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 7.0001pt on input line 6.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 14.39977pt on input line 6.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 6.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 6.9999pt on input line 6.
- [1
+s/otl/lmsans10-bold.luc) (./Zielsetzung.txt)
+(./Theorie.tex <tableptonen.pdf, id=8, 840.70293pt x 172.18518pt>
+File: tableptonen.pdf Graphic file (type pdf)
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package tocbasic Info: character protrusion at toc deactivated on input line 7.
- (./protokoll.toc
-Language ngerman already loaded; id is 8)
-\tf@toc=\write5
+<use tableptonen.pdf>
+Package luatex.def Info: tableptonen.pdf used on input line 15.
+(luatex.def)             Requested size: 418.25555pt x 85.66411pt.
+(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
+s/otl/lmroman8-regular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-va
+r/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
+[2<./tableptonen.pdf>]) [3] (./Durchführung.tex) [4] (./Auswertung.tex
 
-\openout5 = protokoll.toc
-) [2
+LaTeX Warning: Reference `tab:verzögerung' on page 5 undefined on input line 5.
 
-] (./Zielsetzung.txt)
-(./Theorie.tex) [3] (./Durchführung.tex) [4] (./Auswertung.tex(load luc: /Users
-/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-re
-gular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/ge
-neric/fonts/otl/lmroman6-regular.luc) (./tabelleverzögerung.tex)
-<figverzögerung.pdf, id=18, 462.52798pt x 346.89601pt>
+
+
+LaTeX Warning: Reference `fig:verzögerung' on page 5 undefined on input line 5.
+
+
+(./tabelleverzögerung.tex)
+<figverzögerung.pdf, id=36, 462.52798pt x 346.89601pt>
 File: figverzögerung.pdf Graphic file (type pdf)
 
 <use figverzögerung.pdf>
@@ -2318,11 +2314,20 @@ Package luatex.def Info: figverzögerung.pdf used on input line 9.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5] (./tabellekalibrierung.tex
+[5]
+
+LaTeX Warning: Reference `tab:kalibrierung' on page 6 undefined on input line 43
+.
+
+
+LaTeX Warning: Reference `fig:kalibrierung' on page 6 undefined on input line 43
+.
+
+(./tabellekalibrierung.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) <figkalibrierung.pdf, id=25, 462.52798pt x 346.89601pt>
+) <figkalibrierung.pdf, id=41, 462.52798pt x 346.89601pt>
 File: figkalibrierung.pdf Graphic file (type pdf)
 
 <use figkalibrierung.pdf>
@@ -2336,44 +2341,57 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (40.04349pt too high) has occurred while \output is active []
 
 
-[7<./figkalibrierung.pdf>] <figmyonen.pdf, id=137, 1445.4pt x 722.7pt>
-File: figmyonen.pdf Graphic file (type pdf)
+[7<./figkalibrierung.pdf>]
 
-<use figmyonen.pdf>
+LaTeX Warning: Reference `fig:myonen' on page 8 undefined on input line 69.
+
+<figmyonen.pdf, id=153, 1445.4pt x 722.7pt>
+File: figmyonen.pdf Graphic file (type pdf)
+ <use figmyonen.pdf>
 Package luatex.def Info: figmyonen.pdf used on input line 72.
 (luatex.def)             Requested size: 418.25555pt x 209.1255pt.
- [8<./figmyonen.pdf>]) [9] (./Diskussion.tex) [10] [11]
-(./protokoll.aux
+ [8<./figmyonen.pdf>]) [9] (./Diskussion.tex) [10] [11] (./protokoll.aux
 Language ngerman already loaded; id is 8)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+
 Package logreq Info: Writing requests to 'protokoll.run.xml'.
 
 \openout1 = protokoll.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 31096 strings out of 494481
+ 31021 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 627 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 76 glue_spec, 16 attr
+ 612 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 73 glue_spec, 16 attr
 ibute_list, 1 write nodes
-   avail lists: 1:5,2:765,3:128,4:29,5:213,6:2141,7:747,8:107,9:389,10:16,11:274
+   avail lists: 1:5,2:767,3:128,4:54,5:215,6:3256,7:747,8:107,9:386,10:24,11:477
 ,12:1
- 34321 multiletter control sequences out of 65536+600000
- 82 fonts using 21135855 bytes
- 67i,14n,106p,8836b,2603s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 34275 multiletter control sequences out of 65536+600000
+ 58 fonts using 13285219 bytes
+ 67i,14n,106p,8836b,2607s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.ot
 f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
-otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmoder
-n-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8
--regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/l
+otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.
+otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-regula
+r.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmod
+ern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/l
 atinmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm
 /lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public
-/lm/lmroman12-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pub
-lic/lm/lmsans10-bold.otf>
-Output written on protokoll.pdf (11 pages, 102365 bytes).
+/lm/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/
+lm/lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman12-regular.otf>
+Output written on protokoll.pdf (11 pages, 152811 bytes).
 
-PDF statistics: 258 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+PDF statistics: 286 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

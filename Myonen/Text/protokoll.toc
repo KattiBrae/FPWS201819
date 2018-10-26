@@ -1,12 +1,12 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {german}
-\contentsline {section}{\numberline {1}Theorie}{3}
-\contentsline {section}{\numberline {2}Aufbau und Durchführung}{5}
-\contentsline {subsection}{\numberline {2.1}Aufbau}{5}
-\contentsline {subsection}{\numberline {2.2}Durchführung}{7}
-\contentsline {section}{\numberline {3}Auswertung}{8}
-\contentsline {subsection}{\numberline {3.1}Einregeln der optimalen Verzögerungszeit}{8}
-\contentsline {subsection}{\numberline {3.2}Kalibrierung des Multi-Channel-Analysers}{9}
-\contentsline {subsection}{\numberline {3.3}Messung der Lebensdauer}{11}
-\contentsline {section}{\numberline {4}Diskussion}{13}
+\contentsline {section}{\numberline {1}Theorie}{2}
+\contentsline {section}{\numberline {2}Aufbau und Durchführung}{4}
+\contentsline {subsection}{\numberline {2.1}Aufbau}{4}
+\contentsline {subsection}{\numberline {2.2}Durchführung}{6}
+\contentsline {section}{\numberline {3}Auswertung}{7}
+\contentsline {subsection}{\numberline {3.1}Einregeln der optimalen Verzögerungszeit}{7}
+\contentsline {subsection}{\numberline {3.2}Kalibrierung des Multi-Channel-Analysers}{8}
+\contentsline {subsection}{\numberline {3.3}Messung der Lebensdauer}{10}
+\contentsline {section}{\numberline {4}Diskussion}{12}

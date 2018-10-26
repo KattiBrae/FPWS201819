@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  26 OCT 2018 11:07
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  26 OCT 2018 12:08
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.264 seconds
+luaotfload | main : initialization completed in 0.259 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2283,24 +2283,31 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 (load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
-s/otl/lmsans10-bold.luc) (./Zielsetzung.txt)
-(./Theorie.tex <tableptonen.pdf, id=8, 840.70293pt x 172.18518pt>
-File: tableptonen.pdf Graphic file (type pdf)
+s/otl/lmsans10-bold.luc)
+Package tocbasic Info: character protrusion at toc deactivated on input line 7.
+ (./protokoll.toc
+Language ngerman already loaded; id is 8)
+\tf@toc=\write5
 
-<use tableptonen.pdf>
+\openout5 = protokoll.toc
+ [2] (./Theorie.tex
+<tableptonen.pdf, id=13, 840.70293pt x 172.18518pt>
+File: tableptonen.pdf Graphic file (type pdf)
+ <use tableptonen.pdf>
 Package luatex.def Info: tableptonen.pdf used on input line 14.
 (luatex.def)             Requested size: 418.25555pt x 85.66411pt.
 (load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
 s/otl/lmroman8-regular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-va
-r/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
-[2<./tableptonen.pdf>]) [3] (./Durchführung.tex [4]
-<schaltung.pdf, id=36, 464.73601pt x 698.08167pt>
+r/luatex-cache/generic/fonts/otl/lmroman6-regular.luc) [3<./tableptonen.pdf>])
+[4] (./Durchführung.tex [5] <schaltung.pdf, id=39, 464.73601pt x 698.08167pt>
 File: schaltung.pdf Graphic file (type pdf)
- <use schaltung.pdf>
+
+<use schaltung.pdf>
 Package luatex.def Info: schaltung.pdf used on input line 54.
 (luatex.def)             Requested size: 250.95587pt x 376.95848pt.
- [5<./schaltung.pdf>]) [6] (./Auswertung.tex (./tabelleverzögerung.tex)
-<figverzögerung.pdf, id=56, 462.52798pt x 346.89601pt>
+ [6<./schaltung.pdf>]) [7] (./Auswertung.tex
+(./tabelleverzögerung.tex)
+<figverzögerung.pdf, id=59, 462.52798pt x 346.89601pt>
 File: figverzögerung.pdf Graphic file (type pdf)
 
 <use figverzögerung.pdf>
@@ -2310,11 +2317,11 @@ Package luatex.def Info: figverzögerung.pdf used on input line 9.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7] (./tabellekalibrierung.tex
+[8] (./tabellekalibrierung.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) <figkalibrierung.pdf, id=60, 462.52798pt x 346.89601pt>
+) <figkalibrierung.pdf, id=63, 462.52798pt x 346.89601pt>
 File: figkalibrierung.pdf Graphic file (type pdf)
 
 <use figkalibrierung.pdf>
@@ -2324,28 +2331,31 @@ Package luatex.def Info: figkalibrierung.pdf used on input line 47.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8<./figverzögerung.pdf>]
+[9<./figverzögerung.pdf>]
 Overfull \vbox (40.04349pt too high) has occurred while \output is active []
 
 
-[9<./figkalibrierung.pdf>] <figmyonen.pdf, id=172, 1445.4pt x 722.7pt>
+[10<./figkalibrierung.pdf>] <figmyonen.pdf, id=175, 1445.4pt x 722.7pt>
 File: figmyonen.pdf Graphic file (type pdf)
 
 <use figmyonen.pdf>
 Package luatex.def Info: figmyonen.pdf used on input line 72.
 (luatex.def)             Requested size: 418.25555pt x 209.1255pt.
- [10<./figmyonen.pdf>]) [11] (./Diskussion.tex
+ [11<./figmyonen.pdf>]) [12] (./Diskussion.tex
 
-LaTeX Warning: Citation 'Demtröder' on page 12 undefined on input line 8.
+LaTeX Warning: Citation 'Demtröder' on page 13 undefined on input line 8.
 
 )
 
-LaTeX Warning: Empty bibliography on input line 33.
+LaTeX Warning: Empty bibliography on input line 34.
 
-[12] (./protokoll.aux
+[13] (./protokoll.aux
 Language ngerman already loaded; id is 8)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2358,15 +2368,15 @@ Package logreq Info: Writing requests to 'protokoll.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 31006 strings out of 494481
+ 31015 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 607 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 72 glue_spec, 16 attr
+ 622 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 75 glue_spec, 16 attr
 ibute_list, 1 write nodes
    avail lists: 1:3,2:762,3:113,4:64,5:276,6:4308,7:930,8:70,9:380,10:28,11:617,
 12:1
- 34261 multiletter control sequences out of 65536+600000
- 58 fonts using 13285063 bytes
+ 34268 multiletter control sequences out of 65536+600000
+ 58 fonts using 13285167 bytes
  67i,14n,106p,8836b,2612s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.ot
@@ -2378,10 +2388,10 @@ mroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/l
 m/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm
 /lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public
 /lm/lmroman12-regular.otf>
-Output written on protokoll.pdf (12 pages, 217167 bytes).
+Output written on protokoll.pdf (13 pages, 217719 bytes).
 
-PDF statistics: 296 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
+PDF statistics: 299 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

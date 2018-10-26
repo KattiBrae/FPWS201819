@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  26 OCT 2018 11:04
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  26 OCT 2018 11:07
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.221 seconds
+luaotfload | main : initialization completed in 0.264 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2363,8 +2363,8 @@ Here is how much of LuaTeX's memory you used:
  607 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 72 glue_spec, 16 attr
 ibute_list, 1 write nodes
-   avail lists: 1:3,2:762,3:128,4:64,5:276,6:4305,7:930,8:107,9:380,10:28,11:619
-,12:2
+   avail lists: 1:3,2:762,3:113,4:64,5:276,6:4308,7:930,8:70,9:380,10:28,11:617,
+12:1
  34261 multiletter control sequences out of 65536+600000
  58 fonts using 13285063 bytes
  67i,14n,106p,8836b,2612s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -2378,7 +2378,7 @@ mroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/l
 m/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm
 /lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public
 /lm/lmroman12-regular.otf>
-Output written on protokoll.pdf (12 pages, 217264 bytes).
+Output written on protokoll.pdf (12 pages, 217167 bytes).
 
 PDF statistics: 296 PDF objects out of 1000 (max. 8388607)
  129 compressed objects within 2 object streams

@@ -1,5 +1,5 @@
 \subsection{Einregeln der optimalen Verzögerungszeit}
-Da die Leitungen von den SEV zur Koinzidenzschaltung nicht zwingend gleich schnell sind, wird die Verzögerung zwischen den beiden Seiten optimiert.
+Da die verwendeten SEV unterschiedliche elektrische Eigenschaften haben und da die Leitungen von den SEV zur Koinzidenzschaltung nicht zwingend gleich schnell sind, wird die Verzögerung zwischen den beiden Seiten optimiert.
 Die Verzögerungszeit kann in beiden Leitungen separat erhöht werden, indem Kabel mit definierten Verzögerungen zugeschaltet werden.
 Eine Verzögerung bei der einen Kabelleitung bewirkt eine relative 'Beschleunigung' der anderen Kabelleitung.
 Die Zählrate $N$ wird in Abhängigkeit verschiedener Verzögerungszeiten $T_{\text{VZ}}$ gemessen (Tabelle \ref{tab:verzögerung}, Abbildung \ref{fig:verzögerung}).
@@ -14,7 +14,7 @@ Es wird eine Ausgleichsrechnung der Form
 \begin{equation*}
   N = -a \left( T_{\text{VZ}} + \Delta T_{\text{VZ}} \right)^4+N_{\text{max}}
 \end{equation*}
-mit Python 3.6.3 vorgenommen.
+mit Python 3.6.3 (scipy.optimize, $curve_fit$) vorgenommen.
 Die Parameter ergeben sich zu
 \begin{align*}
   a                     &=& \SI{  4.8215 \pm 0.2361 e32}{\frac{1}{s^4}}\\
@@ -66,7 +66,7 @@ Mit diesen $b$ und $\Delta t_{0}$ wird im folgenden aus dem Channel die jeweilig
 \FloatBarrier
 
 \subsection{Messung der Lebensdauer}
-Die Messdaten zur Lebensdauern der Myonen sind in Abbildung \ref{fig:myonen} aufgetragen.
+Die Messdaten zur Lebensdauern der Myonen sind in Abbildung \ref{fig:myonen} zu nächst als e-Funktion aufgetragen, in Abbildung \ref{fig:lnmyonen} sind die Messwerte halblogarithmisch aufgetragen.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{figmyonen.pdf}
@@ -92,8 +92,9 @@ bringt die Parameter
 %dU0     = 0.31446226
 Aus dem Parameter $\lambda$ wird die Lebensdauer $\tau$ bestimmt:
 \begin{equation*}
-  \tau_{\text{exp}}=\frac{1}{\lambda}=\SI{1.8932e-06}{s}.
+  \tau_{\text{exp}}=\frac{1}{\lambda}=\SI{1.8932 \pm 0.0668 e-06}{s}.
 \end{equation*}
+Die Unsicherheit von $\tau$ wird als Gaußfehler berechnet.
 Der Parameter $U_{0,exp}$ entspricht der gemessenen Untergrundrate.
 Die Untergrundrate wird auch auf anderem Weg berechnet.
 Hier werden weitere Größen der Messung benötigt:
@@ -103,13 +104,14 @@ Hier werden weitere Größen der Messung benötigt:
   \text{Zählrate Start}    && N_{\text{Start}}  &=\SI{1397196}{} \\
   \text{Zählrate Stop}     && N_{\text{Stop}}   &=\SI{4719}{} \\
 \end{align*}
-Hierzu wird berechnet, wie viele Myonen $N_{\text{S}}$ pro Suchzeit $T_{\text{S}}$ in die Apparatur kommen. Der Fehler wird als Poissonfehler berechnet.
+Hierzu wird berechnet, wie viele Myonen $N_{\text{S}}$ durchschnittlich pro Suchzeit $T_{\text{S}}$ in die Apparatur kommen.
+Der Fehler wird als Poissonfehler berechnet.
 \begin{equation*}
-  N_{\text{S}} = T_{\text{S}}\frac{N_{\text{Start}} \pm \sqrt{ N_{\text{Start}}} }{T_{\text{G}}} = \SI{0.00019 \pm 0.01374}{}.
+  N_{\text{S}} = T_{\text{S}}\frac{N_{\text{Start}} \pm \sqrt{ N_{\text{Start}}} }{T_{\text{G}}} = \SI{0.00018890 \pm 0.01374398}{}.
 \end{equation*}
-Mit dieser Zählrate wird die Wahrscheinlichkeit $P$ berechnet, dass sich genau ein Myon in der Apparatur befindet.
+Mit dieser Zählrate wird die Wahrscheinlichkeit $P$, dass genau ein Myon in einer Suchzeit auftritt, berechnet.
 \begin{equation*}
-  P(1) = N_{\text{S}} \exp{(-N_{\text{S}})} = \SI{0.00019 \pm 0.01374}{}.
+  P(1) = N_{\text{S}} \exp{(-N_{\text{S}})} = \SI{0.00018886 \pm 0.01374269}{}.
 \end{equation*}
 Die Untergrundrate berechnet sich dann mit der Anzahl der einbezogenen Channel $C=\SI{508}{}$ durch
 \begin{equation*}
@@ -123,8 +125,31 @@ Die Untergrundrate berechnet sich dann mit der Anzahl der einbezogenen Channel $
 %dNS = 0.0137439827129
 %dP  = 0.0137426846752
 %dU  = 0.720723017881
+
 %Fehler nach abgewandeltem Poissonfehler
 %dNS = 0.000137439827129
 %dP  = 0.000137426846752
 %dU  = 0.227912629861
+
+
+
+
+
+Die logarithmierte Häufigkeit der Myonenzerfälle ist in Abbildung \ref{fig:lnmyonen} gegen die Lebensdauer aufgetragen.
+Zusätzlich ist eine lineare Regression der Form
+\begin{equation*}
+\ln{ \left( \frac{N-U_{0}}{N_{0}} \right)}= -\lambda t +c
+\end{equation*}
+geplottet.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{figlnmyonen.pdf}
+  \caption{Logarithmierte Häufigkeit der Myonenzerfälle in Abhängigkeit ihrer Lebensdauer}
+  \label{fig:lnmyonen}
+\end{figure}
+Als Parameter ergeben sich
+\begin{align*}
+ \lambda  &=& \SI{0.00671151 \pm 0.00016479 e06}{\frac{1}{s}}\\
+ c        &=& \SI{0.05416215 \pm 0.00081439}{}.\\
+\end{align*}
 \FloatBarrier

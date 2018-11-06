@@ -67,3 +67,23 @@ B=5.194416685028387
 print(B)
 dB=np.sqrt(B)
 print(dB)
+
+
+print('tau fehler')
+lam=0.5282e06
+dlambda=0.01864e06
+#dt/dl=-1/lam**2
+dtau=np.sqrt( (-1/lam**2)**2 * (dlambda)**2 )
+print(dtau)
+
+
+y, x = np.loadtxt('myonen.txt', unpack=True,delimiter=',')
+A=np.sum(y)
+print(A)
+
+
+print('Abweichungen Zählraten')
+a=4648
+b=4719
+f=a-b
+print(f)

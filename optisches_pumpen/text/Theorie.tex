@@ -1,1 +1,65 @@
-Hier könnte Ihre Werbung stehen.
+Grundlagen\\
+- äußere Schalenelektronen für gewöhnlich nach Boltzmann (thermisch) verteilt\\
+- optisches Pumpen sorgt für nicht-thermische Verteilung\\
+
+Landé-Faktor\\
+- Materialeigenschaft -> Materialbestimmung über diese Messung möglich\\
+- Verhältnisfaktor für das magnetische Moment von Spin, Bahndrehimpuls, etc. zum Bohrschen Magneton\\
+- Bohrsches Magneton: magnetisches Moment für Elektron mit l=0????\\
+- Herleitung: Winkelbeziehungen etc\\
+\begin{equation}
+  g_{\text{J}}= \frac{\left(\mu_{\text{S}} +1 \right)J\left(J+1\right) + \left(\mu_{\text{s}}-1\right) \left( S\left(S+1\right)-L\left(L-1\right) \right)   }{2J\left(J+1\right)}
+\label{eqn:landej}
+\end{equation}
+
+Zeeman-Effekt\\
+- Aufspaltung der Hyperfeinstruktur durch ein äußeres Magnetfeld\\
+- Aufspaltung proportional zum Landé-Faktor\\
+
+Kernspin\\
+- Eigendrehimpuls des Atomkerns\\
+- neuer Landé-Faktor\\
+\begin{equation}
+  g_{\text{F}}= g_{\text{J}} \frac{ F\left(F+1\right) + J\left(J+1\right) - I\left(I-1\right)  }{2 \sqrt{F\left(F+1\right)}}
+\label{eqn:landef}
+\end{equation}
+
+Idee des optischen Pumpens\\
+- Übergänge der Elektronen auf den Energieniveaus durch Anregung\\
+- um bestimmte Übergänge zu produzieren, bestimmtes Spektrallicht einstrahlen ($D_{1}$-Licht)\\
+  --- Anregung/Quantensprünge $E_{2}-E_{1}=h \nu$\\
+- um GANZ bestimmte Übergänge zu produzieren, bestimmtes polarisiertes Licht einstrahlen ($\sigma^{+}$-Licht)\\
+  ——- Auswahlregeln\\
+- angeregte Zustände fallen in alle Grundzustände zurück\\
+- $\sigma^{+}$ pumpt (über die genannten Umwege) die Elektronen aus dem niedrigerem Grundzustand in den höheren Grundzustand\\
+
+Optisches Pumpen + Aufbau\\
+- zunächst sind alle Anregungen möglich, da die Elektronen noch auf allen Niveaus vorhanden sind\\
+- das Licht wird also vollständig absorbiert\\
+- mit der Zeit werden die Elektronen in einem Energieniveau gesammelt\\
+- es sind keine Absorptionen möglich\\
+- das Gas wird zunehmend transparent\\
+
+Emission\\
+- spontane Emission: Elektron fällt von alleine zurück (statistisch)\\
+  --- Wahrscheinlich bei hohen Frequenzen des RF-Felds\\
+- induzierte Emission: Elektron fällt zurück entlang der Energie der eingestrahlten Photonen (RF-Quanten)\\
+  --- Wahrscheinlich bei niedrigen Frequenzen des RF-Felds\\
+- induzierte Emission bei 'Resonanzstelle' (passendes RF-Feld mit der richtigen Energie für induzierte Emission)\\
+\begin{equation}
+  h \nu = g_{\text{J}} \mu_{\text{B}} \Delta M_{\text{J}} B_{\text{m}} \Leftrightarrow B_{\text{m}} = \frac{4 \pi m_{0}}{e_{0} g_{\text{J}}} \nu
+\label{eqn:resonanz}
+\end{equation}
+
+Optisches Pumpen + Kernspin\\
+- Energie der Spektrallinie überdeckt alle Hyperfeinstrukturen und Zeemaneffekt\\
+- $\sigma^{+}$-Licht lässt nur $\Delta M_{\text{F}}= +1$ zu, also sammeln sich die Elektronen bei $^{2}S_{1/2}, F=2, M_{\text{F}}=+2$ \\
+
+Quadratischer Zeemaneffekt/Breit-Rabi-Formel\\
+- große B-Felder\\
+- Wechselwirkung Spin-Bahn-Kopplung\\
+- Wechselwirkung magnetische Momente\\
+\begin{equation}
+U_{\text{HF}}= g_{\text{F}} \mu_{\text{B}} B + g_{\text{F}}^2 \mu_{\text{B}}^2 B^2 \frac{(1- 2M_{\text{F}})}{\Delta E_{\text{HF}}}
+\label{eqn:quadzeeman}
+\end{equation}

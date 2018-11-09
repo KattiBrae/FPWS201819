@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  8 NOV 2018 08:05
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  9 NOV 2018 08:12
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.248 seconds
+luaotfload | main : initialization completed in 0.226 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2291,57 +2291,52 @@ Language ngerman already loaded; id is 8)
 
 \openout5 = protokoll.toc
  [2] (./Zielsetzung.txt)
-(./Theorie.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--4
+(./Theorie.tex(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cach
+e/generic/fonts/otl/lmroman8-regular.luc)(load luc: /Users/katti/Library/texlive
+/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
+Underfull \hbox (badness 10000) in paragraph at lines 22--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--10
-
- []
-
-(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
-s/otl/lmroman8-regular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-va
-r/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
-Underfull \hbox (badness 10000) in paragraph at lines 15--18
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--22
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
 
-Overfull \hbox (2.96667pt too wide) in paragraph at lines 27--35
+Overfull \hbox (2.96667pt too wide) in paragraph at lines 45--53
 \TU/lmr/m/n/10.95 - um be-stimm-te Über-gän-ge zu pro-du-zie-ren, be-stimm-te
 s Spek-tral-licht ein-strah-len ($\l_fontspec_font 𝐷[]$\TU/lmr/m/n/10.95 -Li
 cht) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--42
+Underfull \hbox (badness 10000) in paragraph at lines 45--53
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
+Underfull \hbox (badness 10000) in paragraph at lines 54--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
+Underfull \hbox (badness 10000) in paragraph at lines 61--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--62
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
@@ -2355,7 +2350,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
 
-) [5] (./Auswertung.tex) [6] (./Diskussion.tex)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 25--21
+
+ []
+
+[5] (./Auswertung.tex) [6] (./Diskussion.tex)
 
 LaTeX Warning: Empty bibliography on input line 34.
 
@@ -2375,28 +2375,30 @@ Package logreq Info: Writing requests to 'protokoll.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30746 strings out of 494481
+ 30771 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 600 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 14 attribute, 74 glue_spec, 14 attr
+ 617 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 17 attribute, 75 glue_spec, 17 attr
 ibute_list, 1 write nodes
-   avail lists: 1:3,2:284,3:107,4:27,5:136,6:1624,7:364,8:62,9:121,10:8,11:211,1
-2:1
- 34034 multiletter control sequences out of 65536+600000
- 50 fonts using 10668559 bytes
- 67i,7n,106p,8836b,789s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
-th.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-reg
-ular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latin
-modern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmr
-oman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/
-lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/l
-mroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/l
-m/lmroman12-regular.otf>
-Output written on protokoll.pdf (7 pages, 37981 bytes).
+   avail lists: 1:3,2:318,3:129,4:32,5:160,6:1862,7:423,8:66,9:204,10:14,11:234,
+12:1
+ 34051 multiletter control sequences out of 65536+600000
+ 58 fonts using 13285323 bytes
+ 67i,10n,106p,8836b,789s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
+f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
+otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/lat
+inmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-m
+ath/latinmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/p
+ublic/lm/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pu
+blic/lm/lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype
+/public/lm/lmroman12-regular.otf>
+Output written on protokoll.pdf (7 pages, 44260 bytes).
 
-PDF statistics: 75 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+PDF statistics: 89 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

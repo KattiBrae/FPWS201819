@@ -29,8 +29,8 @@ Entsprechend ist das magnetische Moment des Bahndrehimpuls $\vec{L}$
 \end{align*}
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.3\textwidth]{magmom.pdf}
-  \caption{Darstellung der verschiedenen magnetischen Momente von Spin, Bahndrehimpuls und Gesamtdrehimpuls}
+  \includegraphics[width=0.3\textwidth]{magmom1.png}
+  \caption{Darstellung der verschiedenen magnetischen Momente von Spin, Bahndrehimpuls und Gesamtdrehimpuls \cite{1}}
   \label{fig:magmom}
 \end{figure}
 Die Kopplung von Spin und Bahndrehimpuls ergibt den Gesamtdrehimpuls $\vec{J}$ und das zugehörige magnetische Moment $\vec{\mu_{\text{J}}}$:
@@ -63,8 +63,8 @@ Der Zeemaneffekt beschreibt die Aufspaltung der vorhandenen Energieniveaus durch
 Die magnetischen Momente wechselwirken mit dem äußeren Magnetfeld $\vec{B}$ und es haben nur die Beiträge entlang der $\vec{J}$-Achse einen Effekt.
 Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ein ganzzahliges Vielfaches $M_{\text{J}}$ von $g_{\text{J}} \mu_{\text{B}} B$:
 \begin{equation}
-  E_{\text{mag}} = -\vec{\mu_{\text{J}}} \vec{B} \Leftarrow E_{\text{mag}} = M_{\text{J}} g_{\text{J}} \mu_{\text{B}} B.
-  \label{eqn:energie}
+  E_{\text{Zeeman}} = -\vec{\mu_{\text{J}}} \vec{B} \Leftarrow E_{\text{Zeeman}} = M_{\text{J}} g_{\text{J}} \mu_{\text{B}} B.
+  \label{eqn:zeeman}
 \end{equation}
 %
 %Kernspin\\
@@ -76,10 +76,25 @@ Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ei
 %\end{equation}
 %
 Der Kernspin $\vec{I}$ entspricht dem Eigendrehimpuls des Atomkerns und führt zur Aufspaltung der Energieniveaus im Rahmen der Hyperfeinstruktur.
+Die Hyperfeinstruktur wird durch den Zeemaneffekt weiter aufgespalten (Abb. \ref{fig:kernspin}).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{kernspin1.png}
+  \caption{Darstellung der Aufspaltung der Energieniveaus durch die Hyperfeinstruktur und den Zeemaneffekt \cite{1}}
+  \label{fig:kernspin}
+\end{figure}
 Der Gesamtdrehimpuls $\vec{J}$ des Elektrons und der Kernspin $\vec{I}$ koppeln zu dem Gesamtdrehimpuls $\vec{F}$ des Atoms:
-\begin{equation*}
-  \vec{F}=\vec{J}+\vec{I}
-\end{equation*}
+\begin{align*}
+  \vec{F}=\vec{J}+\vec{I} && mit && |\vec{\mu_{\text{F}}}|= g_{\text{F}} \mu_{\text{B}} \sqrt{F(F+1)}.\\
+\end{align*}
+Der Kernspin beeinflusst auch den Landé-Faktor $g_{\text{F}}$, der sich nun wie folgt berechnet:
+\begin{equation}
+  \mu_{\text{F}}= g_{\text{F}} \mu_{\text{B}} \frac{F(F+1) + J(J+1) - I(I+1)}{2 \sqrt{F(F+1)}}
+  \label{eqn:landef}
+\end{equation}
+
+
+
 
 
 

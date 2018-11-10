@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  9 NOV 2018 15:26
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  9 NOV 2018 17:15
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.235 seconds
+luaotfload | main : initialization completed in 0.231 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2294,53 +2294,69 @@ Language ngerman already loaded; id is 8)
 (./Theorie.tex(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cach
 e/generic/fonts/otl/lmroman8-regular.luc)(load luc: /Users/katti/Library/texlive
 /2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
-<magmom.pdf, id=13, 229.75385pt x 506.38777pt>
-File: magmom.pdf Graphic file (type pdf)
- <use magmom.pdf>
-Package luatex.def Info: magmom.pdf used on input line 32.
-(luatex.def)             Requested size: 125.47794pt x 276.55923pt.
+<magmom1.png, id=13, 305.14pt x 517.935pt>
+File: magmom1.png Graphic file (type png)
+ <use magmom1.png>
+Package luatex.def Info: magmom1.png used on input line 32.
+(luatex.def)             Requested size: 125.47794pt x 212.97905pt.
+
+
+LaTeX Warning: Citation '1' on page 3 undefined on input line 33.
+
+
+LaTeX Warning: Citation '1' on page 3 undefined on input line 33.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+[3] <kernspin1.png, id=22, 934.49126pt x 784.9325pt>
+File: kernspin1.png Graphic file (type png)
+ <use kernspin1.png>
+Package luatex.def Info: kernspin1.png used on input line 82.
+(luatex.def)             Requested size: 418.25555pt x 351.32397pt.
 
- []
+
+LaTeX Warning: Citation '1' on page 4 undefined on input line 83.
 
 
-Overfull \hbox (2.96667pt too wide) in paragraph at lines 77--85
+LaTeX Warning: Citation '1' on page 4 undefined on input line 83.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4<./magmom1.png>]
+Overfull \hbox (2.96667pt too wide) in paragraph at lines 101--109
 \TU/lmr/m/n/10.95 - um be-stimm-te Über-gän-ge zu pro-du-zie-ren, be-stimm-te
 s Spek-tral-licht ein-strah-len ($\l_fontspec_font 𝐷[]$\TU/lmr/m/n/10.95 -Li
 cht) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--85
+Underfull \hbox (badness 10000) in paragraph at lines 101--109
 
  []
 
-[4<./magmom.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 86--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--99
+[5<./kernspin1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--107
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--112
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
 
  []
 
-) [5] (./Durchführung.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
+
+ []
+
+) [6] (./Durchführung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--17
 
  []
@@ -2355,11 +2371,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--21
 
  []
 
-[6] (./Auswertung.tex) [7] (./Diskussion.tex)
+[7] (./Auswertung.tex) [8] (./Diskussion.tex)
 
 LaTeX Warning: Empty bibliography on input line 34.
 
-[8] (./protokoll.aux
+[9] (./protokoll.aux
 Language ngerman already loaded; id is 8)
 
 LaTeX Warning: There were undefined references.
@@ -2375,16 +2391,17 @@ Package logreq Info: Writing requests to 'protokoll.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30787 strings out of 494481
+ 30976 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 622 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 16 attribute, 75 glue_spec, 16 attr
+ 630 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 18 attribute, 75 glue_spec, 18 attr
 ibute_list, 1 write nodes
-   avail lists: 1:3,2:787,3:134,4:33,5:215,6:1736,7:628,8:75,9:547,10:14,11:225,
+   avail lists: 1:3,2:795,3:123,4:30,5:215,6:1739,7:629,8:75,9:548,10:14,11:194,
 12:1
- 34063 multiletter control sequences out of 65536+600000
- 58 fonts using 13285167 bytes
- 67i,12n,106p,8836b,789s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 34248 multiletter control sequences out of 65536+600000
+ 58 fonts using 13285115 bytes
+ 67i,12n,106p,8836b,3002s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
 f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
 otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2395,10 +2412,10 @@ ic/lm/lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/p
 ublic/lm/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pu
 blic/lm/lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype
 /public/lm/lmroman12-regular.otf>
-Output written on protokoll.pdf (8 pages, 81784 bytes).
+Output written on protokoll.pdf (9 pages, 122049 bytes).
 
 PDF statistics: 106 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

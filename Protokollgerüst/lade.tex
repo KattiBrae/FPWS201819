@@ -2,6 +2,21 @@
 
 \usepackage{polyglossia}
 \setmainlanguage{german}
+%%%%%%%%%%%%%% Kopfzeile %%%%%%%%%%%
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+%\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+
+\ihead{\Titel}                                            %oben innen
+\chead{\DatumAb}                                          %oben mitte
+\ohead{\headmark}\automark{section}                       %oben außen
+
+%\ifoot{Fußzeile innen}                                   %unten innen
+\cfoot{\thepage\ von \pageref{LastPage}}                  %unten mitte
+%\ofoot{Fußzeile rechts}                                  %unten außen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{placeins}
 \usepackage{fontspec}

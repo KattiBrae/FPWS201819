@@ -3,9 +3,9 @@
 \select@language {german}
 \contentsline {section}{\numberline {1}Zielsetzung}{3}
 \contentsline {section}{\numberline {2}Theorie}{3}
-\contentsline {section}{\numberline {3}Aufbau und Durchführung}{7}
-\contentsline {subsection}{\numberline {3.1}Aufbau der Messapparatur}{7}
-\contentsline {subsection}{\numberline {3.2}Vorbereitung}{7}
-\contentsline {subsection}{\numberline {3.3}Messung der Resonanzstellen}{7}
-\contentsline {section}{\numberline {4}Auswertung}{8}
-\contentsline {section}{\numberline {5}Diskussion}{9}
+\contentsline {section}{\numberline {3}Aufbau und Durchführung}{9}
+\contentsline {subsection}{\numberline {3.1}Aufbau der Messapparatur}{9}
+\contentsline {subsection}{\numberline {3.2}Vorbereitung}{9}
+\contentsline {subsection}{\numberline {3.3}Messung der Resonanzstellen}{10}
+\contentsline {section}{\numberline {4}Auswertung}{11}
+\contentsline {section}{\numberline {5}Diskussion}{12}

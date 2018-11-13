@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  12 NOV 2018 08:40
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  13 NOV 2018 19:17
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.259 seconds
+luaotfload | main : initialization completed in 0.253 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -1518,9 +1518,16 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count374
 \@quotereset=\count375
-No file protokoll.aux.
+(./protokoll.aux
+luatex-hyphen: loading patterns and exceptions for: german (\language4)
+luatex-hyphen: info: no hyphenation exceptions for this language
+Language ngerman already loaded; id is 8
 
+LaTeX Warning: Label `fig:übergänge' multiply defined.
+
+)
 \openout1 = protokoll.aux
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
@@ -1537,6 +1544,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
+
 Language ngerman already loaded; id is 8
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
@@ -2300,8 +2308,8 @@ Package microtype Info: Loading generic settings for font family
 (load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
 s/otl/lmsans10-bold.luc)
 Package tocbasic Info: character protrusion at toc deactivated on input line 5.
-
-No file protokoll.toc.
+ (./protokoll.toc
+Language ngerman already loaded; id is 8)
 \tf@toc=\write5
 
 \openout5 = protokoll.toc
@@ -2313,7 +2321,12 @@ LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 8.
 [2] (./Zielsetzung.txt) (./Theorie.tex(load luc: /Users/katti/Library/texlive/20
 17/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc)(load luc: /Use
 rs/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-
-regular.luc) <magmom1.png, id=14, 305.14pt x 517.935pt>
+regular.luc)
+Underfull \hbox (badness 10000) in paragraph at lines 10--23
+
+ []
+
+<magmom1.png, id=15, 305.14pt x 517.935pt>
 File: magmom1.png Graphic file (type png)
  <use magmom1.png>
 Package luatex.def Info: magmom1.png used on input line 32.
@@ -2329,19 +2342,9 @@ LaTeX Warning: Citation '1' on page 3 undefined on input line 33.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `fig:magmom' on page 3 undefined on input line 40.
-
-
-LaTeX Warning: Reference `fig:magmom' on page 3 undefined on input line 41.
-
-
 LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 51.
 
-[3]
-
-LaTeX Warning: Reference `fig:kernspin' on page 4 undefined on input line 79.
-
-<kernspin1.png, id=24, 934.49126pt x 784.9325pt>
+[3] <kernspin1.png, id=24, 934.49126pt x 784.9325pt>
 File: kernspin1.png Graphic file (type png)
  <use kernspin1.png>
 Package luatex.def Info: kernspin1.png used on input line 82.
@@ -2359,101 +2362,138 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 89.
 
-[4<./magmom1.png>] <doublett.pdf, id=29, 827.23508pt x 516.34317pt>
-File: doublett.pdf Graphic file (type pdf)
+[4<./magmom1.png>]
+Overfull \hbox (50.51959pt too wide) in paragraph at lines 119--127
+ [][] 
+ []
 
-<use doublett.pdf>
-Package luatex.def Info: doublett.pdf used on input line 109.
+<doublett.pdf, id=29, 827.23508pt x 516.34317pt>
+File: doublett.pdf Graphic file (type pdf)
+ <use doublett.pdf>
+Package luatex.def Info: doublett.pdf used on input line 137.
 (luatex.def)             Requested size: 200.76086pt x 125.31154pt.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 110.
+(Font)              scaled to size 10.00015pt on input line 138.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 7.0001pt on input line 110.
+(Font)              scaled to size 7.0001pt on input line 138.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
-(Font)              scaled to size 5.00008pt on input line 110.
+(Font)              scaled to size 5.00008pt on input line 138.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 110.
+(Font)              scaled to size 9.99985pt on input line 138.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 6.9999pt on input line 110.
+(Font)              scaled to size 6.9999pt on input line 138.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 4.99992pt on input line 110.
-(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
-s/otl/lmroman7-regular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-va
-r/luatex-cache/generic/fonts/otl/lmroman5-regular.luc)
+(Font)              scaled to size 4.99992pt on input line 138.
+
 <sigmaplus.pdf, id=30, 824.0904pt x 562.59201pt>
 File: sigmaplus.pdf Graphic file (type pdf)
  <use sigmaplus.pdf>
-Package luatex.def Info: sigmaplus.pdf used on input line 115.
+Package luatex.def Info: sigmaplus.pdf used on input line 143.
 (luatex.def)             Requested size: 200.76086pt x 137.05077pt.
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 181.
+
+[5<./kernspin1.png>]
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 181.
+
+[6<./doublett.pdf><./sigmaplus.pdf>]
+<transparenz.pdf, id=64, 839.04482pt x 418.9911pt>
+File: transparenz.pdf Graphic file (type pdf)
+ <use transparenz.pdf>
+Package luatex.def Info: transparenz.pdf used on input line 197.
+(luatex.def)             Requested size: 418.25555pt x 208.86209pt.
+
+
+LaTeX Warning: Citation '1' on page 7 undefined on input line 198.
+
+
+LaTeX Warning: Citation '1' on page 7 undefined on input line 198.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<übergänge.pdf, id=65, 845.04686pt x 597.50786pt>
+File: übergänge.pdf Graphic file (type pdf)
+ <use übergänge.pdf>
+Package luatex.def Info: übergänge.pdf used on input line 216.
+(luatex.def)             Requested size: 418.25555pt x 295.73538pt.
+
+
+LaTeX Warning: Citation '1' on page 7 undefined on input line 217.
+
+
+LaTeX Warning: Citation '1' on page 7 undefined on input line 217.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--133
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 232.
 
+[7])
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 16.
+
+[8<./transparenz.pdf>] (./Durchführung.tex
+<aufbau.pdf, id=85, 841.5224pt x 482.17126pt>
+File: aufbau.pdf Graphic file (type pdf)
+ <use aufbau.pdf>
+Package luatex.def Info: aufbau.pdf used on input line 4.
+(luatex.def)             Requested size: 418.25555pt x 239.65036pt.
+
+
+LaTeX Warning: Citation '1' on page 9 undefined on input line 5.
+
+
+LaTeX Warning: Citation '1' on page 9 undefined on input line 5.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (41.44182pt too wide) in paragraph at lines 8--9
+\TU/lmr/m/n/10.95 Der Auf-bau setzt sich zu-sam-men aus Spek-tral-lam-pe, Kol-l
+i-ma-tor (Sam-mel-lin-se), $\l_fontspec_font 𝐷[]$\TU/lmr/m/n/10.95 -Interfer
+enzfilter,
  []
 
 
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 133.
-
-[5<./kernspin1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 134--140
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
 )
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 16.
-
-[6<./doublett.pdf><./sigmaplus.pdf>] (./Durchführung.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--17
+Underfull \hbox (badness 10000) in paragraph at lines 33--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--23
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 21.
 
- []
+[9<./übergänge.pdf>]
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 25--21
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 21.
 
- []
+[10<./aufbau.pdf>] (./Auswertung.tex)
 
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 26.
 
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 21.
-
-[7] (./Auswertung.tex)
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 26.
-
-[8] (./Diskussion.tex)
+[11] (./Diskussion.tex)
 
 LaTeX Warning: Empty bibliography on input line 34.
 
 
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 44.
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 44.
 
-[9] (./protokoll.aux
-luatex-hyphen: loading patterns and exceptions for: german (\language4)
-luatex-hyphen: info: no hyphenation exceptions for this language
+[12] (./protokoll.aux
 Language ngerman already loaded; id is 8)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2466,32 +2506,32 @@ Package logreq Info: Writing requests to 'protokoll.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32506 strings out of 494481
+ 32541 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 615 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 18 attribute, 72 glue_spec, 18 attr
+ 634 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 19 attribute, 75 glue_spec, 19 attr
 ibute_list, 1 write nodes
-   avail lists: 1:3,2:985,3:137,4:28,5:266,6:1860,7:788,8:75,9:649,10:14,11:209,
-12:1
- 35746 multiletter control sequences out of 65536+600000
- 78 fonts using 19045611 bytes
- 67i,19n,106p,8836b,2969s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:3,2:1145,3:116,4:39,5:360,6:3752,7:1577,8:95,9:650,10:20,11:42
+0,12:1
+ 35761 multiletter control sequences out of 65536+600000
+ 76 fonts using 18782007 bytes
+ 67i,19n,106p,8836b,2981s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
 f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
 otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/lat
 inmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-m
 ath/latinmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publ
 ic/lm/lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/p
-ublic/lm/lmroman10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/p
 ublic/lm/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pu
 blic/lm/lmromanslant10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/ope
 ntype/public/lm/lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/
 opentype/public/lm/lmroman12-regular.otf>
-Output written on protokoll.pdf (9 pages, 249324 bytes).
+Output written on protokoll.pdf (12 pages, 691128 bytes).
 
-PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+PDF statistics: 232 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

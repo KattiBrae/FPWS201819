@@ -16,7 +16,7 @@ Das Prinzip des optischen Pumpens besetzt die Niveaus entgegen dieser thermische
 %- Bohrsches Magneton: magnetisches Moment für Elektron mit l=1????\\
 %- Herleitung: Winkelbeziehungen etc\\
 %
-Der Landé-Faktor $g$ ist eine Materialeigenschaft, die zur Stoff- und Isotopenbestimmung benutzt werden kann.
+\\Der Landé-Faktor $g$ ist eine Materialeigenschaft, die zur Stoff- und Isotopenbestimmung benutzt werden kann.
 Das Bohr'sche Magneton ist der Betrag des magnetischem Momentes $\vec{\mu}$ eines Elektrons mit Bahndrehimpuls $L=1$.
 Der Landé-Faktor ist ein Verhältnisfaktor für die magnetischen Momente des Spins $\vec{S}$, des Bahndrehimpulses $\vec{L}$, des Gesamtdrehimpulses $\vec{J}$, etc. zum Bohr'schen Magneton $\mu_{\text{B}}$:
 Das magnetische Moment zu dem Spin $\vec{S}$ sieht wie folgt aus:
@@ -59,11 +59,11 @@ Schlussendlich ergibt sich:
 %- Aufspaltung der Hyperfeinstruktur durch ein äußeres Magnetfeld\\
 %- Aufspaltung proportional zum Landé-Faktor\\
 %
-Der Zeemaneffekt beschreibt die Aufspaltung der vorhandenen Energieniveaus durch ein äußeres Magnetfeld.
+\\Der Zeemaneffekt beschreibt die Aufspaltung der vorhandenen Energieniveaus durch ein äußeres Magnetfeld.
 Die magnetischen Momente wechselwirken mit dem äußeren Magnetfeld $\vec{B}$ und es haben nur die Beiträge entlang der $\vec{J}$-Achse einen Effekt.
 Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ein ganzzahliges Vielfaches $M_{\text{J}}$ von $g_{\text{J}} \mu_{\text{B}} B$:
 \begin{equation}
-  E_{\text{Zeeman}} = -\vec{\mu_{\text{J}}} \vec{B} \Leftarrow E_{\text{Zeeman}} = M_{\text{J}} g_{\text{J}} \mu_{\text{B}} B.
+  E_{\text{Zeeman}} = -\vec{\mu_{\text{J}}} \vec{B} \Rightarrow E_{\text{Zeeman}} = g_{\text{J}} \mu_{\text{B}} M_{\text{J}} B.
   \label{eqn:zeeman}
 \end{equation}
 %
@@ -75,7 +75,7 @@ Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ei
 %\label{eqn:landef}
 %\end{equation}
 %
-Der Kernspin $\vec{I}$ entspricht dem Eigendrehimpuls des Atomkerns und führt zur Aufspaltung der Energieniveaus im Rahmen der Hyperfeinstruktur.
+\\Der Kernspin $\vec{I}$ entspricht dem Eigendrehimpuls des Atomkerns und führt zur Aufspaltung der Energieniveaus im Rahmen der Hyperfeinstruktur.
 Die Hyperfeinstruktur wird durch den Zeemaneffekt weiter aufgespalten (Abb. \ref{fig:kernspin}).
 \begin{figure}[h!]
   \centering
@@ -102,55 +102,135 @@ Der Kernspin beeinflusst auch den Landé-Faktor $g_{\text{F}}$, der sich nun wie
 %- angeregte Zustände fallen in alle Grundzustände zurück\\
 %- $\sigma^{+}$ pumpt (über die genannten Umwege) die Elektronen aus dem niedrigerem Grundzustand in den höheren Grundzustand\\
 %
+\\Das optische Pumpen basiert nun auf der Idee, die Elektronen aus ihrer thermischen Verteilung auf den Hüllen zu bringen.
+Der Einfachheit halber wird zunächst mit der Annahme gearbeitet, dass das Atom einen Kernspin mit $I=0$ besitzt.
+Die verwendeten Stoffe entstammen der Alkali-Gruppe, also haben die Atome immer nur ein Elektron auf der äußersten Schale.
+Als Grundzustand eines Alkali-Atoms ergibt sich $^{2}S_{\frac{1}{2}}$.
+Die angeregten Zustände sind $^{2}P_{\frac{1}{2}}$ und $^{2}P_{\frac{3}{2}}$.
+Die Energieniveaus sind in Abbildung \ref{fig:doublett} dargestellt.
+Die beiden Übergänge in Abbildung \ref{fig:doublett} werden $D_{1}$-$D_{2}$-Doublett genannt.
+Wird ein äußeres Magnetfeld angelegt, entsteht eine Zeeman-Aufspaltung.
+Die Zeeman-Aufspaltung des $D_{1}$-Übergangs ist in Abbildung \ref{fig:sigmaplus} abgebildet.
+Bei der Zeeman-Aufspaltung unterscheiden sich die Übergänge durch die Polarisation (Tab. \ref{tab:polarisation}).
+\begin{table}[h!]
+  \centering
+  \caption{Übergänge der Zeeman-Aufpaltung}
+  \label{tab:polarisation}
+  \begin{tabular}{l l l l l r l l r l c l l r l l l l l l l l l l l l}
+    \toprule
+$\sigma^{+}$ && rechtszirkular && $\Delta M_{\text{J}}=$ & $+1:$  &&  $^{2}P_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $-\frac{1}{2}$ &&$\Rightarrow$&& $^{2}S_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $+\frac{1}{2}$ \\
+$\sigma^{-}$ && linkszirkular  && $\Delta M_{\text{J}}=$ & $-1:$  &&  $^{2}P_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $+\frac{1}{2}$  &&$\Rightarrow$&& $^{2}S_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $-\frac{1}{2}$ \\
+$\pi       $ && linear         && $\Delta M_{\text{J}}=$ & $ 0:$  &&  $^{2}P_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $+\frac{1}{2}$  &&$\Rightarrow$&& $^{2}S_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $+\frac{1}{2}$ \\
+$\pi$        && linear         && $\Delta M_{\text{J}}=$ & $ 0:$  &&  $^{2}P_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $-\frac{1}{2}$ &&$\Rightarrow$&& $^{2}S_{\frac{1}{2}},$ $\Delta M_{\text{J}}=$ & $-\frac{1}{2}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Wird nun der Stoff spezifisch mit $D_{1}$-Licht angeregt, fällt er nur über den $D_{1}$-Übergang aus dem angeregten $^{2}P_{\frac{1}{2}}$-Zustand zurück in seinen Grundzustand $^{2}S_{\frac{1}{2}}$.
+Wird der Stoff weiterhin mit $\sigma^{+}$-polarisiertem $D_{1}$-Licht angeregt, werden die Elektronen vom $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= -\frac{1}{2}$-Zustand in den $^{2}P_{\frac{1}{2}}, \Delta M_{\text{J}}= +\frac{1}{2}$-Zustand gebracht.
+Von dort fallen sie aber in beide Grundzustände $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= \pm \frac{1}{2}$ zurück.
+Mit diesem Prinzip gelingt es, den $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= -\frac{1}{2}$-Zustand (energieärmer) leer zu pumpen und den $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= +\frac{1}{2}$-Zustand (energiereicher) voll zu pumpen.
+Damit ist das Atom nicht mehr in seiner thermischen Verteilung.
 \begin{figure}[h!]
  \centering
  \begin{subfigure}{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{doublett.pdf}
-  \caption{Spannung bei $\varphi=\SI{0}{°}$}
+  \caption{$D_{1}$-$D_{2}$-Doublett eines Alkali-Atoms mit $I=0$}
   \label{fig:doublett}
  \end{subfigure}
  \begin{subfigure}{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{sigmaplus.pdf}
-  \caption{Spannung bei $\varphi=\SI{90}{°}$}
+  \caption{Übergänge der Zeeman-Aufspaltung eines Alkali-Atoms mit $I=0$}
   \label{fig:sigmaplus}
  \end{subfigure}
- \caption{Spannungsverläufe an dem Mischer}
+ \caption{Übergänge eines Alkali-Atoms}
  \label{fig:übergänge}
 \end{figure}
-
-
-
-
-
-Optisches Pumpen + Aufbau\\
-- zunächst sind alle Anregungen möglich, da die Elektronen noch auf allen Niveaus vorhanden sind\\
-- das Licht wird also vollständig absorbiert\\
-- mit der Zeit werden die Elektronen in einem Energieniveau gesammelt\\
-- es sind keine Absorptionen möglich\\
-- das Gas wird zunehmend transparent\\
-
-Emission\\
-- spontane Emission: Elektron fällt von alleine zurück (statistisch)\\
-  --- Wahrscheinlich bei hohen Frequenzen des RF-Felds\\
-- induzierte Emission: Elektron fällt zurück entlang der Energie der eingestrahlten Photonen (RF-Quanten)\\
-  --- Wahrscheinlich bei niedrigen Frequenzen des RF-Felds\\
-- induzierte Emission bei 'Resonanzstelle' (passendes RF-Feld mit der richtigen Energie für induzierte Emission)\\
+%
+%Optisches Pumpen + Aufbau\\
+%- zunächst sind alle Anregungen möglich, da die Elektronen noch auf allen Niveaus vorhanden sind\\
+%- das Licht wird also vollständig absorbiert\\
+%- mit der Zeit werden die Elektronen in einem Energieniveau gesammelt\\
+%- es sind keine Absorptionen möglich\\
+%- das Gas wird zunehmend transparent\\
+%
+\\Um das optische Pumpen zu messen, lässt sich die Transparenz des verdampften Stoffs beobachten.
+Das $\sigma^{+}$-polarisierte $D_{1}$-Licht wird eingestrahlt und trifft auf das Gas.
+Initial bei Einschalten des Magnetfelds sind noch viele Anregungen im Gas möglich, da alle Zeeman-Niveaus gleichmäßig besetzt sind.
+Bei der Anregung wird das Licht der Spektrallampe absorbiert, es ist also wenig transparent.
+Mit fortlaufender Zeit werden durch das optische Pumpen die Elektronen aus dem energieärmeren Grundzustand in den energiereicheren Grundzustand gepumpt.
+Von dort aus können keine weiteren Anregungen ausgehen, und es wird kaum Licht der Spektrallampe absorbiert, das Gas ist also zunehmend transparent.
+%
+%Emission\\
+%- spontane Emission: Elektron fällt von alleine zurück (statistisch)\\
+%  --- Wahrscheinlich bei hohen Frequenzen des RF-Felds\\
+%- induzierte Emission: Elektron fällt zurück entlang der Energie der eingestrahlten Photonen (RF-Quanten)\\
+%  --- Wahrscheinlich bei niedrigen Frequenzen des RF-Felds\\
+%- induzierte Emission bei 'Resonanzstelle' (passendes RF-Feld mit der richtigen Energie für induzierte Emission)\\
+%
+\\Für die Messung der Hyperfeinstruktur und der Zeeman-Aufspaltung werden zwei weitere Phänomene vorgestellt.
+Die spontane Emission bedeutet, dass das Elektron ohne weitere äußere Einwirkung nach gewisser Zeit zurück auf den Grundzustand fällt.
+Die induzierte Emission entsteht, wenn die Anregungsenergie als Quanten eingestrahlt wird.
+Dann fällt das Elektron unter Emission der Anregungsenergie bzw. der Quanten auf den Grundzustand zurück.
+Die induzierte und die spontane Emission können parallel ablaufen.
+Parallel wird die Anregungsenergie auch rückabsorbiert.
+Durch ein hochfrequentes veränderliches Magnetfeld (RF-Feld) wird bei diesem Versuch die Anregungsenergie bzw die sogenannten RF-Quanten eingebracht.
+Das Verhältnis der beiden Emissionsarten wird über die Anregungsenergie $h \nu$ bestimmt.
+Die Anzahlen $n$ der verschiedenen Emissionen pro Zeiteinheit lauten:
+\begin{align*}
+n_{\text{spon}} &= N_{2} A_{21}        \\
+n_{\text{ind}}  &= N_{2} B_{21} u(\nu) \\
+n_{\text{abs}}  &= N_{1} B_{12} u(\nu).\\
+\end{align*}
+Dabei ist $N$ die Atomzahl, $A_{21}$ die Übergangswahrscheinlichkeit der spontanen Emission und $B$ der Einstein-Koeffizient (Proportionalitätsfaktor).
+$u(\nu)$ ist die Dichte der eingestrahlten Quanten.
+Die drei Gleichungen lassen sich durch eine Erhaltung der Übergangszahlen verbinden und durch weitere Überlegungen und das Einbringen der Planckschen Gleichung für schwarze Strahler schreiben als:
+\begin{equation*}
+  n_{\text{spon}} + n_{\text{ind}} = n_{\text{abs}} \Rightarrow A_{21}= \frac{8 \pi h}{c^{3}}B_{12} \nu^{3}.
+\end{equation*}
+Bei höheren Frequenzen des RF-Felds kommt hauptsächlich die spontane Emission vor, bei den niedrigeren Frequenzen vornehmlich die induzierte Emission.
+Erreicht das RF-Feld eine passende Frequenz, setzt also die induzierte Emission ein.
+Hier bedeutet dies, dass die Elektronen entlang der induzierten Emission wieder aus der aufgebauten, nicht-thermischen Verteilung gelangen, wenn das RF-Feld die passende Frequenz hat (Abb. \ref{fig:transparenz}).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{transparenz.pdf}
+  \caption{Transparenz des Gases mit angelegtem RF-Feld und Resonanzstelle \cite{1}}
+  \label{fig:transparenz}
+\end{figure}
+Dies ist mit Gleichung \eqref{eqn:zeeman} der Fall bei:
 \begin{equation}
-  h \nu = g_{\text{J}} \mu_{\text{B}} \Delta M_{\text{J}} B_{\text{m}} \Leftrightarrow B_{\text{m}} = \frac{4 \pi m_{0}}{e_{0} g_{\text{J}}} \nu
+  h \nu = g_{\text{J}} \mu_{\text{B}} \Delta M_{\text{J}} B_{\text{m}} \Leftrightarrow B_{\text{m}} = \frac{4 \pi m_{0}}{e_{0} g_{\text{J}}} \nu.
 \label{eqn:resonanz}
 \end{equation}
-
-Optisches Pumpen + Kernspin\\
-- Energie der Spektrallinie überdeckt alle Hyperfeinstrukturen und Zeemaneffekt\\
-- $\sigma^{+}$-Licht lässt nur $\Delta M_{\text{F}}= +1$ zu, also sammeln sich die Elektronen bei $^{2}S_{1/2}, F=2, M_{\text{F}}=+2$ \\
-
-Quadratischer Zeemaneffekt/Breit-Rabi-Formel\\
-- große B-Felder\\
-- Wechselwirkung Spin-Bahn-Kopplung\\
-- Wechselwirkung magnetische Momente\\
+$B_{\text{m}}$ wird auch Resonanzstelle genannt.
+%
+%Optisches Pumpen + Kernspin\\
+%- Energie der Spektrallinie überdeckt alle Hyperfeinstrukturen und Zeemaneffekt\\
+%- $\sigma^{+}$-Licht lässt nur $\Delta M_{\text{F}}= +1$ zu, also sammeln sich die Elektronen bei $^{2}S_{1/2}, F=2, M_{\text{F}}=+2$ \\
+%
+\\Nun wird wieder der Kernspin $I≠0$ in die Theorie gebracht.
+Die Energie des $D_{1}$-Lichts überdeckt alle möglichen Übergänge der Hyperfeinstruktur und des Zeemaneffekts (Abb. \ref{fig:übergänge}).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{übergänge.pdf}
+  \caption{Übergänge des $D_{1}$-Lichts mit Betrachtung eines Kernspin $I≠0$ \cite{1}, bearbeitet}
+  \label{fig:übergänge}
+\end{figure}
+In blau gekennzeichnet sind die Übergänge, die durch die Auswahlregel $\Delta M_{\text{F}}=+1$ möglich sind.
+Aus dem Grundzustandsniveau mit $F=2$ und $M_{\text{F}}=+2$ ist kein Übergang in das angeregte Niveau möglich.
+Durch spontane Emission (grün gekennzeichnet) können aber Elektronen von den Niveaus $M_{\text{J}}=+1$ und $M_{\text{J}}=0$ in das Niveau $M_{\text{F}}=+2$ übergehen.
+So lässt sich dennoch mittels des optischen Pumpens eine nicht-thermische Verteilung erzeugen.
+%
+%Quadratischer Zeemaneffekt/Breit-Rabi-Formel\\
+%- große B-Felder\\
+%- Wechselwirkung Spin-Bahn-Kopplung\\
+%- Wechselwirkung magnetische Momente\\
+%
+\\Bei starken Magnetfeldern entstehen weitere Effekte, die sich aus der Wechselwirkung des Spins und dem Bahndrehimpuls und der Wechselwirkung der magnetischen Momente ergeben.
+Die Wechselwirkungsenergie der Hyperfeinstruktur berechnet sich dann über:
 \begin{equation}
 U_{\text{HF}}= g_{\text{F}} \mu_{\text{B}} B + g_{\text{F}}^2 \mu_{\text{B}}^2 B^2 \frac{(1- 2M_{\text{F}})}{\Delta E_{\text{HF}}}
 \label{eqn:quadzeeman}
 \end{equation}
+und wird quadratischer Zeemaneffekt genannt.

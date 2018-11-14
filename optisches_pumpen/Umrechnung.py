@@ -122,19 +122,50 @@ plt.savefig('B-Feld.pdf')
 ############# g_F #################
 #a &e Steigung der Ausgleichsgraden
 a = 1.4382169e-10  #10^-6/10^3   muT/kHz
+A= 0.0232002e-10    #Fehler von a
 e = 2.1409131e-10 #T/Hz
+E=0.030643e-10      #Fehler von E
 
 h = 6.62607004e-34 #J*s
 mu_b =9.27400899e-24 #J/T
+print('##########   Lande Faktoren  ##########')
 g_h1 = h/(mu_b*a)
 g_h2 = h/(mu_b*e)
 print(g_h1,g_h2)
-
+##Fehlerberechnung
+G_h1 = np.sqrt((h/(mu_b*a**2))**2*A**2)
+G_h2 = np.sqrt((h/(mu_b*e**2))**2*E**2)
+print('###### Fehler Lande Faktor   ########')
+print(G_h1)
+print(G_h2)
 
 #### Kernspin ####
 gj = 2.0023
 I1=1/2*(gj/g_h1-1)
 I2=1/2*(gj/g_h2-1)
-print('Kernspin')
+print('#######  Kernspin    ##########')
 print(I1,I2)
+###### Fehler Kernspin  #####
+print('######## Fehler Kernspin #######')
+i1=np.sqrt((1/2*(gj/g_h1**2))**2*G_h1**2)
+i2=np.sqrt((1/2*(gj/g_h2**2))**2*G_h2**2)
+print(i1)
+print(i2)
+
+
+#########Wechselwirkungsenergie###########
+print('######   Quadratische Zeeman #######')
+DE1=4.53*10**(-24)  # gegeben in der Anleitung
+DE2=2.01*10**(-24)  # gegeben in der Anleitung
+U_HF1=g_h1*mu_b*B1+g_h1**2*mu_b**2*B1**2*(-3)/DE1
+U_HF2=g_h2*mu_b*B1+g_h2**2*mu_b**2*B2**2*(-3)/DE2
+print(U_HF1)
+print(U_HF2)
+######### Fehler vom Qudrat. Zeeman ######
+print('######## Fehler Zeeman#######')
+u_HF1=np.sqrt((mu_b*B1+g_h1*mu_b**2*B1**2*(-3)/DE1)**2*G_h1**2)
+u_HF2=np.sqrt((mu_b*B2+g_h2*mu_b**2*B2**2*(-3)/DE2)**2*G_h2**2)
+print(u_HF1)
+print(u_HF2)
+
 print ('Fertig')

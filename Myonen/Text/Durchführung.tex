@@ -35,14 +35,14 @@ Für die passende Verzögerungszeit ist die Impulsanzahl über eine bestimmte Me
 Der Koinzidenzschalter gibt nur dann ein Signal weiter wenn an beiden Eingängen ein Impuls ankommt.
 Da die Myonen nich zwangsläufig in der mitte des Szintillators zerfallen kann es so ebenfalls zu einem minimalen Gangunterschied kommen.
 Mit Hilfe der Diskriminatoren wird der eingehende Impuls verlängert sodass der Gangunterschied ausgeglichen werden kann.
-Die Wahrscheinlichkeit, dass beide SEV gleichzeitig ein stakes Rauschsignal empfangen ist sehr gering.
+Die Wahrscheinlichkeit, dass beide SEV gleichzeitig ein starkes Rauschsignal empfangen ist sehr gering.
 
 Ein weiteres Problem ist, dass nur ein kleiner Teil der Myonen welche in der Szintilator eindringen dort auch zerfallen.
-Das bedeutet das der TAC ein Startsignal bekommt, aber kein Stopsignal.
+Das bedeutet, dass der TAC ein Startsignal bekommt, aber kein Stopsignal.
 Da bei unendlich langer Suchzeit ein neu eintreffendes Myon ein Stopsignal geben würde, anstatt ein neues Startsignal,
 muss die Suchzeit $\text{T}_{\text{S}}$ nach einer gewissen Zeit abgebrochen werden.
 Der Suchzeitgeber wird mit einer monostabilen Kippstufe oder auch Univibrator verwirklicht.
-Nach Aktivierung bleibt die Kippstufe über die Zeit $\text{T}_{\text{S}}$ in einem angeregen Zustand und spring dann in seinen Grundzustand zurück.
+Nach Aktivierung bleibt die Kippstufe über die Zeit $\text{T}_{\text{S}}$ in einem angeregen Zustand und springt dann in seinen Grundzustand zurück.
 Die monostabiele Kippstufe besitzt zwei Ausgänge (OUT) wobei einer dieser Ausgänge $\overline{\text{OUT}}$ invers ist.
 Im Grundzustand wird also über den OUT-Ausgang kein Signal weiter gegeben (Logisch 0).
 Der Ausgang $\overline{\text{OUT}}$ gibt hingegen ein Signal weiter (Logisch 1).
@@ -59,43 +59,43 @@ Die AND-Gatter geben nur dann ein Signal weiter wenn an beiden ihrer Eingänge e
 
 Nach der Koinzidenzschaltung wird das Signal also in drei Teile aufgeteilt.
 
-Zum einen wird ein Signal zum 1 AND-Gatter weiter geleitet.
+Zum einen wird ein Signal zum ersten AND-Gatter weitergeleitet.
 Dort liegt nun das Signal vom Myon und das Signal von der monostabielen Kippstufe ($\overline{\text{OUT}}$) an.
-Das Signal wird also vom 1 AND-Gatter durchgelassen und gibt somit das Startsignal für den TAC.
+Das Signal wird also vom ersten AND-Gatter durchgelassen und gibt somit das Startsignal für den TAC.
 Das Signal wird ebenfalls mit einem Impulszähler aufgenommen.
 
-Zum anderen wird das Signal an den 2 AND-Gatter weiter gegeben.
-Das eingehende Signal wird jedoch nicht weiter gegeben, da am zweiten Eingang kein Signal von der monostabielen Kippstufe kommt.
+Zum anderen wird das Signal an das zweite AND-Gatter weitergegeben.
+Das eingehende Signal wird jedoch nicht weitergegeben, da am zweiten Eingang kein Signal von der monostabielen Kippstufe kommt.
 
 Als letztes wird das Signal über einen Verzögerer zur monostabielen Kippstufe geleitet.
-Diese wird angeregt und Verändert so über den Suchzeitraum $\text{T}_{\text{S}}$ das Ausgangssignal.
+Diese wird angeregt und verändert so über den Suchzeitraum $\text{T}_{\text{S}}$ das Ausgangssignal.
 Es wird also an $\overline{\text{OUT}}$ kein Signal (Logisch 0) und an OUT Logisch 1 abgegeben.
 
-Kommt nun das Signal über den Zerfall des Myon kann das Signal den 1 AND-Gatter nicht passieren, das 2 AND-Gatte hingegen schon.
+Kommt nun das Signal über den Zerfall des Myon kann das Signal das erste AND-Gatter nicht passieren, das zweite AND-Gatte hingegen schon.
 Somit wird das Signal als Stopsignal für den TAC gewertet.
 Zusätzlich wird auch dieses Signal mit einem Impulszähler erfasst.
 Das vom TAC konvertierte Signal wird über einen Vielkanalanalysator in einem Computerprogramm verarbeitet.
 
-Zerfällt das Myon nicht im Szintilator bleibt das Signal über den Zerfall aus.
+Zerfällt das Myon nicht im Szintilator, bleibt das Signal über den Zerfall aus.
 Daraufhin springt die monostabiele Kippstufe nach der Zeit $\text{T}_{\text{S}}$ in den Grundzustand zurück.
 Ein neu ankommendes Myon löst somit wieder ein Startsignal aus.
 $\text{T}_{\text{S}}$ sollte demendsprechend so gewählt werden, dass die Suchzeit größer ist als die Lebensdauer eines Myons
-aber kleiner als die warscheinliche Wiedereintrittszeit eines neuen Myons.
+aber kleiner als die wahrscheinliche Wiedereintrittszeit eines neuen Myons.
 
 \subsection{Durchführung}
 Es wird die Schaltung wie in der Abbildung \ref{fig:block}.
-Zusätzlich wird die Anzahl der Stopimpule mit einem Impilszähler ermittelt.
+Zusätzlich wird die Anzahl der Stopimpule mit einem Impulszähler ermittelt.
 
-Um die passende Verzögerungszeit $\text{T}_{\text{VZ}}$ zu ermitteln muss, wie bereits beschieben, die Zeit Variiert werden.
+Um die passende Verzögerungszeit $\text{T}_{\text{VZ}}$ zu ermitteln muss, wie bereits beschieben, die Zeit variiert werden.
 Misst man hinter der Koinzidenzschaltung die Impulse kann so eine abhängigkeit von $\text{T}_{\text{VZ}}$ und der anzahl der Impules festgestellt werden.
 $\text{T}_{\text{VZ}}$ ist richtig gewählt wenn die Impulsanzahl maximal ist.
 
-Die Diskriminatoren werden so eingestellt, dass der Großteil des Rauschens unterdrückt wird die Impules welche von den Myonen stammen jedoch passieren konnen.
-Die Impulslänge wird auf ca. $\SI{4}{ns}$ gestellt um den möglichen Gangunteschied des Lichtes im Szintillator auszugleichen.
+Die Diskriminatoren werden so eingestellt, dass der Großteil des Rauschens unterdrückt wird, aber die Impules, welche von den Myonen stammen, passieren können.
+Die Impulslänge wird auf ca. $\SI{4}{ns}$ gestellt um den möglichen Gangunterschied des Lichtes im Szintillator auszugleichen.
 
-Die Suchzeit $\text{T}_{\text{S}}$ der monostabielen Kippstufe wird so eingestellt das die Suchzeit größer ist als Lebensdauer der Myonen jedoch kleiner ist als
-der warscheinlich nächste Eintritt eines Myons in die Messaperatur.
-Mithilfe eines Doppelimpulsgeneratort kann die Funktionsweise der monostabielen Kippstufe überprüft werden.
-Da es trotzdem sein kann, dass ein neu angekommenes Myon die Messung eines Vorherigen beendet und so ein falsches Stopsignal erzeugt, muss von den Messwerten eine bestimmte Untergrundstrahlung abgezogen werden.
+Die Suchzeit $\text{T}_{\text{S}}$ der monostabilen Kippstufe wird so eingestellt, dass die Suchzeit größer ist als Lebensdauer der Myonen, jedoch kleiner ist als
+der wahrscheinlich nächste Eintritt eines Myons in die Messapparatur.
+Mithilfe eines Doppelimpulsgenerator kann die Funktionsweise der monostabilen Kippstufe überprüft werden.
+Da es trotzdem sein kann, dass ein neu angekommenes Myon die Messung eines vorherigen beendet und so ein falsches Stopsignal erzeugt, muss von den Messwerten eine bestimmte Untergrundstrahlung abgezogen werden.
 
-Da die Anzahl der in Messaperatur zerfallenen Myonen klein ist gegen die Anzahl der Myonen muss die gesamte Messung über einen Zeitraum von ca. $\SI{20}{h}$ erfolgen.
+Da die Anzahl der in Messapparatur zerfallenen Myonen klein ist gegen die Anzahl der Myonen muss die gesamte Messung über einen Zeitraum von ca. $\SI{20}{h}$ erfolgen.

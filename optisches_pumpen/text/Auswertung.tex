@@ -1,26 +1,34 @@
-Die gemessenen Umdrehungen lassen sich mit der Gleichung
+Um die Resonanzstellen zu erreichen können die Potentiometer für die Horizontale Spule und für die Sweep-Spule variiert werden.
+Die zur jeweiligen Resonanzstelle gehörigen Potentiometerumdrehungen können wie folgt in einen Stromstärke umgerechnet werden.
 \begin{align*}
-  1 \text{Umdrehung} = \SI{0,1}{A}
+  \text{Sweep-Spule}&&&\text{Horizontale Spule}\\
+  1 \text{Umdrehung} &= \SI{0,1}{A}&&1 \text{Umdrehung} = \SI{0,3}{A}
 \end{align*}
-umrechnen. Aus der resultierenden Stromstärke kann das B-Feld berrechnet werden.
+Aus den resultierenden Stromstärken kann das B-Feld berrechnet werden.
 \begin{align*}
   B=\mu_0\frac{8}{\sqrt{125}}\frac{N\cdot I}{R}
 \end{align*}
-Die Errechnete Werte sind zusammen mit den dazugehörigen Frequenzen in der Tabelle \ref{tab.Tab1} einzusehen.
-\input{Tabelle.tex}
-\FloatBarrier
-In der Graphik \ref{fig:Bf} sind die Werte graphisch dagestellt.
-Es wird eine Ausgleichsrechnung der Form:
+$N$ und $R$ sind dabei Spulenspezifische größen.
 \begin{align*}
-  B(f)=af+b
+  &\text{Sweep-Spule}&&\text{Horizontale Spule}\\
+  &N=11&&N=154\\
+  &R=\SI{0.1639}{m}&&R=\SI{0.1579}{m}\\
 \end{align*}
-durchgeführt.
+Die $B$-Felder von der Sweep-Spule und der Horizontalspule für eine Resonanzstelle müssen anschließend addiert werden.
+Die errechnete Werte für Stromstärke $I$ und $B$-Feld sind zusammen mit den dazugehörigen Frequenzen in der Tabelle \ref{tab.Tab1} aufgeführt.
+\input{Tabelle.tex}
+In der Graphik \ref{fig:Bf} sind die Werte graphisch dagestellt.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{B-Feld.pdf}
   \caption{Das für die Resonanzstelle benötigte Magnetfeld aufgetragen auf die Frequenz}
   \label{fig:Bf}
 \end{figure}
+Es wird eine Ausgleichsrechnung der Form:
+\begin{align*}
+  B(f)=af+b
+\end{align*}
+durchgeführt.
 \begin{align*}
   B1&\\
   a_1&=\SI{1.438\pm 0.023e-10}{\frac{T}{Hz}}\\
@@ -31,39 +39,54 @@ durchgeführt.
   a_2&=\SI{2.141\pm0.031e-10}{\frac{T}{Hz}}\\
   b_2&=\SI{1.935\pm0.190e-5}{T}
 \end{align*}
-
-Mit der Steigung kann wie folgt der Landesche $g_F$-Faktor bestimmt werden.
+\FloatBarrier
+Mit der Steigung $a$ kann der Landesche $g_F$-Faktor wie folgt bestimmt werden.
 \begin{align*}
   g_F = \frac{h}{\mu_0\cdot a_i}
 \end{align*}
 Somit ergeben sich die Landeschen Faktoren zu:
 \begin{align*}
-  g_{F1} = 0.4967800215411603\\
-  g_{F2} = 0.3337255596982711.
+  g_{F1} = 0.497\\
+  g_{F2} = 0.334.
 \end{align*}
 
-\begin{align*}
-  g_J = \frac{(g_s+1)\cdot J\cdot(J+1)+(g_s-1)\cdot[S\cdot (S+1)-L\cdot (L+1)]}{2\cdot J \cdot (J+1)}
-\end{align*}
-$g_s$ ist gegeben als
-\begin{align*}
-  g_s = 2,0023
-\end{align*}
-Die Quantenzalen in dem Versuch sind gegeben als
-\begin{align*}
-  S = \frac{1}{2}, L=0, J=\frac{1}{2}, F = I+J
-\end{align*}
-Durch einsezten ergibt sich, dass
-\begin{align*}
-  g_J=g_s
-\end{align*}
-ist.
-Mit Hilfe der Formel
+Nun soll der Kernspinn bestimmt werden.
+Dieser kann mit der Formel:
 \begin{align*}
   I = \frac{1}{2}\left(\frac{g_J}{g_F}-1\right)
 \end{align*}
-ergeben sich Kernspinzahlen von
+berechnet werde.
+Das benötigte $g_J$ kann wie folgt bestimmt werden.
 \begin{align*}
-  I_1=1.515278305464324\\
-  I_2=2.499920056783072
+  g_J = \frac{(g_s+1)\cdot J\cdot(J+1)+(g_s-1)\cdot[S\cdot (S+1)-L\cdot (L+1)]}{2\cdot J \cdot (J+1)}
 \end{align*}
+Dabei ist $g_s$ gegeben als
+\begin{align*}
+  g_s = 2,0023
+\end{align*}
+Durch einsetzen der gegebenen Quantenzalen, welche in dem Versuch sind gegebnen als
+\begin{align*}
+  S = \frac{1}{2}, L=0, J=\frac{1}{2}, F = I+J
+\end{align*}
+Läst sich die relation aufstellen:
+\begin{align*}
+  g_J=g_s.
+\end{align*}
+
+Der Kernspinn kann jetzt bestimmt weren.
+\begin{align*}
+  I_1=1.5153\\
+  I_2=2.4999
+\end{align*}
+Durch einen Vergleich mit Literaturwerten kann der Kernspinn den Rubidium-Isotopen zugeortnen werden.
+Es gilt:
+\begin{align*}
+  I_{\text{Rb85}}=\frac{5}{2}\\
+  I_{\text{Rb87}}=\frac{3}{2}
+\end{align*}
+Es wird deutlich, dass
+\begin{align*}
+  I_1=I_{\text{Rb87}}\\
+  I_2=I_{\text{Rb85}}
+\end{align*}
+gilt.

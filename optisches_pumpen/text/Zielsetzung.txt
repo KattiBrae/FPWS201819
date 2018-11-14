@@ -1,1 +1,3 @@
-In diesem Versuch wird mit dem Prinzip des optischen Pumpens 
+In diesem Versuch wird mit dem Prinzip des optischen Pumpens die Hyperfeinstruktur und die Zeeman-Aufspaltung untersucht, indem passend polarisiertes Licht die Atome anregt und die Transparenz des Dampfes gemessen wird.
+Dabei werden die Landé-, der quadratische Zeeman-Effekt und der Kernspin berechnet.
+Dieses Verfahren lässt sich zur Materialbestimmung nutzen, da die Landé-Faktoren isotopenspezifisch sind.

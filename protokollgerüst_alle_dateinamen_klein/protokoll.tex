@@ -1,45 +1,46 @@
 \input{lade.tex}
 \begin{document}
 \setlength{\parindent}{0em}
-\input{Titelseite.tex}
+
+
+\input{titelseite.tex}
+%\pagenumbering{arabic}
 \tableofcontents
 %\input{lit.bib}
 
-\newpage
-
+%\newpage
 \section{Zielsetzung}
-\input{Zielsetzung.txt}
+\input{zielsetzung.txt}
 
 
 \section{Theorie}
-\input{Theorie.tex}
+\input{theorie.tex}
 \newpage
 
 
 \section{Aufbau und Durchführung}
-\input{Durchführung.tex}
+\input{durchführung.tex}
 \newpage
 \FloatBarrier
 
 \section{Auswertung}
-\input{Auswertung.tex}
+\input{auswertung.tex}
 \newpage
 \FloatBarrier
 
 \section{Diskussion}
-\input{Diskussion.tex}
+\input{diskussion.tex}
 
 
 \nocite{*}
 \printbibliography
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{OMDoptischespumpen.pdf}
-  \caption{Originale Messdaten}
-  \label{OMD}
-\end{figure}
-\FloatBarrier
 \label{LastPage}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\textwidth]{OMD1.pdf}
+%  \caption{Originale Messdaten}
+%  \label{OMD}
+%\end{figure}
+
 
 \end{document}

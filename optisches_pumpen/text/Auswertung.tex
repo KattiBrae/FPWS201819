@@ -1,8 +1,8 @@
 In der Abbildung $\ref{fig.bild}$ wird ein typisches Signalbild dargestellt.
 Auf der X-Achse wird das Magnetfeld aufgetragen, auf der Y-Achse die Transparenz des Mediums.
-Das Minimum auf der linken Seite entsteht dadurch, dass dort kein Magnetfeld anliegt uns es so auch zu keiner Zeemanaufspaltung kommen kann.
-Die anderen beiden Minima enstehen durch die gegebenen Isotope $R_{87}$ und $R_{85}$.
-Im folgenden wird die Zuortnung der Isotote zu den Minima vorgenommen.
+Das Minimum auf der linken Seite entsteht dadurch, dass dort kein Magnetfeld anliegt und es so auch zu keiner Zeemanaufspaltung kommen kann.
+Die anderen beiden Resonsnzstellen enstehen durch die gegebenen Isotope $R_{87}$ und $R_{85}$.
+Im Folgenden wird die Zuortnung der Isotote zu den Minima vorgenommen.
 Bis zu dem Zeitpunkt werden die Minnima mit 1 und 2 (von Links nach Rechts) bezeichnet.
 \begin{figure}[h!]
   \centering
@@ -15,19 +15,20 @@ Dabei gilt:
 \begin{align*}
   N_1+N_2 = 1
 \end{align*}
-N beschreibt dabei den prozentualen Anteil an der Gesamtanzahl.
+$N$ beschreibt dabei den prozentualen Anteil an der Gesamtanzahl.
 Durch Ausmessen der Minima ergibt sich ein Verhältniss $R$ für $\frac{\text{Isotop 1}}{\text{Isotop 2}}$ von:
 \begin{align*}
   R=\SI{0.48}{}
 \end{align*}
+Die prozentualen Anteile $N$ lassen sich bestimmen zu:
 \begin{align*}
   N_1&=\frac{0,48}{1+0,48}=0,32\\
-  N_2&=1-N_1=0,68
+  N_2&=1-N_1=0,68.
 \end{align*}
 
 
 Um die Resonanzstellen zu erreichen können die Potentiometer für die Horizontale Spule und für die Sweep-Spule variiert werden.
-Die zur jeweiligen Resonanzstelle gehörigen Potentiometerumdrehungen können wie folgt in einen Stromstärke umgerechnet werden.
+Die zur jeweiligen Resonanzstelle gehörigen Potentiometerumdrehungen können wie folgt in eine Stromstärke umgerechnet werden.
 \begin{align*}
   \text{Sweep-Spule}&&&\text{Horizontale Spule}\\
   1 \text{Umdrehung} &= \SI{0,1}{A}&&1 \text{Umdrehung} = \SI{0,3}{A}
@@ -36,13 +37,13 @@ Aus den resultierenden Stromstärken kann das B-Feld berrechnet werden.
 \begin{align*}
   B=\mu_0\frac{8}{\sqrt{125}}\frac{N\cdot I}{R}
 \end{align*}
-$N$ und $R$ sind dabei Spulenspezifische größen.
+Die Windungszahl $N$ und der Radius $R$ sind dabei Spulenspezifische größen.
 \begin{align*}
   &\text{Sweep-Spule}&&\text{Horizontale Spule}\\
   &N=11&&N=154\\
   &R=\SI{0.1639}{m}&&R=\SI{0.1579}{m}\\
 \end{align*}
-Die $B$-Felder von der Sweep-Spule und der Horizontalspule für eine Resonanzstelle müssen anschließend addiert werden.
+Die $B$-Felder von der Sweep-Spule und der Horizontalspule für eine Resonanzstelle müssen anschließend addiert werden um das gesamte Magnetfeld zu erhalten.
 Die errechnete Werte für Stromstärke $I$ und $B$-Feld sind zusammen mit den dazugehörigen Frequenzen in der Tabelle \ref{tab.Tab1} aufgeführt.
 \input{Tabelle.tex}
 In der Graphik \ref{fig:Bf} sind die Werte graphisch dagestellt.
@@ -57,6 +58,7 @@ Es wird eine Ausgleichsrechnung der Form:
   B(f)=af+b
 \end{align*}
 durchgeführt.
+Es ergeben sich folgende Fit-Parameter:
 \begin{align*}
   B1&\\
   a_1&=\SI{1.438\pm 0.023e-10}{\frac{T}{Hz}}\\
@@ -92,16 +94,16 @@ Dabei ist $g_s$ gegeben als
 \begin{align*}
   g_s = 2,0023
 \end{align*}
-Durch einsetzen der gegebenen Quantenzalen, welche in dem Versuch sind gegebnen als
+Durch einsetzen der gegebenen Quantenzalen, welche in dem Versuch gegebnen sind als:
 \begin{align*}
-  S = \frac{1}{2}, L=0, J=\frac{1}{2}, F = I+J
+  S = \frac{1}{2}, L=0, J=\frac{1}{2}, F = I+J.
 \end{align*}
 Läst sich die relation aufstellen:
 \begin{align*}
   g_J=g_s.
 \end{align*}
 
-Der Kernspinn kann jetzt bestimmt weren.
+Der Kernspinn kann jetzt bestimmt werden.
 \begin{align*}
   I_1=1,5153\pm0,03\\
   I_2=2,4999\pm0,04

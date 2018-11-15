@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.28)  15 NOV 2018 01:19
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.28)  15 NOV 2018 01:31
  restricted system commands enabled.
 **Protokoll.tex
 (./Protokoll.tex
@@ -1916,7 +1916,7 @@ ibute_list, 1 write nodes
    avail lists: 1:3,2:1155,3:122,4:46,5:358,6:3745,7:1577,8:94,9:654,10:27,11:41
 8,12:1
  36437 multiletter control sequences out of 65536+600000
- 84 fonts using 23472795 bytes
+ 84 fonts using 23472871 bytes
  67i,19n,106p,8836b,2889s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-
 bold.otf></home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/l
@@ -1931,7 +1931,7 @@ egular.otf></home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm
 ublic/lm/lmromanslant10-regular.otf></home/tobias/.local/texlive/2017/texmf-dist
 /fonts/opentype/public/lm/lmroman17-regular.otf></home/tobias/.local/texlive/201
 7/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf>
-Output written on Protokoll.pdf (16 pages, 853588 bytes).
+Output written on Protokoll.pdf (16 pages, 853257 bytes).
 
 PDF statistics: 280 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams

@@ -1,6 +1,6 @@
-#messdaten
-#abstand der Spiegel L # intensität
-0.59  ,0.50464  # milli Ampere
+#stab sphere
+#abstand der Spiegel L/cm , intensität/mA
+0.59  ,0.50464
 0.63  ,0.46055
 0.67  ,0.46578
 0.71  ,0.46251

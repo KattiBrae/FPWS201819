@@ -82,8 +82,8 @@ A=np.sum(y)
 print(A)
 
 
-print('Abweichungen Zählraten')
-a=4648
-b=4719
-f=a-b
+print('Abweichungen')
+a=1.8932
+b=2.1969811
+f=100*(a-b)/b
 print(f)

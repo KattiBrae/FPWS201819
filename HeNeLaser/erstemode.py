@@ -1,4 +1,3 @@
-
 import numpy as np
 import sympy
 import matplotlib.pyplot as plt
@@ -7,8 +6,8 @@ from pylab import figure, axes, pie, title, show
 
 print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
-x, y = np.loadtxt('stabilitätsbedingung.txt', unpack=True,delimiter=',')
-y=-y
+x, y = np.loadtxt('erstemode.txt', unpack=True,delimiter=',')
+
 
 def f(x,a,b):
     return a*x+b
@@ -31,5 +30,5 @@ plt.legend()
 
 
 
-plt.savefig('stabilitätsbedingung.pdf')
+plt.savefig('erstemode.pdf')
 print ('Fertig')

@@ -7,9 +7,9 @@ Zum Vergleich der Werte wird die relative Abweichung berechet durch:
 \end{equation*}
 Die Lebensdauer der Myonen wird als $\tau_{\text{exp}}$ gemessen und mit dem Literaturwert $\tau_{\text{theo}}$ \cite{PDG} verglichen.
 \begin{align*}
-  \tau_{\text{exp}}   &=&   \SI{1.8932e-06}{s}  \\
-  \tau_{\text{theo}}  &=&   \SI{2.1969811 \pm 0.0000022}{s}   \\
-  f_{\tau}            &=&   \SI{13.91}{\%}      \\
+  \tau_{\text{exp}}   &=&   \SI{1.8932 \pm 0.0668 e-06}{s}  \\
+  \tau_{\text{theo}}  &=&   \SI{2.1969811 \pm 0.0000022 e-06}{s}   \\
+  f_{\tau}            &=&   \SI{13.83}{\%}      \\
 \end{align*}
 Die Abweichung der Lebensdauern lässt sich unter anderem durch folgendes erklären.
 In die Messaparatur werden mehrere Bauteile gebaut um die Messung genauer zu gestalten.
@@ -19,7 +19,7 @@ Dennoch kann durch den Aufbau der Messung das Auftreten zweier fast hochenergeti
 Die Untergrundrate ergibt sich als $U_{\text{0,exp}}$ aus den Fitparametern und wird mit dem theoretischen, berechneten Wert $U_{\text{0,theo}}$ verglichen:
 \begin{align*}
   U_{\text{0,exp}}    &=&  \SI{0.7406 \pm 0.3145}{} \\
-  U_{\text{0,theo}}   &=&  \SI{0.5194416685028387 \pm 0.720723017881}{}   \\
+  U_{\text{0,theo}}   &=&  \SI{0.5194 \pm 0.7207}{}   \\
   f_{\text{U}}        &=&  \SI{42.58}{\%}. \\
 \end{align*}
 Die Abweichung der Untergrundrate ist unerwartet groß.
@@ -29,6 +29,8 @@ Auffällig ist außerdem die Differenz der Zählraten:
   \text{Zählrate Stop}     && N_{\text{Stop}}   &=\SI{4719}{} \\
   \text{Differenz}         && \Delta N          &=\SI{71}{}.\\
 \end{align*}
-Zwischen dem TAC und dem MCA gehen $\SI{1.51}{\%}$ der Startsignale verloren.
-Eine mögliche Erklärung ist, dass der Multichannelanalyser eine zu geringe Auflösung hat und sehr gerine Zeitabstände zwischen dem Start- und dem Stopsignal nicht darstellen kann.
-Außerdem wird die theoretische Untergrundrate nur durch die Zählrate der Startsignale berechnet, während der experimentelle Wert durch die Signale berechnet wird, bei denen sowohl Start- und Stopsignal vorhanden sind.
+Es gehen also zwischen dem MCA und dem Zählwerk $\SI{71}{}$ Signale verloren.
+Eine mögliche Erklärung ist, dass die verlorenen Signale außerhalb der Messbereiche der $\SI{512}{}$ Channel des MCA liegen.
+%Zwischen dem TAC und dem MCA gehen $\SI{1.51}{\%}$ der Signale verloren.
+%Eine mögliche Erklärung ist, dass der Multichannelanalyser eine zu geringe Auflösung hat und sehr gerine Zeitabstände zwischen dem Start- und dem Stopsignal nicht darstellen kann.
+%Außerdem wird die theoretische Untergrundrate nur durch die Zählrate der Startsignale berechnet, während der experimentelle Wert durch die Signale berechnet wird, bei denen sowohl Start- und Stopsignal vorhanden sind.

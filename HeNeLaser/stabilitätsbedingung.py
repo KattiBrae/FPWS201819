@@ -8,6 +8,7 @@ from pylab import figure, axes, pie, title, show
 print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
 x, y = np.loadtxt('stabilitätsbedingung.txt', unpack=True,delimiter=',')
+y=-y
 
 def f(x,a,b):
     return a*x+b

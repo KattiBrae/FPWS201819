@@ -1,5 +1,5 @@
 #stab sphere
-#abstand der Spiegel L/cm , intensität/mA
+#abstand der Spiegel L/m , intensität/mA
 0.59  ,0.50464
 0.63  ,0.46055
 0.67  ,0.46578

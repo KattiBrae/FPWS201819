@@ -9,9 +9,11 @@ print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
 x, y = np.loadtxt('stabsphere.txt', unpack=True,delimiter=',')
 y=-y
-
-def f(x,a,b):
-    return a*x+b
+r1=1.4
+r2=1.4
+(r1*r2)
+def f(x,a,b,c,d,e):
+    return a*(x+b)**2/(r1*r2)+c*(x+d)/(r1*r2)+e/(r1*r2)
 popt, pcov = curve_fit(f, x, y)
 print(popt)
 print(np.diag(pcov))
@@ -22,9 +24,9 @@ x_new = np.linspace(x[0], x[-1], 500)
 
 plt.figure(1)
 plt.plot(x,y,'x')
-plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
-plt.xlabel('X-Achse')
-plt.ylabel('Y-Achse')
+plt.plot(x_new,f(x_new,*popt),'-', label='Regression $\propto L^2$')
+plt.xlabel('L/m')
+plt.ylabel('I/$10^{-3}$A')
 plt.grid()
 plt.legend()
 

@@ -6,22 +6,21 @@ from pylab import figure, axes, pie, title, show
 
 print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
-x, y = np.loadtxt('erstemode.txt', unpack=True,delimiter=',')
+R, y = np.loadtxt('erstemode.txt', unpack=True,delimiter=',')
 
 
-def f(x,a,b):
-    return a*x+b
-popt, pcov = curve_fit(f, x, y)
+def f(R,phi,w,l,b):
+    return sympy.cos(l*phi)(4*2*np.pi)/(R*w)/((1+(2*z/R)**2)**((1+l)/2))
+popt, pcov = curve_fit(f, R, y)
 print(popt)
 print(np.diag(pcov))
-
-x_new = np.linspace(x[0], x[-1], 500)
+R_new = np.linspace(x[0], x[-1], 500)
 
 
 
 plt.figure(1)
-plt.plot(x,y,'x')
-plt.plot(x_new,f(x_new,*popt),'-', label='Lineare Regression')
+plt.plot(R,y,'x')
+plt.plot(R_new,f(R_new,*popt),'-', label='Lineare Regression')
 plt.xlabel('X-Achse')
 plt.ylabel('Y-Achse')
 plt.grid()

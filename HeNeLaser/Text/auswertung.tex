@@ -1,37 +1,44 @@
-Stabilität Sphere:
-\textbf{WHATWHATWHATWHATWHATWHATWHATWHATWHAT}
+\subsection{Stabilitätsbedingung des doppeltsphärischen Aufbaus}
+Die Messdaten zur Stabilitätsbedingung des doppeltsphärischen Aufbaus sind in Tabelle \ref{tab:stabsphere} notiert.
+\input{tabstabsphere.tex}
+Die Resonatorlänge $L$ ist in Abbildung \ref{fig:stabsphere} gegen den aufgenommenen Strom $I$ des Photodetektors aufgetragen.
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{stabsphere.pdf}
+  \includegraphics[width=\textwidth]{stabsphere.pdf}
   \caption{Überprüfung der Stabilitätsbedingung beim doppeltsphärischen Aufbau}
   \label{fig:stabsphere}
 \end{figure}
-Fit:
+Es wird folgende Funktion mit Python 3.6.3 (scipy.optimize, curve$\_$fit) gefittet:
 \begin{equation*}
-  I= \frac{a(L+b)^2}{r_1 r_2}+\frac{c(L+d)}{r_1 r_2}+\frac{e}{r_1 r_2}
+  I= \frac{a(L+b)^2}{r_1 r_2}+\frac{c(L+d)}{r_1 r_2}+\frac{e}{r_1 r_2}.
 \end{equation*}
-\FloatBarrier
+Es ergeben sich die Parameter
 \begin{align*}
 a &=& \SI{0.77019576  \pm 6.67239536e-01}{} \\
 b &=& \SI{0.68148470  \pm 5.70376283e+12}{} \\
 c &=& \SI{-1.53874317 \pm 1.35339234e+13}{} \\
 d &=& \SI{2.97459567  \pm 1.52142773e+13}{} \\
-e &=& \SI{3.19916773  \pm 1.03956309e+12}{} \\
+e &=& \SI{3.19916773  \pm 1.03956309e+12}{}. \\
 \end{align*}
 \FloatBarrier
 
-Stabilität Flat:
+\subsection{Stabilitätsbedingung des sphärisch-flachen Aufbaus}
+Die Messwerte zum Photodetektorstrom $I$ und der Resonatorlänge $L$ sind in Tabelle \ref{tab:stabflat} aufgenommen.
+Aufgrund einer technischen Gegebenheit wird die Messung doppelt durchgeführt.
+\input{tabstabflat.tex}
+In Abbildung \ref{fig:stabflat} ist der Photodetektorstrom $I$ in Abhängigkeit der Resonatorlänge $L$ dargestellt.
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{stabflat.pdf}
-  \caption{Überprüfung der Stabilitätsbedingung beim flach-sphärischen Aufbau}
+  \includegraphics[width=\textwidth]{stabflat.pdf}
+  \caption{Überprüfung der Stabilitätsbedingung beim sphärisch-flachen Aufbau}
   \label{fig:stabflat}
 \end{figure}
-Fit:
+Die lineare Regression hat die Form
 \begin{equation*}
   I= aL+b
 \end{equation*}
-\FloatBarrier
+und wird erneut mit Python 3.6.3 (scipy.optimize, curve$\_$fit) durchgeführt.
+Als Parameter ergeben sich:
 \begin{align*}
 &&\text{zweite Messung} \\
 a &=& \SI{260.60636539 \pm 2739.59243164}{} \\
@@ -42,10 +49,13 @@ b &=& \SI{-6.55319099 \pm 91.18238783}{} \\
 \end{align*}
 \FloatBarrier
 
-Grundmode:
+\subsection{Grundmode}
+In Tabelle \ref{tab:grundmode} sind die Messwerte zur Intensitätsverteilung notiert.
+\input{tabgrundmode.tex}
+
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{grundmode.pdf}
+  \includegraphics[width=\textwidth]{grundmode.pdf}
   \caption{Intensitätsverteilung der Grundmode}
   \label{fig:grundmode}
 \end{figure}
@@ -62,6 +72,7 @@ d &=& \SI{ 0.01007865 \pm 7.33843461e-05}{}\\
 \FloatBarrier
 
 Erste Mode:
+\input{taberstemode.tex}
 \begin{align*}
 kommt noch\\
 \end{align*}

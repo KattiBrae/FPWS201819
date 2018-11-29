@@ -52,28 +52,54 @@ b &=& \SI{-6.55319099 \pm 91.18238783}{} \\
 \subsection{Grundmode}
 In Tabelle \ref{tab:grundmode} sind die Messwerte zur Intensitätsverteilung notiert.
 \input{tabgrundmode.tex}
-
+Die Messwerte sind in Abbildung \ref{fig:grundmode} gegeneinander aufgetragen.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{grundmode.pdf}
   \caption{Intensitätsverteilung der Grundmode}
   \label{fig:grundmode}
 \end{figure}
-Fit:
+Die Funktion
 \begin{equation*}
-  I= a \exp{\left( b(x-c)^2 \right)}+d
+  I= a \exp{\left( -b(x-c)^2 \right)}+d
 \end{equation*}
+wird mittels Python 3.6.3 (scipy.optimize, curve$\_$fit) an die Werte gefittet.
+Es ergeben sich die Parameter
 \begin{align*}
-a &=& \SI{ 1.71042307 \pm 2.01428259e-04}{}\\
-b &=& \SI{-0.01047146 \pm 5.10717911e-08}{}\\
-c &=& \SI{-1.64149566 \pm 3.45206452e-03}{}\\
-d &=& \SI{ 0.01007865 \pm 7.33843461e-05}{}\\
+a &=& \SI{ 1.71042311 \pm 2.01427833e-04  }{}\\
+b &=& \SI{ 1.04714595 \pm 0.510711421  e+04}{\frac{1}{m^2}}\\
+c &=& \SI{-1.64149557 \pm 0.00000345207992 e-03}{m}\\
+d &=& \SI{ 1.00787408 \pm 0.00733846863 e-02}{}.\\
 \end{align*}
+Der Parameter $b$ entspricht nun
+\begin{align*}
+                  &&&&&      b &=&  \frac{2}{\omega^2} \\
+  \Leftrightarrow &&&&& \omega &=& \pm \sqrt{\frac{2}{b}} \\
+                  &&&&& \omega &=& \pm \SI{0.0138201064795 \pm 0.0033701539974}{m}\\
+\end{align*}
+Physikalisch ist nnur das positive Ergebnis von $\omega$ sinnvoll.
+
+\begin{equation*}
+\omega= \omega_{0} \sqrt{1+ (\frac{\lambda z}{\pi})^2}
+\end{equation*}
+
+\textbf{ERGEBNIS?\\
+$\omega_0$ (Strahltaille) berechnen?}
 \FloatBarrier
 
-Erste Mode:
+\subsection{Erste Mode}
 \input{taberstemode.tex}
 \begin{align*}
 kommt noch\\
 \end{align*}
+
+\subsection{Polarisation}
+\input{tabpolarisation.tex}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{polarisation.pdf}
+  \caption{Intensität in Abhängigkeit der Polarisation am Filter}
+  \label{fig:polarisation}
+\end{figure}
+
 \FloatBarrier

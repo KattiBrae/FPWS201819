@@ -75,31 +75,67 @@ Der Parameter $b$ entspricht nun
 \begin{align*}
                   &&&&&      b &=&  \frac{2}{\omega^2} \\
   \Leftrightarrow &&&&& \omega &=& \pm \sqrt{\frac{2}{b}} \\
-                  &&&&& \omega &=& \pm \SI{0.0138201064795 \pm 0.0033701539974}{m}\\
+  \Rightarrow      &&&&& \omega &=& \pm \SI{0.0138201064795 \pm 0.0033701539974}{m}\\
 \end{align*}
 Physikalisch ist nnur das positive Ergebnis von $\omega$ sinnvoll.
 
-\begin{equation*}
-\omega= \omega_{0} \sqrt{1+ (\frac{\lambda z}{\pi})^2}
-\end{equation*}
-
-\textbf{ERGEBNIS?\\
-$\omega_0$ (Strahltaille) berechnen?}
+%\begin{equation*}
+%\omega= \omega_{0} \sqrt{1+ (\frac{\lambda z}{\pi})^2}
+%\end{equation*}
+%
+%\textbf{ERGEBNIS?\\
+%$\omega_0$ (Strahltaille) berechnen?}
 \FloatBarrier
 
 \subsection{Erste Mode}
 \input{taberstemode.tex}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{erstemode.pdf}
+  \caption{Intensitätsverteilung der ersten Mode}
+  \label{fig:erstemode}
+\end{figure}
+\begin{equation*}
+  I = \frac{8 a (R-b)^2}{\omega^2} \quad \exp{ \left( \frac{-2d(R-b)^2}{\omega^2} \right)}+c
+\end{equation*}
 \begin{align*}
-kommt noch\\
+  a      &=& \SI{ 0.00270039879 \pm 8.09048499e+18}{}\\
+  b      &=& \SI{-0.000860265803 \pm 5.15488867e-08}{}\\
+  c      &=& \SI{ 0.978796910 \pm 1.29892421}{}\\
+  d      &=& \SI{ 121.928078 \pm 1.64940075e+16}{}\\
+  \omega &=& \SI{ 0.132436551 \pm 4.86490590e+09}{}\\
+   && \textbf{WHAAAAAAT Fehler wtf}\\
+   && \textbf{Leider gehts irgendwie nicht besser}\\
 \end{align*}
+\FloatBarrier
 
 \subsection{Polarisation}
+Die Messwerte zur Messreihe der Polarisation sind in Tabelle \ref{tab:polarisation} notiert.
 \input{tabpolarisation.tex}
+Die Polarisation $\sigma$ ist in Abbildung \ref{fig:polarisation} gegen den Photodetektorstrom $I$ aufgetragen.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{polarisation.pdf}
   \caption{Intensität in Abhängigkeit der Polarisation am Filter}
   \label{fig:polarisation}
 \end{figure}
-
+Es wird ein Fit der Form
+\begin{equation*}
+  I= a sin(b \sigma +c)+d
+\end{equation*}
+durchgeführt.
+Als Parameter ergeben sich
+\begin{align*}
+  a &=& \SI{ 8.29329958 \pm 2.49000694}{nA} \\
+  b &=& \SI{ 0.03369334 \pm 0.00000355042034}{} \\
+  c &=& \SI{ 5.97045848 \pm 0.142066153}{°} \\
+  d &=& \SI{ 8.00719666 \pm 1.40593060}{nA}. \\
+\end{align*}
+Die Extrema liegen bei den Polarisationen
+\begin{align*}
+  &\sigma_{\text{max, Fit}} &=&& \SI{50.97045848 \pm 0.142066153}{°},   && \SI{230.97045848 \pm 0.142066153}{°} \\
+  &\sigma_{\text{max, Wert}} &=&& \SI{ 60 }{°},                          && \SI{ 244 }{°} \\
+  &\sigma_{\text{min, Fit}} &=&& \SI{140.97045848 \pm 0.142066153}{°},  && \SI{320.97045848 \pm 0.142066153}{°} \\
+  &\sigma_{\text{min, Wert}} &=&& \SI{ 146 }{°},                         && \SI{ 328 }{°}. \\
+\end{align*}
 \FloatBarrier

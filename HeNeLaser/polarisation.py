@@ -11,7 +11,7 @@ x, y = np.loadtxt('polarisation1.txt', unpack=True,delimiter=',')
 
 
 def f(x,a,b,c,d):
-    return a*np.cos(b*x+c)+d
+    return a*np.sin(b*x+c)+d
 popt, pcov = curve_fit(f, x, y, p0=[10,0.05,3,8])
 print(popt)
 print(np.diag(pcov))

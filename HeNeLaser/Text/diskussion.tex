@@ -1,27 +1,72 @@
-Überhaupt
-- große Schwankungen des Amperemeters
-- hohe Präzision in der Justage erforderlich
-Stabilitätsbedingung
-- sphärisch-sphärisch
-  + Lokale Abweichung der Messwerte von der Kurve ist gigantisch
-  + Theoriekurve ist in den Messwerten kaum zu erkennen
-  + Unerklärliche Fehler (Fehler in Python?)
-- sphärisch-flach
-  + Zwei Messungen, da der Laser so aus der Justage gebracht wurde, dass ein Neustart einfacher war
-  + Erste Messung voll daneben (Fehler wtf, keine Steigung)
-  + Zweite Messung ganz okay (Fehler okay :) )
-  + Bei den späteren Messwerten ist das Justieren sehr schwierig/hohe Präzision gefordert
-TEM-Grundmode
-- Gauß trifft Messwerte genau (Abbildung)
-- Fehler okay
-- Strahltaille nur positiv
-Erste Mode
-- Fit schwierig
-- trifft Messwerte nicht sehr genau (Fehler größer als Parameter)
-- Intensitätsverlust auf einer Seite
-  + Möglicherweise Draht nicht genau mittig
-Polarisation
-- Intensitätsverlust auf einer Seite
-  + Liegt möglicherweise am Aufbau? Vielleicht zu doll auf den Tisch gelehnt
-- Minima und Maxima genau zu erkennen
-  + Fit-Extrema und Messwert-Extrema decken sich nicht völlig
+%Überhaupt
+%- große Schwankungen des Amperemeters
+%- hohe Präzision in der Justage erforderlich
+Initial lässt sich sagen, dass die Werte auf dem Amperemeter schwierig abzulesen sind, da das Amperemeter im Bereich der jeweiligen letzten drei Nachkommastellen schwankt, insbesondere bei den letzten Nachkommastellen.
+Um überhaupt ein Signal aus dem Aufbau zu bekommen, ist eine hohe Präzision bei der Justage von Nöten, die durch die ungeübten Durchführenden nicht zwingend gegeben ist.\\
+%Stabilitätsbedingung
+%- sphärisch-sphärisch
+%  + Lokale Abweichung der Messwerte von der Kurve ist gigantisch
+%  + Theoriekurve ist in den Messwerten kaum zu erkennen
+%  + Unerklärliche Fehler (Fehler in Python?)
+Es wird zunächst beim doppeltsphärischen Aufbau die Stabilitätsbedingung geprüft.
+Auffällig ist die große Abweichung der Messwerte von der Theoriekurve, sowohl im Plot (Abb. \ref{fig:stabsphere}), wie auch in den Fit-Parametern.
+Gerade die Parameter aus der Ausgleichsrechnung weisen auf, dass die Werte nicht gut zur Theorie passen, da das verwendete Programm kaum eine Funktion an die Werte fitten kann.
+Dies führt zu Fehlerangaben, die den eigentlichen Parameter übersteigen.\\
+%- sphärisch-flach
+%  + Zwei Messungen, da der Laser so aus der Justage gebracht wurde, dass ein Neustart einfacher war
+%  + Erste Messung voll daneben (Fehler wtf, keine Steigung)
+%  + Zweite Messung ganz okay (Fehler okay :) )
+%  + Bei den späteren Messwerten ist das Justieren sehr schwierig/hohe Präzision gefordert
+Bei dem einfach-sphärischen Aufbau wird die Messung wiederholt, da im Rahmen der ersten Messreihe der Laser so aus der Justage gebracht wird, dass keine weiteren Messwerte aufgenommen werden können.
+Das Problem ist, dass mit fortschreitendem Resonatorabstand die Feinjustage immer schwieriger wird, sodass hier bei der ersten Messreihe die Spiegel so stark verstellt werden, dass der Laser kein Licht mehr ausgibt.
+Durch den Neubeginn stehen hier zwei Messreihen zur Verfügung.
+In Abbildung \ref{fig:stabflat} ist zu erkennen, dass die erste Messreihe zwar global einen Anstieg aufweist, aber zwischen den Werten kaum eine Steigung erkennbar ist.
+Die zweite Messreihe entspricht der Theorie besser; es ist eine passendere Steigung erkennbar.
+Auch die Werte aus der Ausgleichsrechnung zeigen, dass die zweite Messreihe deutlich genauer ist.
+Die erste Messreihe lässt sich kaum linear fitten und gibt auch wieder Fehler aus, die größer als die eigentlichen Werte sind.
+Die zweite Messreihe dagegen stellt eine akzeptable Gerade dar.\\
+%TEM-Grundmode
+%- Gauß trifft Messwerte genau (Abbildung)
+%- Fehler wunderbar
+%- Strahltaille
+Die Grundmode des Lasers entspricht einer Gaußverteilung (Abb. \ref{fig:grundmode}).
+Die Abweichungen sind relativ zu den weiteren Fits des Versuchs gering.
+Der Strahlradius $\omega$ wird als
+\begin{equation*}
+  \omega = \SI{ 0.01382 \pm 0.00015 }{m}
+\end{equation*}
+berechnet.\\
+%Erste Mode
+%- Fit schwierig, funktioniert nur bei sehr genauen Startwerten
+%- trifft Messwerte nicht sehr genau (Fehler größer als Parameter)
+%- Intensitätsverlust auf einer Seite
+%  + Möglicherweise Draht nicht genau mittig
+Zur Darstellung der ersten Mode wird ein Draht in den Strahlengang eingebracht.
+Der Fit gestaltet sich als schwierig, da auch hier die Messwerte nur bedingt auf die Funktion passen.
+Nur bei spezifischen Startwerten ist ein Fit mit python möglich, und die ausgegebenen Fehler entsprechen nicht einer sinnvollen Messung, da sie größer sind, als die eigentlichen Messwerte.
+Auffällig ist außerdem der Intensitätsverlust, der sich auf der linken Seite der Messwerte befindet.
+Eine mögliche Erklärung ist, dass der Draht sich nicht genau mittig im Strahl befindet.
+Außerdem ist eine kontinuierliche Verzerrung des Aufbaus durch die Tische und die Bewegung der Durchführenden nicht auszuschließen.\\
+%Polarisation
+%- Intensitätsverlust auf einer Seite
+%  + Liegt möglicherweise am Aufbau? Vielleicht zu doll auf den Tisch gelehnt
+%- Minima und Maxima genau zu erkennen
+%  + Fit-Extrema und Messwert-Extrema decken sich nicht völlig
+Die Polarisation des Lasers wird gemessen.
+Die Maxima der gefitteten Funktion (Index f) und der Messwerte (Index m) decken sich nicht völlig:
+\begin{align*}
+                &&& \text{1. Extremum}                            && \text{2. Extremum}   \\
+  \text{Maxima} &&& \sigma_{\text{f}} = \SI{50.97 \pm 0.38}{°},   && \sigma_{\text{f}}  = \SI{230.97 \pm 0.38}{°} \\
+                &&& \sigma_{\text{m}} = \SI{ 60 }{°},             && \sigma_{\text{m}}  = \SI{ 244 }{°} \\
+  \text{Minima} &&& \sigma_{\text{f}} = \SI{140.97 \pm 0.38}{°},  && \sigma_{\text{f}}  = \SI{320.97 \pm 0.38}{°} \\
+                &&& \sigma_{\text{m}} = \SI{ 146 }{°},            && \sigma_{\text{m}}  = \SI{ 328 }{°}. \\
+\end{align*}
+So weichen die Maxima und Minima der gefitteten Funktion und der um folgende Werte voneinander ab:
+\begin{align*}
+              &&& \text{1. Extremum}  && \text{2. Extremum}    \\
+\text{Maxima} &&& f=\SI{17.72}{\%},   && f=\SI{5.64}{\%} \\
+\text{Minima} &&& f=\SI{3.57}{\%},    && f=\SI{2.19}{\%} \\
+\end{align*}
+In Abbildung \ref{fig:polarisation} ist ein Intensitätsverlust über die Maxima auf der rechten Seite erkennbar.
+Der Intensitätsverlust lässt sich teilweise analog zu dem Intensitätsverlust aus dem vorherigen Versuchsteil erklären.
+Eine Verzerrung durch den Aufbau, die Tische und die Bewegungen der Durchführenden ist nicht auszuschließen.

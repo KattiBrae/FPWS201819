@@ -14,7 +14,7 @@ def f(x,a,b):
     return a*x+b
 popt, pcov = curve_fit(f, x, y)
 print(popt)
-print(np.diag(pcov))
+print(np.sqrt(np.diag(pcov)))
 
 
 print('1. Messung')
@@ -26,7 +26,7 @@ def g(m,c,d):
     return c*m+d
 qopt, qcov = curve_fit(g, m, n)
 print(qopt)
-print(np.diag(qcov))
+print(np.sqrt(np.diag(qcov)))
 
 
 x_new = np.linspace(x[0], m[-1], 500)

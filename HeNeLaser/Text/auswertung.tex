@@ -10,16 +10,23 @@ Die Resonatorlänge $L$ ist in Abbildung \ref{fig:stabsphere} gegen den aufgenom
 \end{figure}
 Es wird folgende Funktion mit Python 3.6.3 (scipy.optimize, curve$\_$fit) gefittet:
 \begin{equation*}
-  I= \frac{a(L+b)^2}{r_1 r_2}+\frac{c(L+d)}{r_1 r_2}+\frac{e}{r_1 r_2}.
+  I= \frac{a(L+b)^2}{r_1 r_2}+\frac{c(L+b)}{r_1 r_2}+\frac{d}{r_1 r_2}.
 \end{equation*}
 Es ergeben sich die Parameter
 \begin{align*}
-a &=& \SI{0.77019576  \pm 6.67239536e-01}{} \\
-b &=& \SI{0.68148470  \pm 5.70376283e+12}{} \\
-c &=& \SI{-1.53874317 \pm 1.35339234e+13}{} \\
-d &=& \SI{2.97459567  \pm 1.52142773e+13}{} \\
-e &=& \SI{3.19916773  \pm 1.03956309e+12}{}. \\
+a &=& \SI{  0.77   \pm 0.86 }{A} \\
+b &=&(\SI{  1  }{} \pm \SI{1e+06 }{}) \si{m} \\
+c &=&(\SI{ -2  }{} \pm \SI{1e+06 }{}) \si{Am} \\
+d &=&(\SI{  0.3}{} \pm \SI{2e+06 }{}) \si{Am^2} \\
 \end{align*}
+%
+%\begin{align*}
+%a &=& \SI{   0.7701953 \pm 8.55242891e-01 }{A} \\
+%b &=& \SI{  1.01713845 \pm 1.01457068e+06 }{m} \\
+%c &=& \SI{ -2.05577951 \pm 1.56283636e+06 }{Am} \\
+%d &=& \SI{  0.27390834 \pm 2.08573475e+06 }{Am^2} \\
+%\end{align*}
+%
 \FloatBarrier
 
 \subsection{Stabilitätsbedingung des sphärisch-flachen Aufbaus}
@@ -41,12 +48,22 @@ und wird erneut mit Python 3.6.3 (scipy.optimize, curve$\_$fit) durchgeführt.
 Als Parameter ergeben sich:
 \begin{align*}
 &&\text{zweite Messung} \\
-a &=& \SI{260.60636539 \pm 2739.59243164}{} \\
-b &=& \SI{-209.49268296 \pm 1168.43618691}{} \\
+a &=& \SI{  260 \pm 52 }{\frac{A}{m}} \\
+b &=& \SI{ -210 \pm 34 }{A} \\
 &&\text{erste Messung} \\
-a &=& \SI{3.03299421 \pm 187.11756018}{} \\
-b &=& \SI{-6.55319099 \pm 91.18238783}{} \\
+a &=& \SI{  3.0 \pm 13.7 }{\frac{A}{m}} \\
+b &=& \SI{ -6.6 \pm 9.6 }{A} \\
 \end{align*}
+%
+%\begin{align*}
+%&&\text{zweite Messung} \\
+%a &=& \SI{  260.60636539 \pm 52.34111607 }{\frac{A}{m}} \\
+%b &=& \SI{ -209.49268296 \pm 34.18239586 }{A} \\
+%&&\text{erste Messung} \\
+%a &=& \SI{  3.03299421 \pm 13.67909208 }{\frac{A}{m}} \\
+%b &=& \SI{ -6.55319099 \pm 9.54894695 }{A} \\
+%\end{align*}
+%
 \FloatBarrier
 
 \subsection{Grundmode}
@@ -66,19 +83,27 @@ Die Funktion
 wird mittels Python 3.6.3 (scipy.optimize, curve$\_$fit) an die Werte gefittet.
 Es ergeben sich die Parameter
 \begin{align*}
-a &=& \SI{ 1.71042311 \pm 2.01427833e-04  }{}\\
-b &=& \SI{ 1.04714595 \pm 0.510711421  e+04}{\frac{1}{m^2}}\\
-c &=& \SI{-1.64149557 \pm 0.00000345207992 e-03}{m}\\
-d &=& \SI{ 1.00787408 \pm 0.00733846863 e-02}{}.\\
+a &=& \SI{  1.710 \pm 0.014 }{A}\\
+b &=& \SI{  10472 \pm 226 }{\frac{1}{m^2}}\\
+c &=& \SI{ -0.00164 \pm 0.00006 }{m}\\
+d &=& \SI{  0.01008 \pm 0.00857 }{A}.\\
 \end{align*}
+%
+%\begin{align*}
+%a &=& \SI{  1.71042311e+00 \pm 1.41925274e-02 }{A}\\
+%b &=& \SI{  1.04714595e+04 \pm 2.25989252e+02 }{\frac{1}{m^2}}\\
+%c &=& \SI{ -1.64149557e-03 \pm 5.87544034e-05 }{m}\\
+%d &=& \SI{  1.00787408e-02 \pm 8.56648623e-03 }{A}.\\
+%\end{align*}
+%
 Der Parameter $b$ entspricht nun
 \begin{align*}
                   &&&&&      b &=&  \frac{2}{\omega^2} \\
   \Leftrightarrow &&&&& \omega &=& \pm \sqrt{\frac{2}{b}} \\
-  \Rightarrow      &&&&& \omega &=& \pm \SI{0.0138201064795 \pm 0.0033701539974}{m}\\
+  \Rightarrow      &&&&& \omega &=& \pm \SI{ 0.01382 \pm 0.00015 }{m}\\
 \end{align*}
-Physikalisch ist nnur das positive Ergebnis von $\omega$ sinnvoll.
-
+Physikalisch ist nur das positive Ergebnis von $\omega$ sinnvoll.
+%\omega &=& \pm \SI{ 0.0138201064795 \pm 0.00014912895026 }{m}
 %\begin{equation*}
 %\omega= \omega_{0} \sqrt{1+ (\frac{\lambda z}{\pi})^2}
 %\end{equation*}
@@ -88,25 +113,37 @@ Physikalisch ist nnur das positive Ergebnis von $\omega$ sinnvoll.
 \FloatBarrier
 
 \subsection{Erste Mode}
+Die Messwerte zur Untersuchung der ersten transversalen Mode sind in Tabelle \ref{tab:erstemode} notiert.
 \input{taberstemode.tex}
+In Abbildung \ref{fig:erstemode} sind die Messwerte gegeneinander aufgetragen.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{erstemode.pdf}
   \caption{Intensitätsverteilung der ersten Mode}
   \label{fig:erstemode}
 \end{figure}
+Es wird die Funktion
 \begin{equation*}
-  I = \frac{8 a (R-b)^2}{\omega^2} \quad \exp{ \left( \frac{-2d(R-b)^2}{\omega^2} \right)}+c
+  I = \frac{8 a (x-b)^2}{\omega^2} \quad \exp{ \left( \frac{-2d(x-b)^2}{\omega^2} \right)}+c
 \end{equation*}
+gefittet, die sich aus der Feldverteilung des Resonators mit den ersten Laguerrepolynomen ergibt.
+Als Parameter ergeben sich:
 \begin{align*}
-  a      &=& \SI{ 0.00270039879 \pm 8.09048499e+18}{}\\
-  b      &=& \SI{-0.000860265803 \pm 5.15488867e-08}{}\\
-  c      &=& \SI{ 0.978796910 \pm 1.29892421}{}\\
-  d      &=& \SI{ 121.928078 \pm 1.64940075e+16}{}\\
-  \omega &=& \SI{ 0.132436551 \pm 4.86490590e+09}{}\\
-   && \textbf{WHAAAAAAT Fehler wtf}\\
-   && \textbf{Leider gehts irgendwie nicht besser}\\
+  a      &=& \SI{  2700 \pm 2844377790 }{A} \\
+  b      &=& \SI{ -0.00086 \pm 0.00023 }{m} \\
+  c      &=& \SI{  0.98 \pm 1.14 }{A} \\
+  d      &=& \SI{  122 \pm 128428998 }{} \\
+  \omega &=& \SI{  0.13 \pm 69748.88 }{} .\\
 \end{align*}
+%
+%\begin{align*}
+%  a      &=& \SI{  2.70039879e+03 \pm 2.84437779e+09 }{A} \\
+%  b      &=& \SI{ -8.60265803e-04 \pm 2.27043799e-04 }{m} \\
+%  c      &=& \SI{  9.78796910e-01 \pm 1.13970356e+00 }{A} \\
+%  d      &=& \SI{  1.21928078e+02 \pm 1.28428998e+08 }{} \\
+%  \omega &=& \SI{  1.32436551e-01 \pm 6.97488774e+04 }{} .\\
+%\end{align*}
+%
 \FloatBarrier
 
 \subsection{Polarisation}
@@ -126,16 +163,24 @@ Es wird ein Fit der Form
 durchgeführt.
 Als Parameter ergeben sich
 \begin{align*}
-  a &=& \SI{ 8.29329958 \pm 2.49000694}{nA} \\
-  b &=& \SI{ 0.03369334 \pm 0.00000355042034}{} \\
-  c &=& \SI{ 5.97045848 \pm 0.142066153}{°} \\
-  d &=& \SI{ 8.00719666 \pm 1.40593060}{nA}. \\
+  a &=& \SI{ 8.3 \pm 1.6 }{nA} \\
+  b &=& \SI{ 0.0337 \pm 0.0019 }{} \\
+  c &=& \SI{ 5.97 \pm 0.38 }{°} \\
+  d &=& \SI{ 8.01 \pm 1.19 }{nA}. \\
 \end{align*}
+%
+%\begin{align*}
+%  a &=& \SI{ 8.29329958 \pm 1.57797558 }{nA} \\
+%  b &=& \SI{ 0.03369334 \pm 0.00188426 }{} \\
+%  c &=& \SI{ 5.97045848 \pm 0.37691664 }{°} \\
+%  d &=& \SI{ 8.00719666 \pm 1.18571944 }{nA}. \\
+%\end{align*}
+%
 Die Extrema liegen bei den Polarisationen
 \begin{align*}
-  &\sigma_{\text{max, Fit}} &=&& \SI{50.97045848 \pm 0.142066153}{°},   && \SI{230.97045848 \pm 0.142066153}{°} \\
+  &\sigma_{\text{max, Fit}} &=&& \SI{50.97 \pm 0.38}{°},   && \SI{230.97 \pm 0.38}{°} \\
   &\sigma_{\text{max, Wert}} &=&& \SI{ 60 }{°},                          && \SI{ 244 }{°} \\
-  &\sigma_{\text{min, Fit}} &=&& \SI{140.97045848 \pm 0.142066153}{°},  && \SI{320.97045848 \pm 0.142066153}{°} \\
+  &\sigma_{\text{min, Fit}} &=&& \SI{140.97 \pm 0.38}{°},  && \SI{320.97 \pm 0.38}{°} \\
   &\sigma_{\text{min, Wert}} &=&& \SI{ 146 }{°},                         && \SI{ 328 }{°}. \\
 \end{align*}
 \FloatBarrier

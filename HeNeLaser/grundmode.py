@@ -15,7 +15,7 @@ def f(x,a,b,c,d):
     return a*np.exp(-b*(x-c)**2)+d
 popt, pcov = curve_fit(f, x, y, p0=[1.7,0.00002,0.00000002,0.017])
 print(popt)
-print(np.diag(pcov))
+print(np.sqrt(np.diag(pcov)))
 
 x_new = np.linspace(x[0], x[-1], 500)
 

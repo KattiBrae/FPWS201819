@@ -19,7 +19,7 @@ def f(R,a,b,c,d,o):
 
 popt, pcov = curve_fit(f,R,y, p0=[25,0.003,10,1000,0.5])
 print(popt)
-print(np.diag(pcov))
+print(np.sqrt(np.diag(pcov)))
 R_new = np.linspace(R[0], R[-1], 5000)
 
 

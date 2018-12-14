@@ -11,12 +11,12 @@ x, y = np.loadtxt('stabsphere.txt', unpack=True,delimiter=',')
 y=-y
 r1=1.4
 r2=1.4
-(r1*r2)
-def f(x,a,b,c,d,e):
-    return a*(x+b)**2/(r1*r2)+c*(x+d)/(r1*r2)+e/(r1*r2)
+def f(x,a,b,c,e):
+#    return 1/(r1*r2)*a*(r2-c*(x+b))*(r1-d*(x+b))+e
+    return a*(x+b)**2/(r1*r2)+c*(x+b)/(r1*r2)+e/(r1*r2)
 popt, pcov = curve_fit(f, x, y)
 print(popt)
-print(np.diag(pcov))
+print(np.sqrt(np.diag(pcov)))
 
 x_new = np.linspace(x[0], x[-1], 500)
 

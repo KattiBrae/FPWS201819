@@ -8,6 +8,10 @@ Die Resonatorlänge $L$ ist in Abbildung \ref{fig:stabsphere} gegen den aufgenom
   \caption{Überprüfung der Stabilitätsbedingung beim doppeltsphärischen Aufbau}
   \label{fig:stabsphere}
 \end{figure}
+Aus der Stabilitätsbedingung folgt der Zusammenhang
+\begin{equation*}
+  I=\left(1-\frac{L}{r_1} \right) \left(1- \frac{L}{r_2} \right).
+\end{equation*}
 Es wird folgende Funktion mit Python 3.6.3 (scipy.optimize, curve$\_$fit) gefittet:
 \begin{equation*}
   I= \frac{a(L+b)^2}{r_1 r_2}+\frac{c(L+b)}{r_1 r_2}+\frac{d}{r_1 r_2}.
@@ -17,7 +21,7 @@ Es ergeben sich die Parameter
 a &=& \SI{  0.77   \pm 0.86 }{A} \\
 b &=&(\SI{  1  }{} \pm \SI{1e+06 }{}) \si{m} \\
 c &=&(\SI{ -2  }{} \pm \SI{1e+06 }{}) \si{Am} \\
-d &=&(\SI{  0.3}{} \pm \SI{2e+06 }{}) \si{Am^2} \\
+d &=&(\SI{  0.3}{} \pm \SI{2e+06 }{}) \si{Am^2}. \\
 \end{align*}
 %
 %\begin{align*}
@@ -40,6 +44,10 @@ In Abbildung \ref{fig:stabflat} ist der Photodetektorstrom $I$ in Abhängigkeit 
   \caption{Überprüfung der Stabilitätsbedingung beim sphärisch-flachen Aufbau}
   \label{fig:stabflat}
 \end{figure}
+Aufgrund des flachen Spiegels reduziert sich die Stabilitätsbedingung auf
+\begin{equation*}
+  I=\left(1-0 \right) \left(1- \frac{L}{r_2} \right)=1- \frac{L}{r_2}
+\end{equation*}
 Die lineare Regression hat die Form
 \begin{equation*}
   I= aL+b
@@ -158,7 +166,7 @@ Die Polarisation $\sigma$ ist in Abbildung \ref{fig:polarisation} gegen den Phot
 \end{figure}
 Es wird ein Fit der Form
 \begin{equation*}
-  I= a sin(b \sigma +c)+d
+  I= a \sin{(b \sigma +c)}+d
 \end{equation*}
 durchgeführt.
 Als Parameter ergeben sich

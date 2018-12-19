@@ -18,17 +18,17 @@ Es wird folgende Funktion mit Python 3.6.3 (scipy.optimize, curve$\_$fit) gefitt
 \end{equation*}
 Es ergeben sich die Parameter
 \begin{align*}
-a &=& \SI{  0.77   \pm 0.86 }{A} \\
+a &=& \SI{ -0.77   \pm 0.86 }{A} \\
 b &=&(\SI{  1  }{} \pm \SI{1e+06 }{}) \si{m} \\
-c &=&(\SI{ -2  }{} \pm \SI{1e+06 }{}) \si{Am} \\
-d &=&(\SI{  0.3}{} \pm \SI{2e+06 }{}) \si{Am^2}. \\
+c &=&(\SI{  2  }{} \pm \SI{1e+06 }{}) \si{Am} \\
+d &=&(\SI{ -0.3}{} \pm \SI{2e+06 }{}) \si{Am^2}. \\
 \end{align*}
 %
 %\begin{align*}
-%a &=& \SI{   0.7701953 \pm 8.55242891e-01 }{A} \\
+%a &=& \SI{  -0.7701953 \pm 8.55242891e-01 }{A} \\
 %b &=& \SI{  1.01713845 \pm 1.01457068e+06 }{m} \\
-%c &=& \SI{ -2.05577951 \pm 1.56283636e+06 }{Am} \\
-%d &=& \SI{  0.27390834 \pm 2.08573475e+06 }{Am^2} \\
+%c &=& \SI{  2.05577951 \pm 1.56283636e+06 }{Am} \\
+%d &=& \SI{ -0.27390834 \pm 2.08573475e+06 }{Am^2} \\
 %\end{align*}
 %
 \FloatBarrier
@@ -56,20 +56,20 @@ und wird erneut mit Python 3.6.3 (scipy.optimize, curve$\_$fit) durchgeführt.
 Als Parameter ergeben sich:
 \begin{align*}
 &&\text{zweite Messung} \\
-a &=& \SI{  260 \pm 52 }{\frac{A}{m}} \\
-b &=& \SI{ -210 \pm 34 }{A} \\
+a &=& \SI{ -260 \pm 52 }{\frac{A}{m}} \\
+b &=& \SI{  210 \pm 34 }{A} \\
 &&\text{erste Messung} \\
-a &=& \SI{  3.0 \pm 13.7 }{\frac{A}{m}} \\
-b &=& \SI{ -6.6 \pm 9.6 }{A} \\
+a &=& \SI{ -3.0 \pm 13.7 }{\frac{A}{m}} \\
+b &=& \SI{  6.6 \pm 9.6 }{A} \\
 \end{align*}
 %
 %\begin{align*}
 %&&\text{zweite Messung} \\
-%a &=& \SI{  260.60636539 \pm 52.34111607 }{\frac{A}{m}} \\
-%b &=& \SI{ -209.49268296 \pm 34.18239586 }{A} \\
+%a &=& \SI{ -260.60636539 \pm 52.34111607 }{\frac{A}{m}} \\
+%b &=& \SI{  209.49268296 \pm 34.18239586 }{A} \\
 %&&\text{erste Messung} \\
-%a &=& \SI{  3.03299421 \pm 13.67909208 }{\frac{A}{m}} \\
-%b &=& \SI{ -6.55319099 \pm 9.54894695 }{A} \\
+%a &=& \SI{ -3.03299421 \pm 13.67909208 }{\frac{A}{m}} \\
+%b &=& \SI{  6.55319099 \pm 9.54894695 }{A} \\
 %\end{align*}
 %
 \FloatBarrier
@@ -192,3 +192,13 @@ Die Extrema liegen bei den Polarisationen
   &\sigma_{\text{min, Wert}} &=&& \SI{ 146 }{°},                         && \SI{ 328 }{°}. \\
 \end{align*}
 \FloatBarrier
+
+\subsection{Berechnung der Wellenlänge des Lasers}
+Zur Berechnung der Wellenlänge wird im Interferenzmuster des Gitters der Abstand des ersten Nebenmaximum zum Hauptmaximum notiert.
+Außerdem wird der Abstand des Gitters zum Schirm notiert.
+\begin{equation*}
+    \lambda = \frac{d g}{a}
+\end{equation*}
+%a = schirmabstand
+%g = spaltabstand
+%d = abstand Hauptmaximum -  erstes nebenmaximum

@@ -8,7 +8,7 @@ from pylab import figure, axes, pie, title, show
 print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
 x, y = np.loadtxt('stabsphere.txt', unpack=True,delimiter=',')
-y=-y
+#y=-y
 r1=1.4
 r2=1.4
 def f(x,a,b,c,e):

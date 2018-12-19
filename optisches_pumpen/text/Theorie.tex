@@ -4,11 +4,14 @@
 %
 Ein Atom hat diskrete Energieniveaus, auf denen sich die Hüllenelektronen befinden.
 Die Verteilung der Elektronen erfolgt bei den äußeren Hüllenelektronen statistisch nach Boltzmann.
-Die Besetzungszahlen $N_{1}, N_{2}$ zweier Niveaus mit der statistischen Gewichtung $g_{1}, g_{2}$ liegen in folgendem Zusammenhang:
+Die temperaturabhängigen Besetzungszahlen $N_{1}, N_{2}$ zweier Niveaus mit der statistischen Gewichtung $g_{1}, g_{2}$ und den Energien $W_{1}$, $W_{2}$ ($W_{1}$<$W_{2}$) liegen in folgendem Zusammenhang:
 \begin{equation*}
   \frac{N_{2}}{N_{1}} = \frac{ g_{2} \exp{  \left( -\frac{W_{2}}{k_{\text{B}}}  \right) }}{ g_{1} \exp{ \left( -\frac{W_{1}}{k_{\text{B}}} \right) }}.
 \end{equation*}
+$k_{\text{B}}$ ist hierbei die Boltzmann-Konstante und $T$ beschreibt die Temperatur.
 Das Prinzip des optischen Pumpens besetzt die Niveaus entgegen dieser thermischen Verteilung.\\
+In diesem Versuch wird das optische Pumpen mithilfe des Zeeman-Effekts durchgeführt.
+Die Aufspaltung der Energieniveaus im Rahmen des Zeeman-Effekts und so auch das optische Pumpen ist abhängig von den quantenmechanischen Eigenschaften der Atome.
 %
 %Landé-Faktor\\
 %- Materialeigenschaft -> Materialbestimmung über diese Messung möglich\\
@@ -16,8 +19,8 @@ Das Prinzip des optischen Pumpens besetzt die Niveaus entgegen dieser thermische
 %- Bohrsches Magneton: magnetisches Moment für Elektron mit l=1????\\
 %- Herleitung: Winkelbeziehungen etc\\
 %
-\\Der Landé-Faktor $g$ ist eine Materialeigenschaft, die zur Stoff- und Isotopenbestimmung benutzt werden kann.
-Das Bohr'sche Magneton ist der Betrag des magnetischem Momentes $\vec{\mu}$ eines Elektrons mit Bahndrehimpuls $L=1$.
+\\Der Landé-Faktor $g$ ist eine Materialeigenschaft von Atomen, die zur Stoff- und Isotopenbestimmung benutzt werden kann.
+Das Bohr'sche Magneton ist der Betrag des magnetischen Momentes $\vec{\mu}$ eines Elektrons mit Bahndrehimpuls $L=1$.
 Der Landé-Faktor ist ein Verhältnisfaktor für die magnetischen Momente des Spins $\vec{S}$, des Bahndrehimpulses $\vec{L}$, des Gesamtdrehimpulses $\vec{J}$, etc. zum Bohr'schen Magneton $\mu_{\text{B}}$:
 Das magnetische Moment zu dem Spin $\vec{S}$ sieht wie folgt aus:
 \begin{align*}
@@ -33,23 +36,23 @@ Entsprechend ist das magnetische Moment des Bahndrehimpuls $\vec{L}$
   \caption{Darstellung der verschiedenen magnetischen Momente von Spin, Bahndrehimpuls und Gesamtdrehimpuls \cite{1}}
   \label{fig:magmom}
 \end{figure}
-Die Kopplung von Spin und Bahndrehimpuls ergibt den Gesamtdrehimpuls $\vec{J}$ und das zugehörige magnetische Moment $\vec{\mu_{\text{J}}}$:
+Die Kopplung von Spin und Bahndrehimpuls ergibt den Gesamtdrehimpuls $\vec{J}$ der Elektronenhülle und das zugehörige magnetische Moment $\vec{\mu_{\text{J}}}$:
 \begin{align*}
   \vec{\mu_{\text{J}}} = \vec{\mu_{\text{S}}} + \vec{\mu_{\text{L}}}= - g_{\text{J}} \mu_{\text{B}} \vec{J} && \text{mit} && |\vec{\mu_{\text{J}}}|=  g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)}.
 \end{align*}
-Nur das magnetische Moment $|\vec{\mu_{\text{J}}}|$ in Richtung von $\vec{J}$ hat schlussendlich einen Effekt, da $\vec{J}$ eine Präzessionsbewegung vollführt (Abb. \ref{fig:magmom}).
+Nur das magnetische Moment $|\vec{\mu_{\text{J}}}|$ in Richtung von $\vec{J}$ hat einen Effekt auf die Energiebilanz, da $\vec{J}$ eine Präzessionsbewegung vollführt (Abb. \ref{fig:magmom}).
 Die Winkelbeziehung in $|\vec{\mu_{\text{J}}}|$ lässt sich aus Abbildung \ref{fig:magmom} erkennen.
 Damit ergibt sich:
 \begin{align*}
-                  && |\vec{\mu_{\text{J}}}|  &=&  |\mu_{\text{S}}| \cos{(\alpha)} &+& |\mu_{\text{L}}| \cos{(\beta)} \\
- \Leftrightarrow  && g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)} &=& g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)} \cos{(\alpha)} &+& \mu_{\text{B}} \sqrt{L(L+1)} \cos{(\beta)}
+                   |\vec{\mu_{\text{J}}}|                    =  |\mu_{\text{S}}| \cos{(\alpha)}                          + |\mu_{\text{L}}| \cos{(\beta)} \\
+ \Leftrightarrow   g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)} = g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)} \cos{(\alpha)}  + \mu_{\text{B}} \sqrt{L(L+1)} \cos{(\beta)}
 \end{align*}
 Für die Winkel lässt sich aufstellen:
 \begin{align*}
-  \cos{(\alpha)} &=& \frac{ |\vec{S}|^2 - |\vec{L}|^2 + |\vec{J}|^2}{2 |\vec{L}||\vec{J}|^2} \\% &=& \frac{ \left(g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)}\right)^2  -  \left( \mu_{\text{B}} \sqrt{L(L+1)} \right)^2  +  \left( g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)} \right)^2 }{  2              \mu_{\text{B}} \sqrt{L(L+1)} g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)}    } \\
-  \cos{(\beta)}  &=& \frac{-|\vec{S}|^2 + |\vec{L}|^2 + |\vec{J}|^2}{2 |\vec{S}||\vec{J}|^2}.\\% &=& \frac{-\left(g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)}\right)^2  +  \left( \mu_{\text{B}} \sqrt{L(L+1)} \right)^2  +  \left( g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)} \right)^2 }{  2 g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)} g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)}    }.\\
+  \cos{(\alpha)} = \frac{ |\vec{S}|^2 - |\vec{L}|^2 + |\vec{J}|^2}{2 |\vec{L}||\vec{J}|^2} \\% &=& \frac{ \left(g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)}\right)^2  -  \left( \mu_{\text{B}} \sqrt{L(L+1)} \right)^2  +  \left( g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)} \right)^2 }{  2              \mu_{\text{B}} \sqrt{L(L+1)} g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)}    } \\
+  \cos{(\beta)}  = \frac{-|\vec{S}|^2 + |\vec{L}|^2 + |\vec{J}|^2}{2 |\vec{S}||\vec{J}|^2}.\\% &=& \frac{-\left(g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)}\right)^2  +  \left( \mu_{\text{B}} \sqrt{L(L+1)} \right)^2  +  \left( g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)} \right)^2 }{  2 g_{\text{S}} \mu_{\text{B}} \sqrt{S(S+1)} g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)}    }.\\
 \end{align*}
-Schlussendlich ergibt sich:
+Es ergibt sich:
 \begin{equation}
   g_{\text{J}}= \frac{\left(g_{\text{S}} +1 \right)J\left(J+1\right) + \left(g_{\text{S}}-1\right) \left[ S\left(S+1\right)-L\left(L-1\right) \right]   }{2J\left(J+1\right)}.
 \label{eqn:landej}
@@ -60,7 +63,7 @@ Schlussendlich ergibt sich:
 %- Aufspaltung proportional zum Landé-Faktor\\
 %
 \\Der Zeemaneffekt beschreibt die Aufspaltung der vorhandenen Energieniveaus durch ein äußeres Magnetfeld.
-Die magnetischen Momente wechselwirken mit dem äußeren Magnetfeld $\vec{B}$ und es haben nur die Beiträge entlang der $\vec{J}$-Achse einen Effekt.
+Die magnetischen Momente wechselwirken mit dem äußeren Magnetfeld $\vec{B}$ und es haben nur die Beiträge entlang der $\vec{B}$-Achse einen Effekt.
 Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ein ganzzahliges Vielfaches $M_{\text{J}}$ von $g_{\text{J}} \mu_{\text{B}} B$:
 \begin{equation}
   E_{\text{Zeeman}} = -\vec{\mu_{\text{J}}} \vec{B} \Rightarrow E_{\text{Zeeman}} = g_{\text{J}} \mu_{\text{B}} M_{\text{J}} B.
@@ -83,7 +86,7 @@ Die Hyperfeinstruktur wird durch den Zeemaneffekt weiter aufgespalten (Abb. \ref
   \caption{Darstellung der Aufspaltung der Energieniveaus durch die Hyperfeinstruktur und den Zeemaneffekt \cite{1}}
   \label{fig:kernspin}
 \end{figure}
-Der Gesamtdrehimpuls $\vec{J}$ des Elektrons und der Kernspin $\vec{I}$ koppeln zu dem Gesamtdrehimpuls $\vec{F}$ des Atoms:
+Der Gesamtdrehimpuls $\vec{J}$ der Elektronenhülle und der Kernspin $\vec{I}$ koppeln zu dem Gesamtdrehimpuls $\vec{F}$ des Atoms:
 \begin{align*}
   \vec{F}=\vec{J}+\vec{I} && mit && |\vec{\mu_{\text{F}}}|= g_{\text{F}} \mu_{\text{B}} \sqrt{F(F+1)}.\\
 \end{align*}
@@ -102,16 +105,16 @@ Der Kernspin beeinflusst auch den Landé-Faktor $g_{\text{F}}$, der sich nun wie
 %- angeregte Zustände fallen in alle Grundzustände zurück\\
 %- $\sigma^{+}$ pumpt (über die genannten Umwege) die Elektronen aus dem niedrigerem Grundzustand in den höheren Grundzustand\\
 %
-\\Das optische Pumpen basiert nun auf der Idee, die Elektronen aus ihrer thermischen Verteilung auf den Hüllen zu bringen.
-Der Einfachheit halber wird zunächst mit der Annahme gearbeitet, dass das Atom einen Kernspin mit $I=0$ besitzt.
+\\Das optische Pumpen basiert auf der Idee, die Elektronen aus ihrer thermischen Verteilung auf den Hüllen zu bringen.
 Die verwendeten Stoffe entstammen der Alkali-Gruppe, also haben die Atome immer nur ein Elektron auf der äußersten Schale.
-Als Grundzustand eines Alkali-Atoms ergibt sich $^{2}S_{\frac{1}{2}}$.
+Der Einfachheit halber wird zunächst mit der Annahme gearbeitet, dass das Atom einen Kernspin mit $I=0$ besitzt.
+Als Grundzustand ergibt sich somit $^{2}S_{\frac{1}{2}}$.
 Die angeregten Zustände sind $^{2}P_{\frac{1}{2}}$ und $^{2}P_{\frac{3}{2}}$.
 Die Energieniveaus sind in Abbildung \ref{fig:doublett} dargestellt.
 Die beiden Übergänge in Abbildung \ref{fig:doublett} werden $D_{1}$-$D_{2}$-Doublett genannt.
 Wird ein äußeres Magnetfeld angelegt, entsteht eine Zeeman-Aufspaltung.
 Die Zeeman-Aufspaltung des $D_{1}$-Übergangs ist in Abbildung \ref{fig:sigmaplus} abgebildet.
-Bei der Zeeman-Aufspaltung unterscheiden sich die Übergänge durch die Polarisation (Tab. \ref{tab:polarisation}).
+Bei der Zeeman-Aufspaltung unterscheiden sich die Übergänge durch die Polarisation des Lichts (Tab. \ref{tab:polarisation}).
 \begin{table}[h!]
   \centering
   \caption{Übergänge der Zeeman-Aufpaltung}
@@ -125,8 +128,8 @@ $\pi$        && linear         && $\Delta M_{\text{J}}=$ & $ 0:$  &&  $^{2}P_{\f
     \bottomrule
   \end{tabular}
 \end{table}
-Wird nun der Stoff spezifisch mit $D_{1}$-Licht angeregt, fällt er nur über den $D_{1}$-Übergang aus dem angeregten $^{2}P_{\frac{1}{2}}$-Zustand zurück in seinen Grundzustand $^{2}S_{\frac{1}{2}}$.
-Wird der Stoff weiterhin mit $\sigma^{+}$-polarisiertem $D_{1}$-Licht angeregt, werden die Elektronen vom $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= -\frac{1}{2}$-Zustand in den $^{2}P_{\frac{1}{2}}, \Delta M_{\text{J}}= +\frac{1}{2}$-Zustand gebracht.
+%Wird nun der Stoff spezifisch mit $D_{1}$-Licht angeregt, fällt er nur über den $D_{1}$-Übergang aus dem angeregten $^{2}P_{\frac{1}{2}}$-Zustand zurück in seinen Grundzustand $^{2}S_{\frac{1}{2}}$.
+Wird der Stoff mit $\sigma^{+}$-polarisiertem $D_{1}$-Licht angeregt, werden die Elektronen vom $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= -\frac{1}{2}$-Zustand in den $^{2}P_{\frac{1}{2}}, \Delta M_{\text{J}}= +\frac{1}{2}$-Zustand gebracht.
 Von dort fallen sie aber in beide Grundzustände $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= \pm \frac{1}{2}$ zurück.
 Mit diesem Prinzip gelingt es, den $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= -\frac{1}{2}$-Zustand (energieärmer) leer zu pumpen und den $^{2}S_{\frac{1}{2}}, \Delta M_{\text{J}}= +\frac{1}{2}$-Zustand (energiereicher) voll zu pumpen.
 Damit ist das Atom nicht mehr in seiner thermischen Verteilung.
@@ -157,10 +160,10 @@ Damit ist das Atom nicht mehr in seiner thermischen Verteilung.
 %
 \\Um das optische Pumpen zu messen, lässt sich die Transparenz des verdampften Stoffs beobachten.
 Das $\sigma^{+}$-polarisierte $D_{1}$-Licht wird eingestrahlt und trifft auf das Gas.
-Initial bei Einschalten des Magnetfelds sind noch viele Anregungen im Gas möglich, da alle Zeeman-Niveaus gleichmäßig besetzt sind.
-Bei der Anregung wird das Licht der Spektrallampe absorbiert, es ist also wenig transparent.
+Initial bei Einschalten des Magnetfelds ist noch Absorption im Gas möglich, da alle Grundzustände gleichmäßig besetzt sind.
+Zu Beginn der Messung wird das Licht der Spektrallampe absorbiert, das Gas ist also wenig transparent.
 Mit fortlaufender Zeit werden durch das optische Pumpen die Elektronen aus dem energieärmeren Grundzustand in den energiereicheren Grundzustand gepumpt.
-Von dort aus können keine weiteren Anregungen ausgehen, und es wird kaum Licht der Spektrallampe absorbiert, das Gas ist also zunehmend transparent.
+Von dort aus können keine weiteren Anregungen ausgehen, und es wird immer weniger Licht der Spektrallampe absorbiert, das Gas wird also zunehmend transparent.
 %
 %Emission\\
 %- spontane Emission: Elektron fällt von alleine zurück (statistisch)\\
@@ -169,13 +172,12 @@ Von dort aus können keine weiteren Anregungen ausgehen, und es wird kaum Licht 
 %  --- Wahrscheinlich bei niedrigen Frequenzen des RF-Felds\\
 %- induzierte Emission bei 'Resonanzstelle' (passendes RF-Feld mit der richtigen Energie für induzierte Emission)\\
 %
-\\Für die Messung der Hyperfeinstruktur und der Zeeman-Aufspaltung werden zwei weitere Phänomene vorgestellt.
-Die spontane Emission bedeutet, dass das Elektron ohne weitere äußere Einwirkung nach gewisser Zeit zurück auf den Grundzustand fällt.
-Die induzierte Emission entsteht, wenn die Anregungsenergie als Quanten eingestrahlt wird.
-Dann fällt das Elektron unter Emission der Anregungsenergie bzw. der Quanten auf den Grundzustand zurück.
+\\Für die Messung der Zeeman-Aufspaltung werden zwei weitere Phänomene vorgestellt.
+Die spontane Emission bedeutet, dass das Elektron ohne weitere äußere Einwirkung nach gewisser Zeit zurück in den Grundzustand fällt.
+Die induzierte Emission entsteht, wenn die Anregungsenergie als Quanten eingestrahlt wird und das Elektron unter Emission der Anregungsenergie bzw. der Quanten in den Grundzustand zurückfällt.
 Die induzierte und die spontane Emission können parallel ablaufen.
 Parallel wird die Anregungsenergie auch rückabsorbiert.
-Durch ein hochfrequentes veränderliches Magnetfeld (RF-Feld) wird bei diesem Versuch die Anregungsenergie bzw die sogenannten RF-Quanten eingebracht.
+%Durch ein hochfrequentes veränderliches Magnetfeld (RF-Feld) wird bei diesem Versuch die Anregungsenergie bzw die sogenannten RF-Quanten eingebracht.
 Das Verhältnis der beiden Emissionsarten wird über die Anregungsenergie $h \nu$ bestimmt.
 Die Anzahlen $n$ der verschiedenen Emissionen pro Zeiteinheit lauten:
 \begin{align*}
@@ -185,13 +187,16 @@ n_{\text{abs}}  &= N_{1} B_{12} u(\nu).\\
 \end{align*}
 Dabei ist $N$ die Atomzahl, $A_{21}$ die Übergangswahrscheinlichkeit der spontanen Emission und $B$ der Einstein-Koeffizient (Proportionalitätsfaktor).
 $u(\nu)$ ist die Dichte der eingestrahlten Quanten.
-Die drei Gleichungen lassen sich durch eine Erhaltung der Übergangszahlen verbinden und durch weitere Überlegungen und das Einbringen der Planckschen Gleichung für schwarze Strahler schreiben als:
+Die drei Gleichungen lassen sich mit der Bedingung $B_{21}=B_{12}$ durch eine Erhaltung der Übergangszahlen verbinden und durch weitere Überlegungen und das Einbringen der Planckschen Gleichung für schwarze Strahler schreiben als:
 \begin{equation*}
   n_{\text{spon}} + n_{\text{ind}} = n_{\text{abs}} \Rightarrow A_{21}= \frac{8 \pi h}{c^{3}}B_{12} \nu^{3}.
 \end{equation*}
-Bei höheren Frequenzen des RF-Felds kommt hauptsächlich die spontane Emission vor, bei den niedrigeren Frequenzen vornehmlich die induzierte Emission.
+Damit ist die spontane Emission proportional zu $\nu^3$.
+Bei höheren Frequenzen des RF-Felds kommt hauptsächlich die spontane Emission vor, bei den niedrigeren Frequenzen kommt die spontane Emission immer weniger vor.
 Erreicht das RF-Feld eine passende Frequenz, setzt also die induzierte Emission ein.
-Hier bedeutet dies, dass die Elektronen entlang der induzierten Emission wieder aus der aufgebauten, nicht-thermischen Verteilung gelangen, wenn das RF-Feld die passende Frequenz hat (Abb. \ref{fig:transparenz}).
+Hier bedeutet dies, dass die Elektronen über die induzierte Emission wieder aus der aufgebauten, nicht-thermischen Verteilung gelangen, wenn das RF-Feld die passende Frequenz hat (Abb. \ref{fig:transparenz}).
+Das höhere Niveau entleert sich nun, da die induzierte Emission bei der passenden Frequenz möglich ist.
+Damit verringert sich im Bereich der passenden Frequenz die Transparenz des Gases, da die Absorptionen wieder möglich sind.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{transparenz.pdf}
@@ -213,8 +218,8 @@ $B_{\text{m}}$ wird auch Resonanzstelle genannt.
 Die Energie des $D_{1}$-Lichts überdeckt alle möglichen Übergänge der Hyperfeinstruktur und des Zeemaneffekts (Abb. \ref{fig:übergänge}).
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{übergänge.pdf}
-  \caption{Übergänge des $D_{1}$-Lichts mit Betrachtung eines Kernspin $I≠0$ \cite{1}, bearbeitet}
+  \includegraphics[width=\textwidth]{übers.pdf}
+  \caption{Übergänge des $D_{1}$-Lichts mit Betrachtung eines Kernspin $I=\frac{3}{2}≠0$ \cite{1}, bearbeitet}
   \label{fig:übergänge}
 \end{figure}
 In blau gekennzeichnet sind die Übergänge, die durch die Auswahlregel $\Delta M_{\text{F}}=+1$ möglich sind.

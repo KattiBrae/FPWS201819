@@ -7,7 +7,7 @@ from pylab import figure, axes, pie, title, show
 print('2. Messung')
 print('Steigung','Y-Achsenabschnitt')
 x, y = np.loadtxt('stabflat1.txt', unpack=True,delimiter=',')
-y=-y
+#y=-y
 x=x*1e-02
 
 def f(x,a,b):
@@ -20,7 +20,7 @@ print(np.sqrt(np.diag(pcov)))
 print('1. Messung')
 
 m, n = np.loadtxt('stabflat2.txt', unpack=True,delimiter=',')
-n=-n
+#n=-n
 m=m*1e-02
 def g(m,c,d):
     return c*m+d

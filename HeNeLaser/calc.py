@@ -27,3 +27,12 @@ e=146
 t=320.97
 f=100*(e-t)/t
 print(f)
+
+
+
+print('Wellenlänge')
+d=0.052
+a=0.807
+g=1e-05
+lam=d*g/a
+print(lam)

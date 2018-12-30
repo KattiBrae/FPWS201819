@@ -1,24 +1,24 @@
-Tabelle =      'A1L1x50mmF5000-14000S2.dat'
-Speichername = 'A1L1x50mmF5000-14000S2.pdf'
+Tabelle =      'L8x75cF100-10000S10.dat'
+Speichername = 'L8x75cF100-10000S10.pdf'
+
 import sys
 from numpy import NaN, Inf, arange, isscalar, asarray, array
 
-def peakdet(v, delta, x):
+def peakdet(    v,      # Y-Werte (Vektor)
+                delta,  # Toleranzbereich Scalar
+                x):     # X-Werte Frequenz (Vektor gleich groß wie v)
 
     maxtab = []
     mintab = []
 
-    if x is None:
-        x = arange(len(v))
+    if x is None : x = arange(len(v))
 
     v = asarray(v)
 
     if len(v) != len(x):
         sys.exit('Input vectors v and x must have same length')
-
     if not isscalar(delta):
         sys.exit('Input argument delta must be a scalar')
-
     if delta <= 0:
         sys.exit('Input argument delta must be positive')
 
@@ -58,7 +58,8 @@ if __name__=="__main__":
     x, y = np.loadtxt(Tabelle, unpack=True,delimiter=' ')
     s = list(y)
     plot(x, y)
-    maxtab, mintab = peakdet(s,0.3,x)#list(x))#.3)
+    maxtab, mintab = peakdet(s,0.5,x)
+    print(Tabelle)
     print('Maximum'), print('x, y'),  print(maxtab)
     print('Minimum'), print('x, y'),  print(mintab)
     scatter(array(maxtab)[:,0], array(maxtab)[:,1], color='blue', label='Maximum')

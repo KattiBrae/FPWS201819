@@ -246,7 +246,7 @@ x_new = np.linspace(x[0], x[-1], 500)
 plt.figure(1)
 plt.plot(x,y,'x')
 plt.plot(x_new,f(x_new,*Werte),'-', label='Fitfunktion $\Delta f \sim 1/d$')
-plt.xlabel('Länge d')
+plt.xlabel('Länge d / mm')
 plt.ylabel('Frequenz $\Delta$ f')
 plt.grid()
 plt.legend()
@@ -256,6 +256,36 @@ plt.legend()
 
 plt.savefig('geschi.pdf')
 print ('Fertig')
+
+
+#############
+o, p = np.loadtxt('bild.txt', unpack=True,delimiter=' ')
+
+#def f(x,a,b):
+#    return a*(1/x)+b
+#Werte, Fehler = curve_fit(f, x, y)
+#print(Werte)
+#print(np.diag(Fehler**2)**(1/4))
+#
+#
+#x_new = np.linspace(x[0], x[-1], 500)
+
+
+
+plt.figure(2)
+plt.plot(o,p,'x', label="Messwerte")
+#plt.plot(x_new,f(x_new,*Werte),'-', label='Fitfunktion $\Delta f \sim 1/d$')
+plt.xlabel('Rohranzahl')
+plt.ylabel('Resonanzfrequenz f')
+plt.grid()
+plt.legend()
+
+
+
+
+plt.savefig('bild.pdf')
+print ('Fertig')
+#############
 
 """
 Ergebniss aus python
@@ -267,3 +297,66 @@ f=1.68e5*(1/x)+8.5
 l=2*f
 c=l*f*(1/1000)
 print(c)
+
+
+
+
+
+
+'''
+##############
+A1L1x75mmF6000-9000S10.dat
+6860.
+A1L2x75mmF6000-9000S10.dat
+6870.
+8010.
+A1L3x75mmF6000-9000S10.dat
+6110.
+6880.
+7640.
+8400.
+A1L4x75mmF6000-9000S10.dat
+6310.
+6880.
+7450.
+8030.
+8590.
+A1L5x75mmF6000-9000S10.dat
+6420.
+6880.
+7340.
+7800.
+8260.
+8710.
+A1L6x75mmF6000-9000S10.dat
+6120.
+6500.
+6880.
+7260.
+7650.
+8030.
+8410.
+8790.
+A1L7x75mmF6000-9000S10.dat
+6230.
+6560.
+6880.
+7210.
+7540.
+7860.
+8190.
+8520.
+8850.
+A1L8x75mmF6000-9000S10.dat
+6030.
+6310.
+6590.
+6880.
+7170.
+7460.
+7740.
+8030.
+8320.
+8600.
+8890.
+'''

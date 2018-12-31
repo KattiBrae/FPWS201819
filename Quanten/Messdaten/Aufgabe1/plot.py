@@ -1,7 +1,7 @@
-Tabelle =      'A1L2x75mmF6000-9000S10.dat'
-Speichername = 'A1L2x75mmF6000-9000S10.pdf'
-#lookformax = True  # zuerst ein Maximum
-lookformax = False  # zuerst ein Minimum
+Tabelle =      'A1L8x75mmF6000-9000S10.dat'
+Speichername = 'A1L8x75mmF6000-9000S10.pdf'
+lookformax = True  # zuerst ein Maximum
+#lookformax = False  # zuerst ein Minimum
 a = 1               # ab wann Schwankung als Extrema gewertet wird
 
 import sys

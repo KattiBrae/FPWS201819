@@ -244,8 +244,8 @@ x_new = np.linspace(x[0], x[-1], 500)
 
 
 plt.figure(1)
-plt.plot(x,y,'x')
 plt.plot(x_new,f(x_new,*Werte),'-', label='Fitfunktion $\Delta f \sim 1/d$')
+plt.plot(x,y,'x')
 plt.xlabel('Länge d / mm')
 plt.ylabel('Frequenz $\Delta$ f')
 plt.grid()
@@ -255,7 +255,7 @@ plt.legend()
 
 
 plt.savefig('geschi.pdf')
-print ('Fertig')
+print ('Fertig(Frequenzen/Länge Fitfunktion Df = a 1/x + b)')
 
 
 #############
@@ -284,7 +284,35 @@ plt.legend()
 
 
 plt.savefig('bild.pdf')
-print ('Fertig')
+print ('Fertig (Resonanzfrequenz/Rohranzahl)')
+#############
+
+d, s = np.loadtxt('versuch3.txt', unpack=True,delimiter=' ')
+
+def f(d,a,b):
+    return a*d+b
+Werte, Fehler = curve_fit(f, d, s)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+
+
+d_new = np.linspace(d[0], d[-1], 500)
+
+
+
+plt.figure(3)
+plt.plot(d,s,'x', label="Messwerte")
+plt.plot(d_new,f(d_new,*Werte),'-', label='Ausgleichsgerade')
+plt.xlabel('Resonanzindex')
+plt.ylabel('Resonanzfrequenz f')
+plt.grid()
+plt.legend()
+
+
+
+
+plt.savefig('versuch3.pdf')
+print ('Fertig(Resonanzfrequenzen numeriert + Ausgleichsgerade)')
 #############
 
 """

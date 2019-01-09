@@ -212,6 +212,7 @@ print(c)
 
 
 ##############plotten der werte#########
+print("#########################################################################################################")
 """
 3380.0 50
 1140 150
@@ -222,6 +223,9 @@ print(c)
 327.5 525
 286.0 600
 """
+
+print("Frequenzen/Länge Fitfunktion Df = a 1/x + b")
+
 import numpy as np
 import sympy
 import matplotlib.pyplot as plt
@@ -255,10 +259,22 @@ plt.legend()
 
 
 plt.savefig('geschi.pdf')
-print ('Fertig(Frequenzen/Länge Fitfunktion Df = a 1/x + b)')
+print ('Fertig')
 
+"""
+Ergebniss aus python
+mit der Form a*1/x+b
+[  1.68692913e+05   8.56657992e+00]
+[ 253.97695158    1.99530368]
+"""
+f=1.68e5*(1/x)+8.5
+l=2*f
+c=l*f*(1/1000)
+print(c)
 
+print("######################################################################################################")
 #############
+print("(Resonanzfrequenz/Rohranzahl)")
 o, p = np.loadtxt('bild.txt', unpack=True,delimiter=' ')
 
 #def f(x,a,b):
@@ -284,9 +300,10 @@ plt.legend()
 
 
 plt.savefig('bild.pdf')
-print ('Fertig (Resonanzfrequenz/Rohranzahl)')
+print ('Fertig ')
+print("####################################################################################################")
 #############
-
+print("(Resonanzfrequenzen numeriert + Ausgleichsgerade)")
 d, s = np.loadtxt('versuch3.txt', unpack=True,delimiter=' ')
 
 def f(d,a,b):
@@ -312,19 +329,18 @@ plt.legend()
 
 
 plt.savefig('versuch3.pdf')
-print ('Fertig(Resonanzfrequenzen numeriert + Ausgleichsgerade)')
+
+#ergebniss auf Phython
+#[  286.54545455  5737.09090907]
+#[ 0.37848474  2.56700835]
+#y = 286.5*x+5737
+h=286.5/(0.075*8)
+print(h)
+
+print ('Fertig')
 #############
 
-"""
-Ergebniss aus python
-mit der Form a*1/x+b
-[  1.68692913e+05   8.56657992e+00]
-[ 253.97695158    1.99530368]
-"""
-f=1.68e5*(1/x)+8.5
-l=2*f
-c=l*f*(1/1000)
-print(c)
+
 
 
 

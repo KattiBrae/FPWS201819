@@ -304,103 +304,128 @@ print ('Fertig ')
 print("####################################################################################################")
 #############
 print("(Resonanzfrequenzen numeriert + Ausgleichsgerade)")
-d, s = np.loadtxt('versuch3.txt', unpack=True,delimiter=' ')
-
-def f(d,a,b):
-    return a*d+b
-Werte, Fehler = curve_fit(f, d, s)
+x1, y1 = np.loadtxt('linearfit1.txt', unpack=True,delimiter=' ')
+def f1(x1,a,b):
+    return a*x1+b
+Werte, Fehler = curve_fit(f1, x1, y1)
 print(Werte)
 print(np.diag(Fehler**2)**(1/4))
-
-
-d_new = np.linspace(d[0], d[-1], 500)
-
-
-
+x1_new = np.linspace(x1[0], x1[-1], 500)
 plt.figure(3)
-plt.plot(d,s,'x', label="Messwerte")
-plt.plot(d_new,f(d_new,*Werte),'-', label='Ausgleichsgerade')
+plt.plot(x1,y1,'x', label="Messwerte")
+plt.plot(x1_new,f1(x1_new,*Werte),'-', label='Ausgleichsgerade')
+
+
+x2, y2 = np.loadtxt('linearfit2.txt', unpack=True,delimiter=' ')
+def f2(x2,a,b):
+    return a*x2+b
+Werte, Fehler = curve_fit(f2, x2, y2)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+x2_new = np.linspace(x2[0], x2[-1], 500)
+plt.plot(x2,y2,'x')#, label="Messwerte")
+plt.plot(x2_new,f2(x2_new,*Werte),'-')#, label='Ausgleichsgerade')
+
+x3, y3 = np.loadtxt('linearfit3.txt', unpack=True,delimiter=' ')
+def f3(x3,a,b):
+    return a*x3+b
+Werte, Fehler = curve_fit(f3, x3, y3)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+x3_new = np.linspace(x3[0], x3[-1], 500)
+plt.plot(x3,y3,'x')#, label="Messwerte")
+plt.plot(x3_new,f3(x3_new,*Werte),'-')#, label='Ausgleichsgerade')
+
+x4, y4 = np.loadtxt('linearfit4.txt', unpack=True,delimiter=' ')
+def f4(x4,a,b):
+    return a*x4+b
+Werte, Fehler = curve_fit(f4, x4, y4)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+x4_new = np.linspace(x4[0], x4[-1], 500)
+plt.plot(x4,y4,'x')#, label="Messwerte")
+plt.plot(x4_new,f4(x4_new,*Werte),'-')#, label='Ausgleichsgerade')
+
+x5, y5 = np.loadtxt('linearfit5.txt', unpack=True,delimiter=' ')
+def f5(x5,a,b):
+    return a*x5+b
+Werte, Fehler = curve_fit(f5, x5, y5)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+x5_new = np.linspace(x5[0], x5[-1], 500)
+plt.plot(x5,y5,'x')#, label="Messwerte")
+plt.plot(x5_new,f5(x5_new,*Werte),'-')#, label='Ausgleichsgerade')
+
+x6, y6 = np.loadtxt('linearfit6.txt', unpack=True,delimiter=' ')
+def f6(x6,a,b):
+    return a*x6+b
+Werte, Fehler = curve_fit(f6, x6, y6)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+x6_new = np.linspace(x6[0], x6[-1], 500)
+plt.plot(x6,y6,'x')#, label="Messwerte")
+plt.plot(x6_new,f6(x6_new,*Werte),'-')#, label='Ausgleichsgerade')
+
+x7, y7 = np.loadtxt('linearfit7.txt', unpack=True,delimiter=' ')
+def f7(x7,a,b):
+    return a*x7+b
+Werte, Fehler = curve_fit(f7, x7, y7)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+x7_new = np.linspace(x7[0], x7[-1], 500)
+plt.plot(x7,y7,'x')#, label="Messwerte")
+plt.plot(x7_new,f7(x7_new,*Werte),'-')#, label='Ausgleichsgerade')
+
 plt.xlabel('Resonanzindex')
 plt.ylabel('Resonanzfrequenz f')
 plt.grid()
 plt.legend()
 
 
+plt.savefig('linearfit.pdf')
 
 
-plt.savefig('versuch3.pdf')
+
 
 #ergebniss auf Phython
+a=1140#.  5730.]
+#[ inf  inf]
+h=a*0.075*2*2
+print(h)
+
+#[  763.00000002  5349.99999995]
+#[ 1.73205078  4.74341648]
+h=763*(0.075*3)*2
+print(h)
+
+a= 571.00000009#  5738.99999974]
+#[ 1.52752528  5.06622819]
+h=a*(0.075*4)*2
+print(h)
+
+a= 458.57142856#  5963.33333337]
+#[ 0.82478609  3.21208036]
+h=a*0.075*5*2
+print(h)
+
+a= 381.90476191  #5736.42857139]
+#[ 0.43470044  2.19512964]
+h=a*0.075*6*2
+
+#[  327.16666669  5901.94444431]
+#[ 0.41943525  2.360294  ]
+h=327.16666667*(0.075*7)*2
+print(h)
+
 #[  286.54545455  5737.09090907]
 #[ 0.37848474  2.56700835]
 #y = 286.5*x+5737
-h=286.5/(0.075*8)
+h=286.545454*(0.075*8)*2
 print(h)
+
+
+
+
 
 print ('Fertig')
 #############
-
-
-
-
-
-
-
-
-'''
-##############
-A1L1x75mmF6000-9000S10.dat
-6860.
-A1L2x75mmF6000-9000S10.dat
-6870.
-8010.
-A1L3x75mmF6000-9000S10.dat
-6110.
-6880.
-7640.
-8400.
-A1L4x75mmF6000-9000S10.dat
-6310.
-6880.
-7450.
-8030.
-8590.
-A1L5x75mmF6000-9000S10.dat
-6420.
-6880.
-7340.
-7800.
-8260.
-8710.
-A1L6x75mmF6000-9000S10.dat
-6120.
-6500.
-6880.
-7260.
-7650.
-8030.
-8410.
-8790.
-A1L7x75mmF6000-9000S10.dat
-6230.
-6560.
-6880.
-7210.
-7540.
-7860.
-8190.
-8520.
-8850.
-A1L8x75mmF6000-9000S10.dat
-6030.
-6310.
-6590.
-6880.
-7170.
-7460.
-7740.
-8030.
-8320.
-8600.
-8890.
-'''

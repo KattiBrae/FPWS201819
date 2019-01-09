@@ -21,16 +21,18 @@ $d$ ist dabei die Länge des Rohres und n die Anzahl der Knotenpunkte.
 Desweiteren ist auffällig, dass für eine Rohrlänge die Abstand zwichen zwei Maxima immer konstannt ist.
 
 \subsection{Besimmung der Lichtgeschwindigkeit}
-Es wird eine Messung mit einer Rohrlänge von $\SI{600}{mm}$ für Frequenzen von 6000 bis 9000 $\si{HZ}$ wie in Abb.\ref{fig.frequenz/rohrlänge} zusehen.
-Die Resonanzfrequenzen werden von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
-Die Resonazfrequenzabstände sind konstant daher ergibt sich eine Gerade der Form: $y=ax+b$ welche an die Messwerte gefittet wird.
-In der Abb. \ref{fig.schallgeschwindigkeit} sind die Messwerte mit der Fitfunktion abgebildet.
-Für die Fitparameter ergeben sich folgende Werte.
+In den Graphen \ref{fig.2} und \ref{fig.2} werden die Resonanzfrequenzen einer jeden Messreihe von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
+Die Resonazfrequenzabstände sind konstant für eine Messreihe daher ergeben sich Geraden der Form: $y=ax+b$ welche an die Messwerte gefittet werden.
+In der Abb. \ref{fig.linearfit} sind die Messwerte mit den Fitfunktionen abgebildet.
+%Für die Fitparameter ergeben sich folgende Werte.
+%\begin{align*}
+%  a &= 286.54545455 \pm 0.37848474\\
+%  b &= 5737.09090907 \pm 2.56700835
+%\end{align*}
+Mit Hilfe der Steigung $a$ kann als die Schallgeschwindigkeit $c$ berechnet werden.
 \begin{align*}
-  a &= 286.54545455 \pm 0.37848474\\
-  b &= 5737.09090907 \pm 2.56700835
+  c = a\cdot2d
 \end{align*}
-Die Steigung $a$ kann als die Schallgeschwindigkeit ankenommen werden.(warum auch immer?)
 %###########Bild##########
 \begin{figure}[h!]
   \centering
@@ -40,14 +42,14 @@ Die Steigung $a$ kann als die Schallgeschwindigkeit ankenommen werden.(warum auc
 \end{figure}
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{versuch3.pdf}
+  \includegraphics[width=\textwidth]{linearfit.pdf}
   \caption{Die Intensitätsmaxima werden nummerriert und die Nummer gegen die Frequenz aufgetragen.}
-  \label{fig.versuch3}
+  \label{fig.linearfit}
 \end{figure}
 %#########
 \FloatBarrier
 Die Schallgeschwindigkeit kann auch mit Hilfe einer anderen Methode bestimmt werden.
-dazu betrachten wir ein Rohr der Länge 75mm for die Frequenzen von 6000 bis 9000.
+dazu betrachten wir ein Rohr der Länge 75mm für die Frequenzen von 6000 bis 9000 $\si{Hz}$.
 Da die Rohrlänge $d$ ein vielfaches $n$ der halben Wellenlänge $\lambda$ ist gilt:
 \begin{align*}
   \lambda = \frac{2d}{n}
@@ -64,7 +66,7 @@ Daraus ergiebt sich :
 Die Freqenz ist dabei gegeben als $\SI{6880}{\frac{m}{s}}$.
 Diese Freqenz ist die einzige Frequenz im Frequenzbereich welche bei allen Vielfachen der Rohrlänge von $\SI{75}{mm}$ vertreten ist,
 zusehen ist dies in den Abb. \ref{fig.1234} und \ref{fig.5678}.
-Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass es wohl 3 Knotenpunkte in der $\SI{75}{mm}$ Röhre gibt, da die dazugehörige Schallgeschwindigkeit von $\SI{344}{\frac{m}{s}}$ gut zum Litteraturwert??? von $\SI{343.2}{\frac{m}{s}}$ passt.
+Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass die Wellenlänge bei $\frac{3}{2}\lambda$ liegt, da die dazugehörige Schallgeschwindigkeit von $\SI{344}{\frac{m}{s}}$ gut zum Litteraturwert??? von $\SI{343.2}{\frac{m}{s}}$ passt.
 
 \FloatBarrier
 Desweiteren soll die Schallgeschwindigkeit Mithilfe des Verhätnisses von Frequenzübergang zu Rohrlänge bestimmt werden.
@@ -95,4 +97,4 @@ w
 \begin{align*}
   \omega_k=k\lambda f
 \end{align*}
-Linear nochmal mit wk anstat freqenz oder anders 
+Linear nochmal mit wk anstat freqenz oder anders

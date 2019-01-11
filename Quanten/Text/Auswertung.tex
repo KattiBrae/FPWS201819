@@ -8,7 +8,7 @@ In der Abbildung \ref{fig.1} sind die Messwerte für die Rohrlängen : $\SI{75}{
   \caption{Intensität der Sachalwelle im Bereich von 6000 bis 9000 $\si{Hz}$ für die Rohrlängen $\SI{75}{mm}, \SI{150}{mm}, \SI{225}{mm}, \SI{300}{mm}$}
   \label{fig.1}
 \end{figure}
-In der Abbildung \ref{fig.1} sind die Messwerte für die Rohrlängen : $\SI{375}{mm}, \SI{450}{mm}, \SI{525}{mm}, \SI{600}{mm}$ abbgebildet.
+In der Abbildung \ref{fig.2} sind die Messwerte für die Rohrlängen : $\SI{375}{mm}, \SI{450}{mm}, \SI{525}{mm}, \SI{600}{mm}$ abbgebildet.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{5678.pdf}
@@ -29,18 +29,23 @@ In der Abb. \ref{fig.linearfit} sind die Messwerte mit den Fitfunktionen abgebil
 %  a &= 286.54545455 \pm 0.37848474\\
 %  b &= 5737.09090907 \pm 2.56700835
 %\end{align*}
-Mit Hilfe der Steigung $a$ kann als die Schallgeschwindigkeit $c$ berechnet werden.
+Mit Hilfe der Steigung $a$ kann die Schallgeschwindigkeit $c$ berechnet werden.
 \begin{align*}
   c = a\cdot2d
 \end{align*}
 Für die Schallgeschwindigkeit ergeben sich so Werte von:
 \begin{align*}
-c&=342.0\\
-c&=343.3\\
-c&=342.6\\
-c&=343.9\\
-c&=343.5\\
-c&=343.8\\
+a &= 1140.0 && d = 2\cdot\SI{0.075}{m} && c=\SI{342.0}{\frac{m}{s}}\\
+a &= 763.0  && d = 3\cdot\SI{0.075}{m} && c=\SI{343.3}{\frac{m}{s}}\\
+a &= 571.0  && d = 4\cdot\SI{0.075}{m} && c=\SI{342.6}{\frac{m}{s}}\\
+a &= 458.6  && d = 5\cdot\SI{0.075}{m} && c=\SI{343.9}{\frac{m}{s}}\\
+a &= 381.9  && d = 6\cdot\SI{0.075}{m} && c=\SI{343.7}{\frac{m}{s}}\\
+a &= 327.2  && d = 7\cdot\SI{0.075}{m} && c=\SI{343.5}{\frac{m}{s}}\\
+a &= 286.5  && d = 8\cdot\SI{0.075}{m} && c=\SI{343.8}{\frac{m}{s}}\\
+\end{align*}
+Der Mittelwert ergibt:
+\begin{align*}
+  c=\SI{343.28\pm1.63}{\frac{m}{s}}
 \end{align*}
 %###########Bild##########
 %\begin{figure}[h!]
@@ -74,7 +79,7 @@ Daraus ergiebt sich :
 \end{align}
 Die Freqenz ist dabei gegeben als $\SI{6880}{\frac{m}{s}}$.
 Diese Freqenz ist die einzige Frequenz im Frequenzbereich welche bei allen Vielfachen der Rohrlänge von $\SI{75}{mm}$ vertreten ist,
-zusehen ist dies in den Abb. \ref{fig.1234} und \ref{fig.5678}.
+zusehen ist dies in den Abb. \ref{fig.1} und \ref{fig.2}.
 Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass die Wellenlänge bei $\frac{3}{2}\lambda$ liegt, da die dazugehörige Schallgeschwindigkeit von $\SI{344}{\frac{m}{s}}$ gut zum Litteraturwert??? von $\SI{343.2}{\frac{m}{s}}$ passt.
 
 \FloatBarrier

@@ -7,24 +7,38 @@ In der Röhre bildet sich bei bestimmten Frequenzen das Phänomen der Resonanz.
 Die Resonanzfrequenz ist diejenige Frequenz, bei der materialgegeben der Energieübertrag die geringsten Verluste hat.
 Ein Objekt kann mehrere Resonanzfrequenzen haben.
 Die Bedingung für Resonanz in einer Röhre mit geschlossenen Enden lautet
-\begin{equation*}
-  n \lambda = 2 L = \frac{n c}{f}.
-\end{equation*}
+\begin{equation}
+  n \lambda = 2 L = \frac{n c}{f} \Leftrightarrow f(n) = \frac{c}{2L} n.
+  \label{eqn:resonanz}
+\end{equation}
 Hierbei ist $\lambda$ die Wellenlänge, $L$ die Länge der Röhre, $c$ die Schallgeschwindigkeit, $f$ die Schallfrequenz und $n$ die Angabe, um welches ganzzahlige Vielfache der Resonanz es sich handelt.\\
 %
 %- Schallwellen Herleitung?
-Die Wellenfunktion von Schallwellen lässt sich über die linearisierte Eulergleichung herleiten.
+Die Wellengleichung für Schallwellen lässt sich über die linearisierte Eulergleichung (Gleichung \eqref{eqn:euler}) und die Kontinuitätsgleichung (Gleichung \eqref{eqn:konti}) herleiten:
+\begin{equation}
+  \frac{ \partial \vec{u}}{ \partial t} = - \frac{1}{\rho} \nabla p
+  \label{eqn:euler}
+\end{equation}
+\begin{equation}
+  \frac{\partial \rho}{ \partial t} = - \rho \nabla \vec{u}
+  \label{eqn:konti}
+\end{equation}
+\begin{equation}
+  \frac{ \partial^2 p}{\partial t^2} = \frac{1}{\rho \kappa} \Delta p
+  \label{eqn:schallwelle}
+\end{equation}
 
-    - Dispersion Schallwellen
-- Potenzialtopf
-    - Dispersion QM
-- Analogien/Differenzen
 
-- Eindimensionaler Festkörper
-    - Bändermodell
-    - Teilchenkette (Lattice)
-    - Dispersionsrelation
-    - Bragg-Bedingung
-
-- Superstrukturen
-    - Defekte und Bandstrukturen
+%    - Dispersion Schallwellen
+%- Potenzialtopf
+%    - Dispersion QM
+%- Analogien/Differenzen
+%
+%- Eindimensionaler Festkörper
+%    - Bändermodell
+%    - Teilchenkette (Lattice)
+%    - Dispersionsrelation
+%    - Bragg-Bedingung
+%
+%- Superstrukturen
+%    - Defekte und Bandstrukturen

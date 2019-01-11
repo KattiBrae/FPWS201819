@@ -2,6 +2,7 @@
 Im Versuch werden in verschiedenen Aufbauten Röhren benutzt, in denen sich unter Verwendung von Lautsprechern akustische stehende Wellen ausbilden.
 Die Röhre wird mit dem Mikrofon verschlossen.\\
 %
+\subsection{Stehende Schallwellen}
 %- Theorie Resonanz
 In der Röhre bildet sich bei bestimmten Frequenzen das Phänomen der Resonanz.
 Die Resonanzfrequenz ist diejenige Frequenz, bei der materialgegeben der Energieübertrag die geringsten Verluste hat.
@@ -14,7 +15,6 @@ Die Bedingung für Resonanz in einer Röhre mit geschlossenen Enden lautet
 Hierbei ist $\lambda$ die Wellenlänge, $L$ die Länge der Röhre, $c$ die Schallgeschwindigkeit, $f$ die Schallfrequenz und $n$ die Angabe, um welches ganzzahlige Vielfache der Resonanz es sich handelt.\\
 %
 %- Schallwellen Herleitung?
-Die Wellengleichung für Schallwellen lässt sich über die linearisierte Eulergleichung (Gleichung \eqref{eqn:euler}) und die Kontinuitätsgleichung (Gleichung \eqref{eqn:konti}) herleiten:
 \begin{equation}
   \frac{ \partial \vec{u}}{ \partial t} = - \frac{1}{\rho} \nabla p
   \label{eqn:euler}
@@ -23,16 +23,76 @@ Die Wellengleichung für Schallwellen lässt sich über die linearisierte Eulerg
   \frac{\partial \rho}{ \partial t} = - \rho \nabla \vec{u}
   \label{eqn:konti}
 \end{equation}
+%
+Die Wellengleichung für Schallwellen lässt sich über die linearisierte Eulergleichung (Gleichung \eqref{eqn:euler}) und die Kontinuitätsgleichung (Gleichung \eqref{eqn:konti}) herleiten:
 \begin{equation}
   \frac{ \partial^2 p}{\partial t^2} = \frac{1}{\rho \kappa} \Delta p
   \label{eqn:schallwelle}
 \end{equation}
-
-
+Für den Vergleich zum quantenmechanischen Teilchen sind die Randbedingungen wichtig.
+Auch wenn es aus der Wellengleichung nicht direkt ersichtlich ist, ist die Schallgeschwindigkeit am Rand bzw. an der Wand am Ende der Röhre null.
+Damit ist auch die Ableitung des Schalldrucks senkrecht zur Wand verschwindet:
+\begin{align*}
+  \frac{ \partial u }{\partial t} = 0 && \frac{ \partial p }{ \partial t} = 0.
+\end{align*}
+Die Wellengleichung lässt sich hier auf ein eindimensionales Problem reduzieren.
+So lässt sich der Ansatz
+\begin{equation*}
+  p(x)=p_{0} \cos{(kx + \alpha)} \cos{(\omega t)}
+\end{equation*}
+verwenden.
+Mit den Randbedingungen ergibt sich, dass $\alpha=0$ und $k= \frac{n \pi}{L}$.
+%
 %    - Dispersion Schallwellen
+%
+\subsection{Das quantenmechanische Teilchen}
 %- Potenzialtopf
+Die zeitabhängige Schrödingergleichung ist bekannt als
+\begin{equation*}
+  - \frac{ \hbar^2}{2 m} \psi(r, t) + V(r, t) \psi(r, t) = i \hbar \psi(r, t).
+\end{equation*}
+Die eindimensionale, zeitunabhängige Schrödingergleichung reicht aus, um den eindimensionalen, unendlich tiefen Potenzialtopf zu berechnen.
+Der Potenzialtopf wird hier mit einer Wand an der Stelle $x=0$ und der zweiten Wand bei $x=L$ gewählt.
+Da im Topf $V(x)=0$ gilt, ergibt sich:
+\begin{equation}
+  - \frac{ \hbar^2}{2 m} \psi(x) = E \psi(x).
+  \label{eqn:schrödinger}
+\end{equation}
+Der passende Ansatz für diese Gleichung ist
+\begin{equation}
+  \psi(x)= A \sin{(kx+\alpha)}.
+  \label{eqn:ansatz}
+\end{equation}
+Die Randbedingungen des Potenzialtopfs belaufen sich auf
+\begin{align*}
+    \psi(0)=0       && \psi(L)=0.\\
+\end{align*}
+Damit ergibt sich nach Einsetzen des Randbedingungen in den Ansatz in Gleichung \eqref{eqn:ansatz} und Einsetzen des Ansatzes in die Schrödingergleichung \eqref{eqn:schrödinger} folgendes:
+\begin{equation}
+  E(k) = \frac{\hbar^2 k^2}{2 m} = \frac{\hbar^2 \pi^2 n^2}{2 m L^2}.
+  \label{eqn:dispersionqm}
+\end{equation}
+Dies ist die Dispersionsrelation des quantenmechanischen Teilchens im Potenzialtopf.
 %    - Dispersion QM
 %- Analogien/Differenzen
+\subsection{Vergleich von stehenden Schallwellen und Teilchen im Potenzialtopf}
+Während die Schallwellen mechanische Phänomene sind, ist das Teilchen im Potenzialtopf ein quantenmechanisches Problem.
+Die Schallwellen sind damit genau lokalisierbar.
+Beim quantenmechanischen Teilchen im Potenzialtopf hingegen lässt sich nur eine Aufenthaltswahrscheinlichkeit $|\psi^2|$ formulieren.\\
+Auch die Randbedingungen sind unterschiedlich.
+Während bei dem quantenmechanischen Teilchen die Wellenfunktion an den Rändern null sein muss, ist dies bei den stehenden Schallwellen nicht der Fall.
+Zwar ist bei den Schallwellen die Geschwindigkeit $\vec{u}$ an den Rändern null, aber die vektorielle Geschwindigkeit entspricht nicht der skalaren quantenmechanischen Wellenfunktion.
+Obwohl der Schalldruck $p$ an den Rändern maximal ist, trifft er das quantenmechanische Teilchen besser, da es eine skalare Größe ist.\\
+Die Dispersionsrelation der Schallwellen $\omega(k)$ entspricht nicht der Dispersionsrelation des quantenmechanischen Teilchens $E(k)$, schon da $\omega ≠ k$.
+Dennoch lassen sich die beiden Dispersionen vergleichen, da sich in beiden Phänomenen diskrete Niveaus ergeben.\\
+Auch die Eigenzustände unterscheiden sich.
+%Zeitunabhängige quantenmechanische Eigenzustände sind dauerhaft, während mechanische Eigenzustände instabil sind.
+%Zeitabhängige Eigenzustände in der Quantenmechanik sind wiederum nicht beständig.
+%Es ergibt sich ein Spektrum der Eigenfrequenzen, beschrieben durch folgende Gleichung:
+%\begin{equation*}
+%  |A(\omega)| = \frac{1}{2 \pi ( \lambda + i ())}
+%\end{equation*}
+%
 %
 %- Eindimensionaler Festkörper
 %    - Bändermodell

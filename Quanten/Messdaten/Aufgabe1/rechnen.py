@@ -509,3 +509,42 @@ c = a*2*0.075*8
 fc = np.sqrt((2*0.075*8)**2+0.07468486**2)
 
 print(c, "+-", fc)
+
+
+
+c = 343.28
+l = c / y8
+print(l)
+k=(2*np.pi)/l
+print(k)
+w = 2*np.pi *y8
+
+
+print('Graphik1')
+print('Steigung','Y-Achsenabschnitt')
+
+
+def f(k,a,b):
+    return a*k**2
+Werte, Fehler = curve_fit(f, k, w)
+print(Werte)
+print(np.diag(Fehler**2)**(1/4))
+
+
+k_new = np.linspace(k[0], k[-1], 500)
+
+h = 6.62607004e-34
+m = 9.10938356*10**(-31)
+E = (h**2*k**2)/(2*m)
+print(E)
+plt.figure(5)
+plt.plot(k_new,f(k_new,*Werte),'-')#, label='Fitfunktion $\Delta f \sim 1/d$')
+#plt.plot(k,E)
+plt.plot(k,w,'x', label="Messwerte")
+plt.ylabel(r'$\omega$ (k)')
+plt.xlabel(r'k')
+plt.grid()
+plt.legend()
+
+plt.savefig('richtig-fw.pdf')
+print ('Fertig')

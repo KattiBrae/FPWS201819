@@ -42,7 +42,6 @@ So lässt sich der Ansatz
 \end{equation*}
 verwenden.
 Mit den Randbedingungen ergibt sich, dass $\alpha=0$ und $k= \frac{n \pi}{L}$.
-%
 %    - Dispersion Schallwellen
 %
 \subsection{Das quantenmechanische Teilchen}
@@ -74,8 +73,9 @@ Damit ergibt sich nach Einsetzen des Randbedingungen in den Ansatz in Gleichung 
 \end{equation}
 Dies ist die Dispersionsrelation des quantenmechanischen Teilchens im Potenzialtopf.
 %    - Dispersion QM
-%- Analogien/Differenzen
+%
 \subsection{Vergleich von stehenden Schallwellen und Teilchen im Potenzialtopf}
+%- Analogien/Differenzen
 Während die Schallwellen mechanische Phänomene sind, ist das Teilchen im Potenzialtopf ein quantenmechanisches Problem.
 Die Schallwellen sind damit genau lokalisierbar.
 Beim quantenmechanischen Teilchen im Potenzialtopf hingegen lässt sich nur eine Aufenthaltswahrscheinlichkeit $|\psi^2|$ formulieren.\\
@@ -86,15 +86,27 @@ Obwohl der Schalldruck $p$ an den Rändern maximal ist, trifft er das quantenmec
 Die Dispersionsrelation der Schallwellen $\omega(k)$ entspricht nicht der Dispersionsrelation des quantenmechanischen Teilchens $E(k)$, schon da $\omega ≠ k$.
 Dennoch lassen sich die beiden Dispersionen vergleichen, da sich in beiden Phänomenen diskrete Niveaus ergeben.\\
 Auch die Eigenzustände unterscheiden sich.
-%Zeitunabhängige quantenmechanische Eigenzustände sind dauerhaft, während mechanische Eigenzustände instabil sind.
-%Zeitabhängige Eigenzustände in der Quantenmechanik sind wiederum nicht beständig.
-%Es ergibt sich ein Spektrum der Eigenfrequenzen, beschrieben durch folgende Gleichung:
-%\begin{equation*}
-%  |A(\omega)| = \frac{1}{2 \pi ( \lambda + i ())}
-%\end{equation*}
+Zeitunabhängige quantenmechanische Eigenzustände sind dauerhaft, während mechanische Eigenzustände instabil sind.
+Zeitabhängige Eigenzustände in der Quantenmechanik sind wiederum nicht beständig.
+Es ergibt sich ein Spektrum der quantenmechanischen Eigenfrequenzen, beschrieben durch folgende Gleichung:
+\begin{equation}
+  |A(\omega)| = \frac{ 1 }{ \sqrt{ (\omega_{0}) - \omega)^2 + \lambda^2} }.
+  \label{eqn:spektrumqm}
+\end{equation}
+Für die mechanischen Eigenzustände ergibt sich das folgende Spektrum:
+\begin{equation}
+  |A(\omega)| = \frac{ 2 \omega_{0} }{ \sqrt{ (\omega_{0}^2 - \omega^2)^2 + (2 \gamma \omega)^2 } }
+  \label{eqn:spektrumschall}
+\end{equation}
 %
-%
+\subsection{Eindimensionaler Festkörper}
 %- Eindimensionaler Festkörper
+Der eindimensionale Festkörper lässt sich auf zwei Arten modellieren.
+\paragraph{Bändermodell}
+Die Energieniveaus eines einzelnen Atoms sind diskret, aber werden Atome nah aneinander gebracht, verschmelzen die höheren Niveaus zu den sogenannten Energiebändern.
+Die Energieniveaus in der Quantenmechanik sind äquidistant.
+In der Messung der Resonanzen der stehenden Schallwellen in Abhängigkeit der Rohrlänge sind die Resonanzstellen nicht äquidistant verteilt.
+
 %    - Bändermodell
 %    - Teilchenkette (Lattice)
 %    - Dispersionsrelation

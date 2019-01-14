@@ -9,10 +9,16 @@ Die Resonanzfrequenz ist diejenige Frequenz, bei der materialgegeben der Energie
 Ein Objekt kann mehrere Resonanzfrequenzen haben.
 Die Bedingung für Resonanz in einer Röhre mit geschlossenen Enden lautet
 \begin{equation}
-  n \lambda = 2 L = \frac{n c}{f} \Leftrightarrow f(n) = \frac{c}{2L} n.
-  \label{eqn:resonanz}
+  n \lambda = 2 L = \frac{n c}{f} \Leftrightarrow f(n) = \frac{c}{2L} n \Leftrightarrow f(k) = \frac{c}{2\pi} k.
+  \label{eqn:dispersionschall}
 \end{equation}
 Hierbei ist $\lambda$ die Wellenlänge, $L$ die Länge der Röhre, $c$ die Schallgeschwindigkeit, $f$ die Schallfrequenz und $n$ die Angabe, um welches ganzzahlige Vielfache der Resonanz es sich handelt.\\
+In der letzten Umformung wird die Gleichung
+\begin{equation}
+  k = \frac{\pi}{L} n
+  \label{eqn:wellenzahl}
+\end{equation}
+verwendet.
 %
 %- Schallwellen Herleitung?
 \begin{equation}
@@ -103,14 +109,78 @@ Für die mechanischen Eigenzustände ergibt sich das folgende Spektrum:
 %- Eindimensionaler Festkörper
 Der eindimensionale Festkörper lässt sich auf zwei Arten modellieren.
 \paragraph{Bändermodell}
+%    - Bändermodell
 Die Energieniveaus eines einzelnen Atoms sind diskret, aber werden Atome nah aneinander gebracht, verschmelzen die höheren Niveaus zu den sogenannten Energiebändern.
+Dabei gibt es Energiebänder, in denen sich Elektronen befinden, und Bandlücken, in denen keine Zustände möglich sind.
 Die Energieniveaus in der Quantenmechanik sind äquidistant.
 In der Messung der Resonanzen der stehenden Schallwellen in Abhängigkeit der Rohrlänge sind die Resonanzstellen nicht äquidistant verteilt.
-
-%    - Bändermodell
+Die Rohrlänge lässt sich jedoch in den Wellenvektor umrechnen, und es kann die Dispersionsrelation $f(k)$ nach Gleichung \eqref{eqn:dispersionschall} berechnet werden.
+Die quantenmechanischen Teilchen, Elektronen, im Bändermodell zeigen Dispersion, wenn die Wellenlänge $\lambda$ in etwa der Gitterkonstante $a$ entspricht.
+Für die Schallwellen lässt sich ein Analogon bilden:
+\begin{equation}
+  a = \frac{\lambda}{2}.
+\end{equation}
+Die Barrierenhöhe $d$ der einzelnen Potenziale spielt dabei folgende Rolle:
+\begin{equation}
+  d. \textbf{\huge{FORMEL}}
+\end{equation}
+Wiederum die Anzahl der zusammengebrachten Atome $j$ äußert sich über:
+\begin{equation}
+  j. \huge{\textbf{FORMEL}}
+\end{equation}
+Die Gitterkonstante $a$ ändert das Spektrum und die Bänder mit
+\begin{equation}
+  a. \huge{\textbf{FORMEL}}
+\end{equation}
+Der reziproke Gittervektor wird im eindimensionalen Festkörper beschrieben durch
+\begin{equation}
+  G= \frac{2 \pi }{a} n
+  \label{eqn:reziprokesgitter}
+\end{equation}
+mit der natürlichen Zahl $n$.
+Die Brillouin-Zone ist das Äquivalent zur Wigner-Seiz-Einheitszelle im reziproken Raum.
+Die Dimension des reziproken Raums ist $\si{1/m}$.
+Für $n=1$ ergit sich also nach Gleichung \eqref{eqn:reziprokesgitter} und nach Gleichung \eqref{eqn:wellenzahl}:
+\begin{align}
+  G= \frac{2 \pi }{a}  && k = \frac{ \pi }{L} = \frac{\pi}{ j a}.
+  \label{eqn:unsergitter}
+\end{align}
+Das Verhältnis der beiden Größen beläuft sich auf
+\begin{equation*}
+  \frac{G}{k} = 2 j.
+\end{equation*}
+Im jeder Brillouin-Zone sind entsprechend doppelt so viele k-Punkte, wie es Einheitszellen im System gibt.
+Für $n=0$ gibt es keine Resonanz.\\
+In der Festkörperphysik ist die Zustandsdichte $\rho$ ein wichtiger Faktor.
+In diesem Versuch wird sie durch
+\begin{equation}
+  \rho(f) = \frac{1}{f_{i+1}-f_{i}}
+  \label{eqn:zustandsdichte}
+\end{equation}
+genähert.
+\\\textbf{\huge{BILD}}
+%
+\paragraph{Lineare Teilchenkette}
 %    - Teilchenkette (Lattice)
+Nun werden einzelne Atome betrachtet, die wir zu einem Molekül verbinden und diese Moleküle aufsummieren.
+Dieses Verfahren wird 'tight-binding-Modell' genannt.
+\\\textbf{\huge{MEHR?}}
+\\\textbf{\huge{BILD}}
 %    - Dispersionsrelation
 %    - Bragg-Bedingung
 %
+\subsection{Superstrukturen}
 %- Superstrukturen
+Als Superstrukturen werden hier Festkörper bezeichnet, die periodische Änderungen haben.
+So kann ein eindimensionaler Festkörper zum Beispiel aus zwei verschiedenen Sorten Atomen bestehen.
+Dies kann Folgen auf die Bandstrukturen des Festkörpers haben.
+\\\textbf{\huge{BILD}}
+%
+\subsection{Defekte}
 %    - Defekte und Bandstrukturen
+Sind die andersartigen Atome im Festkörper nicht periodisch verteilt, so sind es reguläre Defekte.
+Die Defekte verändern die Bandstrukturen auf multiple Weisen.
+In der Halbleitertechnik werden Defekte bewusst in Materialien eingebracht, um optimale Leitereigenschaften zu kreieren.
+Dieser Vorgang nennt sich 'Dotierung'.
+\\\textbf{\huge{BILD}}
+%

@@ -1,0 +1,7 @@
+Was wir machen sollen: untersuchen, wie die Bandlücken sich verschieben, wenn wir 'größere Zellen' (Längere Röhrchen, gleiche Blenden) benutzen
+  - Auswertung ähnlich wie bei Aufgabe 2
+  - Resonanzstellen aus Peak-Picking-Fkt.
+  - Durchnummerieren
+  - k ausrechnen wie in Aufgabe 2/ wie in der Anleitung ( k= n \pi durch a mit L=a/n bzw L=j*a) mit j=Anzahl der Röhren
+  - geplottet werden soll f(k) in der ersten Brillouin-Zone (zwischen -\pi/a und \pi/a)
+  - wir müssen also aus dem n die a berechnen? Da weiß ich noch nicht wie das geht

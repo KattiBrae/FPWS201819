@@ -1,0 +1,11 @@
+Wa wir hier machen sollen: Bandstrukturen beobachten
+  - Nach der Aufgabenstellung müssen wir hier nicht zwingend Plotten
+  - Aber: wir sollen zeigen, wie sich die Bandlücken ändern
+  - vielleicht ist da sinnvoll, die Bandlücken auszumessen (Anfang und Ende des Bandes), in allen drei Plots
+  - die erste Bandlücke für die drei Messreihen vermessen
+  - die zweite Bandlücke für alle drei Messreihen vermessen
+  - die dritte Bandlücke für alle drei Messreihen vermessen
+  - ggf Bandlücken-Breite auf y-Achse, Blendendurchmesser auf x-Achse ?
+  - 3 Graphen, einen für jede Bandlücke ?
+
+  - mit größeren Blenden werden die Bandlücken kleiner?

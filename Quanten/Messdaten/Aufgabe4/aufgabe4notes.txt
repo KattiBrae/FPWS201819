@@ -1,0 +1,10 @@
+Was wir machen sollen: Bandlücken unter Veränderung der Gesamtrohrlänge bzw Zellenanzahl messen
+  - deswegen haben wir die anzahl der Rohre von 12 auf 10 verringert (und auch die Blendenzahl angepasst)
+  - wir haben nur drei Plots/Messungen (einer aus der vorherigen Messung, einer aus der Messung danach)
+  - ...ich sehe keine großen Unterschiede in den drei Plots...
+    - vielleicht sind die 'Ecken' in dem mit der geringsten Anzahl von Röhren ein wenig runder? (Das sehe ich tatsächlich)
+
+    - oder die Bandlücken sind ein wenig breiter?
+    - oder sind irgendwo die frequenzen verrutscht?
+
+  - ich glaube, das müssen wir nicht plotten

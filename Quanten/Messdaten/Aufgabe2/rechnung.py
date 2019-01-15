@@ -19,9 +19,9 @@ print('Graphik1')
 print('Steigung','Y-Achsenabschnitt')
 
 
-def f(k,a,b):
+def g(k,a,b):
     return a*k**2
-Werte, Fehler = curve_fit(f, k, w)
+Werte, Fehler = curve_fit(g, k, f)
 print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 
@@ -33,13 +33,13 @@ m = 9.10938356*10**(-31)
 E = (h**2*k**2)/(2*m)
 print(E)
 plt.figure(1)
-plt.plot(k_new,f(k_new,*Werte),'-')#, label='Fitfunktion $\Delta f \sim 1/d$')
+plt.plot(k_new,g(k_new,*Werte),'-')#, label='Fitfunktion $\Delta f \sim 1/d$')
 #plt.plot(k,E)
-plt.plot(k,w,'x', label="Messwerte")
-plt.ylabel(r'$\omega$ (k)')
+plt.plot(k,f,'x', label="Messwerte")
+plt.ylabel(r'$f$ (k)')
 plt.xlabel(r'k')
 plt.grid()
 plt.legend()
 
-plt.savefig('fw.pdf')
+plt.savefig('f(k).pdf')
 print ('Fertig')

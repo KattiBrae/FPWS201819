@@ -2,3 +2,4 @@ Was wir hier machen sollen: f(k) plotten
   - dazu nehmen wir die Resonanzstellen/die Maxima aus der Peak-Picking-Funktion
   - nummerieren sie durch mit n
   - berechnen aus n das k mit k= \frac{n \pi}{L} mit L als gesamte Rohrlänge
+      (k=2 \pi / \lambda)

@@ -1,0 +1,5 @@
+Was wir machen sollen: Zeigen wie sich die Bänder unter periodischen Defekten ändern
+  - ich glaube zu sehen: die Bandlücken bleiben an der selben Stelle, werden aber breiter mit Defekten
+  - sonst ist ja einfach immer alles zur 0 hin weiter zusammen gerückt - hier irgendwie nicht
+  - vielleicht bikde ich mir das auch nur ein
+  - man könnte wie vorher auch, die breite der bandlücken überprüfen

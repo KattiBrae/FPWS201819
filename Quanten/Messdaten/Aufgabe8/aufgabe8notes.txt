@@ -1,0 +1,4 @@
+Was wir machen sollen: Bindung von Atomen untersuchen
+  - die Blende ist eine Beschreibung der Stärke der Bindung (kleine Blende, geringe Bindung)
+  - je größer die Blende desto schmaler die Bandlücken
+  - ggf Plot wie bei Aufgabe 3? Bandlücken ausmessen und für die einzelnen Resonanzstellen vergleichen für die unterschiedlichen Blenden?

@@ -1,0 +1,8 @@
+Was wir machen sollen: Das selbe wie bei Aufgabe 8 nur für mehr 'Teilchen'
+  - wieder Bandlücken abmessen für die verschiedenen Blendengrößen separat
+  - auch die verschiedenen Anzahlen an 'Teilchen'/Röhren separat betrachten
+  - wir müssen nichts ausrechnen, wenn ich das richtig sehe
+  - nur vergleichen?
+
+  - sinnvoll fänd ich den vergleich: wie bilden sich die Bandlücken, wenn ich bei konstanter Blendengröße die Anzahl der Röhren erhöhe
+  - und das dann für dir drei verschiedenen Blendengrößen 'separat'

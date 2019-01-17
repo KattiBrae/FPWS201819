@@ -7,6 +7,8 @@ from pylab import figure, axes, pie, title, show
 
 x, y = np.loadtxt('tabelle.txt', unpack=True,delimiter=' ')
 
+
+
 c = 343.28
 l = c / y
 #print(l)

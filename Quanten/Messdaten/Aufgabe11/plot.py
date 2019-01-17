@@ -1,8 +1,8 @@
-Tabelle =      'A6L1x50mmF0-22000S10.dat'
-Speichername = 'A6L1x50mmF0-22000S10.pdf'
+Tabelle =      'A11L10x5075mmF0-12000S10B9D16.dat'
+Speichername = 'A11L10x5075mmF0-12000S10B9D16.pdf'
 #lookformax = True  # zuerst ein Maximum
 lookformax = False  # zuerst ein Minimum
-a = 2.8               # ab wann Schwankung als Extrema gewertet wird
+a = 1               # ab wann Schwankung als Extrema gewertet wird
 
 import sys
 from numpy import NaN, Inf, arange, isscalar, asarray, array

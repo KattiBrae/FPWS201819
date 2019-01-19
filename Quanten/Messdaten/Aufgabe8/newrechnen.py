@@ -50,5 +50,5 @@ if __name__ == '__main__':
     #
 
     plt.grid()
-    plt.savefig("newtest.pdf")
+    plt.savefig("A8.pdf")
 ##############################

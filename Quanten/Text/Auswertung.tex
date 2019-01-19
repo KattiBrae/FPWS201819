@@ -70,13 +70,17 @@ Da die Rohrlänge $d$ ein vielfaches $n$ der halben Wellenlänge $\lambda$ ist g
 \end{align*}
 Die Schallgeschwindigkeit ist gegeben durch:$c=f \cdot \lambda$.
 Daraus ergibt sich :
-\begin{align}
+\begin{align*}
   n&=1  c&=\SI{1032}{\frac{m}{s}}\\
-  n&=2  c&=\SI{516}{\frac{m}{s}}\\
-  n&=3  c&=\SI{344}{\frac{m}{s}}\\
+  n&=2  c&=\SI{516}{\frac{m}{s}}
+\end{align*}
+\begin{align}
+  n&=3  c&=\SI{344}{\frac{m}{s}}
   \label{eqn.schall}
-  n&=4  c&=\SI{258}{\frac{m}{s}}.
 \end{align}
+\begin{align*}
+  n&=4  c&=\SI{258}{\frac{m}{s}}.
+\end{align*}
 Die Freqenz ist dabei gegeben als $\SI{6880}{\frac{m}{s}}$.
 Diese Freqenz ist die einzige Frequenz im Frequenzbereich welche bei allen Vielfachen der Rohrlänge von $\SI{75}{mm}$ vertreten ist,
 zusehen ist dies in den Abb. \ref{fig.1} und \ref{fig.2}.
@@ -98,17 +102,118 @@ Für a und b ergegben sich die Werte:
   \caption{Der Abstand der Frequenzen wird gegen die Rohrlänge Aufgretragen.}
   \label{fig.1/x}
 \end{figure}
+\FloatBarrier
 
-\subsection{Aufgabe 2?}
-bestimmung von k
-\begin{align*}
-  k= \frac{2\pi}{\lambda}
-\end{align*}
-w
-\begin{align*}
-  \omega=2\pi f
-\end{align*}
-\begin{align*}
-  \omega_k=k\lambda f
-\end{align*}
-Linear nochmal mit wk anstat freqenz oder anders
+\subsection{Aufgabe 2: Dispersion}
+In dieser Aufgabe wird $f(k)$ geplottet.
+Aus der Messung mit einer Rohrlänge von $12\cdot\SI{50}{mm}$ und einem Frequenzbereich von $400-12000\si{Hz}$ werden die Maximalstellen mit Hilfe einer Peak-Piking ermittelt.
+Die Maximalstellen werden durchnummerriert und die darugehörige Freqenz in $f(k)$ ungerechnen.
+\begin{align}
+  k= \frac{n \pi}{L}
+\end{align}
+$L$ ist dabei die gesammte Rohrlänge.
+
+In der Abbildung \ref{fig.Aufgabe2} ist $k$ gegen $f(k)$ aufgetragen. Dargestellt ist zu einen die Dispersionsrelation von Schallwellen und zum anderen die Diespersionsrelation eines quantenmechanischen Teilchens im Potenzialtopf nach der Funktion \ref{eqn:dispersionqm}
+Es ist zu erkennen, dass die Dispersion von Schalwellen linear verläuft wohingegen die Dispersion eines quantenmechanischen Teilchens im Potenzialtopf quadratisch ist.
+Das Analogon zwischen den belden Dispersionsrelationen ist daher nicht sehr zutreffend.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{f(k).pdf}
+  \caption{Dispersionsrelation für Schalwellen X und die Theorikurve eines quantenmechanischen Teilchens im Potenzialtopf}
+  \label{fig.Aufgabe2}
+\end{figure}
+\FloatBarrier
+
+\subsection{Aufgabe 3: Bandstruckturen}
+In dieser Aufgabe werden die Bandlücken in reation zu der Blendengröße gesetzt.
+Anhand der Abbildung \ref{fig.Aufgabe3} wird deutlich, dass die Bandlücken mit zunehmender Blendengröße kleiner werden.
+Die Bandlücken wirden bestimmt indem man die Differenz vom Anfang und Ende der Bandlücke betrachtet.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{Bandlücken3.pdf}
+  \caption{Größe der Bandlücken aufgetragen gegen die Blendengröße}
+  \label{fig.Aufgabe3}
+\end{figure}
+\FloatBarrier
+
+\subsection{Aufgabe 4: Bandstruckturen}
+Diese Aufgabe ist sehr ähnlich zur Aufgabe 3. Hier wird die Bandlücke jedoch im Verhältniss zur Rohrlänge betrachtet.
+Dementsprechend ist in der Abbildung \ref{fig.Aufgabe4} die Badlücken gegen die Rohrlängen aufgetragen.
+Die Rohrlänge wird zwichen 8, 10 und 12 mal $\SI{50}{mm}$ variiert.
+Die Messung ist nicht sehr aussagekräftig.
+Lediglich ist zu erkennen, dass die Bandlücken relativ unabhängig von der Rohrlänge sind.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{Bandlücken.pdf}
+  \caption{Größe der Bandlücken aufgetragen gegen die Rohrlänge}
+  \label{fig.Aufgabe4}
+\end{figure}
+\FloatBarrier
+
+\subsection{Aufgabe 5}
+In Dieser Aufgabe wird die Bandlücke ebenfals ins Verhältniss mit der Rohrlänge genommen. Dabei wir zwichen 8 mal $\SI{75}{mm}$ und 8 mal $\SI{50}{mm}$ gewechselt.
+Es werden dementsprächend unterschiedlich große Einheitszellen betrachtet.
+In den Abbildungen \ref{fig.Aufgabe5} und \ref{fig.Aufgabe575} sind die Maxima gegen k geplottet. Anhand der hinterlegten Bandlücken wird deutlich, dass die Bandlücken für größere Rohrabschnitte kleiner werden.
+In der Abbildung \ref{fig.Aufgabe5a} wird ebenfals deutlich, dass die größe der Bandlücke fällt mit größeren Einheitszellen.
+%\FloatBarrier
+
+\begin{figure}
+ \centering
+ \begin{subfigure}{0.48\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{bla.pdf}
+  \caption{8 mal \SI{50}{mm}}
+  \label{fig.Aufgabe5}
+ \end{subfigure}
+ \begin{subfigure}{0.48\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{bla75.pdf}
+  \caption{8 mal \SI{75}{mm}}
+  \label{fig.Aufgabe575}
+ \end{subfigure}
+ \caption{Bandlücken für unterschiedliche Rohrlängen}
+ %\label{fig:500-6-7}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{newtest.pdf}
+  \caption{Größe der Bandlücken aufgetragen gegen die größe der Einheitszelle}
+  \label{fig.Aufgabe5a}
+\end{figure}
+\FloatBarrier
+
+\subsection{Aufgabe 6 und 7}
+In dieser Aufgabe werden wieder die Maxima gegen k geplottet. Es entsteht wieder wie erwartet eine Gerade wie in Abbildung \ref{fig.Aufgabe6} und \ref{fig.Aufgabe7} zusehen.
+Anhand der Abbildungen ist zu sagen, dass sich die beiden Messungen nicht viel unterscheiden.
+
+\begin{figure}
+ \centering
+ \begin{subfigure}{0.48\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{A6.pdf}
+  \caption{1 mal \SI{50}{mm}}
+  \label{fig.Aufgabe6}
+ \end{subfigure}
+ \begin{subfigure}{0.48\textwidth}
+  \centering
+  \includegraphics[width=1\textwidth]{A7.pdf}
+  \caption{1 mal \SI{75}{mm}}
+  \label{fig.Aufgabe7}
+ \end{subfigure}
+ \caption{Maxima gegen k}
+ %\label{fig:500-6-7}
+\end{figure}
+
+\subsection{Aufgabe 8}
+Es werden für 2 mal $\SI{50}{mm}$ Rohrlänge unterschiedliche Blendendurchmesser untersucht. Der Blendendurchmesser soll die Stärke von Bindungen zwischen Atomen symbolisieren.
+Für die unterschiedlichen Blendendurchmesser entstehen unterschiedlich breite Bandlücken.
+In der Abbidung $\ref{fig.Aufgabe8}$ ist der zusammenhang zwischen Blendendurchmesser und Bandlücke dargestellt.
+Es wird deutlich dass bei größeren Blendendurchmessern die Bandlücken kleiner werden.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{A8.pdf}
+  \caption{Bandlücke in Abhängigkeit von dem Blendendurchmesser}
+  \label{fig.Aufgabe8}
+\end{figure}
+\FloatBarrier

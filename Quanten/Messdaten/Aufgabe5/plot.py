@@ -1,5 +1,5 @@
-Tabelle =      'A5L8x50mmF0-12000S10B7D16.dat'
-Speichername = 'A5L8x50mmF0-12000S10B7D16.pdf'
+Tabelle =      'A5L8x75mmF0-12000S10B7D16.dat'
+Speichername = 'A5L8x75mmF0-12000S10B7D16.pdf'
 #lookformax = True  # zuerst ein Maximum
 lookformax = False  # zuerst ein Minimum
 a = 0.101               # ab wann Schwankung als Extrema gewertet wird
@@ -65,7 +65,7 @@ if __name__=="__main__":
     maxtab, mintab = peakdet(s,a,x,lookformax)
     print(Tabelle)
     print('Maximum'), print('x, y'),  print(maxtab)
-    print('Minimum'), print('x, y'),  print(mintab)
+    #print('Minimum'), print('x, y'),  print(mintab)
     scatter(array(maxtab)[:,0], array(maxtab)[:,1], color='blue', label='Maximum')
     #scatter(array(mintab)[:,0], array(mintab)[:,1], color='red', label='Minimum')
     plt.legend()

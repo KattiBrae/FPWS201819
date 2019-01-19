@@ -1,4 +1,4 @@
-Wa wir hier machen sollen: Bandstrukturen beobachten
+Was wir hier machen sollen: Bandstrukturen beobachten
   - Nach der Aufgabenstellung müssen wir hier nicht zwingend Plotten
   - Aber: wir sollen zeigen, wie sich die Bandlücken ändern
   - vielleicht ist da sinnvoll, die Bandlücken auszumessen (Anfang und Ende des Bandes), in allen drei Plots

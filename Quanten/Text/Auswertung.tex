@@ -1,14 +1,14 @@
 In der Messung werden für den Frequenzbereich von 6000 bis 9000 $\si{Hz}$ Rohrlängen von $\SI{75}{mm}$ bis $\SI{600}{mm}$ vermessen.
 Bei bestimmten Frequenzen bildet sich eine stehende Welle aus. Das hat Resonanz zur Folge, so dass die Schallwelle eine höhere Intensität hat.
 In den folgenden 2 Abbildungen wird die Intensität gegen die Wellenlänge aufgetragen.
-In der Abbildung \ref{fig.1} sind die Messwerte für die Rohrlängen : $\SI{75}{mm}, \SI{150}{mm}, \SI{225}{mm}, \SI{300}{mm}$ abbgebildet.
+In der Abbildung \ref{fig.1} sind die Messwerte für die Rohrlängen: $\SI{75}{mm}, \SI{150}{mm}, \SI{225}{mm}, \SI{300}{mm}$ abbgebildet.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{1234.pdf}
   \caption{Intensität der Schallwelle im Bereich von 6000 bis 9000 $\si{Hz}$ für die Rohrlängen $\SI{75}{mm}, \SI{150}{mm}, \SI{225}{mm}, \SI{300}{mm}$}
   \label{fig.1}
 \end{figure}
-In der Abbildung \ref{fig.2} sind die Messwerte für die Rohrlängen : $\SI{375}{mm}, \SI{450}{mm}, \SI{525}{mm}, \SI{600}{mm}$ abbgebildet.
+In der Abbildung \ref{fig.2} sind die Messwerte für die Rohrlängen: $\SI{375}{mm}, \SI{450}{mm}, \SI{525}{mm}, \SI{600}{mm}$ dargestellt.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{5678.pdf}
@@ -18,11 +18,17 @@ In der Abbildung \ref{fig.2} sind die Messwerte für die Rohrlängen : $\SI{375}
 Die Intensitätsmaxima sind mit einem blauen Punkt gekennzeichnet.
 Auffällig ist, dass sich für alle Rohrlängen Intensitätsmaxima an der Stelle von $\SI{6880}{Hz}$ bilden. Das heißt, dass bei dieser Frequenz eine stehende Welle entsteht die eine Wellenlänge von $\lambda=\frac{1}{2n}d$ besitzt.
 $d$ ist dabei die Länge des Rohres und n die Anzahl der Knotenpunkte.
-Desweiteren ist auffällig, dass für eine Rohrlänge die Abstand zwichen zwei Maxima immer konstannt ist.
+Desweiteren ist auffällig, dass für eine Rohrlänge der Abstand zwischen zwei Maxima immer konstant ist.
+\FloatBarrier
 
 \subsection{Bestimmung der Lichtgeschwindigkeit}
-In den Graphen \ref{fig.2} und \ref{fig.2} werden die Resonanzfrequenzen einer jeden Messreihe von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
-Die Resonazfrequenzabstände sind konstant für eine Messreihe, daher ergeben sich Geraden der Form: $y=ax+b$ welche an die Messwerte gefittet werden.
+\FloatBarrier
+In den Graphen \ref{fig.2} und \ref{fig.2} \textbf{\huge{DAS IST ZWEI MAL DER GLEICHE PLOT (4\&4)}}} werden die Resonanzfrequenzen einer jeden Messreihe von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
+Die Resonanzfrequenzabstände sind konstant für eine Messreihe, daher ergeben sich Geraden der Form:
+\begin{equation*}
+  y=ax+b,
+\end{equation*}
+welche mit Python 3.6.3 und curve\_fit an die Messwerte gefittet werden.
 In der Abb. \ref{fig.linearfit} sind die Messwerte mit den Fitfunktionen abgebildet.
 %Für die Fitparameter ergeben sich folgende Werte.
 %\begin{align*}
@@ -63,16 +69,20 @@ Der Mittelwert ergibt:
 %#########
 \FloatBarrier
 Die Schallgeschwindigkeit kann auch mit Hilfe einer anderen Methode bestimmt werden.
-dazu betrachten wir ein Rohr der Länge $\SI{75}{mm}$ für die Frequenzen von 6000 bis 9000 $\si{Hz}$.
-Da die Rohrlänge $d$ ein vielfaches $n$ der halben Wellenlänge $\lambda$ ist gilt:
+Dazu betrachten wir ein Rohr der Länge $\SI{75}{mm}$ für die Frequenzen von 6000 bis 9000 $\si{Hz}$.
+Da die Rohrlänge $d$ ein Vielfaches $n$ der halben Wellenlänge $\lambda$ ist gilt:
 \begin{align*}
   \lambda = \frac{2d}{n}.
 \end{align*}
-Die Schallgeschwindigkeit ist gegeben durch:$c=f \cdot \lambda$.
+Die Schallgeschwindigkeit ist gegeben durch:
+\begin{equation*}
+  c=f \cdot \lambda.
+\end{equation*}
 Daraus ergibt sich :
 \begin{align*}
   n&=1  c&=\SI{1032}{\frac{m}{s}}\\
-  n&=2  c&=\SI{516}{\frac{m}{s}}
+  n&=2  c&=\SI{516}{\frac{m}{s}}\\
+  \textbf{\huge{SOLL DAS SO IM TEXT AUSSEHEN? n und c rücken hier zusammen}} &&
 \end{align*}
 \begin{align}
   n&=3  c&=\SI{344}{\frac{m}{s}}
@@ -81,70 +91,75 @@ Daraus ergibt sich :
 \begin{align*}
   n&=4  c&=\SI{258}{\frac{m}{s}}.
 \end{align*}
-Die Freqenz ist dabei gegeben als $\SI{6880}{\frac{m}{s}}$.
-Diese Freqenz ist die einzige Frequenz im Frequenzbereich welche bei allen Vielfachen der Rohrlänge von $\SI{75}{mm}$ vertreten ist,
+Die Frequenz ist dabei gegeben als $\SI{6880}{\frac{m}{s}}$.
+Diese Frequenz ist die einzige Frequenz im Frequenzbereich, welche bei allen Vielfachen der Rohrlänge von $\SI{75}{mm}$ vertreten ist,
 zusehen ist dies in den Abb. \ref{fig.1} und \ref{fig.2}.
 \textbf{\huge{Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass die Wellenlänge bei $\frac{3}{2}\lambda$ liegt, da die dazugehörige Schallgeschwindigkeit von $\SI{344}{\frac{m}{s}}$ gut zum Literaturwert??? von $\SI{343.2}{\frac{m}{s}}$ passt.}}
 
 \FloatBarrier
-Desweiteren soll die Schallgeschwindigkeit mithilfe des Verhältnisses von Frequenzübergang zu Rohrlänge bestimmt werden.
+Desweiteren soll die Schallgeschwindigkeit mithilfe des Verhältnisses von Frequenzübergangen zu Rohrlänge bestimmt werden.
 Dieser Zusammenhang ist in Abb. \ref{fig.1/x} dargestellt.
 An die Messwerte wird eine Funktion der Form $a\cdot\frac{1}{x}+b$ gefittet.
 Für a und b ergegben sich die Werte:
 \begin{align*}
-  a&=168692.913\pm253.977\\
-  b&=8.566\pm1.995\\
+  a&=\SI{168692.913\pm253.977}{EINHEIT}\\
+  b&=\SI{8.566\pm1.995}{EINHEIT}.\\
 \end{align*}
 %################Bild#####################
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{geschi.pdf}
-  \caption{Der Abstand der Frequenzen wird gegen die Rohrlänge Aufgretragen.}
+  \caption{Der Abstand der Frequenzen wird gegen die Rohrlänge aufgetragen.}
   \label{fig.1/x}
 \end{figure}
 \FloatBarrier
 
 \subsection{Aufgabe 2: Dispersion}
+\FloatBarrier
 In dieser Aufgabe wird $f(k)$ geplottet.
-Aus der Messung mit einer Rohrlänge von $12\cdot\SI{50}{mm}$ und einem Frequenzbereich von $400-12000\si{Hz}$ werden die Maximalstellen mit Hilfe einer Peak-Piking ermittelt.
-Die Maximalstellen werden nummeriert und die darzugehörige Freqenz in $f(k)$ umgerechnen.
+Aus der Messung mit einer Rohrlänge von $12\cdot\SI{50}{mm}$ und einem Frequenzbereich von $400-12000\si{Hz}$ werden die Maximalstellen mit Hilfe einer Peak-Picking-Funktion ermittelt.
+Die Maximalstellen werden nummeriert und die dazugehörige Frequenz in $f(k)$ umgerechnet.
 \begin{align}
   k= \frac{n \pi}{L}
 \end{align}
 $L$ ist dabei die gesammte Rohrlänge.
 
 In der Abbildung \ref{fig.Aufgabe2} ist $k$ gegen $f(k)$ aufgetragen. Dargestellt ist zum einen die Dispersionsrelation von Schallwellen und zum anderen die Dispersionsrelation eines quantenmechanischen Teilchens im Potenzialtopf nach der Funktion \ref{eqn:dispersionqm}.
-Es ist zu erkennen, dass die Dispersion von Schalwellen linear verläuft wohingegen die Dispersion eines quantenmechanischen Teilchens im Potenzialtopf quadratisch ist.
+Es ist zu erkennen, dass die Dispersion von Schallwellen linear verläuft, wohingegen die Dispersion eines quantenmechanischen Teilchens im Potenzialtopf quadratisch ist.
+\textbf{\huge{DEN FOLGENDEN SATZ WÜRDE ICH NICHT IN DER AUSWERTUNG SCHREIBEN, SONDERN IN DER DISKUSSION, UND SELBST DA FINDE ICH IHN FRAGWÜRDIG. IMMERHIN HABEN WIR EINEN GANZEN VERSUCH DAMIT GEMACHT.}}
 Das Analogon zwischen den beiden Dispersionsrelationen ist daher nicht sehr zutreffend.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{f(k).pdf}
-  \caption{Dispersionsrelation für Schalwellen X und die Theorikurve eines quantenmechanischen Teilchens im Potenzialtopf}
+  \caption{Dispersionsrelation für Schallwellen X\textbf{\huge{WOFÜR STEHT DAS X?}} und die Theoriekurve eines quantenmechanischen Teilchens im Potenzialtopf}
   \label{fig.Aufgabe2}
 \end{figure}
+\textbf{\huge{Hat k im Plot keine Einheit? Ich weiß es so grade nicht :)}}
 \FloatBarrier
 
-\subsection{Aufgabe 3: Bandstruckturen}
-In dieser Aufgabe werden Atome in einer Kette simmuliert.
-Dazu wird ein Rohr der Länge 12 mal 50 $\si{mm}$ mit Blenden unterteilt.
+\subsection{Aufgabe 3: Bandstrukturen}
+\FloatBarrier
+In dieser Aufgabe werden Atome in einer Kette simuliert.
+Dazu wird ein Rohr der Länge $\SI{12 \cdot }{mm}$ mit Blenden unterteilt.
 Die Blendengrößen werden zwischen 10, 13 und $\SI{16}{mm}$ variiert.
-In der Abbildung \ref{fig.Aufgabe3} werden die Bandlücken in Reation zu der Blendengröße gesetzt.
+In der Abbildung \ref{fig.Aufgabe3} werden die Bandlücken in Relation zu der Blendengröße dargestellt.
 Es wird deutlich, dass die Bandlücken mit zunehmender Blendengröße kleiner werden.
-Die Bandlücken werden bestimmt indem man die Differenz vom Anfangs- und End- punkt der Bandlücke betrachtet.
+Die Bandlücken werden bestimmt, indem die Differenz vom Anfangs- und Endpunkt der Bandlücke betrachtet wird.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{Bandlücken3.pdf}
   \caption{Größe der Bandlücken aufgetragen gegen die Blendengröße}
   \label{fig.Aufgabe3}
 \end{figure}
+\textbf{\huge{Welche Gerade steht für welchen Aufbau oder für welche Bandlücke? Im Protokoll sieht man die Spektren ja nicht und so sind die Linien eher sinnlos/verwirrend}}
 \FloatBarrier
 
-\subsection{Aufgabe 4: Bandstruckturen}
-Diese Aufgabe ist sehr ähnlich zur Aufgabe 3. Hier wird die Bandlücke jedoch im Verhältniss zur Rohrlänge betrachtet.
-Dementsprechend ist in der Abbildung \ref{fig.Aufgabe4} die Badlücken gegen die Rohrlängen aufgetragen.
-Die Rohrlänge wird zwichen 8, 10 und 12 mal $\SI{50}{mm}$ variiert.
+\subsection{Aufgabe 4: Bandstrukturen}
+Hier werden wie bei der vorherigen Aufgabe die Bandlücken betrachet, jedoch im Verhältnis zur Rohrlänge statt zur Blendengröße.
+Dementsprechend sind in der Abbildung \ref{fig.Aufgabe4} die Bandlücken gegen die Rohrlängen aufgetragen.
+Die Rohrlänge wird zwischen $\SI{8 \cdot 50}{mm}$, $\SI{10 \cdot 50}{mm}$ und $\SI{12 \cdot 50}{mm}$ variiert.
 Die Messung ist nicht sehr aussagekräftig.
-Lediglich ist zu erkennen, dass die Bandlücken relativ unabhängig von der Rohrlänge sind.
+Lediglich ist zu erkennen, dass die Bandlücken unabhängig von der Rohrlänge sind.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{Bandlücken.pdf}
@@ -152,6 +167,9 @@ Lediglich ist zu erkennen, dass die Bandlücken relativ unabhängig von der Rohr
   \label{fig.Aufgabe4}
 \end{figure}
 \FloatBarrier
+
+
+\textbf{\huge{Katti war hier}}
 
 \subsection{Aufgabe 5}
 In dieser Aufgabe wird die Bandlücke ebenfals ins Verhältniss zu der Rohrlänge gesetzte. Dabei wird zwischen 8 mal $\SI{75}{mm}$ und 8 mal $\SI{50}{mm}$ gewechselt.
@@ -209,7 +227,7 @@ Anhand der Abbildungen ist zu sagen, dass sich die beiden Messungen nicht viel u
 \end{figure}
 
 \subsection{Aufgabe 8}
-Es werden für 2 mal $\SI{50}{mm}$ Rohrlänge unterschiedliche Blendendurchmesser untersucht. Der Blendendurchmesser soll die Stärke von Bindungen zwischen Atomen symbolisieren.
+Es werden für $\SI{2 \cdot 50}{mm}$ Rohrlänge unterschiedliche Blendendurchmesser untersucht. Der Blendendurchmesser soll die Stärke von Bindungen zwischen Atomen symbolisieren.
 Für die unterschiedlichen Blendendurchmesser entstehen unterschiedlich breite Bandlücken.
 In der Abbidung $\ref{fig.Aufgabe8}$ ist der zusammenhang zwischen Blendendurchmesser und Bandlücke dargestellt.
 Es wird deutlich, dass bei größeren Blendendurchmessern die Bandlücken kleiner werden.

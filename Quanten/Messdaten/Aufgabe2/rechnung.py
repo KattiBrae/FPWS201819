@@ -37,7 +37,7 @@ plt.plot(k_new,g(k_new,*Werte),'-', label='Theorie Funktion')
 #plt.plot(k,E)
 plt.plot(k,f,'x', label="Messwerte")
 plt.ylabel(r'$f$ (k)')
-plt.xlabel(r'k')
+plt.xlabel(r'k / $\frac{1}{m}$')
 plt.grid()
 plt.legend()
 

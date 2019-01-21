@@ -23,7 +23,8 @@ Desweiteren ist auffällig, dass für eine Rohrlänge der Abstand zwischen zwei 
 
 \subsection{Bestimmung der Lichtgeschwindigkeit}
 \FloatBarrier
-In den Graphen \ref{fig.2} und \ref{fig.2} \textbf{\huge{DAS IST ZWEI MAL DER GLEICHE PLOT (4\&4)}}} werden die Resonanzfrequenzen einer jeden Messreihe von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
+In den Graphen \ref{fig.1} und \ref{fig.2} %\textbf{\huge{DAS IST ZWEI MAL DER GLEICHE PLOT (4\&4)}}
+werden die Resonanzfrequenzen einer jeden Messreihe von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
 Die Resonanzfrequenzabstände sind konstant für eine Messreihe, daher ergeben sich Geraden der Form:
 \begin{equation*}
   y=ax+b,
@@ -80,30 +81,30 @@ Die Schallgeschwindigkeit ist gegeben durch:
 \end{equation*}
 Daraus ergibt sich :
 \begin{align*}
-  n&=1  c&=\SI{1032}{\frac{m}{s}}\\
-  n&=2  c&=\SI{516}{\frac{m}{s}}\\
-  \textbf{\huge{SOLL DAS SO IM TEXT AUSSEHEN? n und c rücken hier zusammen}} &&
+  n=1&&  c&=\SI{1032}{\frac{m}{s}}\\
+  n=2&&  c&=\SI{516}{\frac{m}{s}}\\
+  %\textbf{\huge{SOLL DAS SO IM TEXT AUSSEHEN? n und c rücken hier zusammen}} &&
 \end{align*}
 \begin{align}
-  n&=3  c&=\SI{344}{\frac{m}{s}}
+  n=3&&  c&=\SI{344}{\frac{m}{s}}
   \label{eqn.schall}
 \end{align}
 \begin{align*}
-  n&=4  c&=\SI{258}{\frac{m}{s}}.
+  n=4&&  c&=\SI{258}{\frac{m}{s}}.
 \end{align*}
 Die Frequenz ist dabei gegeben als $\SI{6880}{\frac{m}{s}}$.
 Diese Frequenz ist die einzige Frequenz im Frequenzbereich, welche bei allen Vielfachen der Rohrlänge von $\SI{75}{mm}$ vertreten ist,
 zusehen ist dies in den Abb. \ref{fig.1} und \ref{fig.2}.
-\textbf{\huge{Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass die Wellenlänge bei $\frac{3}{2}\lambda$ liegt, da die dazugehörige Schallgeschwindigkeit von $\SI{344}{\frac{m}{s}}$ gut zum Literaturwert??? von $\SI{343.2}{\frac{m}{s}}$ passt.}}
+Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass die Wellenlänge bei $\frac{3}{2}\lambda$ liegt, da die dazugehörige Schallgeschwindigkeit von $\SI{344}{\frac{m}{s}}$ gut zum den bereits berechneten Wert von $\SI{343.28}{\frac{m}{s}}$ passt.
 
 \FloatBarrier
 Desweiteren soll die Schallgeschwindigkeit mithilfe des Verhältnisses von Frequenzübergangen zu Rohrlänge bestimmt werden.
 Dieser Zusammenhang ist in Abb. \ref{fig.1/x} dargestellt.
 An die Messwerte wird eine Funktion der Form $a\cdot\frac{1}{x}+b$ gefittet.
-Für a und b ergegben sich die Werte:
+Für a und b ergegben sich die Werte:\textbf{\huge{mit den Einheitnen bin ich mir nicht ganz sicher.}}
 \begin{align*}
-  a&=\SI{168692.913\pm253.977}{EINHEIT}\\
-  b&=\SI{8.566\pm1.995}{EINHEIT}.\\
+  a&=\SI{168692.913\pm253.977}{m}\\
+  b&=\SI{8.566\pm1.995}{Hz}.\\
 \end{align*}
 %################Bild#####################
 \begin{figure}[h!]
@@ -126,38 +127,41 @@ $L$ ist dabei die gesammte Rohrlänge.
 
 In der Abbildung \ref{fig.Aufgabe2} ist $k$ gegen $f(k)$ aufgetragen. Dargestellt ist zum einen die Dispersionsrelation von Schallwellen und zum anderen die Dispersionsrelation eines quantenmechanischen Teilchens im Potenzialtopf nach der Funktion \ref{eqn:dispersionqm}.
 Es ist zu erkennen, dass die Dispersion von Schallwellen linear verläuft, wohingegen die Dispersion eines quantenmechanischen Teilchens im Potenzialtopf quadratisch ist.
-\textbf{\huge{DEN FOLGENDEN SATZ WÜRDE ICH NICHT IN DER AUSWERTUNG SCHREIBEN, SONDERN IN DER DISKUSSION, UND SELBST DA FINDE ICH IHN FRAGWÜRDIG. IMMERHIN HABEN WIR EINEN GANZEN VERSUCH DAMIT GEMACHT.}}
-Das Analogon zwischen den beiden Dispersionsrelationen ist daher nicht sehr zutreffend.
+%\textbf{\huge{DEN FOLGENDEN SATZ WÜRDE ICH NICHT IN DER AUSWERTUNG SCHREIBEN, SONDERN IN DER DISKUSSION, UND SELBST DA FINDE ICH IHN FRAGWÜRDIG. IMMERHIN HABEN WIR EINEN GANZEN VERSUCH DAMIT GEMACHT.}}
+%Das Analogon zwischen den beiden Dispersionsrelationen ist daher nicht sehr zutreffend.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{f(k).pdf}
-  \caption{Dispersionsrelation für Schallwellen X\textbf{\huge{WOFÜR STEHT DAS X?}} und die Theoriekurve eines quantenmechanischen Teilchens im Potenzialtopf}
+  \caption{Dispersionsrelation für Schallwellen und die Theorie Funktion eines quantenmechanischen Teilchens im Potenzialtopf}
   \label{fig.Aufgabe2}
 \end{figure}
-\textbf{\huge{Hat k im Plot keine Einheit? Ich weiß es so grade nicht :)}}
+%\textbf{\huge{Hat k im Plot keine Einheit? Ich weiß es so grade nicht :)}}
 \FloatBarrier
 
 \subsection{Aufgabe 3: Bandstrukturen}
 \FloatBarrier
 In dieser Aufgabe werden Atome in einer Kette simuliert.
-Dazu wird ein Rohr der Länge $\SI{12 \cdot }{mm}$ mit Blenden unterteilt.
+Dazu wird ein Rohr der Länge $12 \cdot \SI{50}{mm}$ mit einheitlichen Blenden unterteilt.
 Die Blendengrößen werden zwischen 10, 13 und $\SI{16}{mm}$ variiert.
 In der Abbildung \ref{fig.Aufgabe3} werden die Bandlücken in Relation zu der Blendengröße dargestellt.
+Für alle drei Messung mit den drei Blenden bilden sich drei Bandlücken aus,diese sind In der Abbildung jeweils übereinande.
+Die zueinander gehörenden Bandlücken der unterschiedlichen Messungen sind jeweils mit einer Ausgleichsgeraden verbunden.
 Es wird deutlich, dass die Bandlücken mit zunehmender Blendengröße kleiner werden.
 Die Bandlücken werden bestimmt, indem die Differenz vom Anfangs- und Endpunkt der Bandlücke betrachtet wird.
+Die Bandlücken bei höherer Frequenz sind größer.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{Bandlücken3.pdf}
   \caption{Größe der Bandlücken aufgetragen gegen die Blendengröße}
   \label{fig.Aufgabe3}
 \end{figure}
-\textbf{\huge{Welche Gerade steht für welchen Aufbau oder für welche Bandlücke? Im Protokoll sieht man die Spektren ja nicht und so sind die Linien eher sinnlos/verwirrend}}
+%\textbf{\huge{Welche Gerade steht für welchen Aufbau oder für welche Bandlücke? Im Protokoll sieht man die Spektren ja nicht und so sind die Linien eher sinnlos/verwirrend}}
 \FloatBarrier
 
 \subsection{Aufgabe 4: Bandstrukturen}
 Hier werden wie bei der vorherigen Aufgabe die Bandlücken betrachet, jedoch im Verhältnis zur Rohrlänge statt zur Blendengröße.
 Dementsprechend sind in der Abbildung \ref{fig.Aufgabe4} die Bandlücken gegen die Rohrlängen aufgetragen.
-Die Rohrlänge wird zwischen $\SI{8 \cdot 50}{mm}$, $\SI{10 \cdot 50}{mm}$ und $\SI{12 \cdot 50}{mm}$ variiert.
+Die Rohrlänge wird zwischen $8 \cdot \SI{50}{mm}$, $10 \cdot \SI{50}{mm}$ und $12 \cdot \SI{50}{mm}$ variiert.
 Die Messung ist nicht sehr aussagekräftig.
 Lediglich ist zu erkennen, dass die Bandlücken unabhängig von der Rohrlänge sind.
 \begin{figure}[h!]
@@ -227,7 +231,7 @@ Anhand der Abbildungen ist zu sagen, dass sich die beiden Messungen nicht viel u
 \end{figure}
 
 \subsection{Aufgabe 8}
-Es werden für $\SI{2 \cdot 50}{mm}$ Rohrlänge unterschiedliche Blendendurchmesser untersucht. Der Blendendurchmesser soll die Stärke von Bindungen zwischen Atomen symbolisieren.
+Es werden für $2 \cdot \SI{50}{mm}$ Rohrlänge unterschiedliche Blendendurchmesser untersucht. Der Blendendurchmesser soll die Stärke von Bindungen zwischen Atomen symbolisieren.
 Für die unterschiedlichen Blendendurchmesser entstehen unterschiedlich breite Bandlücken.
 In der Abbidung $\ref{fig.Aufgabe8}$ ist der zusammenhang zwischen Blendendurchmesser und Bandlücke dargestellt.
 Es wird deutlich, dass bei größeren Blendendurchmessern die Bandlücken kleiner werden.
@@ -272,16 +276,24 @@ Aus den Abbildungen wird deutlich, dass die Bandlücken mit steigender Anzahl vo
 \subsection{Aufgabe 10}
 In diesem Aufgabenteil weden die Bänder unter periodischen Defekten betrachtet.
 Vermessen wird ein Rohr der Länge $L=12 \cdot \SI{50}{mm}$ mit abwechselnden Blendengrößen von 16 und 13 $\si{mm}$.
-In der Abbildung \ref{fig.Aufgabe10} ist die Bandlücke in Abhängigkeit von der Bandlückennummer dargestellt.
-Vergleicht man die Werte mit denen aus Abbildung \ref{fig.Aufgabe92} und \ref{fig.Aufgabe91} für 6 Einheitszellen so wird deutlich, dass
-die periodischen Defekte dazu führen, dass die Bandlücken zwischen denen von den Blendengrößen 16 und 13 $\si{mm}$, ohne defekte, liegen.
-Die Frequenzen bei denen die Bandlücken entstehen bleiben konstant.
-  \begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{A10.pdf}
-    \caption{Bandlücken bei alternierenden Blendengrößen}
-    \label{fig.Aufgabe10}
-  \end{figure}
+Die Frequenz der Maxima wird gegen k geplottet und die Bandlücken farbig makiert.
+Auf diese Weise lassen sich die periodischen Defekte sehr gut beobachten.
+%In der Abbildung \ref{fig.Aufgabe10} ist die Bandlücke in Abhängigkeit von der Bandlückennummer dargestellt.
+%Vergleicht man die Werte mit denen aus Abbildung \ref{fig.Aufgabe92} und \ref{fig.Aufgabe91} für 6 Einheitszellen so wird deutlich, dass
+%die periodischen Defekte dazu führen, dass die Bandlücken zwischen denen von den Blendengrößen 16 und 13 $\si{mm}$, ohne defekte, liegen.
+%Die Frequenzen bei denen die Bandlücken entstehen bleiben konstant.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{A101.pdf}
+  \caption{Frequenz der Maxima geplottet gegen k mit makierten Bandlücken}
+  \label{fig.Aufgabe101}
+\end{figure}
+%  \begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=\textwidth]{A10.pdf}
+%    \caption{Bandlücken bei alternierenden Blendengrößen}
+%    \label{fig.Aufgabe10}
+%  \end{figure}
   \FloatBarrier
 
 \subsection{Aufgabe 11}
@@ -289,26 +301,66 @@ In dieser Aufgabe geht es ebenfalls darum das Verhalten von Bandlücken unter Ve
 Die Defekte treten hier jedoch nicht wie in der Aufgabe zuvor in Form von der Blendengröße auf, sonder die Rohrabschnitte werden verändert.
 Für die Messung wird eine alternierende Folge von 50 und $75\si{mm}$ langen Röhren benutzt, welche jeweils mit Blenden vom Durchmesser 16 $\si{mm}$ abgetrennt sind.
 Insgesammt werden 10 Rohrabschnitte verwendet.
-Die Bandlücken werden nummeriert und wie in Abbildung \ref{fig.Aufgabe11} geplottet.
-An der Abbildung ist deutlich zu erkennen das die Größe der Bandlücken nicht mehr wie üblich mit steigender Nummer linear ansteigt.
+Auch hier werden zur veranschaulichung wieder die Frequenzen der Maxima gegen k geplottet.
+Anhand der Fablich makierten Bandlücken wird deutlich, dass die Defekte einen großen Einfluss auf des verhalten der Kette haben.
+%Die Bandlücken werden nummeriert und wie in Abbildung \ref{fig.Aufgabe112} geplottet.
+%An der Abbildung ist deutlich zu erkennen das die Größe der Bandlücken nicht mehr wie üblich mit steigender Nummer linear ansteigt.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{A11.pdf}
-  \caption{Bandlücken bei alternierenden Rohrlängen}
-  \label{fig.Aufgabe11}
+  \includegraphics[width=1\textwidth]{A112.pdf}
+  \caption{Frequenz der Maxima geplottet gegen k mit makierten Bandlücken}
+  \label{fig.Aufgabe111}
 \end{figure}
+%\begin{figure}[h!]
+%  \centering
+%  \includegraphics[width=\textwidth]{A11.pdf}
+%  \caption{Bandlücken bei alternierenden Rohrlängen}
+%  \label{fig.Aufgabe112}
+%\end{figure}
 \FloatBarrier
 
 \subsection{Aufgabe 12}
 Nun sollen vereinzelnt Defekte in die Kette eingebaut werden.
 Es werden 4 Messungen mit unterschiedlichen Defekten durchgeführt.
-Es werden wieder die Bandlücken berechnet und nummeriert.
-In der Abbildung \ref{fig.Aufgabe12} ist der Zusammenhang abgebildet.
-Aus der Abbildung folgt die Annahme das kleinere Defekte keinen großen Einfluss auf das Verhalten der Kette haben.
-  \begin{figure}[h!]
+Die entstehenden Bandlücken sind in den Abbildungen \ref{fig.Aufgabe12} gut zusehen.
+Es sind jedoch keine gravierenden Unterschiede zwischen den Messungen auszumachen.
+In der ersten Bandlücke gibt es ein Maximum welches von der Stürung her rühren könnte.
+
+%  \begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=\textwidth]{A12.pdf}
+%    \caption{Bandlücken bei alternierenden Rohrlängen}
+%    \label{fig.Aufgabe12}
+%  \end{figure}
+%  \FloatBarrier
+
+  \begin{figure}
+   \centering
+   \begin{subfigure}{0.48\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{A12.pdf}
-    \caption{Bandlücken bei alternierenden Rohrlängen}
-    \label{fig.Aufgabe12}
+    \includegraphics[width=1.1\textwidth]{max.pdf}
+    \caption{Defekt an dritter Stelle mit $12_5$ mm}
+    \label{fig.Aufgabe121}
+   \end{subfigure}
+   \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{max2.pdf}
+    \caption{Defekt an dritter Stelle mit einem Rohr der Länge $\SI{75}{mm}$}
+    \label{fig.Aufgabe122}
+   \end{subfigure}
+
+   \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{max3.pdf}
+    \caption{Defekt an achter Stelle mit $12_5$ mm}
+    \label{fig.Aufgabe123}
+   \end{subfigure}
+   \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{max4.pdf}
+    \caption{Defekt an achter Stelle mit einem Rohr der Länge $\SI{75}{mm}$}
+    \label{fig.Aufgabe124}
+   \end{subfigure}
+   \caption{Messung mit einem Rohr der Länge $12 \cdot \SI{50}{mm}$ und einem Blendendruchmesser von $\SI{16}{mm}$ mit Defekten an bestimmten Stellen.}
+   \label{fig.Aufgabe12}
   \end{figure}
-  \FloatBarrier

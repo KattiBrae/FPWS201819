@@ -32,7 +32,7 @@ print(f)
 
 print('Wellenlänge')
 d=0.052
-a=0.807
-g=1e-05
-lam=d*g/a
+L=0.807
+a=1e-05
+lam =a*np.sin(np.arctan( d/L ))
 print(lam)

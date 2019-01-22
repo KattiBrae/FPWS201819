@@ -197,12 +197,14 @@ Die Extrema liegen bei den Polarisationen
 Zur Berechnung der Wellenlänge wird im Interferenzmuster des Gitters der Abstand des ersten Nebenmaximum zum Hauptmaximum notiert.
 Außerdem wird der Abstand des Gitters zum Schirm notiert.
 \begin{align*}
+\text{Ordnung des Maximums}                        && n &=&\SI{1}{}&&\\
 \text{Abstand Hauptmaximum - 1. Nebenmaximum}      && d &=&\SI{0.052}{m} && \\
-\text{Abstand Gitter - Schirm}                     && a &=&\SI{0.807}{m} && \\
-\text{Abstand der Gitterlinien}                    && g &=&\SI{1e-05}{m} && \\
+\text{Abstand Gitter - Schirm}                     && L &=&\SI{0.807}{m} && \\
+\text{Abstand der Gitterlinien}                    && a &=&\SI{1e-05}{m} && \\
 \end{align*}
+Es ergibt sich folgende Wellenlänge:
 \begin{equation*}
-    \lambda = \frac{d g}{a} = \SI{6.44e-07}{m}= \SI{644}{nm}
+    \lambda = \frac{a}{n} \sin{\left( \arctan{\left( \frac{d}{L} \right)} \right)} = \SI{6.43e-07}{m} = \SI{643}{nm}.
 \end{equation*}
 %lambda=6.44361833952912e-07
 %a = schirmabstand

@@ -32,7 +32,19 @@ print(f)
 
 print('Wellenlänge')
 d=0.052
+dd=0.002
 L=0.807
+dL=0.002
 a=1e-05
 lam =a*np.sin(np.arctan( d/L ))
 print(lam)
+#ddlam= a*L /( ( L**2 + d**2 )*np.sqrt( ( d**2 ) / ( L**2 ) + 1 ))
+ddlam=1.23147972145e-05
+print(ddlam)
+#dLlam= -a*d/( ( d**2 + L**2 )*np.sqrt( ( d**2 ) / ( L**2 ) + 1 ))
+dLlam=-7.93518531792e-07
+print(dLlam)
+
+print('Fehler')
+gauss= np.sqrt( (ddlam)**2*(dd)**2 + (dLlam)**2*(dL)**2 )
+print(gauss)

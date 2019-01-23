@@ -198,15 +198,16 @@ Zur Berechnung der Wellenlänge wird im Interferenzmuster des Gitters der Abstan
 Außerdem wird der Abstand des Gitters zum Schirm notiert.
 \begin{align*}
 \text{Ordnung des Maximums}                        && n &=&\SI{1}{}&&\\
-\text{Abstand Hauptmaximum - 1. Nebenmaximum}      && d &=&\SI{0.052}{m} && \\
-\text{Abstand Gitter - Schirm}                     && L &=&\SI{0.807}{m} && \\
+\text{Abstand Hauptmaximum - 1. Nebenmaximum}      && d &=&\SI{0.052 \pm 0.002}{m} && \\
+\text{Abstand Gitter - Schirm}                     && L &=&\SI{0.807 \pm 0.002}{m} && \\
 \text{Abstand der Gitterlinien}                    && a &=&\SI{1e-05}{m} && \\
 \end{align*}
 Es ergibt sich folgende Wellenlänge:
 \begin{equation*}
-    \lambda = \frac{a}{n} \sin{\left( \arctan{\left( \frac{d}{L} \right)} \right)} = \SI{6.43e-07}{m} = \SI{643}{nm}.
+    \lambda = \frac{a}{n} \sin{\left( \arctan{\left( \frac{d}{L} \right)} \right)} = \SI{6.43e-07}{m} = \SI{643.0 \pm 0.3}{nm}.
 \end{equation*}
-%lambda=6.44361833952912e-07
-%a = schirmabstand
-%g = spaltabstand
-%d = abstand Hauptmaximum -  erstes nebenmaximum
+Der Fehler wird als Gaussfehler berechnet:
+\begin{align*}
+  \Delta \lambda &=& \sqrt{ \left( \frac{aL}{ \left( L^2 + d^2 \right) \sqrt{ \frac{d^2}{L^2} + 1 }} \right)^2 \cdot \left(\Delta d \right)^2 + \left( \frac{-ad}{ \left( d^2 + L^2 \right) \sqrt{ \frac{d^2}{L^2} + 1 }} \right)^2 \cdot \left( \Delta L \right)^2 } &&\\
+                 &=& \SI{0.3}{nm}. &&
+\end{align*}

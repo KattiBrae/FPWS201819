@@ -75,9 +75,9 @@ if __name__=="__main__":
     plt.fill_between(x1, y11, y12, color='blue', alpha=.1)
     plt.plot(k,y,'x', label="Messwerte", color="red")
     plt.ylabel(r'Frequenz / Hz')
-    plt.xlabel(r'k')
+    plt.xlabel(r'k / $\frac{1}{m}$')
     plt.grid()
     plt.legend()
 
-    plt.savefig('bla.pdf')
+    plt.savefig('A112.pdf')
     print ('Fertig')

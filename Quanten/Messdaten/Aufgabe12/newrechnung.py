@@ -24,7 +24,7 @@ if __name__=="__main__":
     from numpy import NaN, Inf, arange, isscalar, asarray, array
     import sys
 
-    y = np.loadtxt('max4.txt', unpack=True,delimiter=' ')
+    y = np.loadtxt('max.txt', unpack=True,delimiter=' ')
     c = 343.28
     l = c / y
     k=(2*np.pi)/l
@@ -63,9 +63,9 @@ if __name__=="__main__":
 
     plt.plot(k,y,'x', label="Messwerte", color="red")
     plt.ylabel(r'Frequenz / Hz')
-    plt.xlabel(r'k')
+    plt.xlabel(r'k / $\frac{1}{m}$')
     plt.grid()
     plt.legend()
 
-    plt.savefig('max4.pdf')
+    plt.savefig('max.pdf')
     print ('Fertig')

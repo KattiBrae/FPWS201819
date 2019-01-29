@@ -1,3 +1,5 @@
 .DS_Store
 protokoll.*
 !protokoll.tex
+Protokoll.*
+!Protokoll.tex

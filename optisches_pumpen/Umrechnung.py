@@ -109,8 +109,8 @@ f_new = np.linspace(f[0], f[-1], 500)
 plt.figure(1)
 plt.plot(f,B1,'x')
 plt.plot(f,B2,'x')
-plt.plot(f_new,g(f_new,*popt),'-', label='Rb87')
-plt.plot(f_new,q(f_new,*popt2),'-',label='Rb85')
+plt.plot(f_new,g(f_new,*popt),'-', label='Isotop 1')
+plt.plot(f_new,q(f_new,*popt2),'-',label='Isotop 2')
 
 plt.xlabel('Frequenz / kHz')
 plt.ylabel('B-Feld / $\mu$T')
@@ -155,41 +155,59 @@ print(i2)
 
 #########Wechselwirkungsenergie###########
 print('######   Quadratische Zeeman #######')
-DE1=4.53*10**(-24)  # gegeben in der Anleitung
-DE2=2.01*10**(-24)  # gegeben in der Anleitung
-U_HF1=g_h1*mu_b*B1+g_h1**2*mu_b**2*B1**2*(-3)/DE1
-U_HF2=g_h2*mu_b*B1+g_h2**2*mu_b**2*B2**2*(-3)/DE2
-print(U_HF1)
-print(U_HF2)
+DE87=4.53*10**(-24)  # gegeben in der Anleitung
+DE85=2.01*10**(-24)  # gegeben in der Anleitung in Jule
+B87=2.35e-4
+B85=163.5e-6
+m87=2
+m85=3
+g87=1/2
+g85=1/3
+mu_b    #9.27e-24
+QZL87=g87*mu_b*B87
+QZQ87=g87**2*mu_b**2*B87**2*(1-2*m87)/DE87
 
-##############Neu Quadratischer Zeeman ###########
-print('######   Neu #######')
-DE1=4.53*10**(-24)  # gegeben in der Anleitung
-DE2=2.01*10**(-24)  # gegeben in der Anleitung
-U_HF1=g_h1*mu_b*B1#+g_h1**2*mu_b**2*B1**2*(-3)/DE1
-U_HF2=g_h2*mu_b*B1#+g_h2**2*mu_b**2*B2**2*(-3)/DE2
-print(U_HF1)
-print(U_HF2)
-gh=508.5*10**6
-B=B1*10**(-6)
-mu = 9.27*10**(-24)
-U = gh*B*mu
-print(U)
+QZL85=g85*mu_b*B85
+QZQ85=g85**2*mu_b**2*B85**2*(1-2*m85)/DE85
+
+print('Linear 87')
+print(QZL87)
+print('Quadratisch 87')
+print(QZQ87)
+
+print('Linear 85')
+print(QZL85)
+print('Quadratisch 85')
+print(QZQ85)
+
+###############Neu Quadratischer Zeeman ###########
+#print('######   Neu #######')
+#DE1=4.53*10**(-24)  # gegeben in der Anleitung
+#DE2=2.01*10**(-24)  # gegeben in der Anleitung
+#U_HF1=g_h1*mu_b*B1#+g_h1**2*mu_b**2*B1**2*(-3)/DE1
+#U_HF2=g_h2*mu_b*B1#+g_h2**2*mu_b**2*B2**2*(-3)/DE2
+#print(U_HF1)
+#print(U_HF2)
+#gh=508.5*10**6
+#B=B1*10**(-6)
+#mu = 9.27*10**(-24)
+#U = gh*B*mu
+#print(U)
+##
+#print('######   Neu #######')
+#DE1=4.53*10**(-24)  # gegeben in der Anleitung
+#DE2=2.01*10**(-24)  # gegeben in der Anleitung
+#U_HF1=g_h1**2*mu_b**2*B1**2*(-3)/DE1
+#U_HF2=g_h2**2*mu_b**2*B2**2*(-3)/DE2
+#print(U_HF1)
+#print(U_HF2)
+#U=gh**2*mu**2*B**2*(-3)/DE1
+#print(U)
+########## Fehler vom Qudrat. Zeeman ######
+#print('######## Fehler Zeeman#######')
+#u_HF1=np.sqrt((mu_b*B1+g_h1*mu_b**2*B1**2*(-3)/DE1)**2*G_h1**2)
+#u_HF2=np.sqrt((mu_b*B2+g_h2*mu_b**2*B2**2*(-3)/DE2)**2*G_h2**2)
+#print(u_HF1)
+#print(u_HF2)
 #
-print('######   Neu #######')
-DE1=4.53*10**(-24)  # gegeben in der Anleitung
-DE2=2.01*10**(-24)  # gegeben in der Anleitung
-U_HF1=g_h1**2*mu_b**2*B1**2*(-3)/DE1
-U_HF2=g_h2**2*mu_b**2*B2**2*(-3)/DE2
-print(U_HF1)
-print(U_HF2)
-U=gh**2*mu**2*B**2*(-3)/DE1
-print(U)
-######### Fehler vom Qudrat. Zeeman ######
-print('######## Fehler Zeeman#######')
-u_HF1=np.sqrt((mu_b*B1+g_h1*mu_b**2*B1**2*(-3)/DE1)**2*G_h1**2)
-u_HF2=np.sqrt((mu_b*B2+g_h2*mu_b**2*B2**2*(-3)/DE2)**2*G_h2**2)
-print(u_HF1)
-print(u_HF2)
-
-print ('Fertig')
+#print ('Fertig')

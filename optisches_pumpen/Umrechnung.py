@@ -161,6 +161,30 @@ U_HF1=g_h1*mu_b*B1+g_h1**2*mu_b**2*B1**2*(-3)/DE1
 U_HF2=g_h2*mu_b*B1+g_h2**2*mu_b**2*B2**2*(-3)/DE2
 print(U_HF1)
 print(U_HF2)
+
+##############Neu Quadratischer Zeeman ###########
+print('######   Neu #######')
+DE1=4.53*10**(-24)  # gegeben in der Anleitung
+DE2=2.01*10**(-24)  # gegeben in der Anleitung
+U_HF1=g_h1*mu_b*B1#+g_h1**2*mu_b**2*B1**2*(-3)/DE1
+U_HF2=g_h2*mu_b*B1#+g_h2**2*mu_b**2*B2**2*(-3)/DE2
+print(U_HF1)
+print(U_HF2)
+gh=508.5*10**6
+B=B1*10**(-6)
+mu = 9.27*10**(-24)
+U = gh*B*mu
+print(U)
+#
+print('######   Neu #######')
+DE1=4.53*10**(-24)  # gegeben in der Anleitung
+DE2=2.01*10**(-24)  # gegeben in der Anleitung
+U_HF1=g_h1**2*mu_b**2*B1**2*(-3)/DE1
+U_HF2=g_h2**2*mu_b**2*B2**2*(-3)/DE2
+print(U_HF1)
+print(U_HF2)
+U=gh**2*mu**2*B**2*(-3)/DE1
+print(U)
 ######### Fehler vom Qudrat. Zeeman ######
 print('######## Fehler Zeeman#######')
 u_HF1=np.sqrt((mu_b*B1+g_h1*mu_b**2*B1**2*(-3)/DE1)**2*G_h1**2)

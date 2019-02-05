@@ -1,7 +1,7 @@
-In der Abbildung \ref{fig:bild} wird ein typisches Signalbild dargestellt.
-Auf der X-Achse wird das Magnetfeld aufgetragen, auf der Y-Achse die Transparenz des Mediums.
+In Abbildung \ref{fig:bild} ist ein typisches Signalbild dargestellt.
+Auf der X-Achse ist das Magnetfeld aufgetragen, auf der Y-Achse die Transparenz des Rb-Dampfes.
 Das Minimum auf der linken Seite entsteht dadurch, dass dort kein Magnetfeld anliegt und es so auch zu keiner Zeemanaufspaltung kommen kann.
-Die anderen beiden Resonanzstellen enstehen durch die gegebenen Isotope $R^{87}$ und $R^{85}$.
+Die beiden Resonanzstellen enstehen durch die gegebenen Isotope $R^{87}$ und $R^{85}$.
 Im Folgenden wird die Zuordnung der Isotope zu den Minima vorgenommen.
 Bis zu dem Zeitpunkt werden die Minnima mit 1 und 2 (von Links nach Rechts) bezeichnet.
 \begin{figure}[h!]
@@ -10,13 +10,13 @@ Bis zu dem Zeitpunkt werden die Minnima mit 1 und 2 (von Links nach Rechts) beze
   \caption{Das für die Resonanzstelle benötigte Magnetfeld aufgetragen auf die Frequenz}
   \label{fig:bild}
 \end{figure}
-Anhand der Abbildung \ref{fig:bild} kann eine Abschätzung des Verhältnisses der beiden Isotope getroffen werden.
+Anhand der Abbildung \ref{fig:bild} kann eine Abschätzung des prozentualen Verhältnisses der beiden Isotope getroffen werden.
 Dabei gilt:
 \begin{align*}
   N_1+N_2 = 1
 \end{align*}
-$N$ beschreibt dabei den Anteil an der Gesamtanzahl.
-Durch Ausmessen der Minima ergibt sich ein Verhältniss $R$ für $\frac{\text{Isotop 1}}{\text{Isotop 2}}$ von:
+$N$ beschreibt dabei den prozentualen Anteil des Iostopes an der Gesamtanzahl.
+Durch Ausmessen der Minima ergibt sich ein Verhältniss $R$ für $\frac{N_1}{N_2}$ von:
 \begin{align*}
   R=\SI{0.48}{}
 \end{align*}
@@ -28,7 +28,7 @@ Die Anteile $N$ lassen sich bestimmen zu:
 
 
 Um die Resonanzstellen zu erreichen können die Potentiometer für die Horizontale Spule und für die Sweep-Spule variiert werden.
-Die zur jeweiligen Resonanzstelle gehörigen Potentiometerumdrehungen können wie folgt in eine Stromstärke umgerechnet werden.
+Die zur jeweiligen Resonanzstelle gehörigen Potentiometerumdrehungen können wie folgt in eine Stromstärke $I$ umgerechnet werden.
 \begin{align*}
   \text{Sweep-Spule}&&&\text{Horizontale Spule}\\
   \SI{1}{Umdrehung} &= \SI{0,1}{A}&&\SI{1}{Umdrehung} = \SI{0,3}{A}
@@ -43,7 +43,7 @@ Die Windungszahl $N$ und der Radius $R$ sind dabei spulenspezifische Größen.
   &N=11&&N=154\\
   &R=\SI{0.1639}{m}&&R=\SI{0.1579}{m}\\
 \end{align*}
-Die $B$-Felder von der Sweep-Spule und der Horizontalspule für eine Resonanzstelle müssen anschließend addiert werden um das gesamte Magnetfeld zu erhalten.
+Die $B$-Felder von der Sweep-Spule $B_S$ und der Horizontalspule $B_H$ für eine Resonanzstelle müssen anschließend addiert werden um das gesamte Magnetfeld $B_{\text{ges}}$ zu erhalten.
 Die errechnete Werte für Stromstärke $I$ und $B$-Feld sind zusammen mit den dazugehörigen Frequenzen in der Tabelle \ref{tab:Tab1} aufgeführt.
 \input{Tabelle.tex}
 In der Graphik \ref{fig:Bf} sind die Werte graphisch dagestellt.
@@ -55,22 +55,20 @@ In der Graphik \ref{fig:Bf} sind die Werte graphisch dagestellt.
 \end{figure}
 Es wird eine Ausgleichsrechnung der Form:
 \begin{align*}
-  B(f)=af+b
+  B(f)=a_if+b_i
 \end{align*}
 durchgeführt.
 Es ergeben sich folgende Fit-Parameter:
 \begin{align*}
-  B1&\\
   a_1&=\SI{1.438\pm 0.023e-10}{\frac{T}{Hz}}\\
   b_1&=\SI{1.876\pm 0.144e-5}{T}
 \end{align*}
 \begin{align*}
-  B2&\\
   a_2&=\SI{2.141\pm0.031e-10}{\frac{T}{Hz}}\\
   b_2&=\SI{1.935\pm0.190e-5}{T}
 \end{align*}
 \FloatBarrier
-Mit der Steigung $a$ kann der Landesche $g_F$-Faktor wie folgt bestimmt werden.
+Mit der Steigung $a$ kann der Landesche $g_F$-Faktor mit der Gleichung $\ref{eqn:landef}$wie folgt bestimmt werden.
 \begin{align*}
   g_F = \frac{h}{\mu_0\cdot a_i}
 \end{align*}
@@ -81,24 +79,29 @@ Somit ergeben sich die Landeschen Faktoren zu:
 \end{align*}
 
 Nun soll der Kernspinn bestimmt werden.
-Dieser kann mit der Formel:
+
+Die den für den Versuch wichtigen Quantenzahlen lauten:
+\begin{equation}
+	S = \frac{1}{2},\quad L = 0,\quad J = \frac{1}{2},\quad F = I + J.
+\end{equation}
+wobei $F$ den höchst mögliche Wert besitzt da nur für das Niveau mit dem höchst möglichen $m_F$
+kein Übergang mit $\Delta m_{f}$ mehr möglich ist. Eingesetzt in die Gleichung:
+\begin{align}
+	g_F\approx g_J\frac{F\cdot(F+1)+J\cdot(J+1)-I(I+1)}{2F\cdot(F+1)}
+	\label{eq:lande_faktor_gf}
+\end{align}
+ergibt sich die Formel für den Kernspin:
 \begin{align*}
-  I = \frac{1}{2}\left(\frac{g_J}{g_F}-1\right)
+  I = \frac{1}{2}\left(\frac{g_J}{g_F}-1\right).
 \end{align*}
-berechnet werde.
-Das benötigte $g_J$ kann wie folgt bestimmt werden.
-\begin{align*}
-  g_J = \frac{(g_s+1)\cdot J\cdot(J+1)+(g_s-1)\cdot[S\cdot (S+1)-L\cdot (L+1)]}{2\cdot J \cdot (J+1)}
-\end{align*}
+
+Das benötigte $g_J$ kann mit Hilfe von $\ref{eqn:landej}$ besimmt werden.
 Dabei ist $g_s$ gegeben als
 \begin{align*}
   g_s = 2,0023
 \end{align*}
-Durch einsetzen der gegebenen Quantenzahlen, welche in dem Versuch gegeben sind als:
-\begin{align*}
-  S = \frac{1}{2}, L=0, J=\frac{1}{2}, F = I+J,
-\end{align*}
-lässt sich die Relation aufstellen:
+
+Es lässt sich die Relation aufstellen:
 \begin{align*}
   g_J=g_s.
 \end{align*}
@@ -108,7 +111,7 @@ Der Kernspin kann jetzt bestimmt werden.
   I_1=1,5153\pm0,03\\
   I_2=2,4999\pm0,04
 \end{align*}
-Durch einen Vergleich mit Literaturwerten kann der Kernspinn den Rubidium-Isotopen zugeordnet werden.
+Durch einen Vergleich mit Literaturwerten \cite{spin} kann der Kernspinn den Rubidium-Isotopen zugeordnet werden.
 Es gilt:
 \begin{align*}
   I_{Rb^{85}}=\frac{5}{2}\\
@@ -121,6 +124,14 @@ Es wird deutlich, dass
 \end{align*}
 gilt.
 
-Mit Hilfe der Formel \ref{eqn:quadzeeman} kann die Wechselwirkungsenergie der Hyperfeinstruktur bestimmt werden.
-Die errechneten Weren sind in der Tabelle \ref{tab.QZ} für die beiden Isotope aufgefürt.
-\input{QuadratischerZeeman.tex}
+????\\
+Mit Hilfe der Formel \ref{eqn:quadzeeman} kann der lineare und der quadratische Zeeman-Effekt bestimmt werden.
+Für den quadratische Zeeman-Effekt ergibt sich ein Beitrag von:
+\begin{align*}
+  U_{85}=-6,34\cdot 10^{-31}\si{J}\\
+  U_{87}=-7,85\cdot 10^{-31}\si{J}
+\end{align*}
+
+
+%Die errechneten Weren sind in der Tabelle \ref{tab.QZ} für die beiden Isotope aufgefürt.
+%\input{QuadratischerZeeman.tex}

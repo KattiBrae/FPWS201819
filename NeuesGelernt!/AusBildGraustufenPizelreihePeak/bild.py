@@ -1,4 +1,4 @@
-Bild = "bild.jpg"       #einzilesendes Bild
+Bild = "bild.jpg"       #Bild Quelle
 Speichername = 'NeuBild.pdf'
 #lookformax = True  # zuerst ein Maximum
 lookformax = False  # zuerst ein Minimum

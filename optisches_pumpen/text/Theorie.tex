@@ -4,9 +4,9 @@
 %
 Ein Atom hat diskrete Energieniveaus, auf denen sich die Hüllenelektronen befinden.
 Die Verteilung der Elektronen erfolgt bei den äußeren Hüllenelektronen statistisch nach Boltzmann.
-Die temperaturabhängigen Besetzungszahlen $N_{1}, N_{2}$ zweier Niveaus mit der statistischen Gewichtung $g_{1}, g_{2}$ und den Energien $W_{1}$, $W_{2}$ ($W_{1}$<$W_{2}$) liegen in folgendem Zusammenhang:
+Die temperaturabhängigen Besetzungszahlen $N_{1}, N_{2}$ zweier Niveaus mit der statistischen Gewichtung $g_{1}, g_{2}$ und den Energien $W_{1}$, $W_{2}$ ($W_{1}$<$W_{2}$), der Boltzmann-Konstante $k_\text{B}$, der Temperatur $T$ liegen in folgendem Zusammenhang:
 \begin{equation*}
-  \frac{N_{2}}{N_{1}} = \frac{ g_{2} \exp{  \left( -\frac{W_{2}}{k_{\text{B}}}  \right) }}{ g_{1} \exp{ \left( -\frac{W_{1}}{k_{\text{B}}} \right) }}.
+  \frac{N_{2}}{N_{1}} = \frac{ g_{2} \exp{  \left( -\frac{W_{2}}{k_{\text{B}} T}  \right) }}{ g_{1} \exp{ \left( -\frac{W_{1}}{k_{\text{B}} T } \right) }}.
 \end{equation*}
 $k_{\text{B}}$ ist hierbei die Boltzmann-Konstante und $T$ beschreibt die Temperatur.
 Das Prinzip des optischen Pumpens besetzt die Niveaus entgegen dieser thermischen Verteilung.\\
@@ -40,7 +40,7 @@ Die Kopplung von Spin und Bahndrehimpuls ergibt den Gesamtdrehimpuls $\vec{J}$ d
 \begin{align*}
   \vec{\mu_{\text{J}}} = \vec{\mu_{\text{S}}} + \vec{\mu_{\text{L}}}= - g_{\text{J}} \mu_{\text{B}} \vec{J} && \text{mit} && |\vec{\mu_{\text{J}}}|=  g_{\text{J}} \mu_{\text{B}} \sqrt{J(J+1)}.
 \end{align*}
-Nur das magnetische Moment $|\vec{\mu_{\text{J}}}|$ in Richtung von $\vec{J}$ hat einen Effekt auf die Energiebilanz, da $\vec{J}$ eine Präzessionsbewegung vollführt (Abb. \ref{fig:magmom}).
+Nur das magnetische Moment $|\vec{\mu_{\text{J}}}|$ in Richtung von $\vec{J}$ hat einen Effekt auf die Energiebilanz, da das magnetische Moment eine Präzessionsbewegung um $\vec{J}$ vollführt (Abb. \ref{fig:magmom}) und sich die senkrechten Komponenten herausmitteln.
 Die Winkelbeziehung in $|\vec{\mu_{\text{J}}}|$ lässt sich aus Abbildung \ref{fig:magmom} erkennen.
 Damit ergibt sich:
 \begin{align*}
@@ -64,11 +64,15 @@ Es ergibt sich:
 %
 \\Der Zeemaneffekt beschreibt die Aufspaltung der vorhandenen Energieniveaus durch ein äußeres Magnetfeld.
 Die magnetischen Momente wechselwirken mit dem äußeren Magnetfeld $\vec{B}$ und es haben nur die Beiträge entlang der $\vec{B}$-Achse einen Effekt.
-Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ein ganzzahliges Vielfaches $M_{\text{J}}$ von $g_{\text{J}} \mu_{\text{B}} B$:
+Durch die Richtungsquantelung ist die Wechselwirkungsenergie $E_{\text{mag}}$ ein ganzzahliges Vielfaches $M_{\text{J}}$ (Orientierungsquantenzahl) von $g_{\text{J}} \mu_{\text{B}} B$:
 \begin{equation}
   E_{\text{Zeeman}} = -\vec{\mu_{\text{J}}} \vec{B} \Rightarrow E_{\text{Zeeman}} = g_{\text{J}} \mu_{\text{B}} M_{\text{J}} B.
   \label{eqn:zeeman}
 \end{equation}
+Die Orientierungsquantenzahl oder magnetische Quantenzahl $M_{\text{J}}$ kommt aus der Projektion des Bahndrehimpulses auf die z-Achse:
+\begin{equation*}
+  L_\text{z}= M_{\text{J}} \hbar.
+\end{equation*}
 %
 %Kernspin\\
 %- Eigendrehimpuls des Atomkerns\\
@@ -233,9 +237,11 @@ So lässt sich dennoch mittels des optischen Pumpens eine nicht-thermische Verte
 %- Wechselwirkung magnetische Momente\\
 %
 \\Bei starken Magnetfeldern entstehen weitere Effekte, die sich aus der Wechselwirkung des Spins und dem Bahndrehimpuls und der Wechselwirkung der magnetischen Momente ergeben.
-Die Wechselwirkungsenergie der Hyperfeinstruktur berechnet sich dann über:
+Die Zeemanaufspaltung berechnet sich dann über:
 \begin{equation}
 U_{\text{HF}}= g_{\text{F}} \mu_{\text{B}} B + g_{\text{F}}^2 \mu_{\text{B}}^2 B^2 \frac{(1- 2M_{\text{F}})}{\Delta E_{\text{HF}}}
 \label{eqn:quadzeeman}
 \end{equation}
 und wird quadratischer Zeemaneffekt genannt.
+Dabei ist $\Delta E_{\text{HF}}$ die Energiedifferenz zwischen $M_{\text{J}}=+1$ und $M_{\text{F}}=+2$.
+\text{\huge{HIER}}

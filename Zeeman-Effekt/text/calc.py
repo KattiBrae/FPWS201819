@@ -52,5 +52,6 @@ gauss= np.sqrt( ( 2 * (h * c * dlam)/(mu * B * lam**2) * Dlam )**2 + ( (h * c * 
 print(gauss)
 
 
-
+q=100*(0.442-0.5)/0.5
+print(q)
 #zirkular g_ij= -15131113.258429853 +- 776339.447163

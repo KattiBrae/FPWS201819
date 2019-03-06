@@ -317,8 +317,8 @@ print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x1_new = np.linspace(x1[0], x1[-1], 500)
 plt.figure(3)
-plt.plot(x1,y1,'x', label="Messwerte")
-plt.plot(x1_new,f1(x1_new,*Werte),'-', label='Ausgleichsgerade')
+plt.plot(x1,y1,'x', label="Messwerte",color="green")
+plt.plot(x1_new,f1(x1_new,*Werte),'-', label='150mm',color="green")
 
 
 x2, y2 = np.loadtxt('linearfit2.txt', unpack=True,delimiter=' ')
@@ -329,7 +329,7 @@ print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x2_new = np.linspace(x2[0], x2[-1], 500)
 plt.plot(x2,y2,'x')#, label="Messwerte")
-plt.plot(x2_new,f2(x2_new,*Werte),'-')#, label='Ausgleichsgerade')
+plt.plot(x2_new,f2(x2_new,*Werte),'-', label='225mm')
 
 x3, y3 = np.loadtxt('linearfit3.txt', unpack=True,delimiter=' ')
 def f3(x3,a,b):
@@ -339,7 +339,7 @@ print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x3_new = np.linspace(x3[0], x3[-1], 500)
 plt.plot(x3,y3,'x')#, label="Messwerte")
-plt.plot(x3_new,f3(x3_new,*Werte),'-')#, label='Ausgleichsgerade')
+plt.plot(x3_new,f3(x3_new,*Werte),'-', label='300mm')
 
 x4, y4 = np.loadtxt('linearfit4.txt', unpack=True,delimiter=' ')
 def f4(x4,a,b):
@@ -349,7 +349,7 @@ print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x4_new = np.linspace(x4[0], x4[-1], 500)
 plt.plot(x4,y4,'x')#, label="Messwerte")
-plt.plot(x4_new,f4(x4_new,*Werte),'-')#, label='Ausgleichsgerade')
+plt.plot(x4_new,f4(x4_new,*Werte),'-', label='375mm')
 
 x5, y5 = np.loadtxt('linearfit5.txt', unpack=True,delimiter=' ')
 def f5(x5,a,b):
@@ -359,7 +359,7 @@ print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x5_new = np.linspace(x5[0], x5[-1], 500)
 plt.plot(x5,y5,'x')#, label="Messwerte")
-plt.plot(x5_new,f5(x5_new,*Werte),'-')#, label='Ausgleichsgerade')
+plt.plot(x5_new,f5(x5_new,*Werte),'-', label='450mm')
 
 x6, y6 = np.loadtxt('linearfit6.txt', unpack=True,delimiter=' ')
 def f6(x6,a,b):
@@ -369,7 +369,7 @@ print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x6_new = np.linspace(x6[0], x6[-1], 500)
 plt.plot(x6,y6,'x')#, label="Messwerte")
-plt.plot(x6_new,f6(x6_new,*Werte),'-')#, label='Ausgleichsgerade')
+plt.plot(x6_new,f6(x6_new,*Werte),'-', label='525mm')
 
 x7, y7 = np.loadtxt('linearfit7.txt', unpack=True,delimiter=' ')
 def f7(x7,a,b):
@@ -378,8 +378,8 @@ Werte, Fehler = curve_fit(f7, x7, y7)
 print(Werte)
 print(np.diag(Fehler**2)**(1/4))
 x7_new = np.linspace(x7[0], x7[-1], 500)
-plt.plot(x7,y7,'x')#, label="Messwerte")
-plt.plot(x7_new,f7(x7_new,*Werte),'-')#, label='Ausgleichsgerade')
+plt.plot(x7,y7,'x',color="red")#, label="Messwerte")
+plt.plot(x7_new,f7(x7_new,*Werte),'-',color="red", label='600mm')
 
 plt.xlabel('Resonanzindex')
 plt.ylabel('Resonanzfrequenz f')

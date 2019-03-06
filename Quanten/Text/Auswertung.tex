@@ -1,6 +1,6 @@
 In der Messung werden für den Frequenzbereich von 6000 bis 9000 $\si{Hz}$ Rohrlängen von $\SI{75}{mm}$ bis $\SI{600}{mm}$ vermessen.
 Bei bestimmten Frequenzen bildet sich eine stehende Welle aus. Das hat Resonanz zur Folge, so dass die Schallwelle eine höhere Intensität hat.
-In den folgenden 2 Abbildungen wird die Intensität gegen die Wellenlänge aufgetragen.
+In den folgenden Abbildungen wird die Intensität gegen die Wellenlänge aufgetragen.
 In der Abbildung \ref{fig.1} sind die Messwerte für die Rohrlängen: $\SI{75}{mm}, \SI{150}{mm}, \SI{225}{mm}, \SI{300}{mm}$ abbgebildet.
 \begin{figure}[h!]
   \centering
@@ -16,12 +16,13 @@ In der Abbildung \ref{fig.2} sind die Messwerte für die Rohrlängen: $\SI{375}{
   \label{fig.2}
 \end{figure}
 Die Intensitätsmaxima sind mit einem blauen Punkt gekennzeichnet.
-Auffällig ist, dass sich für alle Rohrlängen Intensitätsmaxima an der Stelle von $\SI{6880}{Hz}$ bilden. Das heißt, dass bei dieser Frequenz eine stehende Welle entsteht die eine Wellenlänge von $\lambda=\frac{1}{2n}d$ besitzt.
-$d$ ist dabei die Länge des Rohres und n die Anzahl der Knotenpunkte.
-Desweiteren ist auffällig, dass für eine Rohrlänge der Abstand zwischen zwei Maxima immer konstant ist.
+%Auffällig ist, dass sich für alle Rohrlängen Intensitätsmaxima an der Stelle von $\SI{6880}{Hz}$ bilden.
+%Das heißt, dass bei dieser Frequenz eine stehende Welle entsteht die eine Wellenlänge von $\lambda=\frac{1}{2n}d$ besitzt.
+%$d$ ist dabei die Länge des Rohres und n die Anzahl der Knotenpunkte.
+%Desweiteren ist auffällig, dass für eine Rohrlänge der Abstand zwischen zwei Maxima immer konstant ist.
 \FloatBarrier
 
-\subsection{Bestimmung der Lichtgeschwindigkeit}
+\subsection{Bestimmung der Schallgeschwindigkeit}
 \FloatBarrier
 In den Graphen \ref{fig.1} und \ref{fig.2} %\textbf{\huge{DAS IST ZWEI MAL DER GLEICHE PLOT (4\&4)}}
 werden die Resonanzfrequenzen einer jeden Messreihe von 1 bis n nummeriert und anschließend gegen die Frequenz aufgetragen.
@@ -30,6 +31,8 @@ Die Resonanzfrequenzabstände sind konstant für eine Messreihe, daher ergeben s
   y=ax+b,
 \end{equation*}
 welche mit Python 3.6.3 und curve\_fit an die Messwerte gefittet werden.
+Für die Besimmung der Steigung der Geraden ist die richtige Nummerierung der Resonanzfrequenzen nicht von bedeutung.
+Es genügt wenn in einer Messung vortlaufend nummeriert wird.
 In der Abb. \ref{fig.linearfit} sind die Messwerte mit den Fitfunktionen abgebildet.
 %Für die Fitparameter ergeben sich folgende Werte.
 %\begin{align*}
@@ -41,15 +44,37 @@ Mit Hilfe der Steigung $a$ kann die Schallgeschwindigkeit $c$ berechnet werden.
   c = a\cdot2d
 \end{align*}
 Für die Schallgeschwindigkeit ergeben sich so Werte von:
-\begin{align*}
-a &= 1140.0 && d = 2\cdot\SI{0.075}{m} && c=\SI{342.0}{\frac{m}{s}}\\
-a &= 763.0  && d = 3\cdot\SI{0.075}{m} && c=\SI{343.3}{\frac{m}{s}}\\
-a &= 571.0  && d = 4\cdot\SI{0.075}{m} && c=\SI{342.6}{\frac{m}{s}}\\
-a &= 458.6  && d = 5\cdot\SI{0.075}{m} && c=\SI{343.9}{\frac{m}{s}}\\
-a &= 381.9  && d = 6\cdot\SI{0.075}{m} && c=\SI{343.7}{\frac{m}{s}}\\
-a &= 327.2  && d = 7\cdot\SI{0.075}{m} && c=\SI{343.5}{\frac{m}{s}}\\
-a &= 286.5  && d = 8\cdot\SI{0.075}{m} && c=\SI{343.8}{\frac{m}{s}}\\
-\end{align*}
+\begin{table}
+  \centering
+  \caption{Bestimmung der Schallgeschwindigkeit}
+  \label{Tab1}
+    \begin{tabular}{c c c}
+      \toprule
+      Steigung&Rohrlänge&Schallgeschwindigkeit\\
+      a&d&c\\
+      \midrule
+      $\si{\frac{1}{s}}$&$\si{m}$&$\si{\frac{m}{s}}$\\
+      \midrule
+      \midrule
+       1140.0 & 2$\cdot\SI{0.075}{m}$ & $\SI{342.0}{\frac{m}{s}}$\\
+       763.0  & 3$\cdot\SI{0.075}{m}$ & $\SI{343.3}{\frac{m}{s}}$\\
+       571.0  & 4$\cdot\SI{0.075}{m}$ & $\SI{342.6}{\frac{m}{s}}$\\
+       458.6  & 5$\cdot\SI{0.075}{m}$ & $\SI{343.9}{\frac{m}{s}}$\\
+       381.9  & 6$\cdot\SI{0.075}{m}$ & $\SI{343.7}{\frac{m}{s}}$\\
+       327.2  & 7$\cdot\SI{0.075}{m}$ & $\SI{343.5}{\frac{m}{s}}$\\
+       286.5  & 8$\cdot\SI{0.075}{m}$ & $\SI{343.8}{\frac{m}{s}}$\\
+      \bottomrule
+    \end{tabular}
+\end{table}
+%\begin{align*}
+%a &= 1140.0 && d = 2\cdot\SI{0.075}{m} && c=\SI{342.0}{\frac{m}{s}}\\
+%a &= 763.0  && d = 3\cdot\SI{0.075}{m} && c=\SI{343.3}{\frac{m}{s}}\\
+%a &= 571.0  && d = 4\cdot\SI{0.075}{m} && c=\SI{342.6}{\frac{m}{s}}\\
+%a &= 458.6  && d = 5\cdot\SI{0.075}{m} && c=\SI{343.9}{\frac{m}{s}}\\
+%a &= 381.9  && d = 6\cdot\SI{0.075}{m} && c=\SI{343.7}{\frac{m}{s}}\\
+%a &= 327.2  && d = 7\cdot\SI{0.075}{m} && c=\SI{343.5}{\frac{m}{s}}\\
+%a &= 286.5  && d = 8\cdot\SI{0.075}{m} && c=\SI{343.8}{\frac{m}{s}}\\
+%\end{align*}
 Der Mittelwert ergibt:
 \begin{align*}
   c=\SI{343.28\pm1.63}{\frac{m}{s}}.
@@ -101,13 +126,18 @@ Den Ergebnissen aus \ref{eqn.schall} ist zu entnehmen, dass die Wellenlänge bei
 Desweiteren soll die Schallgeschwindigkeit mithilfe des Verhältnisses von Frequenzübergängen zu Rohrlänge bestimmt werden.
 Dieser Zusammenhang ist in Abb. \ref{fig.1/x} dargestellt.
 An die Messwerte wird eine Funktion der Form $a\cdot\frac{1}{x}+b$ gefittet.
-Für a und b ergegben sich die Werte:
+Für a und b ergeben sich die Werte:
 %\\\textbf{\huge{Katti?: Deine Einheit der Steigung a ist Hz*m.}}
 
 \begin{align*}
-  a&=\SI{168692.913\pm253.977}{Hz \cdot m}\\
+  a&=\SI{168692.913\pm253.977}{Hz \cdot mm}\\
   b&=\SI{8.566\pm1.995}{Hz}.\\
 \end{align*}
+Durch umstellen der Gleichung \ref{eqn:dispersionschall} zu:
+\begin{align*}
+  nc=2Lf+b=2a+b
+\end{align*}
+ergibt sich für die Schallgeschwindigkeit ein Wert von: $c = \SI{345.95}{\frac{m}{s}}$
 %################Bild#####################
 \begin{figure}[h!]
   \centering
@@ -131,6 +161,8 @@ In der Abbildung \ref{fig.Aufgabe2} ist $k$ gegen $f(k)$ aufgetragen. Dargestell
 Es ist zu erkennen, dass die Dispersion von Schallwellen linear verläuft, wohingegen die Dispersion eines quantenmechanischen Teilchens im Potenzialtopf quadratisch ist.
 %\textbf{\huge{DEN FOLGENDEN SATZ WÜRDE ICH NICHT IN DER AUSWERTUNG SCHREIBEN, SONDERN IN DER DISKUSSION, UND SELBST DA FINDE ICH IHN FRAGWÜRDIG. IMMERHIN HABEN WIR EINEN GANZEN VERSUCH DAMIT GEMACHT.}}
 %Das Analogon zwischen den beiden Dispersionsrelationen ist daher nicht sehr zutreffend.
+Aus der linearen Dispersion der Schallwelle folgt, dass wenn für ein kleines Rohr die Resonanzbedingung erfüllt ist gilt dies auch für vielfache der Rohrlänge.
+Auf diese Weise lassen sich die Eigenheiten der Abbildungen \ref{fig.1} und \ref{fig.2} erklären.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{f(k).pdf}
@@ -150,12 +182,13 @@ Für alle drei Messung mit den drei Blenden bilden sich drei Bandlücken aus, di
 Die untere Gerade stellt den Verlauf der ersten Bandlücke dar, die mittlere den Verlauf der zweiten Bandlücke und die obere den Verlauf der dritten Bandlücke.
 Die zueinander gehörenden Bandlücken der unterschiedlichen Messungen sind jeweils mit einer Ausgleichsgeraden verbunden.
 Es wird deutlich, dass die Bandlücken mit zunehmender Blendengröße kleiner werden.
+Anders beschrieben wird die Kopplung zwischen einzelnen Rohren mir zunehmender Blendengröße größer wodurch sich das Spektrum einem Spektrum ohne Blenden annähert.
 Die Bandlücken werden bestimmt, indem die Differenz vom Anfangs- und Endpunkt der Bandlücke betrachtet wird.
 Die Bandlücken bei höherer Frequenz sind größer.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{Bandlücken3.pdf}
-  \caption{Größe der Bandlücken aufgetragen gegen die Blendengröße}
+  \caption{Größe der Bandlücken aufgetragen gegen die Blendengröße. Übereinander stehen jeweils die Messwerte einer Messung. Die zusammengehörigen Bandlücken werden über alle drei Messungen miteinander verbunden.}
   \label{fig.Aufgabe3}
 \end{figure}
 %\textbf{\huge{In den Achsenbeschriftungen ist an y 'Breite' falsch geschrieben, und an x 'Blendenbreite' - zieht sich so durch alle Plots}}
@@ -166,12 +199,12 @@ Hier werden wie bei der vorherigen Aufgabe die Bandlücken betrachet, jedoch im 
 Dementsprechend sind in der Abbildung \ref{fig.Aufgabe4} die Bandlücken gegen die Rohrlängen aufgetragen.
 Die Rohrlänge wird zwischen $8 \cdot \SI{50}{mm}$, $10 \cdot \SI{50}{mm}$ und $12 \cdot \SI{50}{mm}$ variiert.
 Wieder beschreibt die untere Gerade den Verlauf der ersten Bandlücke, die mittlere den Verlauf der zweiten Bandlücke und die obere den Verlauf der dritten Bandlücke.
-Die Messung ist nicht sehr aussagekräftig.
-Lediglich ist zu erkennen, dass die Bandlücken unabhängig von der Rohrlänge sind.
+Es ist zu erkennen, dass die Bandlücken unabhängig von der Rohrlänge sind.
+Im übertragendem Sinn hängt die Bandlückenbreite nicht von der Größe des Kristalls ab.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{Bandlücken.pdf}
-  \caption{Größe der Bandlücken aufgetragen gegen die Rohrlänge}
+  \caption{Größe der Bandlücken aufgetragen gegen die Rohrlänge. Übereinander stehen jeweils die Messwerte einer Messung. Die zusammengehörigen Bandlücken werden über alle drei Messungen miteinander verbunden.}
   \label{fig.Aufgabe4}
 \end{figure}
 \FloatBarrier
@@ -253,7 +286,8 @@ Es wird deutlich, dass bei größeren Blendendurchmessern die Bandlücken kleine
 In dem Aufgabenteil werden die Bandlücken in Abhängigleit des Blendendurchmessers dargestellt.
 Für die Blendegrößen von 10, 13 und 16 $\si{mm}$ werden jeweils 3, 4 und 6 Einheitszellen vermessen.
 Die gemessenen Abhängigkeiten sind in den Abbildungen \ref{fig.Aufgabe9}, \ref{fig.Aufgabe91} und \ref{fig.Aufgabe92} abgebildet.
-Aus den Abbildungen wird deutlich, dass die Bandlückengröße mit steigender Anzahl von Einheitszellen linear ansteigt.
+%Aus den Abbildungen wird deutlich, dass die Bandlückengröße mit steigender Anzahl von Einheitszellen linear ansteigt.
+Die Bandlückenbreite bleibt mit steigender Zahl von Einheitszellen im wesentlichen konstant.
   \begin{figure}
    \centering
    \begin{subfigure}{0.48\textwidth}
@@ -280,7 +314,7 @@ Aus den Abbildungen wird deutlich, dass die Bandlückengröße mit steigender An
   \FloatBarrier
 
 \subsection{Aufgabe 10}
-In diesem Aufgabenteil weden die Bänder unter periodischen Defekten betrachtet.
+In diesem Aufgabenteil weden die Bänder einer Molekülkette betrachtet.
 Vermessen wird ein Rohr der Länge $L=12 \cdot \SI{50}{mm}$ mit abwechselnden Blendengrößen von 16 und 13 $\si{mm}$.
 Die Frequenz der Maxima wird gegen k geplottet und die Bandlücken farbig makiert.
 Auf diese Weise lassen sich die periodischen Defekte sehr gut beobachten.
@@ -333,8 +367,7 @@ Es lässt sich kein Muster erkennen, nach dem sich die Bandlücken gebildet habe
 Nun sollen vereinzelt Defekte in die Kette eingebaut werden.
 Es werden 4 Messungen mit unterschiedlichen Defekten durchgeführt.
 Die entstehenden Bandlücken sind in den Abbildungen \ref{fig.Aufgabe12} gut zusehen.
-Es sind jedoch keine gravierenden Unterschiede zwischen den Messungen auszumachen.
-In der ersten Bandlücke gibt es ein Maximum welches durch die Störung bedingt sein könnte.
+Durch die Defekte entsteht ein Maximum, oder auch ein zusätzlicher Zustand, inerhalb der ersten Bandlücke.
 
 %  \begin{figure}[h!]
 %    \centering

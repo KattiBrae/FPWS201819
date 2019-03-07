@@ -51,7 +51,7 @@ Der Betrag des Gesamtspins läst sich aufstellen zu:
 \end{align*}
 Der dazugehörige Betrag des magnetischen Momentes ist gegeben als:
 \begin{align*}
-  |\vec{mu}_S| = g_S\mu_B\sqrt{S(S+1)}.
+  |\vec{\mu}_S| = g_S\mu_B\sqrt{S(S+1)}.
 \end{align*}
 Im Falle, dass das Atom keinem zu großen Magnetfeld ausgesetzt ist kann der Gesammtdrehimpuls $\vec{J}$ geschreiben werden als:
 \begin{align*}
@@ -86,6 +86,14 @@ Es bei dieser Betrachtung kann kein Gesammtdrehimpuls $\vec{L}$ oder ein Gesammt
 Für Atome mit mittlerer Kernadungszahl besteht ein fließender Übergang zwischen den beiden Grenzfällen.
 
 \subsection{Aufspaltung der Energienivaus eines Atoms im homogenen Magnetfeld}
+%
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=5cm]{magmom1.png}
+  \caption{Darstellung der verschiedenen magnetischen Momente von Spin, Bahndrehimpuls und Gesamtdrehimpuls}
+  \label{fig:mag}
+\end{figure}
+
 Das magnetische Moment welches zum Gesammtdrehimpuls $\vec{J}$ gehört läst sich brerchnen mit
 \begin{align*}
   \vec{\mu}_J&=\mu_Bg_J\sqrt{J(J+1)},
@@ -94,6 +102,7 @@ wobei für den Landé-Faktor $g_J$ des entsprechneden Atoms gilt:
 \begin{align}
 		g_J:=&\frac{3J(J+1)+S(S+1)-L(L+1)}{2J(J+1)}.
 \end{align}
+\FloatBarrier
 
 \subsection{Energieaufspaltung und Übergänge}
 Durch die Richtungsquantelung sind nur genau $2J+1$ Einstellungen des atomaren magnetischen Momentes zu der äußeren Feldrichtung möglich.
@@ -165,3 +174,63 @@ Da $g_J = 1$ nicht mehr gegeben ist, ergeben sich für die Übergänge die Energ
 	E=(m_ig_{J_i}-m_jg_{J_j})\mu_BB+E_0.
   \label{eqn:anormal}
 \end{align}
+
+\subsection{Vorbereitungsaufgabe}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=9cm]{termschema_blau.pdf}
+  \caption{Thermschema eines ${}^3P_1\leftrightarrow {}^3S_1$ Übergangs. Der Übergang liegt im blauen Wellenlängenbereich.}
+  \label{fig:blau}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=9cm]{termschema_rot.pdf}
+  \caption{Thermschema eines ${}^1D_2 \leftrightarrow {}^1P_1$ Übergangs. Der Übergang liegt im roten Wellenlängenbereich.}
+  \label{fig:rot}
+\end{figure}
+
+\begin{table}
+	\centering
+	\begin{tabular}{cccccc}
+		\toprule
+		Übergang & $m_1$  & $g_{1}$ & $m_2$ & $ g_2$ & $g_{12}$\\
+		\midrule
+		& \multicolumn{2}{c}{${}^1P_1$}  & \multicolumn{2}{c}{${}^1D_2$} \\
+		\midrule
+		& 2 & 1 & 1 & 1 & 1\\
+		$\sigma$& 1 & 1 & 0 & 1 & 1\\
+		& 0 & 1 & -1 & 1 & 1\\
+		\midrule
+		& 1 & 1 & 1 & 1 & 0\\
+		$\pi$ & 0 & 1 & 0 & 1 & 0\\
+		& -1 & 1 & -1 & 1 & 0\\
+		\midrule
+		& 0 & 1 & 1 & 1 & -1\\
+		$\sigma$ & -1 & 1 & 0 & 1 & -1\\
+		& -2 & 1 & -1 & 1 & -1\\\bottomrule
+	\end{tabular}
+	\caption{Hier sind die Landé-Faktoren der roten Spektrallinie aufgeführt.}
+	\label{tab:Lande_rot}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{cccccc}
+		\toprule
+		Übergang & $m_1$  & $g_{1}$ & $m_2$ & $ g_2$ & $g_{12}$\\
+		\midrule
+		& \multicolumn{2}{c}{${}^3S_1$}  & \multicolumn{2}{c}{${}^3P_2$} \\
+		\midrule
+		$\sigma$ & +1 & 2 & 0 & $\frac{3}{2}$& 2\\
+		& 0 & 2 & -1 & $\frac{3}{2}$ & $\frac{3}{2}$\\
+		\midrule
+		& +1 & 2 & +1 & $\frac{3}{2}$ & $\frac{1}{2}$\\
+		$\pi$ & 2 & 2 & 0 & $\frac{3}{2}$ & 0 \\
+		& -1 & 2 & -1 & $\frac{3}{2}$ & -$\frac{1}{2}$\\
+		\midrule
+		& 0 & 2 & 1 & $\frac{3}{2}$ & -$\frac{3}{2}$\\
+		$\sigma$ & -1 & 2 & 0 & $\frac{3}{2}$& -2\\
+		\bottomrule
+	\end{tabular}
+	\caption{Hier sind die Landé-Faktoren der blauen Spektrallinie aufgeführt.}
+	\label{tab:Lande_blau}
+\end{table}

@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {2}Theorie}{3}
 \contentsline {subsection}{\numberline {2.1}Stehende Schallwellen}{3}
 \contentsline {subsection}{\numberline {2.2}Das quantenmechanische Teilchen}{4}
-\contentsline {subsection}{\numberline {2.3}Vergleich von stehenden Schallwellen und Teilchen im Potenzialtopf}{4}
+\contentsline {subsection}{\numberline {2.3}Vergleich von stehenden Schallwellen und Teilchen im Potenzialtopf}{5}
 \contentsline {subsection}{\numberline {2.4}Eindimensionaler Festkörper}{5}
 \contentsline {paragraph}{\nonumberline Bändermodell}{5}
 \contentsline {paragraph}{\nonumberline Lineare Teilchenkette}{7}

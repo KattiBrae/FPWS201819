@@ -5,8 +5,12 @@ Die Röhre wird mit dem Mikrofon verschlossen.\\
 \subsection{Stehende Schallwellen}
 %- Theorie Resonanz
 In der Röhre bildet sich bei bestimmten Frequenzen das Phänomen der Resonanz.
-Die Resonanzfrequenz ist diejenige Frequenz, bei der materialgegeben der Energieübertrag die geringsten Verluste hat.
+Resonanz bedeutet, dass die Amplitude der Welle periodisch verstärkt wird und bei passender Resonanzfrequenz sich deutlichmehr erhöht als bei anderen Frequenzen.
 Ein Objekt kann mehrere Resonanzfrequenzen haben.
+In diesen Versuch werden eine Röhre und Schallwellen verwendet.
+Resonanz entsteht hier also, wenn die ausgesendete Welle am Ende der Röhre reflektiert wurde, zurück zum Mikrofon kommt und zum Zeitpunkt der erneuten Reflexion am Mikrofon mit einer neuen, gleichen Welle überlagert wird.
+Die Amplituden addieren sich.
+Dabei muss aber der passende Zeitpunkt getroffen werden - dies ist die Bedingung für die Resonanzfrequenzen.
 Die Bedingung für Resonanz in einer Röhre mit geschlossenen Enden lautet
 \begin{equation}
   n \lambda = 2 L = \frac{n c}{f} \Leftrightarrow f(n) = \frac{c}{2L} n \Leftrightarrow f(k) = \frac{c}{2\pi} k.
@@ -26,7 +30,7 @@ verwendet.
   \label{eqn:euler}
 \end{equation}
 \begin{equation}
-  \frac{\partial \rho}{ \partial t} = - \rho \nabla \vec{u}
+  \frac{\partial \rho}{ \partial t} = - \rho \nabla \cdot \vec{u}
   \label{eqn:konti}
 \end{equation}
 %
@@ -37,7 +41,7 @@ Die Wellengleichung für Schallwellen lässt sich über die linearisierte Eulerg
 \end{equation}
 Für den Vergleich zum quantenmechanischen Teilchen sind die Randbedingungen wichtig.
 Auch wenn es aus der Wellengleichung nicht direkt ersichtlich ist, ist die Schallgeschwindigkeit am Rand bzw. an der Wand am Ende der Röhre null.
-Damit ist auch die Ableitung des Schalldrucks senkrecht zur Wand verschwindet:
+Damit auch die Ableitung des Schalldrucks senkrecht zur Wand:
 \begin{align*}
   \frac{ \partial u }{\partial t} = 0 && \frac{ \partial p }{ \partial t} = 0.
 \end{align*}
@@ -89,11 +93,12 @@ Auch die Randbedingungen sind unterschiedlich.
 Während bei dem quantenmechanischen Teilchen die Wellenfunktion an den Rändern null sein muss, ist dies bei den stehenden Schallwellen nicht der Fall.
 Zwar ist bei den Schallwellen die Geschwindigkeit $\vec{u}$ an den Rändern null, aber die vektorielle Geschwindigkeit entspricht nicht der skalaren quantenmechanischen Wellenfunktion.
 Obwohl der Schalldruck $p$ an den Rändern maximal ist, trifft er das quantenmechanische Teilchen besser, da es eine skalare Größe ist.\\
-Die Dispersionsrelation der Schallwellen $\omega(k)$ entspricht nicht der Dispersionsrelation des quantenmechanischen Teilchens $E(k)$, schon da $\omega ≠ k$.
+Die Dispersionsrelation der Schallwellen $\omega(k)$ entspricht nicht der Dispersionsrelation des quantenmechanischen Teilchens $E(k)$, schon da $\omega \propto k^2 ≠ k$.
 Dennoch lassen sich die beiden Dispersionen vergleichen, da sich in beiden Phänomenen diskrete Niveaus ergeben.\\
-Auch die Eigenzustände unterscheiden sich.
-Zeitunabhängige quantenmechanische Eigenzustände sind dauerhaft, während mechanische Eigenzustände instabil sind.
-Zeitabhängige Eigenzustände in der Quantenmechanik sind wiederum nicht beständig.
+Auch die Grundzustände unterscheiden sich.
+In der Quantenmechanik hat der Grundzustand immer eine Energie $E>0$, während es in der Mechanik auch Grundzustände mit $E=0$ geben kann.
+%Zeitunabhängige quantenmechanische Eigenzustände sind dauerhaft, während mechanische Eigenzustände zeitunabhängig sind und damit instabil.
+%Zeitabhängige Eigenzustände in der Quantenmechanik sind wiederum nicht beständig.
 Es ergibt sich ein Spektrum der quantenmechanischen Eigenfrequenzen, beschrieben durch folgende Gleichung:
 \begin{equation}
   |A(\omega)| = \frac{ 1 }{ \sqrt{ (\omega_{0}) - \omega)^2 + \lambda^2} }.
@@ -110,12 +115,12 @@ Für die mechanischen Eigenzustände ergibt sich das folgende Spektrum:
 Der eindimensionale Festkörper lässt sich auf zwei Arten modellieren.
 \paragraph{Bändermodell}
 %    - Bändermodell
-Die Energieniveaus eines einzelnen Atoms sind diskret, aber werden Atome nah aneinander gebracht, verschmelzen die höheren Niveaus zu den sogenannten Energiebändern.
+Die Energieniveaus eines einzelnen Atoms sind diskret, aber werden Atome nah aneinander gebracht und gekoppelt, verschmelzen die höheren Niveaus zu den sogenannten Energiebändern.
 Dabei gibt es Energiebänder, in denen sich Elektronen befinden, und Bandlücken, in denen keine Zustände möglich sind.
 Die Energieniveaus in der Quantenmechanik sind äquidistant.
 In der Messung der Resonanzen der stehenden Schallwellen in Abhängigkeit der Rohrlänge sind die Resonanzstellen nicht äquidistant verteilt.
 Die Rohrlänge lässt sich jedoch in den Wellenvektor umrechnen, und es kann die Dispersionsrelation $f(k)$ nach Gleichung \eqref{eqn:dispersionschall} berechnet werden.
-Die quantenmechanischen Teilchen, Elektronen, im Bändermodell zeigen Dispersion, wenn die Wellenlänge $\lambda$ in etwa der Gitterkonstante $a$ entspricht.
+Die quantenmechanischen Teilchen, Elektronen, im Bändermodell zeigen Dispersion.% wenn die Wellenlänge $\lambda$ in etwa der Gitterkonstante $a$ entspricht.
 Für die Schallwellen lässt sich ein Analogon bilden:
 \begin{equation}
   a = \frac{\lambda}{2}.

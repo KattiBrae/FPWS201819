@@ -1,19 +1,19 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.9.28)  6 MAR 2019 21:36
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  9 MAR 2019 11:03
  restricted system commands enabled.
-**Protokoll.tex
-(./Protokoll.tex
+**protokoll.tex
+(./protokoll.tex
 LaTeX2e <2017-04-15>
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
 Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
-llection.(using write cache: /home/tobias/.local/texlive/2017/texmf-var/luatex-c
-ache/generic)(using read cache: /home/tobias/.local/texlive/2017/texmf-var/luate
-x-cache/generic /home/tobias/.texlive2017/texmf-var/luatex-cache/generic)
-luaotfload | conf : Root cache directory is /home/tobias/.local/texlive/2017/tex
-mf-var/luatex-cache/generic/names.
+llection.(using write cache: /Users/katti/Library/texlive/2017/texmf-var/luatex-
+cache/generic)(using read cache: /usr/local/texlive/2017/texmf-var/luatex-cache/
+generic /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic)
+luaotfload | conf : Root cache directory is /Users/katti/Library/texlive/2017/te
+xmf-var/luatex-cache/generic/names.
 luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
--resolved path “/home/tobias/.local/texlive/2017/texmf-dist/tex/luatex/luaotfl
-oad/fontloader-2017-02-11.lua”.
+-resolved path “/usr/local/texlive/2017/texmf-dist/tex/luatex/luaotfload/fontl
+oader-2017-02-11.lua”.
 Lua-only attribute luaotfload@state = 1
 Lua-only attribute luaotfload@noligature = 2
 Lua-only attribute luaotfload@syllabe = 3
@@ -22,8 +22,8 @@ Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 4
-luaotfload | conf : Root cache directory is /home/tobias/.local/texlive/2017/tex
-mf-var/luatex-cache/generic/names.
+luaotfload | conf : Root cache directory is /Users/katti/Library/texlive/2017/te
+xmf-var/luatex-cache/generic/names.
 Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
 font'.
 Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
@@ -34,54 +34,56 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.108 seconds
-Babel <3.13> and hyphenation patterns for 1 language(s) loaded.
+luaotfload | main : initialization completed in 0.281 seconds
+Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2017/09/07 v3.24 KOMA-Script document class (article)
-
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-dependent ba
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2017/04/13 v3.23 KOMA-Script document class (article)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-dependent ba
 sics and keyval usage)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-independent b
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-independent b
 asics and keyval usage)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2017/09/07 v3.24 KOMA-Script package (loading files)
-)))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2017/09/07 v3.24 KOMA-Script package (handling toc-files)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2017/04/13 v3.23 KOMA-Script package (loading files)
+
+Package scrlfile, 2017/04/13 v3.23 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2017/04/13 v3.23 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 133.
+(tocbasic)             for `toc' on input line 131.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 135.
+(tocbasic)             for `lof' on input line 133.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 136.
+(tocbasic)             for `lot' on input line 134.
 Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 2080
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 2059
 .
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrsize11pt.
-clo
-File: scrsize11pt.clo 2017/09/07 v3.24 KOMA-Script font size class option (11pt)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2017/04/13 v3.23 KOMA-Script font size class option (11pt)
 
-luaotfload | db : Font names database loaded from /home/tobias/.local/texlive/20
-17/texmf-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/tob
-ias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regul
-ar.luc))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2017/09/07 v3.24 KOMA-Script package (type area)
+luaotfload | db : Font names database loaded from /Users/katti/Library/texlive/2
+017/texmf-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /Users/k
+atti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-reg
+ular.luc))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2017/04/13 v3.23 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count79
 \ta@hblk=\skip43
@@ -104,7 +106,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1686.
+(typearea)              on input line 1647.
 )
 \c@part=\count80
 \c@section=\count81
@@ -118,57 +120,55 @@ Package typearea Info: These are the values describing the layout:
 \scr@dte@subsubsection@maxnumwidth=\skip50
 \scr@dte@paragraph@maxnumwidth=\skip51
 \scr@dte@subparagraph@maxnumwidth=\skip52
-LaTeX Info: Redefining \textsubscript on input line 4161.
+LaTeX Info: Redefining \textsubscript on input line 4094.
 \abovecaptionskip=\skip53
 \belowcaptionskip=\skip54
 \c@pti@nb@sid@b@x=\box27
 \c@figure=\count86
 \c@table=\count87
-Class scrartcl Info: Redefining `\numberline' on input line 5319.
+Class scrartcl Info: Redefining `\numberline' on input line 5233.
 \bibindent=\dimen102
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/polyglossia/polyglossia.
-sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/polyglossia/polyglossia.sty
 Package: polyglossia 2015/03/25 v1.42.4 Alternative to Babel for XeLaTeX and Lua
 LaTeX
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count88
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/makecmds/makecmds.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/makecmds/makecmds.sty
 Package: makecmds 2009/09/03 v1.0a extra command making commands
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks15
 \XKV@tempa@toks=\toks16
 )
 \XKV@depth=\count89
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.sty
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/05/13 L3 programming layer (loader) 
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2017/09/18 L3 programming layer (loader) 
-
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2017/09/18 L3 programming layer (code)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/05/13 L3 programming layer (code)
 \ucharcat@table=\catcodetable5
 \c_max_int=\count90
 \l_tmpa_int=\count91
 \l_tmpb_int=\count92
 \g_tmpa_int=\count93
 \g_tmpb_int=\count94
-\g__intarray_font_int=\count95
-\g__prg_map_int=\count96
-\c_log_iow=\count97
-\l_iow_line_count_int=\count98
-\l__iow_line_target_int=\count99
-\l__iow_one_indent_int=\count100
-\l__iow_indent_int=\count101
+\g__prg_map_int=\count95
+\c_log_iow=\count96
+\l_iow_line_count_int=\count97
+\l__iow_line_target_int=\count98
+\l__iow_one_indent_int=\count99
+\l__iow_indent_int=\count100
 \c_zero_dim=\dimen103
 \c_max_dim=\dimen104
 \l_tmpa_dim=\dimen105
@@ -187,75 +187,30 @@ Package: expl3 2017/09/18 L3 programming layer (code)
 \l_tmpb_muskip=\muskip13
 \g_tmpa_muskip=\muskip14
 \g_tmpb_muskip=\muskip15
-\l_keys_choice_int=\count102
-\c__fp_leading_shift_int=\count103
-\c__fp_middle_shift_int=\count104
-\c__fp_trailing_shift_int=\count105
-\c__fp_big_leading_shift_int=\count106
-\c__fp_big_middle_shift_int=\count107
-\c__fp_big_trailing_shift_int=\count108
-\c__fp_Bigg_leading_shift_int=\count109
-\c__fp_Bigg_middle_shift_int=\count110
-\c__fp_Bigg_trailing_shift_int=\count111
-\c__fp_rand_size_int=\count112
-\c__fp_rand_four_int=\count113
-\c__fp_rand_eight_int=\count114
-\l__sort_length_int=\count115
-\l__sort_min_int=\count116
-\l__sort_top_int=\count117
-\l__sort_max_int=\count118
-\l__sort_true_max_int=\count119
-\l__sort_block_int=\count120
-\l__sort_begin_int=\count121
-\l__sort_end_int=\count122
-\l__sort_A_int=\count123
-\l__sort_B_int=\count124
-\l__sort_C_int=\count125
-\l__tl_build_start_index_int=\count126
-\l__tl_build_index_int=\count127
-\l__tl_analysis_normal_int=\count128
-\l__tl_analysis_index_int=\count129
-\l__tl_analysis_nesting_int=\count130
-\l__tl_analysis_type_int=\count131
-\l__regex_internal_a_int=\count132
-\l__regex_internal_b_int=\count133
-\l__regex_internal_c_int=\count134
-\l__regex_balance_int=\count135
-\l__regex_group_level_int=\count136
-\l__regex_mode_int=\count137
-\c__regex_cs_in_class_mode_int=\count138
-\c__regex_cs_mode_int=\count139
-\l__regex_catcodes_int=\count140
-\l__regex_default_catcodes_int=\count141
-\c__regex_catcode_L_int=\count142
-\c__regex_catcode_O_int=\count143
-\c__regex_catcode_A_int=\count144
-\c__regex_all_catcodes_int=\count145
-\l__regex_show_lines_int=\count146
-\l__regex_min_state_int=\count147
-\l__regex_max_state_int=\count148
-\l__regex_left_state_int=\count149
-\l__regex_right_state_int=\count150
-\l__regex_capturing_group_int=\count151
-\l__regex_min_pos_int=\count152
-\l__regex_max_pos_int=\count153
-\l__regex_curr_pos_int=\count154
-\l__regex_start_pos_int=\count155
-\l__regex_success_pos_int=\count156
-\l__regex_curr_char_int=\count157
-\l__regex_curr_catcode_int=\count158
-\l__regex_last_char_int=\count159
-\l__regex_case_changed_char_int=\count160
-\l__regex_curr_state_int=\count161
-\l__regex_step_int=\count162
-\l__regex_min_active_int=\count163
-\l__regex_max_active_int=\count164
-\l__regex_replacement_csnames_int=\count165
-\l__regex_match_count_int=\count166
-\l__regex_min_submatch_int=\count167
-\l__regex_submatch_int=\count168
-\l__regex_zeroth_submatch_int=\count169
-\g__debug_trace_regex_int=\count170
+\l_keys_choice_int=\count101
+\c__fp_leading_shift_int=\count102
+\c__fp_middle_shift_int=\count103
+\c__fp_trailing_shift_int=\count104
+\c__fp_big_leading_shift_int=\count105
+\c__fp_big_middle_shift_int=\count106
+\c__fp_big_trailing_shift_int=\count107
+\c__fp_Bigg_leading_shift_int=\count108
+\c__fp_Bigg_middle_shift_int=\count109
+\c__fp_Bigg_trailing_shift_int=\count110
+\c__fp_rand_size_int=\count111
+\c__fp_rand_four_int=\count112
+\c__fp_rand_eight_int=\count113
+\l__sort_length_int=\count114
+\l__sort_min_int=\count115
+\l__sort_top_int=\count116
+\l__sort_max_int=\count117
+\l__sort_true_max_int=\count118
+\l__sort_block_int=\count119
+\l__sort_begin_int=\count120
+\l__sort_end_int=\count121
+\l__sort_A_int=\count122
+\l__sort_B_int=\count123
+\l__sort_C_int=\count124
 \c_empty_box=\box28
 \l_tmpa_box=\box29
 \l_tmpb_box=\box30
@@ -296,49 +251,49 @@ Package: expl3 2017/09/18 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen131
 \l__coffin_scaled_total_height_dim=\dimen132
 \l__coffin_scaled_width_dim=\dimen133
-) (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count171
+\l__driver_color_stack_int=\count125
 \l__driver_tmp_box=\box43
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse
-.sty
-Package: xparse 2017/09/18 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count172
-\g__xparse_grabber_int=\count173
-\l__xparse_m_args_int=\count174
-\l__xparse_mandatory_args_int=\count175
-\l__xparse_v_nesting_int=\count176
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2017/05/13 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count126
+\g__xparse_grabber_int=\count127
+\l__xparse_m_args_int=\count128
+\l__xparse_mandatory_args_int=\count129
+\l__xparse_v_nesting_int=\count130
 )
-Package: fontspec 2017/09/22 v2.6e Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2017/09/27 2.6e Font selection for XeLaTeX and LuaLaTeX
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec-luatex
-.sty
-Package: fontspec-luatex 2017/09/22 v2.6e Font selection for XeLaTeX and LuaLaTe
+Package: fontspec 2017/03/31 v2.6a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2017/03/31 2.6a Font selection for XeLaTeX and LuaLaTeX
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2017/03/31 v2.6a Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count177
-\l__fontspec_language_int=\count178
-\l__fontspec_strnum_int=\count179
-\l__fontspec_tmp_int=\count180
-\l__fontspec_em_int=\count181
-\l__fontspec_emdef_int=\count182
-\l__fontspec_strong_int=\count183
-\l__fontspec_strongdef_int=\count184
+\l__fontspec_script_int=\count131
+\l__fontspec_language_int=\count132
+\l__fontspec_strnum_int=\count133
+\l__fontspec_tmp_int=\count134
+\l__fontspec_em_int=\count135
+\l__fontspec_emdef_int=\count136
+\l__fontspec_strong_int=\count137
+\l__fontspec_strongdef_int=\count138
 \l__fontspec_tmpa_dim=\dimen134
 \l__fontspec_tmpb_dim=\dimen135
 \l__fontspec_tmpc_dim=\dimen136
 \g__file_internal_ior=\read1
- (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/tuenc.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/tuenc.def
 File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 ))
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \fontspec with sig. 'O{}mO{}' on line 482.
+. Defining command \fontspec with sig. 'O{}mO{}' on line 475.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -348,199 +303,192 @@ LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setsansfont with sig. 'O{}mO{}' on line 490.
+. Defining command \setsansfont with sig. 'O{}mO{}' on line 506.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmonofont with sig. 'O{}mO{}' on line 494.
+. Defining command \setmonofont with sig. 'O{}mO{}' on line 526.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathrm with sig. 'O{}mO{}' on line 498.
+. Defining command \setromanfont with sig. 'O{}mO{}' on line 546.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 502.
+. Defining command \setmathrm with sig. 'O{}mO{}' on line 550.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathsf with sig. 'O{}mO{}' on line 506.
+. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 558.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathtt with sig. 'O{}mO{}' on line 510.
+. Defining command \setmathsf with sig. 'O{}mO{}' on line 566.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setromanfont with sig. 'O{}mO{}' on line 514.
+. Defining command \setmathtt with sig. 'O{}mO{}' on line 574.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 518.
+. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 589.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontface with sig. 'mO{}mO{}' on line 522.
+. Defining command \newfontface with sig. 'mO{}mO{}' on line 606.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \defaultfontfeatures with sig. 't+om' on line 526.
+. Defining command \defaultfontfeatures with sig. 't+om' on line 617.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeatures with sig. 'm' on line 530.
+. Defining command \addfontfeatures with sig. 'm' on line 648.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeature with sig. 'm' on line 534.
+. Defining command \newfontfeature with sig. 'mm' on line 675.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfeature with sig. 'mm' on line 538.
+. Defining command \newAATfeature with sig. 'mmmm' on line 689.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newAATfeature with sig. 'mmmm' on line 542.
+. Defining command \newopentypefeature with sig. 'mmm' on line 703.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newopentypefeature with sig. 'mmm' on line 546.
+. Defining command \newICUfeature with sig. 'mmm' on line 723.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newICUfeature with sig. 'mmm' on line 550.
+. Defining command \aliasfontfeature with sig. 'mm' on line 727.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeature with sig. 'mm' on line 554.
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 748.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 558.
+. Defining command \newfontscript with sig. 'mm' on line 781.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontscript with sig. 'mm' on line 562.
+. Defining command \newfontlanguage with sig. 'mm' on line 785.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontlanguage with sig. 'mm' on line 566.
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 789.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareFontsExtensions with sig. 'm' on line 570.
+. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 800.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 574.
+. Defining command \EncodingCommand with sig. 'mO{}m' on line 3162.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCommand with sig. 'mO{}m' on line 3284.
+. Defining command \EncodingAccent with sig. 'mm' on line 3168.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingAccent with sig. 'mm' on line 3290.
+. Defining command \EncodingSymbol with sig. 'mm' on line 3174.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingSymbol with sig. 'mm' on line 3296.
+. Defining command \EncodingComposite with sig. 'mmm' on line 3180.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingComposite with sig. 'mmm' on line 3302.
+. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3186.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3308.
+. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3211.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3333.
+. Defining command \UndeclareSymbol with sig. 'm' on line 3217.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareSymbol with sig. 'm' on line 3339.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \UndeclareComposite with sig. 'mm' on line 3347.
+. Defining command \UndeclareComposite with sig. 'mm' on line 3225.
 .................................................
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 3525.
-LaTeX Info: Redefining \slshape on input line 3530.
-LaTeX Info: Redefining \scshape on input line 3535.
-LaTeX Info: Redefining \upshape on input line 3540.
-LaTeX Info: Redefining \em on input line 3570.
-LaTeX Info: Redefining \emph on input line 3595.
-(load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts
-/otl/lmroman10-bold.luc)(load luc: /home/tobias/.local/texlive/2017/texmf-var/lu
-atex-cache/generic/fonts/otl/lmroman10-italic.luc)
-LaTeX Info: Redefining \- on input line 3646.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 3410.
+LaTeX Info: Redefining \slshape on input line 3415.
+LaTeX Info: Redefining \scshape on input line 3420.
+LaTeX Info: Redefining \upshape on input line 3425.
+LaTeX Info: Redefining \em on input line 3455.
+LaTeX Info: Redefining \emph on input line 3480.
+(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
+s/otl/lmroman10-bold.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-var/
+luatex-cache/generic/fonts/otl/lmroman10-italic.luc)
+LaTeX Info: Redefining \- on input line 3531.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \oldstylenums with sig. 'm' on line 3741.
+. Redefining command \oldstylenums with sig. 'm' on line 3626.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \liningnums with sig. 'm' on line 3745.
+. Defining command \liningnums with sig. 'm' on line 3630.
 .................................................
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX detected.
-) (/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/luatex/luatexbase/luatexbase.s
-ty
+(/usr/local/texlive/2017/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
 Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/luatex/ctablestack/ctablestack
-.sty
+(/usr/local/texlive/2017/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
 Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count185
+\@catcodetablestackcnt=\count139
 )
 \CatcodeTableOther=\catcodetable6
 \CatcodeTableExpl=\catcodetable7
 )
-luatex-hyphen: using data file: /home/tobias/.local/texlive/2017/texmf-var/tex/g
-eneric/config/language.dat.lua
+luatex-hyphen: using data file: /usr/local/texlive/2017/texmf-var/tex/generic/co
+nfig/language.dat.lua
 Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/polyglossia/gloss-german
-.ldf
+(/usr/local/texlive/2017/texmf-dist/tex/latex/polyglossia/gloss-german.ldf
 File: gloss-german.ldf polyglossia: module for german
 
 hyph-de-1901.pat.txt
@@ -549,7 +497,7 @@ Language german already loaded; id is 4
 hyph-de-1996.pat.txt
 Language ngerman was not yet loaded; created with id 8
 Language ngerman already loaded; id is 8
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/polyglossia/babelsh.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/polyglossia/babelsh.def
 File: babelsh.def 2013/04/30 Babel common definitions for shorthands
  Taken verbatim from babel.def (2013/04/15 v3.9e)
 )
@@ -557,56 +505,55 @@ Package polyglossia Info: Making " an active character on input line 79.
 )
 Package polyglossia Info: Default language is german.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlayer-scr
-page.sty
-Package: scrlayer-scrpage 2017/09/07 v3.24 KOMA-Script package (end user interfa
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2017/04/13 v3.23 KOMA-Script package (end user interfa
 ce for scrlayer)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2017/09/07 v3.24 KOMA-Script package (defining layers and page
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 2017/04/13 v3.23 KOMA-Script package (defining layers and page
  styles)
 Package scrlayer Info: Using already defined \footheight
 (scrlayer)             hoping, that this is a length and
-(scrlayer)             not only a macro on input line 109.
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 1997
+(scrlayer)             not only a macro on input line 107.
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 1987
 .
 )
 Package scrlayer-scrpage Info: deactivating warning for font element
-(scrlayer-scrpage)             `pagefoot' on input line 1247.
+(scrlayer-scrpage)             `pagefoot' on input line 1203.
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
 1: section
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/placeins/placeins.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip61
 
 For additional information on amsmath, use the `?' option.
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen137
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen138
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count186
+\inf@bad=\count140
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count187
-\leftroot@=\count188
+\uproot@=\count141
+\leftroot@=\count142
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count189
-\DOTSCASE@=\count190
+\classnum@=\count143
+\DOTSCASE@=\count144
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -615,15 +562,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen139
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count191
-\c@MaxMatrixCols=\count192
+\macc@depth=\count145
+\c@MaxMatrixCols=\count146
 \dotsspace@=\muskip16
-\c@parentequation=\count193
-\dspbrk@lvl=\count194
+\c@parentequation=\count147
+\dspbrk@lvl=\count148
 \tag@help=\toks18
-\row@=\count195
-\column@=\count196
-\maxfields@=\count197
+\row@=\count149
+\column@=\count150
+\maxfields@=\count151
 \andhelp@=\toks19
 \eqnshift@=\dimen140
 \alignsep@=\dimen141
@@ -638,40 +585,40 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2017/05/24 v1.19 mathematical typesetting tools
+(/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count198
-\calc@Bcount=\count199
+\calc@Acount=\count152
+\calc@Bcount=\count153
 \calc@Adimen=\dimen146
 \calc@Bdimen=\dimen147
 \calc@Askip=\skip64
 \calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count266
+\calc@Ccount=\count154
 \calc@Cskip=\skip66
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count267
+\g_MT_multlinerow_int=\count155
 \l_MT_multwidth_dim=\dimen148
 \origjot=\skip67
 \l_MT_shortvdotswithinadjustabove_dim=\dimen149
@@ -681,10 +628,10 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen153
 \l_MT_below_shortintertext_sep=\dimen154
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx.sty
-Package: siunitx 2017/08/02 v2.7j A comprehensive (SI) units package
+(/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2017/05/19 v2.7g A comprehensive (SI) units package
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen155
 \extrarowheight=\dimen156
@@ -692,33 +639,32 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \extratabsurround=\skip68
 \backup@length=\skip69
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3ke
-ys2e.sty
-Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2017/05/13 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box46
 \l__siunitx_tmp_dim=\dimen157
-\l__siunitx_tmp_int=\count268
-\l__siunitx_number_mantissa_length_int=\count269
-\l__siunitx_number_uncert_length_int=\count270
-\l__siunitx_round_int=\count271
-\l__siunitx_process_decimal_int=\count272
-\l__siunitx_process_uncertainty_int=\count273
-\l__siunitx_process_fixed_int=\count274
-\l__siunitx_process_integer_min_int=\count275
-\l__siunitx_process_precision_int=\count276
-\l__siunitx_group_min_int=\count277
+\l__siunitx_tmp_int=\count156
+\l__siunitx_number_mantissa_length_int=\count157
+\l__siunitx_number_uncert_length_int=\count158
+\l__siunitx_round_int=\count159
+\l__siunitx_process_decimal_int=\count160
+\l__siunitx_process_uncertainty_int=\count161
+\l__siunitx_process_fixed_int=\count162
+\l__siunitx_process_integer_min_int=\count163
+\l__siunitx_process_precision_int=\count164
+\l__siunitx_group_min_int=\count165
 \l__siunitx_angle_marker_box=\box47
 \l__siunitx_angle_unit_box=\box48
 \l__siunitx_angle_marker_dim=\dimen158
 \l__siunitx_angle_unit_dim=\dimen159
-\l__siunitx_unit_int=\count278
-\l__siunitx_unit_denominator_int=\count279
-\l__siunitx_unit_numerator_int=\count280
-\l__siunitx_unit_prefix_int=\count281
-\l__siunitx_unit_prefix_base_int=\count282
-\l__siunitx_unit_prefix_gram_int=\count283
-\l__siunitx_number_product_int=\count284
+\l__siunitx_unit_int=\count166
+\l__siunitx_unit_denominator_int=\count167
+\l__siunitx_unit_numerator_int=\count168
+\l__siunitx_unit_prefix_int=\count169
+\l__siunitx_unit_prefix_base_int=\count170
+\l__siunitx_unit_prefix_gram_int=\count171
+\l__siunitx_number_product_int=\count172
 \c__siunitx_one_fill_skip=\skip70
 \l__siunitx_table_unit_align_skip=\skip71
 \l__siunitx_table_exponent_dim=\dimen160
@@ -739,168 +685,174 @@ Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7247.
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7251.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPostPower with sig. 'mm' on line 7250.
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7254.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7253.
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7257.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPrePower with sig. 'mm' on line 7256.
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7260.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIQualifier with sig. 'mm' on line 7259.
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7263.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7262.
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7266.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7265.
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7269.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7280.
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7284.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \num with sig. 'om' on line 7289.
+. Defining command \num with sig. 'om' on line 7293.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7298.
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7302.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numrange with sig. 'omm' on line 7307.
+. Defining command \numrange with sig. 'omm' on line 7311.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7319.
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7323.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIrange with sig. 'ommm' on line 7331.
+. Defining command \SIrange with sig. 'ommm' on line 7335.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SI with sig. 'omom' on line 7343.
+. Defining command \SI with sig. 'omom' on line 7347.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \sisetup with sig. 'm' on line 7346.
+. Defining command \sisetup with sig. 'm' on line 7350.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tablenum with sig. 'om' on line 7361.
+. Defining command \tablenum with sig. 'om' on line 7365.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \si with sig. 'om' on line 7373.
+. Defining command \si with sig. 'om' on line 7377.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numInBookmark with sig. 'om' on line 7420.
+. Defining command \numInBookmark with sig. 'om' on line 7424.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numrangeInBookmark with sig. 'omm' on line 7422.
+. Defining command \numrangeInBookmark with sig. 'omm' on line 7426.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIInBookmark with sig. 'omom' on line 7424.
+. Defining command \SIInBookmark with sig. 'omom' on line 7428.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIlistInBookmark with sig. 'omm' on line 7426.
+. Defining command \SIlistInBookmark with sig. 'omm' on line 7430.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIrangeInBookmark with sig. 'ommm' on line 7428.
+. Defining command \SIrangeInBookmark with sig. 'ommm' on line 7432.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \siInBookmark with sig. 'om' on line 7429.
+. Defining command \siInBookmark with sig. 'om' on line 7433.
 .................................................
-
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/beamer/translator/transl
-ator.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator.sty
 Package: translator 2010/06/12 ver 1.10
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/beamer/translator/transl
-ator-language-mappings.tex)))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2017/07/07 v2.7 Micro-typographical refinements (RS)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
 \MT@toks=\toks23
-\MT@count=\count285
-LaTeX Info: Redefining \textls on input line 789.
+\MT@count=\count173
+LaTeX Info: Redefining \textls on input line 774.
 \MT@outer@kern=\dimen169
-LaTeX Info: Redefining \textmicrotypecontext on input line 1334.
-\MT@listname@count=\count286
+LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
+\MT@listname@count=\count174
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/microtype/microtype-luat
-ex.def
-File: microtype-luatex.def 2017/07/07 v2.7 Definitions specific to luatex (RS)
-Lua module: microtype 2017/07/07 2.7 microtype module.
-LaTeX Info: Redefining \lsstyle on input line 681.
-LaTeX Info: Redefining \lslig on input line 681.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype-luatex.def
+File: microtype-luatex.def 2016/05/14 v2.6a Definitions specific to luatex (RS)
+Lua module: microtype 2016/05/14 2.6a microtype module.
+LaTeX Info: Redefining \lsstyle on input line 674.
+LaTeX Info: Redefining \lslig on input line 674.
 \MT@outer@space=\skip74
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2017/07/07 v2.7 microtype main configuration file (RS)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3packages/xfrac/xfrac.s
-ty (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cf
-g
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 99.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2017/06/24 v1.0f Graphics/color driver for luatex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2017/01/12 v0.01h Graphics/Color for luaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count175
 ))
 \Gin@req@height=\dimen170
 \Gin@req@width=\dimen171
-) (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -915,7 +867,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -981,15 +933,15 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/l3packages/xtemplate/xte
-mplate.sty
-Package: xtemplate 2017/09/18 L3 Experimental prototype document functions
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y
+Package: xtemplate 2017/05/13 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen172
-\l__xtemplate_tmp_int=\count287
+\l__xtemplate_tmp_int=\count176
 \l__xtemplate_tmp_muskip=\muskip17
 \l__xtemplate_tmp_skip=\skip75
 )
-Package: xfrac 2017/09/18 L3 Experimental split-level fractions
+Package: xfrac 2017/05/13 L3 Experimental split-level fractions
 \l__xfrac_slash_box=\box53
 \l__xfrac_tmp_box=\box54
 \l__xfrac_denominator_bot_sep_dim=\dimen173
@@ -1009,8 +961,7 @@ Package: xfrac 2017/09/18 L3 Experimental split-level fractions
 . 
 . Defining command \sfrac with sig. 'omom' on line 419.
 .................................................
-)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen178
 \lightrulewidth=\dimen179
@@ -1022,100 +973,98 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen185
 \cmidrulekern=\dimen186
 \defaultaddspace=\dimen187
-\@cmidla=\count288
-\@cmidlb=\count289
+\@cmidla=\count177
+\@cmidlb=\count178
 \@aboverulesep=\dimen188
 \@belowrulesep=\dimen189
-\@thisruleclass=\count290
-\@lastruleclass=\count291
+\@thisruleclass=\count179
+\@lastruleclass=\count180
 \@thisrulewidth=\dimen190
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2017/11/05 v3.8a programmable bibliographies (PK/JW/AB)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.st
-y
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
 
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-) (/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 \pdftexcmds@toks=\toks24
-) (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-))) (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count292
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.def
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count181
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip20
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count293
-\decimalpart=\count294
+\integerpart=\count182
+\decimalpart=\count183
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count295
-\c@listtotal=\count296
-\c@listcount=\count297
-\c@liststart=\count298
-\c@liststop=\count299
-\c@citecount=\count300
-\c@citetotal=\count301
-\c@multicitecount=\count302
-\c@multicitetotal=\count303
-\c@instcount=\count304
-\c@maxnames=\count305
-\c@minnames=\count306
-\c@maxitems=\count307
-\c@minitems=\count308
-\c@citecounter=\count309
-\c@savedcitecounter=\count310
-\c@uniquelist=\count311
-\c@uniquename=\count312
-\c@refsection=\count313
-\c@refsegment=\count314
-\c@maxextratitle=\count315
-\c@maxextratitleyear=\count316
-\c@maxextrayear=\count317
-\c@maxextraalpha=\count318
-\c@abbrvpenalty=\count319
-\c@highnamepenalty=\count320
-\c@lownamepenalty=\count321
-\c@maxparens=\count322
-\c@parenlevel=\count323
-\blx@tempcnta=\count324
-\blx@tempcntb=\count325
-\blx@tempcntc=\count326
-\blx@maxsection=\count327
-\blx@maxsegment@0=\count328
-\blx@notetype=\count329
-\blx@parenlevel@text=\count330
-\blx@parenlevel@foot=\count331
-\blx@sectionciteorder@0=\count332
+\c@tabx@nest=\count184
+\c@listtotal=\count185
+\c@listcount=\count186
+\c@liststart=\count187
+\c@liststop=\count188
+\c@citecount=\count189
+\c@citetotal=\count190
+\c@multicitecount=\count191
+\c@multicitetotal=\count192
+\c@instcount=\count193
+\c@maxnames=\count194
+\c@minnames=\count195
+\c@maxitems=\count196
+\c@minitems=\count197
+\c@citecounter=\count198
+\c@savedcitecounter=\count199
+\c@uniquelist=\count266
+\c@uniquename=\count267
+\c@refsection=\count268
+\c@refsegment=\count269
+\c@maxextratitle=\count270
+\c@maxextratitleyear=\count271
+\c@maxextradate=\count272
+\c@maxextraalpha=\count273
+\c@abbrvpenalty=\count274
+\c@highnamepenalty=\count275
+\c@lownamepenalty=\count276
+\c@maxparens=\count277
+\c@parenlevel=\count278
+\blx@tempcnta=\count279
+\blx@tempcntb=\count280
+\blx@tempcntc=\count281
+\blx@maxsection=\count282
+\blx@maxsegment@0=\count283
+\blx@notetype=\count284
+\blx@parenlevel@text=\count285
+\blx@parenlevel@foot=\count286
+\blx@sectionciteorder@0=\count287
 \labelnumberwidth=\skip76
 \labelalphawidth=\skip77
 \biblabelsep=\skip78
@@ -1126,81 +1075,83 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibhang=\skip83
 \blx@bcfin=\read2
 \blx@bcfout=\write4
-\c@mincomprange=\count333
-\c@maxcomprange=\count334
-\c@mincompwidth=\count335
+\c@mincomprange=\count288
+\c@maxcomprange=\count289
+\c@mincompwidth=\count290
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-dm.def)
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count336
-\c@savedafterword=\count337
-\c@annotator=\count338
-\c@savedannotator=\count339
-\c@author=\count340
-\c@savedauthor=\count341
-\c@bookauthor=\count342
-\c@savedbookauthor=\count343
-\c@commentator=\count344
-\c@savedcommentator=\count345
-\c@editor=\count346
-\c@savededitor=\count347
-\c@editora=\count348
-\c@savededitora=\count349
-\c@editorb=\count350
-\c@savededitorb=\count351
-\c@editorc=\count352
-\c@savededitorc=\count353
-\c@foreword=\count354
-\c@savedforeword=\count355
-\c@holder=\count356
-\c@savedholder=\count357
-\c@introduction=\count358
-\c@savedintroduction=\count359
-\c@namea=\count360
-\c@savednamea=\count361
-\c@nameb=\count362
-\c@savednameb=\count363
-\c@namec=\count364
-\c@savednamec=\count365
-\c@translator=\count366
-\c@savedtranslator=\count367
-\c@shortauthor=\count368
-\c@savedshortauthor=\count369
-\c@shorteditor=\count370
-\c@savedshorteditor=\count371
-\c@labelname=\count372
-\c@savedlabelname=\count373
-\c@institution=\count374
-\c@savedinstitution=\count375
-\c@lista=\count376
-\c@savedlista=\count377
-\c@listb=\count378
-\c@savedlistb=\count379
-\c@listc=\count380
-\c@savedlistc=\count381
-\c@listd=\count382
-\c@savedlistd=\count383
-\c@liste=\count384
-\c@savedliste=\count385
-\c@listf=\count386
-\c@savedlistf=\count387
-\c@location=\count388
-\c@savedlocation=\count389
-\c@organization=\count390
-\c@savedorganization=\count391
-\c@origlocation=\count392
-\c@savedoriglocation=\count393
-\c@origpublisher=\count394
-\c@savedorigpublisher=\count395
-\c@publisher=\count396
-\c@savedpublisher=\count397
-\c@language=\count398
-\c@savedlanguage=\count399
-\c@pageref=\count400
-\c@savedpageref=\count401
+\c@afterword=\count291
+\c@savedafterword=\count292
+\c@annotator=\count293
+\c@savedannotator=\count294
+\c@author=\count295
+\c@savedauthor=\count296
+\c@bookauthor=\count297
+\c@savedbookauthor=\count298
+\c@commentator=\count299
+\c@savedcommentator=\count300
+\c@editor=\count301
+\c@savededitor=\count302
+\c@editora=\count303
+\c@savededitora=\count304
+\c@editorb=\count305
+\c@savededitorb=\count306
+\c@editorc=\count307
+\c@savededitorc=\count308
+\c@foreword=\count309
+\c@savedforeword=\count310
+\c@holder=\count311
+\c@savedholder=\count312
+\c@introduction=\count313
+\c@savedintroduction=\count314
+\c@namea=\count315
+\c@savednamea=\count316
+\c@nameb=\count317
+\c@savednameb=\count318
+\c@namec=\count319
+\c@savednamec=\count320
+\c@translator=\count321
+\c@savedtranslator=\count322
+\c@shortauthor=\count323
+\c@savedshortauthor=\count324
+\c@shorteditor=\count325
+\c@savedshorteditor=\count326
+\c@labelname=\count327
+\c@savedlabelname=\count328
+\c@institution=\count329
+\c@savedinstitution=\count330
+\c@lista=\count331
+\c@savedlista=\count332
+\c@listb=\count333
+\c@savedlistb=\count334
+\c@listc=\count335
+\c@savedlistc=\count336
+\c@listd=\count337
+\c@savedlistd=\count338
+\c@liste=\count339
+\c@savedliste=\count340
+\c@listf=\count341
+\c@savedlistf=\count342
+\c@location=\count343
+\c@savedlocation=\count344
+\c@organization=\count345
+\c@savedorganization=\count346
+\c@origlocation=\count347
+\c@savedoriglocation=\count348
+\c@origpublisher=\count349
+\c@savedorigpublisher=\count350
+\c@publisher=\count351
+\c@savedpublisher=\count352
+\c@language=\count353
+\c@savedlanguage=\count354
+\c@origlanguage=\count355
+\c@savedoriglanguage=\count356
+\c@pageref=\count357
+\c@savedpageref=\count358
 \shorthandwidth=\skip84
 \shortjournalwidth=\skip85
 \shortserieswidth=\skip86
@@ -1210,40 +1161,40 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2017/11/05 v3.8a biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count402
-\c@textcitetotal=\count403
-\c@textcitemaxnames=\count404
-\c@biburlnumpenalty=\count405
-\c@biburlucpenalty=\count406
-\c@biburllcpenalty=\count407
-\c@smartand=\count408
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2017/11/05 v3.8a biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count359
+\c@textcitetotal=\count360
+\c@textcitemaxnames=\count361
+\c@biburlnumpenalty=\count362
+\c@biburlucpenalty=\count363
+\c@biburllcpenalty=\count364
+\c@smartand=\count365
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2017/11/05 v3.8a biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/standard.bb
-x
-File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count409
-\c@bbx:relatedtotal=\count410
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2017/11/05 v3.8a biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count366
+\c@bbx:relatedtotal=\count367
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2017/11/05 v3.8a biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1258,15 +1209,17 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.cfg
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)) (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/caption/subcaption.st
-y
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen191
@@ -1278,49 +1231,47 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@hangindent=\dimen197
 )
 Package caption Info: KOMA-Script document class.
-\c@ContinuedFloat=\count411
+\c@ContinuedFloat=\count368
 )
-\c@subfigure=\count412
-\c@subtable=\count413
+\c@subfigure=\count369
+\c@subtable=\count370
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/unicode-math/unicode-mat
-h.sty
-Package: unicode-math 2017/08/02 v0.8f Unicode maths in XeLaTeX and LuaLaTeX
+(/usr/local/texlive/2017/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2017/01/27 v0.8d Unicode maths in XeLaTeX and LuaLaTeX
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/ucharcat/ucharcat.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ucharcat/ucharcat.sty
 Package: ucharcat 2015/11/19 v0.03 ucharcat for luaLaTeX (DPC)
 \ucharcat@table=\catcodetable8
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/fix-cm.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/filehook/filehook.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/filehook/filehook.sty
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/filehook/filehook-scrlfi
-le.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/filehook/filehook-scrlfile.sty
 Package: filehook-scrlfile 2011/01/03 v0.1 filehook patch for scrlfile package
 Package filehook Info: Package 'scrlfile' detected and compensated for on input 
 line 102.
 ))
-\g__um_fam_int=\count414
+\g__um_fam_int=\count371
 \g__um_primekern_muskip=\muskip21
-\l__um_primecount_int=\count415
+\l__um_primecount_int=\count372
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \unimathsetup with sig. 'm' on line 166.
 .................................................
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/unicode-math/unicode-mat
-h-luatex.sty
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/lualatex/lualatex-math/lualate
-x-math.sty
-Package: lualatex-math 2017/06/15 v1.7 Patches for mathematics typesetting with 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.
+sty
+(/usr/local/texlive/2017/texmf-dist/tex/lualatex/lualatex-math/lualatex-math.st
+y
+Package: lualatex-math 2016/04/16 v1.6 Patches for mathematics typesetting with 
 LuaLaTeX
 Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting wit
 h LuaLaTeX
@@ -1337,7 +1288,7 @@ h LuaLaTeX
 .................................................
 . lualatex-math info: "patch-macro"
 . 
-. I'm going to patch macro \genfrac .
+. I'm going to patch macro \@genfrac.
 .................................................
 .................................................
 . lualatex-math info: "patch-macro"
@@ -1348,31 +1299,31 @@ h LuaLaTeX
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathfontface with sig. 'mO{}mO{}' on line 169.
+. Defining command \setmathfontface with sig. 'mO{}mO{}' on line 167.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setoperatorfont with sig. 'm' on line 173.
+. Defining command \setoperatorfont with sig. 'm' on line 171.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathfont with sig. 'O{}mO{}' on line 282.
+. Defining command \setmathfont with sig. 'O{}mO{}' on line 280.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addnolimits with sig. 'm' on line 525.
+. Defining command \addnolimits with sig. 'm' on line 523.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \removenolimits with sig. 'm' on line 529.
+. Defining command \removenolimits with sig. 'm' on line 527.
 .................................................
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/unicode-math/unicode-mat
-h-table.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
+ex)
 .................................................
 . unicode-math info: "patch-macro"
 . 
@@ -1397,37 +1348,37 @@ h-table.tex)
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \dblcolon with sig. '' on line 1952.
+. Defining command \dblcolon with sig. '' on line 1965.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \coloneqq with sig. '' on line 1952.
+. Defining command \coloneqq with sig. '' on line 1965.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \Coloneqq with sig. '' on line 1952.
+. Defining command \Coloneqq with sig. '' on line 1965.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \eqqcolon with sig. '' on line 1952.
+. Defining command \eqqcolon with sig. '' on line 1965.
 .................................................
 ))
-luaotfload | cache : Lookup cache loaded from /home/tobias/.local/texlive/2017/t
-exmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.(load luc: /home
-/tobias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/latinmodern
--math.luc)
-\g__fontspec_family_LatinModernMath_int=\count416
+luaotfload | cache : Lookup cache loaded from /Users/katti/Library/texlive/2017/
+texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.(load luc: /Use
+rs/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/latinmode
+rn-math.luc)
+\g__fontspec_family_LatinModernMath_int=\count373
 .................................................
 . fontspec info: "no-font-shape"
 . 
 . Could not resolve font "LatinModernMath/B" (it probably doesn't exist).
 .................................................
-luaotfload | aux : font no 26 (nil) does not define feature smcp for script math
+luaotfload | aux : font no 18 (nil) does not define feature smcp for script math
  with language dflt
-luaotfload | aux : no font with id 26
+luaotfload | aux : no font with id 18
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1461,9 +1412,9 @@ e 41.
 . 
 . Could not resolve font "LatinModernMath/B" (it probably doesn't exist).
 .................................................
-luaotfload | aux : font no 26 (nil) does not define feature smcp for script math
+luaotfload | aux : font no 18 (nil) does not define feature smcp for script math
  with language dflt
-luaotfload | aux : no font with id 26
+luaotfload | aux : no font with id 18
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1515,9 +1466,9 @@ e 41.
 . 
 . Could not resolve font "LatinModernMath/B" (it probably doesn't exist).
 .................................................
-luaotfload | aux : font no 26 (nil) does not define feature smcp for script math
+luaotfload | aux : font no 18 (nil) does not define feature smcp for script math
  with language dflt
-luaotfload | aux : no font with id 26
+luaotfload | aux : no font with id 18
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1558,20 +1509,20 @@ e 41.
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2017/11/05 v3.8a biblatex localization (PK/JW/AB)
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count417
-\@quotereset=\count418
-(./Protokoll.aux
+\@quotelevel=\count374
+\@quotereset=\count375
+(./protokoll.aux
 luatex-hyphen: loading patterns and exceptions for: german (\language4)
 luatex-hyphen: info: no hyphenation exceptions for this language
 Language ngerman already loaded; id is 8)
-\openout1 = Protokoll.aux
+\openout1 = protokoll.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
@@ -1591,13 +1542,12 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 
 Language ngerman already loaded; id is 8
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/
-translator-basic-dictionary/translator-basic-dictionary-English.dict
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbrevia
-tions.cfg
-File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
+(/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/05/19 v2.7g siunitx: Abbreviated units
 )
 LaTeX Info: Redefining \microtypecontext on input line 2.
 Package microtype Info: Generating PDF output.
@@ -1610,45 +1560,39 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/microtype/mt-LatinModern
-Roman.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
 File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mode
 rn Roman (RS)
-)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mki
-i
+) (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count419
+\scratchcounter=\count376
 \scratchdimen=\dimen198
 \scratchbox=\box55
-\nofMPsegments=\count420
-\nofMParguments=\count421
+\nofMPsegments=\count377
+\nofMParguments=\count378
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count422
+\MPscratchCnt=\count379
 \MPscratchDim=\dimen199
-\MPnumerator=\count423
-\makeMPintoPDFobject=\count424
+\MPnumerator=\count380
+\makeMPintoPDFobject=\count381
 \everyMPtoPDFconversion=\toks26
-)
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.s
-ty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.
-sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
 8.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
-,.JBIG2,.JB2 ,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys
-.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 ))
@@ -1657,11 +1601,11 @@ Package biblatex Info: LuaTeX detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 
-\openout4 = Protokoll.bcf
+\openout4 = protokoll.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Protokoll.bbl' not found.
+Package biblatex Info: ... file 'protokoll.bbl' not found.
 
-No file Protokoll.bbl.
+No file protokoll.bbl.
 Package biblatex Info: Reference section=0 on input line 2.
 Package biblatex Info: Reference segment=0 on input line 2.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1673,11 +1617,641 @@ Package caption Info: End \AtBeginDocument code.
 * 
 * Use \Uoverbracket and \Uunderbracket for original `unicode-math' definition.
 *************************************************
-\c__siunitx_mathsf_int=\count425
-Package microtype Info: Loading generic protrusion settings for font family
+\c__siunitx_mathsf_int=\count382
+Package microtype Info: Loading generic settings for font family
 (microtype)             `LatinModernMath' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v D'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v d'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u G'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u g'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"i'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\~o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\`u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\^u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'Y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"Y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\"y'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/358(protrusion)'.
+
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
 (Font)              scaled to size 10.95015pt on input line 2.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
@@ -1691,84 +2265,83 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 5.99991pt on input line 2.
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(/home/tobias/.local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msb.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Package microtype Info: Loading generic protrusion settings for font family
+Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c__siunitx_mathtt_int=\count426
-Package microtype Info: Loading generic protrusion settings for font family
+\c__siunitx_mathtt_int=\count383
+Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(./Titelseite.tex(load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-ca
-che/generic/fonts/otl/lmroman12-regular.luc)(load luc: /home/tobias/.local/texli
-ve/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc)
+(./Titelseite.tex(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-c
+ache/generic/fonts/otl/lmroman12-regular.luc)(load luc: /Users/katti/Library/tex
+live/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc)
 [1
 
-{/home/tobias/.local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])(load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regular.luc)
-Package microtype Info: Loading generic protrusion settings for font family
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])(load lu
+c: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lm
+sans10-regular.luc)
+Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts
-/otl/lmsans10-bold.luc)
+(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
+s/otl/lmsans10-bold.luc)
 Package tocbasic Info: character protrusion at toc deactivated on input line 8.
- (./Protokoll.toc
+ (./protokoll.toc
 Language ngerman already loaded; id is 8)
 \tf@toc=\write5
 
-\openout5 = Protokoll.toc
-(load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts
-/otl/lmromanslant10-regular.luc)
+\openout5 = protokoll.toc
+(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
+s/otl/lmromanslant10-regular.luc)
 [2] (./Zielsetzung.txt) (./Theorie.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
-[3] [4](load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-cache/generi
-c/fonts/otl/lmroman8-regular.luc)(load luc: /home/tobias/.local/texlive/2017/tex
-mf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc) [5]
-<bändermodell.png, id=25, pagebox=cropbox, 630.355pt x 297.11pt>
+[3] [4] [5](load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/g
+eneric/fonts/otl/lmroman8-regular.luc)(load luc: /Users/katti/Library/texlive/20
+17/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc)
+<bändermodell.png, id=25, 630.355pt x 297.11pt>
 File: bändermodell.png Graphic file (type png)
-<use bändermodell.png>
-Package luatex.def Info: bändermodell.png  used on input line 164. on input lin
-e 164.
-Package luatex.def Info: Requested size: 418.25555pt x 197.14044pt on input line
- 164.
+ <use bändermodell.png>
+Package luatex.def Info: bändermodell.png used on input line 169.
+(luatex.def)             Requested size: 418.25555pt x 197.14044pt.
 
 
-LaTeX Warning: Citation 'bändermodell' on page 6 undefined on input line 165.
+LaTeX Warning: Citation 'bändermodell' on page 6 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'bändermodell' on page 6 undefined on input line 165.
+LaTeX Warning: Citation 'bändermodell' on page 6 undefined on input line 170.
 
-<bändermodell2.png, id=26, pagebox=cropbox, 450.68375pt x 467.7475pt>
+<bändermodell2.png, id=26, 450.68375pt x 467.7475pt>
 File: bändermodell2.png Graphic file (type png)
-<use bändermodell2.png>
-Package luatex.def Info: bändermodell2.png  used on input line 170. on input li
-ne 170.
-Package luatex.def Info: Requested size: 292.7776pt x 303.87524pt on input line 
-170.
-
-LaTeX Warning: Citation 'bändermodell2' on page 6 undefined on input line 171.
+ <use bändermodell2.png>
+Package luatex.def Info: bändermodell2.png used on input line 175.
+(luatex.def)             Requested size: 292.7776pt x 303.87524pt.
 
 
-LaTeX Warning: Citation 'bändermodell2' on page 6 undefined on input line 171.
+LaTeX Warning: Citation 'bändermodell2' on page 6 undefined on input line 176.
+
+
+LaTeX Warning: Citation 'bändermodell2' on page 6 undefined on input line 176.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1778,19 +2351,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--72
 
  []
 
-[8]) [9] (./Auswertung.tex
-<1234.pdf, id=42, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[8]) [9] (./Auswertung.tex <1234.pdf, id=42, 462.52798pt x 346.89601pt>
 File: 1234.pdf Graphic file (type pdf)
+
 <use 1234.pdf>
-Package luatex.def Info: 1234.pdf  used on input line 7. on input line 7.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 7.
-<5678.pdf, id=43, pagebox=cropbox, 462.52798pt x 346.89601pt>
+Package luatex.def Info: 1234.pdf used on input line 7.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
+ <5678.pdf, id=43, 462.52798pt x 346.89601pt>
 File: 5678.pdf Graphic file (type pdf)
-<use 5678.pdf>
-Package luatex.def Info: 5678.pdf  used on input line 14. on input line 14.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 14.
+ <use 5678.pdf>
+Package luatex.def Info: 5678.pdf used on input line 14.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 Overfull \hbox (32.08298pt too wide) in paragraph at lines 1--23
 \TU/lmr/m/n/10.95 det. In der Ab-bil-dung 4[] sind die Mess-wer-te für die Roh
@@ -1800,67 +2371,57 @@ r-län-gen: $[] []\l_fontspec_font , [] [], [] [], [] []$
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10<./1234.pdf>]
-<linearfit.pdf, id=84, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[10<./1234.pdf>] <linearfit.pdf, id=84, 462.52798pt x 346.89601pt>
 File: linearfit.pdf Graphic file (type pdf)
+
 <use linearfit.pdf>
-Package luatex.def Info: linearfit.pdf  used on input line 91. on input line 91.
-
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 91.
+Package luatex.def Info: linearfit.pdf used on input line 91.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
  [11<./5678.pdf>] [12<./linearfit.pdf>]
-<geschi.pdf, id=176, pagebox=cropbox, 462.52798pt x 346.89601pt>
+<geschi.pdf, id=176, 462.52798pt x 346.89601pt>
 File: geschi.pdf Graphic file (type pdf)
-<use geschi.pdf>
-Package luatex.def Info: geschi.pdf  used on input line 144. on input line 144.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 144.
+ <use geschi.pdf>
+Package luatex.def Info: geschi.pdf used on input line 144.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13]
-<f(k).pdf, id=180, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[13] <f(k).pdf, id=180, 462.52798pt x 346.89601pt>
 File: f(k).pdf Graphic file (type pdf)
-<use f(k).pdf>
-Package luatex.def Info: f(k).pdf  used on input line 168. on input line 168.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 168.
+ <use f(k).pdf>
+Package luatex.def Info: f(k).pdf used on input line 168.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14<./geschi.pdf>]
-<Bandlücken3.pdf, id=230, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[14<./geschi.pdf>] <Bandlücken3.pdf, id=230, 462.52798pt x 346.89601pt>
 File: Bandlücken3.pdf Graphic file (type pdf)
+
 <use Bandlücken3.pdf>
-Package luatex.def Info: Bandlücken3.pdf  used on input line 190. on input line
- 190.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 190.
+Package luatex.def Info: Bandlücken3.pdf used on input line 190.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15<./f(k).pdf>]
-<Bandlücken.pdf, id=282, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[15<./f(k).pdf>] <Bandlücken.pdf, id=282, 462.52798pt x 346.89601pt>
 File: Bandlücken.pdf Graphic file (type pdf)
+
 <use Bandlücken.pdf>
-Package luatex.def Info: Bandlücken.pdf  used on input line 206. on input line 
-206.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 206.
+Package luatex.def Info: Bandlücken.pdf used on input line 206.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16<./Bandlücken3.pdf>]
-<bla.pdf, id=328, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[16<./Bandlücken3.pdf>] <bla.pdf, id=328, 462.52798pt x 346.89601pt>
 File: bla.pdf Graphic file (type pdf)
+
 <use bla.pdf>
-Package luatex.def Info: bla.pdf  used on input line 223. on input line 223.
-Package luatex.def Info: Requested size: 200.76086pt x 150.57036pt on input line
- 223.
+Package luatex.def Info: bla.pdf used on input line 223.
+(luatex.def)             Requested size: 200.76086pt x 150.57036pt.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
 (Font)              scaled to size 10.00015pt on input line 224.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(1)/m/n' will be
@@ -1869,124 +2430,113 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 9.99985pt on input line 224.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 (Font)              scaled to size 6.9999pt on input line 224.
-<bla75.pdf, id=329, pagebox=cropbox, 462.52798pt x 346.89601pt>
+ <bla75.pdf, id=329, 462.52798pt x 346.89601pt>
 File: bla75.pdf Graphic file (type pdf)
-<use bla75.pdf>
-Package luatex.def Info: bla75.pdf  used on input line 229. on input line 229.
-Package luatex.def Info: Requested size: 200.76086pt x 150.57036pt on input line
- 229.
-<A6.pdf, id=330, pagebox=cropbox, 462.52798pt x 346.89601pt>
+ <use bla75.pdf>
+Package luatex.def Info: bla75.pdf used on input line 229.
+(luatex.def)             Requested size: 200.76086pt x 150.57036pt.
+
+<A6.pdf, id=330, 462.52798pt x 346.89601pt>
 File: A6.pdf Graphic file (type pdf)
-<use A6.pdf>
-Package luatex.def Info: A6.pdf  used on input line 257. on input line 257.
-Package luatex.def Info: Requested size: 200.76086pt x 150.57036pt on input line
- 257.
-<A7.pdf, id=331, pagebox=cropbox, 462.52798pt x 346.89601pt>
+ <use A6.pdf>
+Package luatex.def Info: A6.pdf used on input line 257.
+(luatex.def)             Requested size: 200.76086pt x 150.57036pt.
+
+<A7.pdf, id=331, 462.52798pt x 346.89601pt>
 File: A7.pdf Graphic file (type pdf)
-<use A7.pdf>
-Package luatex.def Info: A7.pdf  used on input line 263. on input line 263.
-Package luatex.def Info: Requested size: 200.76086pt x 150.57036pt on input line
- 263.
-<A8.pdf, id=332, pagebox=cropbox, 462.52798pt x 346.89601pt>
+ <use A7.pdf>
+Package luatex.def Info: A7.pdf used on input line 263.
+(luatex.def)             Requested size: 200.76086pt x 150.57036pt.
+
+<A8.pdf, id=332, 462.52798pt x 346.89601pt>
 File: A8.pdf Graphic file (type pdf)
-<use A8.pdf>
-Package luatex.def Info: A8.pdf  used on input line 279. on input line 279.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 279.
+ <use A8.pdf>
+Package luatex.def Info: A8.pdf used on input line 279.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
  [17<./Bandlücken.pdf>] [18
 Missing character: There is no ⋅ (U+22C5) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman10-regular]:+tlig;!
 <./bla.pdf><./bla75.pdf><./A6.pdf><./A7.pdf>]
-<BandlückenD10.pdf, id=547, pagebox=cropbox, 462.52798pt x 346.89601pt>
+<BandlückenD10.pdf, id=547, 462.52798pt x 346.89601pt>
 File: BandlückenD10.pdf Graphic file (type pdf)
+
 <use BandlückenD10.pdf>
-Package luatex.def Info: BandlückenD10.pdf  used on input line 295. on input li
-ne 295.
-Package luatex.def Info: Requested size: 200.76086pt x 150.57036pt on input line
- 295.
-(load luc: /home/tobias/.local/texlive/2017/texmf-var/luatex-cache/generic/fonts
-/otl/lmroman7-regular.luc)(load luc: /home/tobias/.local/texlive/2017/texmf-var/
-luatex-cache/generic/fonts/otl/lmroman5-regular.luc)
-<BandlückenD13.pdf, id=548, pagebox=cropbox, 462.52798pt x 346.89601pt>
+Package luatex.def Info: BandlückenD10.pdf used on input line 295.
+(luatex.def)             Requested size: 200.76086pt x 150.57036pt.
+(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
+s/otl/lmroman7-regular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-va
+r/luatex-cache/generic/fonts/otl/lmroman5-regular.luc) <BandlückenD13.pdf, id=
+548, 462.52798pt x 346.89601pt>
 File: BandlückenD13.pdf Graphic file (type pdf)
+
 <use BandlückenD13.pdf>
-Package luatex.def Info: BandlückenD13.pdf  used on input line 301. on input li
-ne 301.
-Package luatex.def Info: Requested size: 200.76086pt x 150.57036pt on input line
- 301.
-<BandlückenD16.pdf, id=549, pagebox=cropbox, 462.52798pt x 346.89601pt>
+Package luatex.def Info: BandlückenD13.pdf used on input line 301.
+(luatex.def)             Requested size: 200.76086pt x 150.57036pt.
+
+<BandlückenD16.pdf, id=549, 462.52798pt x 346.89601pt>
 File: BandlückenD16.pdf Graphic file (type pdf)
+
 <use BandlückenD16.pdf>
-Package luatex.def Info: BandlückenD16.pdf  used on input line 310. on input li
-ne 310.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 310.
+Package luatex.def Info: BandlückenD16.pdf used on input line 310.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19<./A8.pdf>]
-<A101.pdf, id=592, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[19<./A8.pdf>] <A101.pdf, id=592, 462.52798pt x 346.89601pt>
 File: A101.pdf Graphic file (type pdf)
-<use A101.pdf>
-Package luatex.def Info: A101.pdf  used on input line 328. on input line 328.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 328.
+ <use A101.pdf>
+Package luatex.def Info: A101.pdf used on input line 328.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 Overfull \vbox (18.55606pt too high) has occurred while \output is active []
 
 
 [20<./BandlückenD10.pdf><./BandlückenD13.pdf><./BandlückenD16.pdf>]
-<A112.pdf, id=732, pagebox=cropbox, 462.52798pt x 346.89601pt>
+<A112.pdf, id=732, 462.52798pt x 346.89601pt>
 File: A112.pdf Graphic file (type pdf)
-<use A112.pdf>
-Package luatex.def Info: A112.pdf  used on input line 354. on input line 354.
-Package luatex.def Info: Requested size: 418.25555pt x 313.70679pt on input line
- 354.
+ <use A112.pdf>
+Package luatex.def Info: A112.pdf used on input line 354.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21<./A101.pdf>]
-<max.pdf, id=777, pagebox=cropbox, 462.52798pt x 346.89601pt>
+[21<./A101.pdf>] <max.pdf, id=777, 462.52798pt x 346.89601pt>
 File: max.pdf Graphic file (type pdf)
-<use max.pdf>
-Package luatex.def Info: max.pdf  used on input line 384. on input line 384.
-Package luatex.def Info: Requested size: 220.83817pt x 165.62952pt on input line
- 384.
+ <use max.pdf>
+Package luatex.def Info: max.pdf used on input line 384.
+(luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
 Overfull \hbox (20.0773pt too wide) in paragraph at lines 384--385
  [][] 
  []
 
-<max2.pdf, id=778, pagebox=cropbox, 462.52798pt x 346.89601pt>
+<max2.pdf, id=778, 462.52798pt x 346.89601pt>
 File: max2.pdf Graphic file (type pdf)
-<use max2.pdf>
-Package luatex.def Info: max2.pdf  used on input line 390. on input line 390.
-Package luatex.def Info: Requested size: 220.83817pt x 165.62952pt on input line
- 390.
+ <use max2.pdf>
+Package luatex.def Info: max2.pdf used on input line 390.
+(luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
 Overfull \hbox (20.0773pt too wide) in paragraph at lines 390--391
  [][] 
  []
 
-<max3.pdf, id=779, pagebox=cropbox, 462.52798pt x 346.89601pt>
+<max3.pdf, id=779, 462.52798pt x 346.89601pt>
 File: max3.pdf Graphic file (type pdf)
-<use max3.pdf>
-Package luatex.def Info: max3.pdf  used on input line 397. on input line 397.
-Package luatex.def Info: Requested size: 220.83817pt x 165.62952pt on input line
- 397.
+ <use max3.pdf>
+Package luatex.def Info: max3.pdf used on input line 397.
+(luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
 Overfull \hbox (20.0773pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
-<max4.pdf, id=780, pagebox=cropbox, 462.52798pt x 346.89601pt>
+<max4.pdf, id=780, 462.52798pt x 346.89601pt>
 File: max4.pdf Graphic file (type pdf)
-<use max4.pdf>
-Package luatex.def Info: max4.pdf  used on input line 403. on input line 403.
-Package luatex.def Info: Requested size: 220.83817pt x 165.62952pt on input line
- 403.
+ <use max4.pdf>
+Package luatex.def Info: max4.pdf used on input line 403.
+(luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
 Overfull \hbox (20.0773pt too wide) in paragraph at lines 403--404
  [][] 
@@ -2006,43 +2556,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--9
 
 LaTeX Warning: Empty bibliography on input line 36.
 
-[25] (./Protokoll.aux
+[25] (./protokoll.aux
 Language ngerman already loaded; id is 8)
 
 LaTeX Warning: There were undefined references.
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Protokoll
+(biblatex)                protokoll
 (biblatex)                and rerun LaTeX afterwards.
 
-Package logreq Info: Writing requests to 'Protokoll.run.xml'.
+Package logreq Info: Writing requests to 'protokoll.run.xml'.
 
-\openout1 = Protokoll.run.xml
+\openout1 = protokoll.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 33366 strings out of 494472
- 100000,1648299 words of node,token memory allocated
+ 32709 strings out of 494481
+ 100000,1373583 words of node,token memory allocated
  727 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 41 attribute, 76 glue_spec, 41 attr
 ibute_list, 1 write nodes
-   avail lists: 1:3,2:1605,3:218,4:38,5:333,6:3361,7:1035,8:98,9:903,10:19,11:41
+   avail lists: 1:3,2:1605,3:218,4:35,5:372,6:3361,7:1035,8:98,9:903,10:18,11:41
 5,12:1
- 36521 multiletter control sequences out of 65536+600000
- 86 fonts using 23736019 bytes
- 67i,19n,106p,8836b,2891s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-
-bold.otf></home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm-m
-ath/latinmodern-math.otf></home/tobias/.local/texlive/2017/texmf-dist/fonts/open
-type/public/lm-math/latinmodern-math.otf></home/tobias/.local/texlive/2017/texmf
--dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/tobias/.local/texliv
-e/2017/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/tobias/.loca
-l/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmromanslant10-regular.otf></
-home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman17-re
-gular.otf></home/tobias/.local/texlive/2017/texmf-dist/fonts/opentype/public/lm/
-lmroman12-regular.otf>
-Output written on Protokoll.pdf (25 pages, 475693 bytes).
+ 35863 multiletter control sequences out of 65536+600000
+ 78 fonts using 19045383 bytes
+ 67i,19n,106p,8836b,3002s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
+th.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/latinmo
+dern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmrom
+an10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lm
+sans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmr
+omanslant10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publi
+c/lm/lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pu
+blic/lm/lmroman12-regular.otf>
+Output written on protokoll.pdf (25 pages, 476211 bytes).
 
 PDF statistics: 1044 PDF objects out of 1200 (max. 8388607)
  370 compressed objects within 4 object streams

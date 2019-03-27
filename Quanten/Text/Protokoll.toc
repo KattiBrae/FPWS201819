@@ -12,16 +12,30 @@
 \contentsline {subsection}{\numberline {2.5}Superstrukturen}{7}
 \contentsline {subsection}{\numberline {2.6}Defekte}{7}
 \contentsline {section}{\numberline {3}Aufbau und Durchführung}{8}
-\contentsline {section}{\numberline {4}Auswertung}{10}
-\contentsline {subsection}{\numberline {4.1}Bestimmung der Schallgeschwindigkeit}{11}
-\contentsline {subsection}{\numberline {4.2}Aufgabe 2: Dispersion}{14}
-\contentsline {subsection}{\numberline {4.3}Aufgabe 3: Bandstrukturen}{15}
-\contentsline {subsection}{\numberline {4.4}Aufgabe 4: Bandstrukturen}{16}
-\contentsline {subsection}{\numberline {4.5}Aufgabe 5}{17}
-\contentsline {subsection}{\numberline {4.6}Aufgabe 6 und 7}{17}
-\contentsline {subsection}{\numberline {4.7}Aufgabe 8}{19}
-\contentsline {subsection}{\numberline {4.8}Aufgabe 9}{19}
-\contentsline {subsection}{\numberline {4.9}Aufgabe 10}{20}
-\contentsline {subsection}{\numberline {4.10}Aufgabe 11}{21}
-\contentsline {subsection}{\numberline {4.11}Aufgabe 12}{22}
-\contentsline {section}{\numberline {5}Diskussion}{24}
+\contentsline {subsection}{\numberline {3.1}Aufbau}{8}
+\contentsline {subsection}{\numberline {3.2}Durchführung}{8}
+\contentsline {paragraph}{\nonumberline Aufgabe 1}{8}
+\contentsline {paragraph}{\nonumberline Aufgabe 2}{8}
+\contentsline {paragraph}{\nonumberline Aufgabe 3}{8}
+\contentsline {paragraph}{\nonumberline Aufgabe 4}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 5}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 6}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 7}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 8}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 9}{9}
+\contentsline {paragraph}{\nonumberline Aufgabe 10}{10}
+\contentsline {paragraph}{\nonumberline Aufgabe 11}{10}
+\contentsline {paragraph}{\nonumberline Aufgabe 12}{10}
+\contentsline {section}{\numberline {4}Auswertung}{11}
+\contentsline {subsection}{\numberline {4.1}Aufgabe 1: Bestimmung der Schallgeschwindigkeit}{12}
+\contentsline {subsection}{\numberline {4.2}Aufgabe 2: Dispersion}{15}
+\contentsline {subsection}{\numberline {4.3}Aufgabe 3: Bandstrukturen}{16}
+\contentsline {subsection}{\numberline {4.4}Aufgabe 4: Bandstrukturen}{17}
+\contentsline {subsection}{\numberline {4.5}Aufgabe 5}{18}
+\contentsline {subsection}{\numberline {4.6}Aufgabe 6 und 7}{19}
+\contentsline {subsection}{\numberline {4.7}Aufgabe 8}{20}
+\contentsline {subsection}{\numberline {4.8}Aufgabe 9}{21}
+\contentsline {subsection}{\numberline {4.9}Aufgabe 10}{22}
+\contentsline {subsection}{\numberline {4.10}Aufgabe 11}{23}
+\contentsline {subsection}{\numberline {4.11}Aufgabe 12}{24}
+\contentsline {section}{\numberline {5}Diskussion}{26}

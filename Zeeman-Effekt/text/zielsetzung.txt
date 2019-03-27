@@ -1,1 +1,2 @@
-Hier könnte Ihre Werbung stehen.
+Der Zeeman-Effekt beschreibt die Aufspaltung der Spektrallinien unter Anlegen eines Magnetfeldes.
+In diesem Versuch wird der Zeeman-Effekt mithilfe eines Cadmium-Spektrums und eines Elektromagneten untersucht, um die Landé-Faktoren der Übergänge zu bestimmen.

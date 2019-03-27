@@ -120,77 +120,77 @@ Für den Fall, dass $B \ne 0$ spaltet sich also das Enaginiveau $E_0$ eines Atom
 %	\includegraphics[width=0.6\textwidth]{Aufspaltung.pdf}
 %	\caption{Aufspaltung eines Energieniveaus von einem Atom mit $J=2$. \cite{V27}}\label{fig:J2}
 %\end{figure}
-Die Aufspaltung führt bei Lichtemmision zur aufspaltung des Spektrums.
-Dies wird als Zeeman-Effekt bezeichnet.
-
-Da nur bestimmte Energieübergänge möglich sind gibt es die Auswahlregeln.
-
-Für die festlegung der Auswahlregeln wird die zeitabhängige Schrödingergleichung benötigt.
+Die Aufspaltung führt bei Lichtemission zur Aufspaltung des Spektrums, diese wird als Zeeman-Effekt bezeichnet.
+%
+Da nur bestimmte Energieübergänge möglich sind, gibt es die Auswahlregeln.
+%
+Für die Festlegung der Auswahlregeln wird die zeitabhängige Schrödingergleichung benötigt.
 \begin{align}
-	-\frac{\hbar^2}{2m}\Delta \psi(\vec{r},t)+U\psi(\vec{r},t)-i\hbar\frac{\partial \psi(\vec{r},t)}{\partial t}=0
+	-\frac{\hbar^2}{2m}\Delta \psi(\vec{r},t)+U\psi(\vec{r},t)-i\hbar\frac{\partial \psi(\vec{r},t)}{\partial t}=0.
 \end{align}
-Die Lösungen $\psi$ beschreiben den Überganz zwischen den Energieniveaus $\alpha$ und $\beta$.
+Die Lösungen $\psi$ beschreiben den Übergang zwischen den Energieniveaus $\alpha$ und $\beta$.
 Aus den Lösungen ergibt sich eine Schwingung des Elektrons zwischen den beiden Energieniveaus mit der Frequenz:
 \begin{align*}
-  \nu_{\alpha\beta}:=\frac{E_\alpha-E_\beta}{h}
+  \nu_{\alpha\beta}:=\frac{E_\alpha-E_\beta}{h}.
 \end{align*}
-Das Elektron lässt sich dementsprechent als Dipol beschreiben welches in die $x$-Richtung mit:
+Das Elektron lässt sich dementsprechend als Dipol beschreiben, welches in die $x$-Richtung mit:
 \begin{align*}
   	D_x=-e_0\text{const } 2 \Re \real\left( \underbrace{\int x\psi^*_\beta\psi_\alpha dV}_{x_{\alpha\beta}}\exp(2\pi i\nu_{\alpha,\beta}t) \right)
 \end{align*}
-abstrahl.
+abstrahlt.
 Für die $y$ und $z$ Richtung kann die Formel analog aufgestellt werden.
-Das Integal $x_{\alpha\beta}$ und seine alalogen $y$ und $z$ Komponenten werden Matxixelemente bezeichnet und sind wichtig für dei berechnung des Poynting-Vektors $\vec{S}_{\alpha\beta}$
+Das Integal $x_{\alpha\beta}$ und seine analogen $y$ und $z$ Komponenten werden Matxixelemente bezeichnet und sind wichtig für die berechnung des Poynting-Vektors $\vec{S}_{\alpha\beta}$.
 Der Poyning-Vektor berechnet sich nach:
 \begin{align*}
-  |\vec{S}_{\alpha\beta}| \sim \left(|x_{\alpha\beta}|^2+|y_{\alpha\beta}|^2+|z_{\alpha\beta}|^2\right) \text{sin}^2(\gamma)
+  |\vec{S}_{\alpha\beta}| \sim \left(|x_{\alpha\beta}|^2+|y_{\alpha\beta}|^2+|z_{\alpha\beta}|^2\right) \text{sin}^2(\gamma).
 \end{align*}
 $\gamma$ beschreibt dabei den Winkel zwischen Dipolmoment und Ausbreitungsrichtung der Strahlung.
-Es kann gezeigt werden, dass die Intensität der vom Dipol emitierten Strahlung mit den Matixelementen zusammenhängt.
-Für den Fall, dass das B-Feld in die Z-Richtung zeigt verschwindet $z_{\alpha\beta}$ außer wenn gilt, dass $m_{\alpha} = m_{\beta}$.
-$x_{\alpha\beta}\pm i y_{\alpha\beta}$ verschwindet ebenfalls außer wenn gilt, dass $m{\beta} = m_{\alpha} \pm 1$.
-Zum Zeeman-Effekt kommt es also nur wenn sich die Orienteirungsquantenzahlen $m_{\alpha}$ und $m_{\beta}$ garnicht oder nur um $\pm 1$ unterscheiden.\\
-
-Für den Fall, dass $\Delta m = 0$ ($z_{\alpha\beta} \neq 0,\ x_{\alpha\beta} = i y_{\alpha\beta} = 0$) kommt es schwingung des Dipols parallel zu Magntfeldachse,
-dies führt bei der Emmision zu linear-polarisiertem Licht parallel zum $\vec{B}$.
-Durch die Polarisation kann das emmitierte Licht am besten senkrecht (Transversal) zur Feldrichunug beobachtet werden.
-Die Strahlungsart wird als $\pi$ bezeichnet.
-
-Für den Fall, das $\Delta m = \pm 1$ ($z_{\alpha\beta} = 0,\ x_{\alpha\beta} = \pm i y_{\alpha\beta} \neq 0$) kommt es zu links oder rechts zirkular-polarisierter Stahlung um dei Magnetfeldachse.
-Bei betrachtung aus der Transversaler Achse zur Feldachse erscheit emmitiertes Licht linear polarisiert.
-Die Strahlungsareten werden als $\sigma$ bezeichnet.
-
+Es kann gezeigt werden, dass die Intensität der vom Dipol emittierten Strahlung mit den Matixelementen zusammenhängt.
+Für den Fall, dass das B-Feld in die Z-Richtung zeigt, verschwindet $z_{\alpha\beta}$, außer wenn gilt, dass $m_{\alpha} = m_{\beta}$.
+$x_{\alpha\beta}\pm i y_{\alpha\beta}$ verschwindet ebenfalls, außer wenn gilt, dass $m{\beta} = m_{\alpha} \pm 1$.
+Zum Zeeman-Effekt kommt es also nur, wenn sich die Orientierungsquantenzahlen $m_{\alpha}$ und $m_{\beta}$ gar nicht oder nur um $\pm 1$ unterscheiden.\\
+%
+Für den Fall, dass $\Delta m = 0$ ($z_{\alpha\beta} \neq 0,\ x_{\alpha\beta} = i y_{\alpha\beta} = 0$) kommt es Schwingung des Dipols parallel zu Magnetfeldachse,
+dies führt bei der Emission zu linear-polarisiertem Licht parallel zu $\vec{B}$.
+Durch die Polarisation kann das emittierte Licht am besten senkrecht (Transversal) zur Feldrichtung beobachtet werden.
+Die Strahlungsart wird als $\pi$ bezeichnet.\\
+%
+Für den Fall, das $\Delta m = \pm 1$ ($z_{\alpha\beta} = 0,\ x_{\alpha\beta} = \pm i y_{\alpha\beta} \neq 0$) kommt es zu links oder rechts zirkular-polarisierter Stahlung um die Magnetfeldachse.
+Bei Betrachtung aus der transversalen Achse zur Feldachse erscheint emittiertes Licht linear polarisiert.
+Die Strahlungsarten werden als $\sigma$ bezeichnet.
+%
 Die oben getroffenen Aussagen gelten nur für den Fall, dass $S=0$.
 Diesen Spezialfall bezeichnet man als normalen Zeeman-Effekt.
-Für Übergenge mit $S=0$ gilt $g_J = 1$. Die Verschiebung der Energieniveaus ist dementsprächend unabhängig von den Quantenzahlen.
-Der Energieunterschied $\Delta E$ zwischen den niveaus ist unabhängig von $L$ und $J$ gleich groß.
+Für Übergänge mit $S=0$ gilt $g_J = 1$. Die Verschiebung der Energieniveaus ist dementsprechend unabhängig von den Quantenzahlen.
+Der Energieunterschied $\Delta E$ zwischen den Niveaus ist unabhängig von $L$ und $J$ gleich groß.
 \begin{align}
   \Delta E = m \mu_B B \text{ für } -J \leq m \leq J
   \label{eqn:normal}
 \end{align}
 
-Der annormale Zeeman-Effekt kommt deulich häufiger vor und tritt auf wenn $S \neq 0$.
+Der anormale Zeeman-Effekt kommt deutlich häufiger vor und tritt auf, wenn $S \neq 0$.
 Es gelten für die Übergänge die selben Auswahlregeln $\Delta m = 0, \pm 1$.
 Da $g_J = 1$ nicht mehr gegeben ist, ergeben sich für die Übergänge die Energien von:
 \begin{align}
 	E=(m_ig_{J_i}-m_jg_{J_j})\mu_BB+E_0.
   \label{eqn:anormal}
 \end{align}
+\FloatBarrier
 
 \subsection{Vorbereitungsaufgabe}
 \begin{figure}[h!]
   \centering
   \includegraphics[width=9cm]{termschema_blau.pdf}
-  \caption{Thermschema eines ${}^3P_1\leftrightarrow {}^3S_1$ Übergangs. Der Übergang liegt im blauen Wellenlängenbereich.}
+  \caption{Termschema eines ${}^3P_1\leftrightarrow {}^3S_1$ Übergangs. Der Übergang liegt im blauen Wellenlängenbereich.}
   \label{fig:blau}
 \end{figure}
 \begin{figure}[h!]
   \centering
   \includegraphics[width=9cm]{termschema_rot.pdf}
-  \caption{Thermschema eines ${}^1D_2 \leftrightarrow {}^1P_1$ Übergangs. Der Übergang liegt im roten Wellenlängenbereich.}
+  \caption{Termschema eines ${}^1D_2 \leftrightarrow {}^1P_1$ Übergangs. Der Übergang liegt im roten Wellenlängenbereich.}
   \label{fig:rot}
 \end{figure}
-
+\FloatBarrier
 \begin{table}
 	\centering
 	\begin{tabular}{cccccc}
@@ -236,3 +236,4 @@ Da $g_J = 1$ nicht mehr gegeben ist, ergeben sich für die Übergänge die Energ
 	\caption{Hier sind die Landé-Faktoren der blauen Spektrallinie aufgeführt.}
 	\label{tab:Lande_blau}
 \end{table}
+\FloatBarrier

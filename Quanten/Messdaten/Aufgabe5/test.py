@@ -55,6 +55,11 @@ if __name__=="__main__":
     u(x1,y6)
 
 
+#    for(int i; i<k.length; i++):
+#        if (y> 2370 and y< 5100):
+#            x=x-50
+#            print(x)
+
 
 
     plt.fill_between(x1, y1, y2, color='blue', alpha=.1)

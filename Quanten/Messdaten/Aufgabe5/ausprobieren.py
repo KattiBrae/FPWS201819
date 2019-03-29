@@ -1,46 +1,165 @@
-#zwischen zwei
-if __name__=="__main__":
-    a =[2,3,4,6,7,8,9,10,12,13,14,15]     #array
-    #print (a[1])
-    print (a)
+def graph(x,y):
+    plt.plot(x,y,'x', label="Messwerte", color="red")
 
-    x=3
-    b=[0,0,0,0]
-    B=0
-    while (x>2 and x<7):
-        print (x, a[x])
-        b[B]=a[x]
+    def f(x,a,b):
+        return(a*x+b)
+    Werte, Fehler = curve_fit(f, x, y)
+    print(Werte)
+    print(np.diag(Fehler**2)**(1/4))
+    x_new = np.linspace(x[0], x[-1], 500)
+    plt.figure(1)
+    plt.plot(x_new,f(x_new,*Werte),'-', color="red")
+#############################
+def passendesX(y):
+    X=[]
+    x=0
+    while (x<len(y)):
         x=x+1
-        B=B+1
-
-    #b=a[3]
-    #a[3]=a[5]
-    #a[5]=b
-
-
-    print (a)
-    print (b)
-
-    x=3
-    B=1
-    while (x>2 and x<7):
-        a[x]=b[len(b)-B]
-        x=x+1
-        B=B+1
-    print(a)
-
-    import numpy as np
-    x, y = np.loadtxt('tabelle.txt', unpack = True , delimiter = ' ')
-    print (y)
+        X.append(x)
+    return(X)
+#############################
+def vonYzuK(y):
     c = 343.28
     l = c / y
     k=(2*np.pi)/l
-    print (k)
+    return(k)
+#############################
+def vonKzuY(k):
+    c = 343.28
+    l=(2*np.pi)/k
+    y = c / l
+    return(y)
+#############################
+def passendesY(x):
+    Y=[]
+    y=0
+    while (y<len(x)):
+        Y.append(vonKzuY(x[y]))#vonYzuK(y[x]))
+        y=y+1
+    return(Y)
+############################
+def AusDreiMachEin(a,b,c):
+    y=[]
+    for x in a:
+        y.append(x)
+    for x in b:
+        y.append(x)
+    for x in c:
+        y.append(x)
 
-    #for(i; i<a.length; i++):
+    return(y)
+##############################
+def teileArray(a,b,y):     #array y wir in 3 teile geteilt
+    Y1 = []
+    Y2 = []
+    Y3 = []
+    i=0
+    while (a>y[i]):
+        Y1.append(y[i])
+        i=i+1
 
-    #if (a[1]>3):
-    #    print("hallo")
+    while (a<y[i] and b>y[i]):
+        Y2.append(y[i])
+        i=i+1
+
+    while (b<y[i]):
+        Y3.append(y[i])
+        i=i+1
+        if (i==len(y)):
+            break
+
+    return(Y1,Y2,Y3)
+##############################
+def makeArray(a):
+    A = []
+    for b in a:
+        A.append(b)
+    return (A)
+##############################
+
+
+if __name__=="__main__":
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import sympy
+    from scipy.optimize import curve_fit
+    from pylab import figure, axes, pie, title, show
+    from numpy import NaN, Inf, arange, isscalar, asarray, array
+    import sys
+    #a =[2,3,4,6,7,8,9,10,12,13,14,15]     #array
+
+    ##print (a[1])
+    #print (a)
+
+
+    ##o=grenzen(2,7,a)
+
+    #x=3
+    #b=[0,0,0,0] # ist das selbe wie b=[0]*4 !!!
+    #B=0
+    #while (x>2 and x<7):
+    #    print (x, a[x])
+    #    b[B]=a[x]
+    #    x=x+1
+    #    B=B+1
+
+    ##b=a[3]
+    ##a[3]=a[5]
+    ##a[5]=b
+
+
+    #print (a)
+    #print (b)
+
+    #x=3
+    #B=1
+    #while (x>2 and x<7):
+    #    a[x]=b[len(b)-B]
+    #    x=x+1
+    #    B=B+1
+    #print(a)
+
+
+#
+    x, y = np.loadtxt('tabelle.txt', unpack = True , delimiter = ' ')
+    Y = makeArray(y)
+    k = vonYzuK(y)
+    K = makeArray(k)
+
+    #k ist die neue X-Achse
+    #y ist die neue y-Achse
+
+    ka,kb,kc = teileArray(60,100,K)
+    print(kb)
+    kb.reverse()
+
+    kd,ke,kf = teileArray(100,175,K)
+    kf.reverse()
+
+    h = AusDreiMachEin(ka,kb,kc)
+    #xa = passendesX(ka)
+    #xb = passendesX(kb)
+    #xe = passendesX(ke)
+    #xf = passendesX(kf)
+
+    ya = passendesY(ka)
+    yb = passendesY(kb)
+    ye = passendesY(ke)
+    yf = passendesY(kf)
+
+    graph(ka,ya)
+    graph(kb,yb)
+    graph(ke,ye)
+    graph(kf,yf)
+
+    #graph(k,y)
+
+    plt.grid()
+    plt.xlabel("BZ")
+    plt.ylabel("Frequenz / Hz")
+    plt.savefig('arraytest.pdf')
+    print("Fertig")
+
 
 
 

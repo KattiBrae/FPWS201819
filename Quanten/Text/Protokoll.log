@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  1 APR 2019 08:45
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.11.19)  1 APR 2019 14:09
  restricted system commands enabled.
 **protokoll.tex
 (./protokoll.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.273 seconds
+luaotfload | main : initialization completed in 0.246 seconds
 Babel <3.10> and hyphenation patterns for 1 language(s) loaded.
 (./lade.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2484,120 +2484,126 @@ File: RedBandSchem75.pdf Graphic file (type pdf)
 <use RedBandSchem75.pdf>
 Package luatex.def Info: RedBandSchem75.pdf used on input line 252.
 (luatex.def)             Requested size: 200.76086pt x 150.57036pt.
-(load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
-s/otl/lmroman12-bold.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-var/
-luatex-cache/generic/fonts/otl/lmroman8-bold.luc)(load luc: /Users/katti/Library
-/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-bold.luc) [18<./
-Bandlücken.pdf>] [19
+
+<Zustandsdichte.pdf, id=334, 462.52798pt x 346.89601pt>
+File: Zustandsdichte.pdf Graphic file (type pdf)
+
+<use Zustandsdichte.pdf>
+Package luatex.def Info: Zustandsdichte.pdf used on input line 273.
+(luatex.def)             Requested size: 418.25555pt x 313.70679pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18<./Bandlücken.pdf>] [19
 Missing character: There is no ⋅ (U+22C5) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman10-regular]:+tlig;!
-<./bla.pdf><./bla75.pdf><./RedBandSchem.pdf><./RedBandSchem75.pdf>]
-<A6.pdf, id=541, 462.52798pt x 346.89601pt>
+<./bla.pdf><./bla75.pdf><./RedBandSchem.pdf><./RedBandSchem75.pdf>] <A6.pdf, id
+=541, 462.52798pt x 346.89601pt>
 File: A6.pdf Graphic file (type pdf)
  <use A6.pdf>
-Package luatex.def Info: A6.pdf used on input line 291.
+Package luatex.def Info: A6.pdf used on input line 302.
 (luatex.def)             Requested size: 200.76086pt x 150.57036pt.
 
 <A7.pdf, id=542, 462.52798pt x 346.89601pt>
 File: A7.pdf Graphic file (type pdf)
  <use A7.pdf>
-Package luatex.def Info: A7.pdf used on input line 297.
+Package luatex.def Info: A7.pdf used on input line 308.
 (luatex.def)             Requested size: 200.76086pt x 150.57036pt.
- [20]
-<A8.pdf, id=546, 462.52798pt x 346.89601pt>
+ [20<./Zustandsdichte.pdf>] <A8.pdf, id=586, 462.52798pt x 346.89601pt>
 File: A8.pdf Graphic file (type pdf)
  <use A8.pdf>
-Package luatex.def Info: A8.pdf used on input line 316.
+Package luatex.def Info: A8.pdf used on input line 327.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [21<./A6.pdf><./A7.pdf>]
-<BandlückenD10.pdf, id=634, 462.52798pt x 346.89601pt>
+<BandlückenD10.pdf, id=674, 462.52798pt x 346.89601pt>
 File: BandlückenD10.pdf Graphic file (type pdf)
 
 <use BandlückenD10.pdf>
-Package luatex.def Info: BandlückenD10.pdf used on input line 332.
+Package luatex.def Info: BandlückenD10.pdf used on input line 343.
 (luatex.def)             Requested size: 200.76086pt x 150.57036pt.
 (load luc: /Users/katti/Library/texlive/2017/texmf-var/luatex-cache/generic/font
 s/otl/lmroman7-regular.luc)(load luc: /Users/katti/Library/texlive/2017/texmf-va
 r/luatex-cache/generic/fonts/otl/lmroman5-regular.luc) <BandlückenD13.pdf, id=
-635, 462.52798pt x 346.89601pt>
+675, 462.52798pt x 346.89601pt>
 File: BandlückenD13.pdf Graphic file (type pdf)
 
 <use BandlückenD13.pdf>
-Package luatex.def Info: BandlückenD13.pdf used on input line 338.
+Package luatex.def Info: BandlückenD13.pdf used on input line 349.
 (luatex.def)             Requested size: 200.76086pt x 150.57036pt.
 
-<BandlückenD16.pdf, id=636, 462.52798pt x 346.89601pt>
+<BandlückenD16.pdf, id=676, 462.52798pt x 346.89601pt>
 File: BandlückenD16.pdf Graphic file (type pdf)
 
 <use BandlückenD16.pdf>
-Package luatex.def Info: BandlückenD16.pdf used on input line 347.
+Package luatex.def Info: BandlückenD16.pdf used on input line 358.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22<./A8.pdf>] <A101.pdf, id=679, 462.52798pt x 346.89601pt>
+[22<./A8.pdf>] <A101.pdf, id=719, 462.52798pt x 346.89601pt>
 File: A101.pdf Graphic file (type pdf)
  <use A101.pdf>
-Package luatex.def Info: A101.pdf used on input line 365.
+Package luatex.def Info: A101.pdf used on input line 376.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 Overfull \vbox (18.55606pt too high) has occurred while \output is active []
 
 
 [23<./BandlückenD10.pdf><./BandlückenD13.pdf><./BandlückenD16.pdf>]
-<A112.pdf, id=818, 462.52798pt x 346.89601pt>
+<A112.pdf, id=858, 462.52798pt x 346.89601pt>
 File: A112.pdf Graphic file (type pdf)
  <use A112.pdf>
-Package luatex.def Info: A112.pdf used on input line 391.
+Package luatex.def Info: A112.pdf used on input line 402.
 (luatex.def)             Requested size: 418.25555pt x 313.70679pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24<./A101.pdf>] <max.pdf, id=862, 462.52798pt x 346.89601pt>
+[24<./A101.pdf>] <max.pdf, id=902, 462.52798pt x 346.89601pt>
 File: max.pdf Graphic file (type pdf)
  <use max.pdf>
-Package luatex.def Info: max.pdf used on input line 421.
+Package luatex.def Info: max.pdf used on input line 432.
 (luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
-Overfull \hbox (20.0773pt too wide) in paragraph at lines 421--422
+Overfull \hbox (20.0773pt too wide) in paragraph at lines 432--433
  [][] 
  []
 
-<max2.pdf, id=863, 462.52798pt x 346.89601pt>
+<max2.pdf, id=903, 462.52798pt x 346.89601pt>
 File: max2.pdf Graphic file (type pdf)
  <use max2.pdf>
-Package luatex.def Info: max2.pdf used on input line 427.
+Package luatex.def Info: max2.pdf used on input line 438.
 (luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
-Overfull \hbox (20.0773pt too wide) in paragraph at lines 427--428
+Overfull \hbox (20.0773pt too wide) in paragraph at lines 438--439
  [][] 
  []
 
-<max3.pdf, id=864, 462.52798pt x 346.89601pt>
+<max3.pdf, id=904, 462.52798pt x 346.89601pt>
 File: max3.pdf Graphic file (type pdf)
  <use max3.pdf>
-Package luatex.def Info: max3.pdf used on input line 434.
+Package luatex.def Info: max3.pdf used on input line 445.
 (luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
-Overfull \hbox (20.0773pt too wide) in paragraph at lines 434--435
+Overfull \hbox (20.0773pt too wide) in paragraph at lines 445--446
  [][] 
  []
 
-<max4.pdf, id=865, 462.52798pt x 346.89601pt>
+<max4.pdf, id=905, 462.52798pt x 346.89601pt>
 File: max4.pdf Graphic file (type pdf)
  <use max4.pdf>
-Package luatex.def Info: max4.pdf used on input line 440.
+Package luatex.def Info: max4.pdf used on input line 451.
 (luatex.def)             Requested size: 220.83817pt x 165.62952pt.
 
-Overfull \hbox (20.0773pt too wide) in paragraph at lines 440--441
+Overfull \hbox (20.0773pt too wide) in paragraph at lines 451--452
  [][] 
  []
 
@@ -2623,21 +2629,20 @@ Package logreq Info: Writing requests to 'protokoll.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32782 strings out of 494481
+ 32781 strings out of 494481
  100000,1373583 words of node,token memory allocated
- 736 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 42 attribute, 77 glue_spec, 42 attr
+ 732 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 41 attribute, 77 glue_spec, 41 attr
 ibute_list, 1 write nodes
-   avail lists: 1:4,2:1692,3:229,4:43,5:373,6:3149,7:1101,8:92,9:837,10:23,11:40
+   avail lists: 1:4,2:1694,3:229,4:43,5:373,6:3149,7:1101,8:92,9:837,10:23,11:40
 2,12:1
- 35914 multiletter control sequences out of 65536+600000
- 83 fonts using 19697319 bytes
+ 35912 multiletter control sequences out of 65536+600000
+ 80 fonts using 19302103 bytes
  67i,19n,106p,8836b,3006s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.ot
 f></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmromancaps10-reg
 ular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman10-
-italic.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman1
-2-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/lat
+italic.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-math/lat
 inmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm-m
 ath/latinmodern-math.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/publ
 ic/lm/lmroman10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/p
@@ -2645,10 +2650,10 @@ ublic/lm/lmsans10-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/pu
 blic/lm/lmromanslant10-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/ope
 ntype/public/lm/lmroman17-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/
 opentype/public/lm/lmroman12-regular.otf>
-Output written on protokoll.pdf (28 pages, 506195 bytes).
+Output written on protokoll.pdf (28 pages, 512861 bytes).
 
-PDF statistics: 1151 PDF objects out of 1200 (max. 8388607)
- 410 compressed objects within 5 object streams
+PDF statistics: 1185 PDF objects out of 1200 (max. 8388607)
+ 421 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

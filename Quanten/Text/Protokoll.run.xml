@@ -41,13 +41,13 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Protokoll.bcf</file>
+      <file>protokoll.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>Protokoll.bbl</file>
+      <file>protokoll.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -60,23 +60,23 @@
       <file>german.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>Protokoll</infile>
+      <infile>protokoll</infile>
     </cmdline>
     <input>
-      <file>Protokoll.bcf</file>
+      <file>protokoll.bcf</file>
     </input>
     <output>
-      <file>Protokoll.bbl</file>
+      <file>protokoll.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Protokoll.bbl</file>
+      <file>protokoll.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Protokoll.bcf</file>
+      <file>protokoll.bcf</file>
     </requires>
     <requires type="editable">
       <file>lit.bib</file>

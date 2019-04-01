@@ -121,7 +121,7 @@ if __name__=="__main__":
 
 
 #
-    x, y = np.loadtxt('tabelle.txt', unpack = True , delimiter = ' ')
+    y = np.loadtxt('tabelle75.txt', unpack = True , delimiter = ' ')
     Y = makeArray(y)
     k = vonYzuK(y)
     K = makeArray(k)
@@ -130,34 +130,53 @@ if __name__=="__main__":
     #y ist die neue y-Achse
 
     ka,kb,kc = teileArray(60,100,K)
-    print(kb)
     kb.reverse()
 
     kd,ke,kf = teileArray(100,175,K)
     kf.reverse()
 
     h = AusDreiMachEin(ka,kb,kc)
-    #xa = passendesX(ka)
-    #xb = passendesX(kb)
-    #xe = passendesX(ke)
-    #xf = passendesX(kf)
+    print(h)
 
-    ya = passendesY(ka)
-    yb = passendesY(kb)
-    ye = passendesY(ke)
-    yf = passendesY(kf)
+    ya,yb,yc=teileArray(2000,4000,Y)
+    yb.reverse()
+    Xa=passendesX(ya)
+    Xb=passendesX(yb)
+    Xc=passendesX(yc)
 
-    graph(ka,ya)
-    graph(kb,yb)
-    graph(ke,ye)
-    graph(kf,yf)
+    graph(Xa,ya)
+    graph(Xb,yb)
+
+
+    yd,ye,yf=teileArray(6000,8000,yc)
+    ye.reverse()
+    Xd=passendesX(yd)
+    Xe=passendesX(ye)
+    Xf=passendesX(yf)
+
+    graph(Xd,yd)
+    graph(Xe,ye)
+    #graph(Xf,yf)
+
+    yg,yh,yi=teileArray(8000,10000,yf)
+    yi.reverse()
+    Xg=passendesX(yg)
+    Xh=passendesX(yh)
+    Xi=passendesX(yi)
+
+    graph(Xh,yh)
+    graph(Xi,yi)
+
+
+
 
     #graph(k,y)
 
     plt.grid()
     plt.xlabel("BZ")
     plt.ylabel("Frequenz / Hz")
-    plt.savefig('arraytest.pdf')
+    plt.savefig('RedBandSchem75.pdf')
+    plt.show()
     print("Fertig")
 
 

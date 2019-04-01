@@ -32,10 +32,10 @@
 \contentsline {subsection}{\numberline {4.3}Aufgabe 3: Bandstrukturen}{16}
 \contentsline {subsection}{\numberline {4.4}Aufgabe 4: Bandstrukturen}{17}
 \contentsline {subsection}{\numberline {4.5}Aufgabe 5}{18}
-\contentsline {subsection}{\numberline {4.6}Aufgabe 6 und 7}{19}
-\contentsline {subsection}{\numberline {4.7}Aufgabe 8}{20}
-\contentsline {subsection}{\numberline {4.8}Aufgabe 9}{21}
-\contentsline {subsection}{\numberline {4.9}Aufgabe 10}{22}
-\contentsline {subsection}{\numberline {4.10}Aufgabe 11}{23}
-\contentsline {subsection}{\numberline {4.11}Aufgabe 12}{24}
-\contentsline {section}{\numberline {5}Diskussion}{26}
+\contentsline {subsection}{\numberline {4.6}Aufgabe 6 und 7}{20}
+\contentsline {subsection}{\numberline {4.7}Aufgabe 8}{21}
+\contentsline {subsection}{\numberline {4.8}Aufgabe 9}{22}
+\contentsline {subsection}{\numberline {4.9}Aufgabe 10}{23}
+\contentsline {subsection}{\numberline {4.10}Aufgabe 11}{24}
+\contentsline {subsection}{\numberline {4.11}Aufgabe 12}{25}
+\contentsline {section}{\numberline {5}Diskussion}{27}

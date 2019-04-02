@@ -1,3 +1,0 @@
-\begin{align*}
-  \psi(\vec{r},t)=C_{\alpha}\psi_{alpha}(\vec{r})e^{-\frac{i}{\hbar}E_{\alpha}t}+C_{\beta}\psi_{beta}(\vec{r})e^{-\frac{i}{\hbar}E_{\beta}t}
-\end{align*}

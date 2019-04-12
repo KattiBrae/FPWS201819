@@ -1,1 +1,0 @@
-Ziel des Versuches ist es die Leerlaufspannung und den Innenwiderstand verschiedener Spannungsquellen zu messen.

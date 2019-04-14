@@ -10,7 +10,14 @@ try:
   interval=int(sys.argv[1])
   filename=time.strftime("%Y%m%d%H%M%S",time.localtime())
   datafile=open(filename,'w')
-  while True:
+  a = True      #
+  i=0
+  while a:      #
+    i=i+1
+
+    if (i == 300):
+        a = False
+        #oder#   break
 
     ser.write('#013\r')
     data=''
@@ -29,7 +36,9 @@ try:
     print 'Giving:',now,value
     datafile.write(value+"\n")
     time.sleep(interval)
+
+
 except:
-    raise 	
+    raise
     print 'Finished'
     datafile.close()

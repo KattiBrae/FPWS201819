@@ -9,27 +9,29 @@ def getlenght(yA):
         a=a+len(yA[i])
     return a
 ######################################
-def getY(yA):
+#Oberfläschenspannung
+def getY(yA):                       #yA ist ein Array gefüllt mit den Arrays aus den Dateien
     y=[]
-    for i in range(len(yA)):
-        for x in yA[i]:
+    for i in range(len(yA)):        #zählt die einzelnen Arrays hoch
+        for x in yA[i]:             #speichert die einzelnen Elemente in das Array y
             y.append(x)
     return(y)
 #####################################
+#Zeit
 def getX(yA):
     X=[]
     x=0
-    while (x<getlenght(yA)):
+    while (x<getlenght(yA)):        #Array mit der Zeit, zählt mit jeder Zeile eine Sekunde hoch
         x=x+1
         X.append(x)
     return(X)
+#####################################
+#def makeArray(a):
+#    A = []
+#    for b in a:
+#        A.append(b)
+#    return (A)
 ####################################
-def makeArray(a):
-    A = []
-    for b in a:
-        A.append(b)
-    return (A)
-###################################
 def plot():
     XAchse = getX(yA)
     YAchse = getY(yA)
@@ -39,7 +41,7 @@ def plot():
     plt.ylabel(r'Oberflächenspannung $\sigma$ $mN/m^2$')
     plt.xlabel(r'Zeit / s')
     plt.grid()
-    plt.show()
+    plt.savefig('C3F8_ohneDPPA_Reihe1.pdf')
 ###################################
 
 if __name__=="__main__":
@@ -59,7 +61,8 @@ if __name__=="__main__":
     date4, b4, s4 = LeseTabelle('C3F8_ohneDPPA_1751.txt')
     date5, b5, s5 = LeseTabelle('C3F8_ohneDPPA_1999.txt')
     date6, b6, s6 = LeseTabelle('C3F8_ohneDPPA_2250.txt')
-    yA = (s1,s2,s3,s4,s5,s6)
+    date7, b7, s7 = LeseTabelle('C3F8_ohneDPPA_2500.txt')
+    yA = (s1,s2,s3,s4,s5,s6, s7)
     ###########
-    
+
     plot()

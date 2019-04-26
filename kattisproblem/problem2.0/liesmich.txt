@@ -1,0 +1,15 @@
+also, was ich machen möchte:
+
+global gesehen möchte ich im plot vier achsen haben. ja, vier achsen! also x links und rechts mit verschiedenen skalen und y oben und unten mit verschiedenen skalen
+genau genommen soll es so sein:
+		x-achse links bekommt den Oberflächendruck - der letzte Messwert aus den gigantischen arrays
+		x-achse rechts bekommt die Oberflächenspannung - das ist nur ein linearer faktor zwischen oberflächendruck und oberflächenspannung
+
+		y-achse unten bekommt die zeit, die im gigantischen array als erstes steht (genau genommen wird in einem anderen array mit jedem eintrag im gigantischen array einen hochgezählt, damit keine lücken beim stundenumbruch sind)
+		y-achse oben bekommt den reduzierten druck, also den druck, den ich für die jeweilige druckstufe eingestellt hab, durch den kondensationsdruck p_0=const.
+				Dabei habe ich mit notiert, bei welcher zeit (aus dem array) ich die ca. 5minütige messung gestartet habe. ab dieser Zeit gilt der druck, den ich eingestellt habe
+				Zwischen den 5minütigen messungen sind noch die intervalle, in denen ich das gas eingelassen habe, aber die möchte ich aus der betrachtung eigentlich raus lassen
+				dann möchte ich p/p_0 gegen den oberflächendruck plotten, so dass ich den Oberflächendruck in Abhängigkeit des reduzierten Drucks ablesen kann.
+				Das wird dann der zweite 'sichtbare plot' in dem plot
+
+für die konstruktion des ganzen hab ich mir einige dinge aus dem internet gesucht, die ich dir gerne kommentiere

@@ -4,26 +4,30 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from pylab import figure, axes, pie, title, show
 
+#großer plot
 plt.rcParams['figure.figsize'] = (20, 10)
 plt.rcParams['font.size'] = 16
 plt.rcParams['lines.linewidth'] = 2
 
 fig = plt.figure()
 
-print('Graphik1')
-print('Steigung','Y-Achsenabschnitt')
-date, unwichtig, y = np.loadtxt('C3F8_ohne_1', unpack=True,delimiter=' ')
-p, d = np.loadtxt('notes_C3F8_ohne_1.txt', unpack=True,delimiter=',')
+#print('Graphik1')
+#print('Steigung','Y-Achsenabschnitt')
 
-x = np.arange(0, len(y), 1 )
-pp0 = np.arange(0, len(y), 1 )
-s = 72.0 - y
+date, unwichtig, y = np.loadtxt('C3F8_ohne_1', unpack=True,delimiter=' ')               # gigantischer array mit  \ datum \ unwichtig \ oberflächendruck
+p, d = np.loadtxt('notes_C3F8_ohne_1.txt', unpack=True,delimiter=',')                   #kleiner array mit druck \ 'startdatum' der messung bzw genaue Uhrzeit aus dem gigantischen array, wann die 5min messzeit beginnen
 
-p0 = 7.5636
+x = np.arange(0, len(y), 1 )                                                            #array der die zeit in sekunden umrechnet/hochzählt
+pp0 = np.arange(0, len(y), 1 )                                                          #array indem ich meine druckwerte speichern will
+s = 72.0 - y                                                                            #umrechnung oberflächendruck zu oberflächenspannung
 
-druck=fig.add_subplot(111)
-spannung=fig.add_subplot(111, frame_on=False)
+p0 = 7.5636                                                                             #kondensationsdruck für dieses Gas bei 20.0°C
 
+druck=fig.add_subplot(111)                                                              #die vier achsen kommen durch zwei plots übereinander, wo bei einem die achsen normal sind und beim anderen ist die x-achse oben und die y-achse rechts
+spannung=fig.add_subplot(111, frame_on=False)                                           #später siehst du vielleicht, dass ich es tatsächlich auch zwei mal plotte - das wollte ich zwar eigentlich nicht, aber es liegt (natürlich) genau passend übereinander, man sieht also die doppelte linie nicht, und das war mir dann auch egal
+
+
+#############mein versuch daran, in den array pp0 die drücke zu speichern, die bei der jeweiligen zeit/beim jeweiligen oberflächendruck anlagen##################
 i=0
 j=0
 for i in range(len(date)):
@@ -47,14 +51,14 @@ for i in range(len(date)):
 
 
 #plt.figure(1)
-druck.plot(x,y,'-')
+druck.plot(x,y,'-')                                         #erster plot mit den normalen achsen
 druck.set_xlabel('Zeit t / s')
 druck.set_ylabel('Oberflächendruck ' r'$\pi$ / $\frac{mN}{m}$' )
 druck.tick_params(axis='x')
 druck.tick_params(axis='y')
 
 #spannung = druck.twinx()
-spannung.plot(x,s,'-')
+spannung.plot(x,s,'-')                                      #zweiter plot mit den anderen achsen
 spannung.invert_yaxis()
 spannung.set_ylabel('Oberflächenspannung ' r'$\sigma$ / $\frac{mN}{m}$' )
 spannung.xaxis.tick_top()

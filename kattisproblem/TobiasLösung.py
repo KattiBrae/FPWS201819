@@ -24,6 +24,7 @@ def getX(yA):
     while (x<getlenght(yA)):        #Array mit der Zeit, zählt mit jeder Zeile eine Sekunde hoch
         x=x+1
         X.append(x)
+    print(X)
     return(X)
 #####################################
 #def makeArray(a):

@@ -2,47 +2,14 @@
 def LeseTabelle(Name): #Funktion u
     a, b = np.loadtxt(Name, unpack=True,delimiter=' ')
     return (a,b)
-#######################################
-def getlenght(yA):
-    a=0
-    for i in range(len(yA)):
-        a=a+len(yA[i])
-    return a
-######################################
-#Oberfläschenspannung
-def getY(yA):                       #yA ist ein Array gefüllt mit den Arrays aus den Dateien
-    y=[]
-    for i in range(len(yA)):        #zählt die einzelnen Arrays hoch
-        for x in yA[i]:             #speichert die einzelnen Elemente in das Array y
-            y.append(x)
-    return(y)
-#####################################
-#Zeit
-def getX(yA):
-    X=[]
-    x=0
-    while (x<getlenght(yA)):        #Array mit der Zeit, zählt mit jeder Zeile eine Sekunde hoch
-        x=x+1
-        X.append(x)
-    print(X)
-    return(X)
+
 #####################################
 def makeArray(a):
     A = []
     for b in a:
         A.append(b)
     return (A)
-####################################
-def plot():
-    XAchse = getX(yA)
-    YAchse = getY(yA)
 
-    plt.plot(XAchse,YAchse,'x')
-    #plt.legend()
-    plt.ylabel(r'Oberflächenspannung $\sigma$ $mN/m^2$')
-    plt.xlabel(r'Zeit / s')
-    plt.grid()
-    plt.savefig('C3F8_ohneDPPA_Reihe1.pdf')
 ###################################
 
 if __name__=="__main__":
@@ -101,45 +68,6 @@ if __name__=="__main__":
         #print(A[j+9] ,C[i+4],B[j+9] ,D[i+3])
         #print(A[j+10],C[i+4],B[j+10],D[i+3])
         #print(A[j+11],C[i+5],B[j+11],D[i+4])
-
-
-
-    print(C)
-    C.append(C[-1]+1)
-    C.append(C[-1]+1)
-    print(C)
-
-    i=0
-    j=0
-    Druck=[]
-    print(len(A))
-    while (i+1<len(C)):
-        while (C[i+1]>A[j]):
-            Druck.append(D[i])
-            print (i,j)
-            j=j+1
-
-        i=i+1
-    ###########
-    print(Druck)
-
-
-
-#Solange wie C kleiner ist als A Soll der wert von D in ein Array
-    druck = []
-    i=0
-    j=0
-    while (i<len(C)):
-        if (i==0):
-            druck.append(D[0])
-            break
-        if (C[i]<A[i+1] and C[i]>A[i-1]):
-            druck.append(D[j])
-            break
-        if (C[i]>=A[i]):
-            j=j+1
-            break
-        i=i+1
 
     print(druck)
     '''

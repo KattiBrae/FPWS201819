@@ -100,3 +100,6 @@ dsdO2m=I[0]/(A2*n*2*10**(-6)*dO)
 dsdO4m=I[1]/(A2*n*4*10**(-6)*dO)
 print("dsd02m : ", dsdO2m)
 print("dsd04m : ", dsdO4m)
+
+#Z-Abhängigkeit
+Ordnungszahl = np.array([79, 13, 83]) # Gold, Alu, Bismuth

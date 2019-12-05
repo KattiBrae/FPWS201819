@@ -1,0 +1,4 @@
+Die Rutherford-Streuung beschreibt die Streuung von $\alpha$-Teilchen an einer Goldfolie.
+Dieser Versuch führte Anfang des 20. Jahrhunderts zur Formulierung des Rutherford'schen Atommodells.
+Dieses Modell zeichnet sich durch einen kleinen, schweren, positiv geladenen Atomkern in einer großen, leichten Hülle aus negativ geladenen Elektronen aus.
+Im Rahmen diesem Experiments wird unter anderem der Differenzielle Wirkungsquerschnitt der Rutherford-Streuung und die Foliendicke über die Bethe-Bloch-Gleichung untersucht. 

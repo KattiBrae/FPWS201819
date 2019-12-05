@@ -1,4 +1,0 @@
-Foliendicke Zählrate #Gold, 1 Grad, 300s
-mu
-2	1226/(300-168)
-4	26/300

@@ -1,3 +1,6 @@
-Alu Bismut Gold #300s, 4.2grad
-3   2      4 #mu m
-523 3515   551
+Material Ordnungszahl Dicke Ereignisse Zeit Grad
+- - mu_meter - s °
+Aluminium 19 3 523 300 4.2
+Bismut 79 2 551 300 4.2
+Gold 83 4 3515 300 4.2
+

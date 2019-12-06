@@ -50,7 +50,7 @@ Daraus ergeben sich die Parameter
     a_\text{mit} &=  (-5,048 \pm 0,517) \cdot 10^{-2} \si{\volt\per\milli\per\bar} \\
     b_\text{mit} &=  (16,144 \pm 0,948) \si{{\milli\bar}} . \\
 \end{align*}
-Dabei gehören die Parameter mit dem Index $\texttt{ohne}$ zu Versuchsreihe ohne eingesetzter Goldfolie, während die Parameter mit dem Index $\texttt{mit}$ zu Versuchsreihe mit eingesetzter Goldfolie gehören. Die dazugehörigen Graphen befinden sich in Abbildung \ref{fig:geraden}
+Dabei gehören die Parameter mit dem Index $\texttt{ohne}$ zu Versuchsreihe ohne eingesetzter Goldfolie, während die Parameter mit dem Index $\texttt{mit}$ zu Versuchsreihe mit eingesetzter Goldfolie gehören. Die dazugehörigen Graphen befinden sich in Abbildung \ref{fig:geraden}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{data/plots/gerade.pdf}
@@ -61,12 +61,12 @@ Dabei gehören die Parameter mit dem Index $\texttt{ohne}$ zu Versuchsreihe ohne
 Um nun mithilfe der Bethe-Bloch Formel \eqref{eqn:bethebloch} auf den Energieverlust schließen zu können, wird zunächst ein Umrechnungsfaktor $\kappa$ von Spannung und Energie bestimmt. Die Energie der $\alpha$-Teilchen ist aus der Theorie bekannt und gegeben mit $E_\alpha = \SI{5,486}{\mega \electronvolt}$.
 Damit folgt 
 \begin{equation}
-    \kappa = \frac{E_\alpha}{b_ohne} = (0,340 \pm 0.020) \si{\mega \electronvolt \per \volt}, 
+    \kappa = \frac{E_\alpha}{b_\text{ohne}} = (0,340 \pm 0,020) \si{\mega \electronvolt \per \volt}, 
 \end{equation}
 wobei die Unsicherheit $\sigma_\kappa$ aus der Gaußschen Fehlerfortpflanzung $\sigma_\kappa = \frac{E_\alpha}{b_\text{ohne}}\sigma_{b_\text{ohne}}$ folgt. \\
 Der Energieverlust beträgt somit
 \begin{equation}
-    \Delta E = \kappa \cdot (b_\text{ohne}-b_\text{mit}) = \SI{2,96(25)}{\mega {electronvolt}}
+    \Delta E = \kappa \cdot (b_\text{ohne}-b_\text{mit}) = \SI{2,96(25)}{\mega \electronvolt}
 \end{equation} 
 deren Unsicherheit $\sigma_E$ aus der Gaußschen Fehlerfortpflanzung
 \begin{align*}
@@ -83,7 +83,7 @@ folgt für die Dicke $d$ der Folie
 \end{equation*} 
 
 \subsection{Untersuchung des differentiellen Wirkungsquerschnittes einer dünnen Goldfolie} \label{chap:dsdO}
-Im folgenden wird der differentielle Wirkungsquerschnitt einer $\SI{2}{\micro \meter}$ dünnen Goldfolie untersucht. Dieser lässt sich experimentell mit der Formel 
+Im folgenden wird der differentielle Wirkungsquerschnitt einer $\SI{2}{\micro \meter}$ dünnen Goldfolie untersucht. Dieser lässt sich experimentell mit der Formel \cite{Kroeninger}
 \begin{equation}
     \left(\frac{\symup{d}\sigma}{\symup{d}\Omega}\right)_\text{exp} = \frac{I}{A \cdot n \cdot d \cdot \Omega}
     \label{eqn:dsdO_exp}
@@ -91,6 +91,7 @@ Im folgenden wird der differentielle Wirkungsquerschnitt einer $\SI{2}{\micro \m
 \begin{center}
     \tiny{($n$ $\hat=$ Teilchendichte, $d$ $\hat=$ Teilchendichte, $\Omega = \frac{\pi r^2}{R^2} \hat{=}$ Vom Detektor abgedeckter Raumwinkel )}
 \end{center}
+bestimmen. \\
 Mit der bereits bestimmten Aktivität $\SI{15.64(48)}{\kilo\becquerel}$ ergeben sich die Werte in Tabelle \ref{tab:diffWQ}. \\
 Die gemessenen und theoretischen Werte sind zusätzlich in Abbildung \ref{fig:ruther} gegenübergestellt.
 \input{data/tables/Tex/diffWQ.tex}
@@ -98,7 +99,8 @@ Die gemessenen und theoretischen Werte sind zusätzlich in Abbildung \ref{fig:ru
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{data/plots/Rutherford.pdf}
-    \caption{Differentieller und theoretischer Wirkungsquerschnitt $\frac{\symup{d}\sigma}{\symup{d}\Omega}$ gegen den Winkel $\theta$ aufgetragen. Die Unsicherheit wurde mit dem Faktorr 100 multipliziert, damit dieser noch sichtbar ist.}
+    \caption{Differentieller und theoretischer Wirkungsquerschnitt $\frac{\symup{d}\sigma}{\symup{d}\Omega}$ gegen den Winkel $\theta$ aufgetragen. Die Unsicherheit wurde mit dem Faktor 100 multipliziert, damit dieser noch sichtbar ist.}
+    \label{fig:ruther}
 \end{figure}
 
 \subsection{Untersuchung des Einflusses der Mehrfachstreuung}
@@ -120,4 +122,6 @@ Die Ergebnisse befinden sich in Tabelle \ref{tab:zWerte2} und sind nocheinmal gr
 \begin{figure}
     \centering
     \includegraphics[width = 0.8\textwidth]{data/plots/atomic_number.pdf}
+    \caption{Grafische Darstellung der differentiellen Wirkungsquerschnitte bei festem Winkel $theta$ und verschiedenen Ordnungszahlen $Z$.}
+    \label{fig:zWerte2}
 \end{figure}

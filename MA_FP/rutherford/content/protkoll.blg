@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[1] Config.pm:307> INFO - Logfile is 'protkoll.blg'
+[109] biber-darwin:315> INFO - === Fr Dez  6, 2019, 08:47:28
+[393] Utils.pm:209> ERROR - Cannot find control file 'protkoll.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[393] Biber.pm:114> INFO - ERRORS: 1

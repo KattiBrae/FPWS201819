@@ -1,1 +1,39 @@
-Hier könnte ihre Werbung stehen.
+\subsection{Energiekalibration}
+\begin{itemize}
+	\item Spektrum geplottet, Counts gegen Channel
+	\item Errorbars?
+	\item Peaks finden lassen, Peaks markiert
+	\item Literaturwerte Energien rausgesucht mit mind. 1\% Emissionswahrscheinlichkeit (Quelle %http://www.nucleide.org/DDEP_WG/Nuclides/Eu-152_tables.pdf 2019-12-11, 22:35)
+	\item Spektrallinien $E$ normiert mit dem größten Wert der Energie: $\frac{E}{max(E)}$
+	\item Channel normiert mit dem letzten Peak $\frac{channel}{max(channel)}$
+	\item Daten mit normierter x-Achse geplottet: norm(E)-0-Diagramm, norm(channel)-Count-Diagramm
+	\item Nicht vorhandene Spektrallinien aus E und doppelte aus Peaks entfernt
+	\item Peak-Channel gegen Energien geplottet, Fit:
+\end{itemize}
+\begin{equation*}
+	E = m \cdot \text{Channel} + n
+\end{equation*}
+\begin{align*}
+	m = \SI{0.20726(4)}{\kilo \electronvolt \per Channel} && n = \SI{-1.22(17)}{\kilo \electronvolt}
+\end{align*}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/spektrum_europium.pdf}
+  \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks.}
+  \label{fig:eu_spect}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/spektrum_europium_kali.pdf}
+  \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks und den zugehörigen Literaturwerten nach \cite{eu_energie}.}
+  \label{fig:eu_spect_kali}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/kalibration.pdf}
+  \caption{Ausgleichsrechnung zur Kalibration mithilfe des $^{152}Eu$-Spektrums.}
+  \label{fig:kali}
+\end{figure}

@@ -1,1 +1,61 @@
-Hier könnte Ihre Werbung stehen.
+\section{Theorie}
+\subsection{Wechselwirkung in Materie}
+Wenn Photonen in den germanium-Detektor einbringen, geben sie ihre Energie hauptsächlich durch drei Effekte an diesem ab. Diese Effekte - Paarbildung, Comptonstreuung und Photoeffekt - werden in den folgenden Unterkapiteln erleutert. Welcher dieser Effekte jedoch auftritt hängt stark von der Kernladungszahl $Z$ des Detektors sowie der Energie $E_\gamma$ der Photonen ab. \\
+Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kann die Anzahl der Wechselwirkungen 
+\begin{equation}
+    N(D) = N_0 n \sigma \symup{d}x
+\end{equation}
+pro Zeiteinheit bestimmt werden. 
+
+
+\subsubsection{Comptoneffekt}
+Wie im Feynman-Diagramm in Abbildung \ref{fig:compton} zu sehen ist, beschreibt der Compton-Effekt das elastische Stoßen eines Photons mit einem ruhenden Elektron.
+\begin{figure}[H]
+\centering
+\feynmandiagram [horizontal=f2 to f3] {
+  i1 [particle=\(e\)] f1 -- [fermion] f2  -- [fermion, edge label=\(e\),] f3 -- [fermion] f4 i4 [particle=\(e\)],
+  f2 -- [photon] p1 [particle=\(\gamma\)],
+  f3 -- [photon] p2 [particle=\(\gamma '\)],
+};
+\caption{Feynman-Diagramm zum Comptoneffekt}
+\label{fig:compton}
+\end{figure}
+Dabei gibt das Photon mit Wellenlänge $\lambda$ Energie an das Elektron ab, wodurch es zu einer Wellenlängenänderung des Photons kommt:
+\begin{equation}
+  \Delta \lambda = \frac{h}{mc}\left( 1-\cos{\theta} \right)
+\end{equation}
+\begin{center}
+    \tiny {($\Delta \lambda \: \hat{=} \: \lambda - \lambda '$, $ \lambda '\: \hat{=} \:\text{Wellenlänge des Photons nach dem Stoß}$, $h=\: \hat{=} \:\text{Planck'sches Wirkungsquantum}$,$\theta\: \hat{=} \:\text{Streuwinkel}$, $m_\text{e} \: \hat{=} \:\text{Masse des Elektrons}$, $c \: \hat{=} \: \text{Lichtgeschwindigkeit}$)}
+\end{center}
+Da sowohl $m$, $c$, als auch $h$ Konstanten sind, hängt die Wellenlängenänderung und somit auch die Energie des Photons nach dem Stoß allein vom Streuwinkel ab.\\
+Für die Energien $E_{\gamma'}$ des Photons und $E_e$ des Elektrons nach dem Stoß lassen sich mithilfe von Energie- und Impulserhaltung die Relationen 
+\begin{align}
+    E_{\gamma'} &= E_\gamma \frac{1}{1+\epsilon (1-cos(\theta))}\\
+    E_e &= E_\gamma \frac{1-cos(\theta)}{1+\epsilon (1-cos(\theta))}
+\end{align} 
+\begin{center}
+    \tiny{($\epsilon = \frac{E_\gamma}{mc^2}$)}
+\end{center}
+herleiten. Bei einem maximalen Streuwinkel von $\theta = \pi$ kommt es zu einem Energieübertrag von 
+\begin{equation}
+    E_\text{EL} = E_\gamma \frac{2 \epsilon}{1 + 2 \epsilon} < E_\gamma .
+\end{equation}
+Somit kann das Photon nicht seine gesamte Energie übertragen.
+
+\subsubsection{Paarbildung}
+Paarbildung bezeichnet das Entstehen von Elektron und Positron aus einem einzelnen Photon. Damit dieser Prozess stattfindet, muss für die Energie des Photons $E_\gamma \ge 2m_e \cdot c^2 \approx 1,02 \mathrm{MeV}$ gelten. Zusätzlich kann die Paarbildung nur in Anwesenheit weiterer Stoßpartner stattfinden, da sonst die Impulserhaltung verletzt wird. Die Energie, die nicht zur Erzeugung des Elektron-Positron-Paares benötigt wird, verteilt sich gleichmäßig auf dieses. 
+Ein eine schmematische Darstellung der Paarbildung ist in Abbildung \ref{fig:pair} zu sehen.
+\begin{figure}[H]
+\centering
+\feynmandiagram [horizontal=f2 to f3] {
+  f2  -- [photon, edge label=\(\gamma\),] f3 -- [fermion] f4 [particle=\(e\)],
+  f3 -- [anti fermion] p2 [particle=\(e\)],
+};
+\caption{Schmematische Darstellung der Paarbildung}
+\label{fig:pair}
+\end{figure}
+Dabei ist es möglich, dass Elektron und Positron rekombinieren und dabei zwei Photonen erzeugen. Dabei ist es möglich, dass diese einen Teil der Energie $E_\gamma$ aus dem Detektor tragen. 
+
+\subsubsection{Photoeffekt}
+Der Photoeffekt beschreibt das Herauslösen eines Hüllenelektrons durch ein Photon. Dieses wird dabei vom Elektron absorbiert. Zusätzlich nimmt ein Elektron aus einer höheren Schale den Platz des herausgelösten Elektrons ein und emmitiert wieder ein Photon.
+Dabei muss die Energie des Photons größer als die Bindungsenergie des herauszulösenden Elektrons sein.

@@ -44,11 +44,15 @@
 mit $t = \SI{605484000 (54000)}{s}$
 und $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ %http://www.nucleide.org/Laraweb/index.php 2019-12-12 18:40
 \begin{equation*}
-	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545 (29)}{\per \second}
+	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
 \end{equation*}
 mit $r=\SI{22.5e-03}{m}$
-und $h = \SI{65e-03}{m}$
+und $h = \SI{80e-03}{m}$
 \begin{align*}
 	\frac{r}{h} = \tan{( \varphi / 2 )} \Leftrightarrow \varphi = 2 \arctan{(\frac{r}{h})} \\
-	\Omega = 4 \pi \sin^2{\frac{\varphi}{2 \cdot 4}} = 4 \pi \sin^2{ \left( \frac{1}{4} \arctan{(r/h)} \right)}
+	\frac{\Omega}{4 \pi} = \sin^2{\frac{\varphi}{2 \cdot 4}} =  \sin^2{ \left( \frac{1}{4} \arctan{(r/h)} \right)} = \SI{0.0069}{sr}
 \end{align*}
+und
+\begin{equation}
+	Q = \frac{4 \pi N_{\text{Peak}}}{\Omega A T P}
+\end{equation}

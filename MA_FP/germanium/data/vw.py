@@ -61,7 +61,7 @@ plt.ylabel('Häufigkeit', labelpad=8)                     # Label Oberflächensp
 #plt.yscale('log')
 
 plt.grid()                                                                                          # Gitternetz
-plt.savefig('spektrum_europium_kali.pdf')
+plt.savefig('vollenergienachweiswahrscheinlichkeit.pdf')
 
 
 

@@ -1,3 +1,4 @@
+\section{Auswertung}
 \subsection{Energiekalibration}
 \begin{itemize}
 	\item Spektrum geplottet, Counts gegen Channel
@@ -17,49 +18,67 @@
 	m = \SI{0.20726(4)}{\kilo \electronvolt \per Channel} && n = \SI{-1.22(17)}{\kilo \electronvolt}
 \end{align*}
 
+\input{content/tables/kalibration.tex}
+
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/images/spektrum_europium.pdf}
+  \includegraphics[width=\textwidth]{content/images/spektrum_europium.pdf}
   \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks.}
   \label{fig:eu_spect}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/images/spektrum_europium_kali.pdf}
-  \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks und den zugehörigen Literaturwerten nach %\cite{eu_energie}
-  .}
+  \includegraphics[width=\textwidth]{content/images/spektrum_europium_kali.pdf}
+  \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks und den zugehörigen Literaturwerten nach \cite{nucleide}.}
   \label{fig:eu_spect_kali}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{content/images/kalibration.pdf}
+  \includegraphics[width=\textwidth]{content/images/kalibration.pdf}
   \caption{Ausgleichsrechnung zur Kalibration mithilfe des $^{152}Eu$-Spektrums.}
   \label{fig:kali}
 \end{figure}
 
-
+\FloatBarrier
 \subsection{Vollenergienachweiswahrscheinlichkeit}
 mit $t = \SI{605484000 (54000)}{s}$
 und $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ %http://www.nucleide.org/Laraweb/index.php 2019-12-12 18:40
-\begin{equation*}
+\begin{equation}
 	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
-\end{equation*}
+	\label{result:aktivität}
+\end{equation}
 mit $r=\SI{22.5e-03}{m}$
 und $h = \SI{80e-03}{m}$
 \begin{align*}
 	\frac{r}{h} = \tan{( \varphi / 2 )} \Leftrightarrow \varphi = 2 \arctan{(\frac{r}{h})} \\
 	\frac{\Omega}{4 \pi} = \sin^2{\frac{\varphi}{2 \cdot 4}} =  \sin^2{ \left( \frac{1}{4} \arctan{(r/h)} \right)} = \SI{0.0069}{sr}
+	\label{result:raumwinkel}
 \end{align*}
 und
 \begin{equation}
-	Q = \frac{4 \pi N_{\text{Peak}}}{\Omega A T P}
+	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}
 \end{equation}
 
-\begin{equation}
-Z = a\sqrt{2\pi\sigma^2} \label{eq:I_Gaus}
-\end{equation}
-\begin{equation}
-	f (x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)}
-\end{equation}
+\input{content/tables/vollenergienachweis.tex}
+
+\begin{itemize}
+	\item Unterteilung der Daten in die Abschnitte um die Peaks (channel und counts werden passend abgeschnitten)
+	\item Über die Peaks wird eine Gaußkurve gelegt $f (x) = \frac{a}{\sqrt{2 \pi \sigma^2}} \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)}+b$
+	\item Klappt bei den meisten Peaks ganz gut, aber manchmal ist der Fehler des Parameters $a$ größer als a :|
+	\item Alternative für Inhalt: Aufsummation der Counts in den jeweiligen Intervallen, Fehler über den Poisson-Fehler ($N \pm \sqrt{N}$)
+	\item $Q$ berechnet mit $A$ aus \eqref{result:aktivität}, $\sfrac{\Omega}{4 \pi}$ aus \eqref{result:raumwinkel},
+	gesamte Messzeit $T=\SI{2134}{s}$, Emissionswahrscheinlichkeit $P_{E_{\gamma}}$ aus \cite{nucleide}, Peakinhalt $N_{\text{Peakinhalt}}$
+	\item $Q$ gegen $E$ aufgetragen, $Q=a E^{b} + c$, Parameter:
+\end{itemize}
+\begin{align*}
+	a = \SI{0.113 (55)}{\frac{1}{J}}, && b = \SI{-0.36 (17)}{\nothing}, && c = \SI{-0.0077 (59)}{\nothing}
+\end{align*}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
+  \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.}
+  \label{fig:vw}
+\end{figure}

@@ -16,7 +16,7 @@ plt.rcParams['lines.linewidth'] = 2
 
 counts = np.loadtxt('europium.txt', unpack=True,delimiter=' ')
 channel = np.arange(0, len(counts), 1 )
-error=np.sqrt(counts)
+error=np.sqrt(counts)/np.sqrt(6801)
 
 E, P = np.loadtxt('europium_literatur.txt', unpack=True,delimiter=' , ')
 
@@ -39,9 +39,9 @@ for i in range(len(channel)):
         else:
             pass
 
+#plt.errorbar(channel/max(peaks_channel), counts, yerr=error, fmt="none", capsize=5, capthick=2, ms=1, color='C2', alpha=0.7, label='Unsicherheit')
 plt.plot(E_norm, np.zeros(len(E),)-40, 'x', markersize='10', markeredgewidth='2', color='C2', label='Literaturwerte')
-plt.plot(channel/max(peaks_channel), counts, '-', linewidth='1', color='C0', label='Daten')
-#plt.errorbar(channel, counts, yerr=error, fmt="none", capsize=5, capthick=1, ms=5, color='C2', label='Unsicherheit')
+plt.plot(channel/max(peaks_channel), counts, '-', linewidth='1', drawstyle='steps', color='C0', label='Daten')
 plt.plot(peaks_channel_norm, peaks_counts, 'x', markersize='10', markeredgewidth='2', color='C1', label='Peaks')
 #plt.plot(peaks_channel_norm, np.zeros(len(peaks_counts)), 'x', markersize='10', markeredgewidth='2', color='C1')
 

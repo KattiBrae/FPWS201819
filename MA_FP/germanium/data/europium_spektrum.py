@@ -40,7 +40,7 @@ for i in range(len(channel)):
             pass
 #
 #plt.plot(E_norm, np.zeros(len(E),)-40, 'x', markersize='10', markeredgewidth='2', color='C2', label='Literaturwerte')
-plt.plot(channel, counts, '-', linewidth='1', color='C0', label='Daten zu ' r'$^{152}Eu$')
+plt.plot(channel, counts, '-', linewidth='1', drawstyle='steps', color='C0', label='Daten zu ' r'$^{152}Eu$')
 #plt.errorbar(channel, counts, yerr=error, fmt="none", capsize=5, capthick=1, ms=5, color='C2', label='Unsicherheit')
 plt.plot(peaks_channel, peaks_counts, 'x', markersize='10', markeredgewidth='2', color='C1', label='Peaks')
 #plt.plot(peaks_channel_norm, np.zeros(len(peaks_counts)), 'x', markersize='10', markeredgewidth='2', color='C1')

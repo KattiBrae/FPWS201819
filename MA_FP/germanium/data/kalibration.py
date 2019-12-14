@@ -16,7 +16,6 @@ plt.rcParams['lines.linewidth'] = 2
 
 counts = np.loadtxt('europium.txt', unpack=True,delimiter=' ')
 channel = np.arange(0, len(counts), 1 )
-error=np.sqrt(counts)
 
 E, P = np.loadtxt('europium_literatur.txt', unpack=True,delimiter=' , ')
 
@@ -31,6 +30,9 @@ peaks_channel = [  594,  1187, 1667, 1988, 2149, 3765, 4655, 5245, 5371, 6801]
 for b in peaks_channel:
     peaks_channel_norm.append(b/max(peaks_channel))
 
+error=np.sqrt(peaks_channel)
+
+
 peaks_counts = []
 for i in range(len(channel)):
     for j in range(len(peaks_channel)):
@@ -41,7 +43,7 @@ for i in range(len(channel)):
 
 #plt.plot(E_norm, np.zeros(len(E),)-40, 'x', markersize='10', markeredgewidth='2', color='C2', label='Literaturwerte')
 #plt.plot(channel/max(peaks_channel), counts, '-', linewidth='1', color='C0', label='Daten')
-##plt.errorbar(channel, counts, yerr=error, fmt="none", capsize=5, capthick=1, ms=5, color='C2', label='Unsicherheit')
+plt.errorbar(peaks_channel, E, yerr=error, fmt="none", capsize=5, capthick=2, ms=1, color='C2', label='Unsicherheit')
 #plt.plot(peaks_channel_norm, peaks_counts, 'x', markersize='10', markeredgewidth='2', color='C1', label='Peaks')
 ##plt.plot(peaks_channel_norm, np.zeros(len(peaks_counts)), 'x', markersize='10', markeredgewidth='2', color='C1')
 #

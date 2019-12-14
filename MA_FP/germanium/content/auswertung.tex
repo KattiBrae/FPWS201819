@@ -44,7 +44,7 @@
 \FloatBarrier
 \subsection{Vollenergienachweiswahrscheinlichkeit}
 mit $t = \SI{605484000 (54000)}{s}$
-und $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ %http://www.nucleide.org/Laraweb/index.php 2019-12-12 18:40
+und $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ \cite{nucleide}
 \begin{equation}
 	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
 	\label{result:aktivität}
@@ -60,6 +60,13 @@ und
 \begin{equation}
 	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}
 \end{equation}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{content/images/einzelnergaussfit_0.pdf}
+  \caption{Vergrößerung des ersten Peaks mit Ausgleichsfunktion einer Gaußkurve zur Veranschaulichung der Gaußpeaks.}
+  \label{fig:vw}
+\end{figure}
 
 \input{content/tables/vollenergienachweis.tex}
 
@@ -79,6 +86,18 @@ und
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
-  \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.}
+  \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.
+  Die Fehlerbereiche verschwinden hinter den Datenpunkten und sind zur Übersichtlichkeit nicht aufgeführt.}
   \label{fig:vw}
 \end{figure}
+
+\subsection{Monoenergetisches Spektrum Cäsium}
+Suche
+\begin{itemize}
+	\item Energie des Strahlers (Photo-Energie -> Gauss fitten? mu entspricht dann dem Channel und der Channel einer Energie)
+	\item Halbwertsbreite fitten
+	\item Zehntelwertsbreite fitten
+	\item Comptonkante ausmessen
+	\item Rückstreulinie ausmessen
+	\item Inhalte des Peaks und des Compton-Kontinuums ausmessen (aufsummieren, aaaaber... Anleitung!)
+\end{itemize}

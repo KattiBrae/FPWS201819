@@ -41,15 +41,18 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
 
 
 
-    ax.plot(tmp_x, tmp_y, 'x')
+    plt.grid()
+
     x_new = np.linspace(tmp_x[0], tmp_x[-1], 5000, endpoint=True)
+#    ax.step(tmp_x,tmp_y, where='mid', color='C0', alpha=0.6)
+    ax.fill_between(tmp_x, 0, tmp_y, step='mid', alpha=0.4)
+    ax.plot(tmp_x, tmp_y, 'x', color='C0', drawstyle='steps', markersize=8, markeredgewidth=2)
     ax.plot(x_new,gaus(x_new,*params),'-', color='C1', label='Fit - Normalverteilung')
 
     ax.legend(fancybox=True, ncol=1)
     ax.set_xlabel('Channel', labelpad=2)
     ax.set_ylabel('Häufigkeit', labelpad=8)
 
-    plt.grid()
 
     plt.savefig('einzelnergaussfit_%s.pdf' %peakno)
 
@@ -69,7 +72,7 @@ def vollE(E, Q, dQ):
 
     x_new = np.linspace(E[0], E[-1], 5000, endpoint=True)
     plt.plot(x_new,f(x_new,*params),'-', color='C1', label='Ausgleichsrechnung nach: $Q = aE^{b}+c$')
-#    plt.errorbar(E, Q, yerr=dQ, fmt="none", capsize=5, capthick=1, ms=5, color='C2', label='Unsicherheit')
+    plt.errorbar(E, Q, yerr=dQ, fmt="none", capsize=5, capthick=1, ms=5, color='C2', label='Unsicherheit')
     plt.plot(E, Q, 'x', markersize=8, markeredgewidth=2, label='Daten')
 
 

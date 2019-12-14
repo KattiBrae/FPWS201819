@@ -91,12 +91,25 @@ und
   \label{fig:vw}
 \end{figure}
 
+\FloatBarrier
 \subsection{Monoenergetisches Spektrum Cäsium}
 Suche
 \begin{itemize}
 	\item Energie des Strahlers (Photo-Energie -> Gauss fitten? mu entspricht dann dem Channel und der Channel einer Energie)
+	\item Fit:
+	\begin{equation*}
+		f(x) = \frac{a}{\sqrt{2 \pi \sigma^2}} \, \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)} + b
+	\end{equation*}
+	\item Parameter
+	\begin{align*}
+		\mu = \SI{3196.29 (3)}{\nothing} && \sigma = \SI{4.35 (3)}{\nothing} && a = \SI{9011 (44)}{\nothing} && b = \SI{6.1 (1)}{\nothing}
+	\end{align*}
 	\item Halbwertsbreite fitten
-	\item Zehntelwertsbreite fitten
+	\item Zehntelwertsbreite fitten, $FWHM/FWTM(Theorie) = 0.549$, in den Daten: $FWHM/FWTM = 0.526$
+	\item
+	\begin{align*}
+		FWHM = 10 && FWTM = 19
+	\end{align*}
 	\item Comptonkante ausmessen
 	\item Rückstreulinie ausmessen
 	\item Inhalte des Peaks und des Compton-Kontinuums ausmessen (aufsummieren, aaaaber... Anleitung!)

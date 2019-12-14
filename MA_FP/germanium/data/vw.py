@@ -33,7 +33,7 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
 
 
     def gaus(x,a,mu,std,c):
-        return a/(2*const.pi*std**2) * np.exp(-(x-mu)**2/(2*std**2))+c
+        return a/np.sqrt((2*const.pi*std**2)) * np.exp(-(x-mu)**2/(2*std**2))+c
 
     params,var = curve_fit(gaus,x,y,p0=[amp,mean,sigma,off], maxfev=5000)
     fehler = np.sqrt(np.diag(var))
@@ -41,13 +41,13 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
 
 
 
-    plt.grid()
+    plt.grid(alpha=0.3)
 
     x_new = np.linspace(tmp_x[0], tmp_x[-1], 5000, endpoint=True)
 #    ax.step(tmp_x,tmp_y, where='mid', color='C0', alpha=0.6)
     ax.fill_between(tmp_x, 0, tmp_y, step='mid', alpha=0.4)
-    ax.plot(tmp_x, tmp_y, 'x', color='C0', drawstyle='steps', markersize=8, markeredgewidth=2)
-    ax.plot(x_new,gaus(x_new,*params),'-', color='C1', label='Fit - Normalverteilung')
+    ax.plot(tmp_x, tmp_y, 'x', color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten')
+    ax.plot(x_new,gaus(x_new,*params),'-', color='C1', label='Normalverteilung')
 
     ax.legend(fancybox=True, ncol=1)
     ax.set_xlabel('Channel', labelpad=2)
@@ -80,7 +80,7 @@ def vollE(E, Q, dQ):
     plt.xlabel('$E$ in keV', labelpad=2)
     plt.ylabel('$Q$', labelpad=8)
 
-    plt.grid()
+    plt.grid(alpha=0.3)
 
     plt.savefig('vollenergienachweiswahrscheinlichkeit.pdf')
 
@@ -148,45 +148,3 @@ if __name__=="__main__":
 
 
     print('--- done ---')
-
-#peaks_channel = [  594,  1187, 1667, 1988, 2149, 3765, 4655, 5245, 5371, 6801]
-#
-#peaks_counts = []
-#for i in range(len(channel)):
-#    for j in range(len(peaks_channel)):
-#        if ( i == peaks_channel[j]):
-#            peaks_counts.append(counts[i])
-#        else:
-#            pass
-#
-#
-#gaussdata = []
-#sigma = []
-#for j in range(len(peaks_channel)):
-#    for i in range(len(channel)):
-#        if ( (j == 0) and ( channel[i] <= peaks_channel[j]-50) and (channel[i] >= peaks_channel[j]+50) ):
-#            gaussdata.append(channel[i])
-##        elif ( (j > 0) and (j < 9) and (channel[i] >= (peaks_channel[j] - peaks_channel[j-1])/2) and (channel[i] <= peaks_channel[j] + (peaks_channel[j+1]-peaks_channel[j])/2 )):
-##            gaussdata.append(channel[i])
-##        elif ( (j == 9) and ( channel[i] >= (peaks_channel[j] - (peaks_channel[j]-peaks_channel[j-1])/2)) and (channel[i] <= peaks_channel[j] + (peaks_channel[j] - peaks_channel[j-1])/2) ):
-##            gaussdata.append(channel[i])
-#        else:
-#            pass
-#    mean,std=norm.fit(gaussdata)
-#    sigma.append(std)
-#    plt.plot(gaussdata, norm.pdf(gaussdata/max(peaks_channel), scale=peaks_channel[j]), loc=sigma[j], color='red', linewidth=1)
-#    gaussdata = []
-#print(sigma)
-#
-#
-#plt.plot(channel, counts, '-', linewidth='1', color='C0', label='Daten')
-#plt.plot(peaks_channel, peaks_counts, 'x', markersize='10', markeredgewidth='2', color='C1', label='Peaks')
-##plt.yscale('log')
-#
-#plt.legend(fancybox=True, ncol=1)
-#plt.xlabel('rel. Channel, rel. Energie', labelpad=2)
-#plt.ylabel('Häufigkeit', labelpad=8)
-#
-#plt.grid()
-#plt.savefig('vollenergienachweiswahrscheinlichkeit.pdf')
-#

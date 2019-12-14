@@ -38,5 +38,5 @@ plt.xlabel('Channel', labelpad=2)                                               
 plt.ylabel('Häufigkeit', labelpad=8)                     # Label Oberflächenspannung
 #plt.yscale('log')
 
-plt.grid()                                                                                          # Gitternetz
+plt.grid(alpha=0.3)
 plt.savefig('spektrum_barium.pdf')

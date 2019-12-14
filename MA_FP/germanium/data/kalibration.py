@@ -73,5 +73,5 @@ plt.xlabel('Channel', labelpad=2)                                               
 plt.ylabel('Energie in keV', labelpad=8)                     # Label Oberflächenspannung
 #plt.yscale('log')
 
-plt.grid()                                                                                          # Gitternetz
+plt.grid(alpha=0.3)
 plt.savefig('kalibration.pdf')

@@ -137,16 +137,95 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
 
     plt.savefig('caesium_photopeak.pdf')
 
+def cutDataArrayBetweenTwoValues(countingup, beingcut, uG, oG): # cuts off data from array before start and after stop of measurement // schneidet am Array die Werte vor und nach der Messung ab
+        ############################## takeListsMakeArrays calling cutDataArrayBetweenTwoValues
+    A = []                                                                              # hier wird abgespeichert
+    for i in range(len(countingup)):                                                          # für alle Indices in der Liste date
+        if countingup[i] >= uG and countingup[i] <= oG:                      # wenn der Wert von date beim Index kleiner ist als der start oder größer ist als der stop
+            A.append(beingcut[i])                                                              # speichere den Wert von dem Datensatz in A
+        else:
+            pass
+
+    return (A)
+
+def fillYarray(yarr, corrospondingxarr):
+    resultarr = []
+    for i in range(len(yarr)):
+        for j in range(len(corrospondingxarr)):
+            if ( i == corrospondingxarr[j]):
+                resultarr.append(yarr[i])
+            else:
+                pass
+    return(resultarr)
+
+def fitgerade(ax, x, y, color, width, name):
+    def f(x,a,b):
+        return a*x+b
+
+    params,var = curve_fit(f,x,y, maxfev=5000)
+    fehler = np.sqrt(np.diag(var))
+
+    x_new = np.linspace(x[0], x[-1], 5000, endpoint=True)
+    ax.plot(x_new,f(x_new,*params),'-', linewidth=2, color=color, label='Fit - %s' %name)
+
+    dashed = np.linspace(x[0]-width, x[-1]+width, 5000, endpoint=True)
+    ax.plot(dashed,f(dashed,*params), linestyle='dashed', linewidth=2, color=color)
+
+    print('----------------------------')
+    print('Gerade %s' %name)
+    print(params)
+    print(fehler)
+    print('----------------------------')
+
+    return(params, fehler)
+
+def lighten_color(color, amount=0.5):
+    import matplotlib.colors as mc
+    import colorsys
+    try:
+        c = mc.cnames[color]
+    except:
+        c = color
+    c = colorsys.rgb_to_hls(*mc.to_rgb(c))
+    return colorsys.hls_to_rgb(c[0], 1 - amount * (1 - c[1]), c[2])
 
 def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right):
     fig, ax = plt.subplots()
 
+#### Compton-Kontinuum - Daten
     tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, width, left, right)
     tmp_y, total = counts(x, y, peaks_x, peakno, width, left, right)
 
-    ax.fill_between(tmp_x, 0, tmp_y, step='mid')#, alpha=0.4)
-    ax.plot(tmp_x, tmp_y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten')
+#### Compton-Kontinuum - Plots
+    C0light = lighten_color('C0', 0.3)
+    C0mid = lighten_color('C0', 0.65)
+    ax.fill_between(tmp_x, 0, tmp_y, color=C0light, step='mid')#, alpha=0.4)
+    #ax.plot(tmp_x, tmp_y, '-', linewidth=0.0000000000000001, color=C0light, drawstyle='steps', markersize=8, markeredgewidth=2)
+    ax.plot(tmp_x, tmp_y, 'x', color=C0mid, drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
 
+#### Arrays für die beiden Geraden-Fits
+    arrlinks_x = cutDataArrayBetweenTwoValues(x, x, 1700, 2250)
+    arrlinks_y = fillYarray(y, arrlinks_x)
+    arrrechts_x = cutDataArrayBetweenTwoValues(x, x, 2200, 2400)
+    arrrechts_y = fillYarray(y, arrrechts_x)
+
+
+    import matplotlib.transforms as mtransforms
+    trans = mtransforms.blended_transform_factory(ax.transData, ax.transAxes)
+    ax.fill_between(arrlinks_x, 0, 1, facecolor='C1', alpha=0.1, transform=trans)
+    ax.fill_between(arrrechts_x, 0, 1, facecolor='C3', alpha=0.1, transform=trans)
+
+#### Beide Geraden-Fits
+    paramslinks, fehlerlinks = fitgerade(ax, arrlinks_x, arrlinks_y, 'C1', 350, 'links')
+    paramsrechts, fehlerrechts = fitgerade(ax, arrrechts_x, arrrechts_y, 'C3', 145, 'rechts')
+
+    alinks = ufloat (paramslinks[0], fehlerlinks[0])
+    blinks = ufloat (paramslinks[1], fehlerlinks[1])
+    arechts = ufloat (paramsrechts[0], fehlerrechts[0])
+    brechts = ufloat (paramsrechts[1], fehlerrechts[1])
+
+    intersection = (brechts-blinks)/(alinks-arechts)
+    print(intersection)
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)

@@ -6,7 +6,7 @@ def vollesspektrum(x, y):
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
-    ax.set_xlabel('Channel', labelpad=2)
+    ax.set_xlabel('Energie in keV', labelpad=2)
     ax.set_ylabel('Häufigkeit', labelpad=8)
 
     plt.savefig('caesium_vollesspektrum.pdf')
@@ -26,17 +26,17 @@ def vollesspektrumlog(x, y):
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
-    ax.set_xlabel('Channel', labelpad=2)
+    ax.set_xlabel('Energie in keV', labelpad=2)
     ax.set_ylabel('Häufigkeit', labelpad=8)
 
     plt.savefig('caesium_vollesspektrumlog.pdf')
 
 def channel(x, y, peaks_x, peakno, width, left, right):
     tmp_x = []
-    for j in range(len(peaks_x)):
-        if (j == peakno):
-            for i in range(len(y)):
-                if (x[i] >= peaks_x[j]-width+left) and (x[i] <= peaks_x[j]+width+right):
+    for j in range(len(peaks_x)): # zählt den Index der Peaks hoch
+        if (j == peakno):       # wenn Index == Peak Nummer
+            for i in range(len(y)):     # zählt den Index der counts hoch
+                if (x[i] >= peaks_x[j]-width+left) and (x[i] <= peaks_x[j]+width+right): # wenn energie kleiner/größer als peakenergie
                     tmp_x.append(x[i])
                 else:
                     pass
@@ -62,14 +62,25 @@ def counts(x, y, peaks_x, peakno, width, left, right):
     total = sum(tmp_y)
     return (tmp_y, total)
 
-def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
+def channelarraytoenergyarray(intake, steigung, yachse):
+    tmp = []
+    for i in range(len(intake)):
+        val = steigung*intake[i]+yachse
+        tmp.append(val)
+    return(tmp)
+
+def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yachse):
     fig, ax = plt.subplots()
 
 
-    tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, width, left, right)
+    tmp_x, mean_channel, sigma = channel(x, y, peaks_x, peakno, width, left, right)
     tmp_y, total = counts(x, y, peaks_x, peakno, width, left, right)
 
-
+    tmp_x = channelarraytoenergyarray(tmp_x, steigung, yachse)
+    mean = np.mean(tmp_x)
+    sigma = np.std(tmp_x)
+    x = channelarraytoenergyarray(x, steigung, yachse)
+    einchannel = steigung
 
     def gauss(x,a,mu,std,c):
         return a/np.sqrt((2*const.pi*std**2)) * np.exp(-(x-mu)**2/(2*std**2))+c
@@ -93,36 +104,37 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
     mean=params[1]
     std=params[2]
 
-    meanint = int(round(mean))
-    mean = meanint
+    counthwb = y[int(round(mean_channel))]
 
     FWHM = 2*np.sqrt(2*np.log(2))*std
 #    FWHMint = int(round(FWHM))
 #    FWHM = FWHMint
 
-    FWHM_x = [mean-FWHM/2 +0.5, mean+FWHM/2 +0.5]
+    FWHM_x = [mean-FWHM/2 + einchannel/2 - 0.015, mean+FWHM/2]
 #    FWHM_y = [gauss(mean, *params)/2, gauss(mean, *params)/2]
-    FWHM_y = [y[meanint]/2, y[meanint]/2]
+    FWHM_y = [counthwb/2, counthwb/2]
 
     FWTM = 2*np.sqrt(2*np.log(10))*std
 #    FWTMint = int(round(FWTM))
 #    FWTM = FWTMint
 
-    FWTM_x = [mean-FWTM/2 , mean+FWTM/2]
+    FWTM_x = [mean-FWTM/2 - einchannel/2 + 0.025, mean+FWTM/2 - einchannel/2 + 0.06]
 #    FWTM_y = [gauss(mean, *params)/10, gauss(mean, *params)/10]
-    FWTM_y = [y[meanint]/10, y[meanint]/10]
+    FWTM_y = [counthwb/10, counthwb/10]
 
     print('----------------------------')
     print('FWHM: ' + str(FWHM))
     print('FWTM: ' + str(FWTM))
+    print(FWHM/FWTM)
+    print(np.sqrt(np.log(2)/np.log(10)))
     print('----------------------------')
 
-#### Plot Halbwertsbreite, Zehntelwertsbreite
+##### Plot Halbwertsbreite, Zehntelwertsbreite
     ax.plot(FWHM_x, FWHM_y, '-', color='C3')
-    ax.annotate((xy)=(mean+FWHM/2 + 0.5, gauss(mean, *params)/2) , fontsize= 12, color='C3', s='Halbwertsbreite: \n 10 Channel', rotation=0)
+    ax.annotate((xy)=(mean -0.5, gauss(mean, *params)/2 +2) , fontsize= 12, color='C3', s='Halbwertsbreite: \n 10 Channel', rotation=0)
 #    ax.axvspan(mean-FWHM/2, mean+FWHM/2, facecolor='C2', alpha=0.1)
     ax.plot(FWTM_x, FWTM_y, '-', color='C3')
-    ax.annotate((xy)=(mean+FWTM/10 + 6.5, gauss(mean, *params)/10 + 50) , fontsize=12, color='C3', s='Zehntelwertsbreite: \n 19 Channel', rotation=0)
+    ax.annotate((xy)=(mean -0.5, gauss(mean, *params)/10 +5) , fontsize=12, color='C3', s='Zehntelwertsbreite: \n 19 Channel', rotation=0)
 
 #### Plot Daten
     ax.fill_between(tmp_x, 0, tmp_y, step='mid', alpha=0.4)
@@ -135,7 +147,7 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
-    ax.set_xlabel('Channel', labelpad=2)
+    ax.set_xlabel('Energie in keV', labelpad=2)
     ax.set_ylabel('Häufigkeit', labelpad=8)
 
     plt.savefig('caesium_photopeak.pdf')
@@ -151,12 +163,12 @@ def cutDataArrayBetweenTwoValues(countingup, beingcut, uG, oG): # cuts off data 
 
     return (A)
 
-def fillYarray(yarr, corrospondingxarr):
+def fillYarray(allecounts, channelabgeschnitten):
     resultarr = []
-    for i in range(len(yarr)):
-        for j in range(len(corrospondingxarr)):
-            if ( i == corrospondingxarr[j]):
-                resultarr.append(yarr[i])
+    for i in range(len(allecounts)):    # zählt den Index der Counts hoch
+        for j in range(len(channelabgeschnitten)):     # zählt den Index der abgeschnittenen Energie hoch
+            if ( i == channelabgeschnitten[j]):
+                resultarr.append(allecounts[i])
             else:
                 pass
     return(resultarr)
@@ -165,7 +177,7 @@ def fitgerade(ax, x, y, color, width, name):
     def f(x,a,b):
         return a*x+b
 
-    params,var = curve_fit(f,x,y, maxfev=5000)
+    params,var = curve_fit(f,x,y, maxfev=10000)
     fehler = np.sqrt(np.diag(var))
 
     x_new = np.linspace(x[0], x[-1], 5000, endpoint=True)
@@ -192,7 +204,7 @@ def lighten_color(color, amount=0.5):
     c = colorsys.rgb_to_hls(*mc.to_rgb(c))
     return colorsys.hls_to_rgb(c[0], 1 - amount * (1 - c[1]), c[2])
 
-def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yachse):
+def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yachse, channelkomplett):
     fig, ax = plt.subplots()
 
 #### Compton-Kontinuum - Daten
@@ -207,10 +219,22 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
     ax.plot(tmp_x, tmp_y, 'x', color=C0mid, drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
 
 #### Arrays für die beiden Geraden-Fits
-    arrlinks_x = cutDataArrayBetweenTwoValues(x, x, steigung*1700+yachse, steigung*2250+yachse)
+    arrlinks_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 1700, 2250)
     arrlinks_y = fillYarray(y, arrlinks_x)
-    arrrechts_x = cutDataArrayBetweenTwoValues(x, x, steigung*2200+yachse, steigung*2400+yachse)
+    arrrechts_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 2200, 2400)
     arrrechts_y = fillYarray(y, arrrechts_x)
+
+    tmp = []
+    for i in range(len(arrlinks_x)):
+        energie = steigung*arrlinks_x[i] + yachse
+        tmp.append(energie)
+    arrlinks_x = tmp
+
+    tmp = []
+    for i in range(len(arrrechts_x)):
+        energie = steigung*arrrechts_x[i] + yachse
+        tmp.append(energie)
+    arrrechts_x = tmp
 
 
     import matplotlib.transforms as mtransforms
@@ -228,14 +252,13 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
     brechts = ufloat (paramsrechts[1], fehlerrechts[1])
 
     print('----------------------------')
-    print('Schnittpunkt der Geraden (Compton-Kante) in Channel')
+    print('Schnittpunkt der Geraden (Compton-Kante) in keV')
     intersection = (brechts-blinks)/(alinks-arechts)
     print(intersection)
-    steigung = ufloat(0.20725824, 4.28713921e-05)
-    yachse = ufloat(-1.22364356, 1.66905256e-01)
-    E_chann = steigung*intersection+yachse
-    print('Schnittpunkt der Geraden (Compton-Kante) in keV')
-    print(E_chann)
+#    steigung = ufloat(0.20725824, 4.28713921e-05)
+#    yachse = ufloat(-1.22364356, 1.66905256e-01)
+#    E_chann = steigung*intersection+yachse
+#    print(E_chann)
 
 
     print('Compton-Kante mit Literaturwert in keV')
@@ -247,7 +270,7 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
-    ax.set_xlabel('Channel', labelpad=2)
+    ax.set_xlabel('Energie in keV', labelpad=2)
     ax.set_ylabel('Häufigkeit', labelpad=8)
 
 
@@ -284,6 +307,8 @@ if __name__=="__main__":
     y = np.loadtxt('caesium.txt', unpack=True,delimiter=' ')
     x = np.arange(0, len(y), 1 )
 
+    channelkomplett = x
+
     steigung = 0.20725824
     yachse = -1.22364356
 #    steigung = ufloat(0.20725824, 4.28713921e-05)
@@ -309,10 +334,10 @@ if __name__=="__main__":
     vollesspektrum(x, y)
     vollesspektrumlog(x, y)
 
-    gaussfit(x, y, peaks_x, 0, steigung*15+yachse, 0, steigung*10+yachse, 0, steigung*(-2)+yachse)
+    gaussfit(channelkomplett, y, [3197], 0, 15, 0, 10, 0, -2, steigung, yachse)
 
     peaks_x_halbe = [ int(round((steigung*3197+yachse)/2)) ]
-    kontinuum(x, y, peaks_x_halbe, 0, steigung*1580+yachse, 0, steigung*10+yachse, 0, 0, steigung, yachse)
+    kontinuum(x, y, peaks_x_halbe, 0, steigung*1580+yachse, 0, steigung*10+yachse, 0, 0, steigung, yachse, channelkomplett)
 
 
     print('--- done ---')

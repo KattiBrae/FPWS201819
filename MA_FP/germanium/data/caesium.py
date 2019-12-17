@@ -65,8 +65,11 @@ def counts(x, y, peaks_x, peakno, width, left, right):
 def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
     fig, ax = plt.subplots()
 
+
     tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, width, left, right)
     tmp_y, total = counts(x, y, peaks_x, peakno, width, left, right)
+
+
 
     def gauss(x,a,mu,std,c):
         return a/np.sqrt((2*const.pi*std**2)) * np.exp(-(x-mu)**2/(2*std**2))+c
@@ -94,16 +97,16 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
     mean = meanint
 
     FWHM = 2*np.sqrt(2*np.log(2))*std
-    FWHMint = int(round(FWHM))
-    FWHM = FWHMint
+#    FWHMint = int(round(FWHM))
+#    FWHM = FWHMint
 
     FWHM_x = [mean-FWHM/2 +0.5, mean+FWHM/2 +0.5]
 #    FWHM_y = [gauss(mean, *params)/2, gauss(mean, *params)/2]
     FWHM_y = [y[meanint]/2, y[meanint]/2]
 
     FWTM = 2*np.sqrt(2*np.log(10))*std
-    FWTMint = int(round(FWTM))
-    FWTM = FWTMint
+#    FWTMint = int(round(FWTM))
+#    FWTM = FWTMint
 
     FWTM_x = [mean-FWTM/2 , mean+FWTM/2]
 #    FWTM_y = [gauss(mean, *params)/10, gauss(mean, *params)/10]
@@ -189,7 +192,7 @@ def lighten_color(color, amount=0.5):
     c = colorsys.rgb_to_hls(*mc.to_rgb(c))
     return colorsys.hls_to_rgb(c[0], 1 - amount * (1 - c[1]), c[2])
 
-def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right):
+def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yachse):
     fig, ax = plt.subplots()
 
 #### Compton-Kontinuum - Daten
@@ -204,9 +207,9 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right):
     ax.plot(tmp_x, tmp_y, 'x', color=C0mid, drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
 
 #### Arrays für die beiden Geraden-Fits
-    arrlinks_x = cutDataArrayBetweenTwoValues(x, x, 1700, 2250)
+    arrlinks_x = cutDataArrayBetweenTwoValues(x, x, steigung*1700+yachse, steigung*2250+yachse)
     arrlinks_y = fillYarray(y, arrlinks_x)
-    arrrechts_x = cutDataArrayBetweenTwoValues(x, x, 2200, 2400)
+    arrrechts_x = cutDataArrayBetweenTwoValues(x, x, steigung*2200+yachse, steigung*2400+yachse)
     arrrechts_y = fillYarray(y, arrrechts_x)
 
 
@@ -216,16 +219,31 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right):
     ax.fill_between(arrrechts_x, 0, 1, facecolor='C3', alpha=0.1, transform=trans)
 
 #### Beide Geraden-Fits
-    paramslinks, fehlerlinks = fitgerade(ax, arrlinks_x, arrlinks_y, 'C1', 350, 'links')
-    paramsrechts, fehlerrechts = fitgerade(ax, arrrechts_x, arrrechts_y, 'C3', 145, 'rechts')
+    paramslinks, fehlerlinks = fitgerade(ax, arrlinks_x, arrlinks_y, 'C1', steigung*350+yachse, 'links')
+    paramsrechts, fehlerrechts = fitgerade(ax, arrrechts_x, arrrechts_y, 'C3', steigung*145+yachse, 'rechts')
 
     alinks = ufloat (paramslinks[0], fehlerlinks[0])
     blinks = ufloat (paramslinks[1], fehlerlinks[1])
     arechts = ufloat (paramsrechts[0], fehlerrechts[0])
     brechts = ufloat (paramsrechts[1], fehlerrechts[1])
 
+    print('----------------------------')
+    print('Schnittpunkt der Geraden (Compton-Kante) in Channel')
     intersection = (brechts-blinks)/(alinks-arechts)
     print(intersection)
+    steigung = ufloat(0.20725824, 4.28713921e-05)
+    yachse = ufloat(-1.22364356, 1.66905256e-01)
+    E_chann = steigung*intersection+yachse
+    print('Schnittpunkt der Geraden (Compton-Kante) in keV')
+    print(E_chann)
+
+
+    print('Compton-Kante mit Literaturwert in keV')
+    E_lit = ufloat(661.657, 0.003) #aus nucleide
+    E = E_lit*1e03*const.elementary_charge
+    eps = E/(const.electron_mass*const.c**2)
+    theo = E*2*eps/(1+2*eps)
+    print(theo/(const.elementary_charge*1e03))
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
@@ -234,7 +252,6 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right):
 
 
 
-#suche jetzt daten zwischen ca. 2000 und 2500 und fitte von links und rechts je eine grade, schnittpunkt ist dann das Ende der Kante
 
     plt.savefig('caesium_kontinuum.pdf')
 
@@ -267,10 +284,18 @@ if __name__=="__main__":
     y = np.loadtxt('caesium.txt', unpack=True,delimiter=' ')
     x = np.arange(0, len(y), 1 )
 
-#    peaks = sig.find_peaks(y, prominence = 50)
+    steigung = 0.20725824
+    yachse = -1.22364356
+#    steigung = ufloat(0.20725824, 4.28713921e-05)
+#    yachse = ufloat(-1.22364356, 1.66905256e-01)
+    E = steigung*x+yachse
+    x = E
+
+#    peaks = sig.find_peaks(y, prominence = 500)
 #    print(peaks)
 
-    peaks_x = [ 3197 ]
+#    peaks_x = [ 3197 ]
+    peaks_x = [ steigung*3197+yachse ]
     peakno = np.arange(0, len(peaks_x), 1 )
 
     peaks_counts = []
@@ -284,10 +309,10 @@ if __name__=="__main__":
     vollesspektrum(x, y)
     vollesspektrumlog(x, y)
 
-    gaussfit(x, y, peaks_x, 0, 15, 0, 10, 0, -2)
+    gaussfit(x, y, peaks_x, 0, steigung*15+yachse, 0, steigung*10+yachse, 0, steigung*(-2)+yachse)
 
-    peaks_x_halbe = [ int(round(3197/2)) ]
-    kontinuum(x, y, peaks_x_halbe, 0, 1580, 0, 10, 0, 0)
+    peaks_x_halbe = [ int(round((steigung*3197+yachse)/2)) ]
+    kontinuum(x, y, peaks_x_halbe, 0, steigung*1580+yachse, 0, steigung*10+yachse, 0, 0, steigung, yachse)
 
 
     print('--- done ---')

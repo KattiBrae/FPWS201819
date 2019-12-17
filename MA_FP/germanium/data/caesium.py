@@ -316,8 +316,8 @@ if __name__=="__main__":
     E = steigung*x+yachse
     x = E
 
-#    peaks = sig.find_peaks(y, prominence = 500)
-#    print(peaks)
+    peaks = sig.find_peaks(y, prominence = 50)
+    print(peaks)
 
 #    peaks_x = [ 3197 ]
     peaks_x = [ steigung*3197+yachse ]

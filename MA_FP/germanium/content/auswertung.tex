@@ -36,7 +36,7 @@ Anschließend werden die zugeordneten Energien der Peaks gegen die Channel der P
 durchgeführt.
 Als Parameter der Regression ergeben sich über \textit{curve\_fit}:
 \begin{align*}
-	m = \SI{0.20726(4)}{\kilo \electronvolt \per Channel} && n = \SI{-1.22(17)}{\kilo \electronvolt}
+	m = \SI{0.20726(4)}{\kilo \electronvolt \per Channel}, && n = \SI{-1.22(17)}{\kilo \electronvolt}.
 \end{align*}
 \begin{figure}[h!]
   \centering
@@ -190,7 +190,8 @@ gefittet.
 Hierzu wird der augewertete Datenbereich angepasst.
 Die Parameter der Ausgleichsrechnung ergeben sich zu
 \begin{align*}
-	\mu = \SI{661.2327 (51)}{\kilo \electronvolt} && \sigma = \SI{0.9023 (51)}{\kilo \electronvolt} && a = \SI{1868 (9)}{\kilo \electronvolt^2} && b = \SI{6.1 (1)}{\kilo \electronvolt}.
+	\mu = \SI{661.2327 (51)}{\kilo \electronvolt}, 	&& \sigma = \SI{0.9023 (51)}{\kilo \electronvolt}, \\
+	 a = \SI{1868 (9)}{\kilo \electronvolt^2}, 		&& b = \SI{6.1 (1)}{\kilo \electronvolt}.
 \end{align*}
 Für den Inhalt des Photopeaks werden die Counts im geplotteten Bereich aufsummiert.
 Der Inhalt beträgt:
@@ -205,49 +206,83 @@ Die Halbwertsbreite (FWHM) und die Zehntelwertsbreite (FWTM) werden zu folgenden
 \end{align*}
 Aus der Standardabweichung $\sigma$ lässt sich ein Vergleichswert passend zur gefitteten Gaußverteilung finden:
 \begin{align*}
-	\text{FWHM}_{\text{Fit}} && = && 2 \sqrt{2 \log{(2)}} \sigma  = \SI{2.13}{\kilo \electronvolt}\\
-	\text{FWTM}_{\text{Fit}} && = && 2 \sqrt{2 \log{(10)}} \sigma = \SI{3.87}{\kilo \electronvolt}\\
+	\text{FWHM}_{\text{Fit}} && = && 2 \sigma \, \sqrt{2 \ln{(2)}}    = \SI{2.13}{\kilo \electronvolt}\\
+	\text{FWTM}_{\text{Fit}} && = && 2 \sigma \, \sqrt{2 \ln{(10)}}  = \SI{3.87}{\kilo \electronvolt}\\
 	\frac{ \text{FWHM}_{\text{Fit}} }{ \text{FWTM}_{\text{Fit}} } && = && \SI{0.55}{\nothing}. \\
 \end{align*}
-
+In Abbildung \ref{fig:cs_kontinuum} ist das Compton-Kontinuum des Spektrums vergrößert dargestellt.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.7\textwidth]{content/images/caesium_kontinuum.pdf}
-  \caption{Vergrößertes Compton-Kontiunuum des $^{137}\symup{Cs}$-Strahlers mit linearen Ausgleichsrechnungen zur Identifitkation der Lage der Compton-Kante.}
+  \caption{Vergrößertes Compton-Kontinuum des $^{137}\symup{Cs}$-Strahlers mit linearen Ausgleichsrechnungen zur Identifitkation der Lage der Compton-Kante.}
   \label{fig:cs_kontinuum}
 \end{figure}
+Über den Schnittpunkt zweier Ausgleichsgeraden der Form $y = a \cdot E + b$ wird die Lage der Compton-Kante angenähert.
+Die Parameter der Geraden ergeben sich zu
+\begin{align*}
+	\text{links:}  && a & = & \SI{0.0699 (58)}{\frac{1}{\kilo \electronvolt}}, && b & = & \SI{-11.3 (24)}{\nothing}, \\
+	\text{rechts:} && a & = & \SI{-0.337 (27)}{\frac{1}{\kilo \electronvolt}}, && b & = & \SI{ 178 (13)}{\nothing}. \\
+\end{align*}
+Der Schnittpunkt, entsprechend die Compton-Kante, liegt über Gleichsetzen der Geradengleichungen bei
+\begin{equation*}
+	E_{\text{CK}} = \SI{460 (4)}{\kilo \electronvolt}.
+\end{equation*}
+Aus Gleichung \eqref{eq:compton_kante} folgt für die Compton-Kante folgender theoretischer Wert:
+\begin{equation*}
+	E_{\text{Kante}} = \SI{477.3340 (28)}{\kilo \electronvolt}.
+\end{equation*}
+Der Inhalt des Compton-Kontinuums als Summation der betreffenden Kanalinhalte bis zur Compton-Kante beträgt
+\begin{equation*}
+	N_{\text{Kontinuum, komplett}} = \SI{42251}{\nothing}. % ohne Wirkungsquerschnitt verrechnet
+\end{equation*}
 
-
-Suche
-\begin{itemize}
-	\item Energie des Strahlers (Photo-Energie -> Gauss fitten? mu entspricht dann dem Channel und der Channel einer Energie)
-	\item Fit:
-	\begin{equation*}
-		f(x) = \frac{a}{\sqrt{2 \pi \sigma^2}} \, \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)} + b
-	\end{equation*}
-	\item Parameter
-	\begin{align*}
-		\mu = \SI{661.2327 (51)}{\kilo \electronvolt} && \sigma = \SI{0.9023 (51)}{\kilo \electronvolt} && a = \SI{1868 (9)}{\nothing} && b = \SI{6.1 (1)}{\nothing}
-	\end{align*}
-	\item Halbwertsbreite fitten
-	\item Zehntelwertsbreite fitten, $FWHM/FWTM(Theorie) = 0.5486620049392714$, in den Daten: $FWHM/FWTM = 0.5486620049392715$
-	\item
-	\begin{align*}
-		FWHM = 10 && FWTM = 19
-	\end{align*}
-	\item Comptonkante ausmessen, bei:
-	\begin{align*}
-		E = \SI{4.6 (4)e+02}{\kilo \electronvolt}
-	\end{align*}
-	\item
-	mit den Parametern
-	\begin{align*}
-		links   && rechts \\
-		a = \SI{0.0699 (58)}{\frac{1}{\kilo \electronvolt}} && a = \SI{ -0.337 (27)}{\frac{1}{\kilo \electronvolt}} \\
-		b = \SI{ -11.3 (24)}{\nothing} 						&& b = \SI{ 178 (13)}{\nothing} \\
-	\end{align*}
-	\item Theorie liegt bei $E_{\text{Kante}} = \SI{477.3340 (28)}{\kilo \electronvolt}$
-	\item Rückstreulinie ausmessen
+%\begin{equation*}
+%	 \frac{3}{8} \cdot \frac{8}{3} \pi r^2 \cdot \frac{1}{m_0 (\sfrac{Eg}{m_0})^2}
+%	 \left[ 2 + \frac{E}{(Eg-E)^2}
+%	 \left( \frac{1}{(\sfrac{Eg}{m_0})^2} +
+%	 \left(1- \frac{2}{\sfrac{Eg}{m_0}} \right)
+%	 \frac{Eg-E}{Eg} \right) \right]
+%	 \cdot c+h
+%\end{equation*}
+Rückstreuung:
+\begin{equation}
+    {E'}_{\!\gamma} = \frac{E_\gamma}{1 + \frac{E_\gamma}{m_e c^2} \left(1 - \cos\vartheta \right)},
+    \label{eq:rückstreu}
+\end{equation}
+Wirkungsquerschnitt ($\varepsilon = E_\gamma / m c^2 << 1$, $\sigma_{Th} = \frac{1}{6 \pi \epsilon_0^2} \frac{e^4}{m_{e}^2 c^4}$):
+\begin{equation}
+    \sigma_{Co} \sim \frac{3}{4}\sigma_{Th} \left(1 - 2\varepsilon + \frac{26}{5}\varepsilon^2 \right).
+\end{equation}
+%
+%Suche
+%\begin{itemize}
+%	\item Energie des Strahlers (Photo-Energie -> Gauss fitten? mu entspricht dann dem Channel und der Channel einer Energie)
+%	\item Fit:
+%	\begin{equation*}
+%		f(x) = \frac{a}{\sqrt{2 \pi \sigma^2}} \, \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)} + b
+%	\end{equation*}
+%	\item Parameter
+%	\begin{align*}
+%		\mu = \SI{661.2327 (51)}{\kilo \electronvolt} && \sigma = \SI{0.9023 (51)}{\kilo \electronvolt} && a = \SI{1868 (9)}{\nothing} && b = \SI{6.1 (1)}{\nothing}
+%	\end{align*}
+%	\item Halbwertsbreite fitten
+%	\item Zehntelwertsbreite fitten, $FWHM/FWTM(Theorie) = 0.5486620049392714$, in den Daten: $FWHM/FWTM = 0.5486620049392715$
+%	\item
+%	\begin{align*}
+%		FWHM = 10 && FWTM = 19
+%	\end{align*}
+%	\item Comptonkante ausmessen, bei:
+%	\begin{align*}
+%		E = \SI{4.6 (4)e+02}{\kilo \electronvolt}
+%	\end{align*}
+%	\item
+%	mit den Parametern
+%	\begin{align*}
+%		links   && rechts \\
+%		a = \SI{0.0699 (58)}{\frac{1}{\kilo \electronvolt}} && a = \SI{ -0.337 (27)}{\frac{1}{\kilo \electronvolt}} \\
+%		b = \SI{ -11.3 (24)}{\nothing} 						&& b = \SI{ 178 (13)}{\nothing} \\
+%	\end{align*}
+%	\item Theorie liegt bei
+	Rückstreulinie ausmessen
 	über Geradenschnittpunkt in Rückstreulinie
-	\item Inhalte des Peaks und des Compton-Kontinuums ausmessen (aufsummieren, aaaaber... Anleitung!)
-\end{itemize}
+	Inhalte des Peaks und des Compton-Kontinuums ausmessen (aufsummieren, aaaaber... Anleitung!)

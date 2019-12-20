@@ -279,13 +279,20 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
 #    E_chann = steigung*intersection+yachse
 #    print(E_chann)
 
-
     print('Compton-Kante mit Literaturwert in keV')
     E_lit = ufloat(661.657, 0.003) #aus nucleide
     E = E_lit*1e03*const.elementary_charge
     eps = E/(const.electron_mass*const.c**2)
     theo = E*2*eps/(1+2*eps)
     print(theo/(const.elementary_charge*1e03))
+
+    peaks_x = [0]
+    tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, 1, 0, 464)
+    tmp_y, total = counts(x, y, peaks_x, peakno, 1, 0, 464)
+#    ax.plot(tmp_x, tmp_y, 'x', color='C4', drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
+
+    print('Inhalt Kontinuum!: ' + str(total))
+
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
@@ -425,11 +432,11 @@ if __name__=="__main__":
 #    vollesspektrumlog(x, y)
 
 #    gaussfit(channelkomplett, y, [940, 3197], 0, 300, 0, 15, 0, 0, steigung, yachse)
-    gaussfit(channelkomplett, y, [940, 3197], 1, 15, 0, 10, 0, -2, steigung, yachse)
+#    gaussfit(channelkomplett, y, [940, 3197], 1, 15, 0, 10, 0, -2, steigung, yachse)
 
     peaks_x_halbe = [ int(round((steigung*3197+yachse)/2)) ]
     peaks_x_halbe_r = [ int(round((steigung*940+yachse)/2)) ]
-#    kontinuum(x, y, peaks_x_halbe, 0, steigung*1580, 0, steigung*10, 0, 0, steigung, yachse, channelkomplett)
+    kontinuum(x, y, peaks_x_halbe, 0, steigung*1580, 0, steigung*10, 0, 0, steigung, yachse, channelkomplett)
 #    rueckstreupeak(x, y, peaks_x_halbe_r, 0, steigung*1250, 0, steigung*0, 280, -100, steigung, yachse, channelkomplett)
 
 

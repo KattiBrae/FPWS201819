@@ -53,7 +53,7 @@ steigung = 0.20725824
 yachse = -1.22364356
 
 #E = steigung*x+yachse
-E = 195
+E = 460
 
 x = (E-yachse)/steigung
 print(x)

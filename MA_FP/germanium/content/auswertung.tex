@@ -1,98 +1,223 @@
 \section{Auswertung}
 \subsection{Energiekalibration}
-\begin{itemize}
-	\item Spektrum geplottet, Counts gegen Channel
-	\item Errorbars?
-	\item Peaks finden lassen, Peaks markiert
-	\item Literaturwerte Energien rausgesucht mit mind. 1\% Emissionswahrscheinlichkeit (Quelle %http://www.nucleide.org/DDEP_WG/Nuclides/Eu-152_tables.pdf 2019-12-11, 22:35)
-	\item Spektrallinien $E$ normiert mit dem größten Wert der Energie: $\frac{E}{max(E)}$
-	\item Channel normiert mit dem letzten Peak $\frac{channel}{max(channel)}$
-	\item Daten mit normierter x-Achse geplottet: norm(E)-0-Diagramm, norm(channel)-Count-Diagramm
-	\item Nicht vorhandene Spektrallinien aus E und doppelte aus Peaks entfernt
-	\item Peak-Channel gegen Energien geplottet, Fit:
-\end{itemize}
-\begin{equation*}
+Die Energiekalibration wird anhand der Vermessung eines $^{152}\symup{Eu}$-Spektrums (Abb. \ref{fig:eu_spectrum}) durchgeführt.
+Die Messdaten werden mit Python 3.7.3 und den Biblitheken \textit{numpy}, \textit{scipy} und \textit{uncertainties} ausgewertet.
+Ausgleichsrechnungen erfolgen mit \textit{scipy.optimize.curve\_fit}.
+Über eine Peak-Picking-Funktion werden die größten Peaks in den Daten ausfindig gemacht und sind in Tabelle \ref{tab:eu_peaks} notiert.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/images/spektrum_europium.pdf}
+  \caption{Das aufgenommene Spektrum über $T=\SI{2134}{s}$ von $^{152}\symup{Eu}$ mit markierten Peaks. Dargestellt ist die Zählrate gegen den zugehörigen Channel des MCA.}
+  \label{fig:eu_spectrum}
+\end{figure}
+Zum $\gamma$-Zerfall des $^{152}\symup{Eu}$ werden Literaturwerte bezüglich der Emissionsenergien und der Emissionswahrscheinlichkeiten recherchiert \cite{nucleide}.
+Dabei werden zunächst die Emissionsenergien mit mindestens $\SI{1}{\%}$ Emissionswahrscheinlichkeit rausgesucht.
+Diese sind in Tabelle \ref{tab:eu_peaks} aufgeführt.
+\input{content/tables/kalibration.tex}
+Zur Kalibration werden die jeweiligen Daten auf den zugehörigen Wert des letzten sichtbaren Peaks normiert.
+Entsprechend werden folgende Rechnungen ausgeführt:
+\begin{align*}
+	\text{rel. Energie } && E_{\text{rel.}} 				&& = && \frac{ E_{\text{Peak}} }{ E_{\text{Peak=9}} } \\
+	\text{rel. Channel } && \text{Channel}_{\text{rel.}} 	&& = && \frac{ \text{Channel} }{ \text{Channel}_{\text{Peak=9}} }. \\
+\end{align*}
+Die relativen Größen sind in Abbildung \ref{fig:eu_kalibration} gegen die Counts aufgetragen.
+Die drei Emissionsenergien, die im gemessenen Spektrum nicht als Peak ersichtlich sind und auch die geringsten Emissionswahrscheinlichkeiten aufweisen, werden aus den Daten der Literaturwerte entfernt.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/images/spektrum_europium_kali.pdf}
+  \caption{Die relativen Größen $E_{\text{rel.}}$ und $\text{Channel}_{\text{rel.}}$, normiert auf den letzten sichtbaren Peak des $^{152}\symup{Eu}$-Spektrums, sind gegen die zugehörigen Counts aufgetragen.
+  Die Peaks lassen sich nun den Spektrallinien des $^{152}\symup{Eu}$ zuordnen.}
+  \label{fig:eu_kalibration}
+\end{figure}
+Anschließend werden die zugeordneten Energien der Peaks gegen die Channel der Peaks geplottet (Abbildung \ref{fig:kalibration}) und es wird eine lineare Regression der Form
+\begin{equation}
 	E = m \cdot \text{Channel} + n
-\end{equation*}
+\end{equation}
+durchgeführt.
+Als Parameter der Regression ergeben sich über \textit{curve\_fit}:
 \begin{align*}
 	m = \SI{0.20726(4)}{\kilo \electronvolt \per Channel} && n = \SI{-1.22(17)}{\kilo \electronvolt}
 \end{align*}
-
-\input{content/tables/kalibration.tex}
-
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{content/images/spektrum_europium.pdf}
-  \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks.}
-  \label{fig:eu_spect}
+  \includegraphics[width=0.7\textwidth]{content/images/spektrum_europium_kali.pdf}
+  \caption{Ausgleichsrechnung über den Zusammenhang der Channel des MCA und der Energien der $\gamma$-Teilchen.}
+  \label{fig:kalibration}
 \end{figure}
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{content/images/spektrum_europium_kali.pdf}
-  \caption{Das aufgenommene Spektrum von $^{152}Eu$ mit eingezeichneten Peaks und den zugehörigen Literaturwerten nach \cite{nucleide}.}
-  \label{fig:eu_spect_kali}
-\end{figure}
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{content/images/kalibration.pdf}
-  \caption{Ausgleichsrechnung zur Kalibration mithilfe des $^{152}Eu$-Spektrums.}
-  \label{fig:kali}
-\end{figure}
+%\begin{itemize}
+%	\item Spektrum geplottet, Counts gegen Channel
+%	\item Errorbars?
+%	\item Peaks finden lassen, Peaks markiert
+%	\item Literaturwerte Energien rausgesucht mit mind. 1\% Emissionswahrscheinlichkeit (Quelle %http://www.nucleide.org/DDEP_WG/Nuclides/Eu-152_tables.pdf 2019-12-11, 22:35)
+%	\item Spektrallinien $E$ normiert mit dem größten Wert der Energie: $\frac{E}{max(E)}$
+%	\item Channel normiert mit dem letzten Peak $\frac{channel}{max(channel)}$
+%	\item Daten mit normierter x-Achse geplottet: norm(E)-0-Diagramm, norm(channel)-Count-Diagramm
+%	\item Nicht vorhandene Spektrallinien aus E und doppelte aus Peaks entfernt
+%	\item Peak-Channel gegen Energien geplottet, Fit:
+%\end{itemize}
+%\begin{equation*}
+%	E = m \cdot \text{Channel} + n
+%\end{equation*}
+%\begin{align*}
+%	m = \SI{0.20726(4)}{\kilo \electronvolt \per Channel} && n = \SI{-1.22(17)}{\kilo \electronvolt}
+%\end{align*}
+
+
+
 
 \FloatBarrier
 \subsection{Vollenergienachweiswahrscheinlichkeit}
-mit $t = \SI{605484000 (54000)}{s}$
-und $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ \cite{nucleide}
+Zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$ (engl.: \textit{efficiency}) des Detektors wird zunächst die Aktivität der Probe ausgerechnet.
+Zwischen dem angegebenen Herstellungsdatum (01.10.2000) \cite{anleitung} der $^{152}\symup{Eu}$-Probe und dem Versuchstag (09.12.2019) sind $t = \SI{605484000 (54000)}{s}$ vergangen.
+Die Halbwertszeit des Isotops beträgt $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ \cite{nucleide}.
+Mit der Anfangsaktivität $A_{0} = \SI{4130 (60)}{Bq}$ ergibt sich über
 \begin{equation}
 	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
 	\label{result:aktivität}
 \end{equation}
-mit $r=\SI{22.5e-03}{m}$
-und $h = \SI{80e-03}{m}$
+die aktuelle Aktivität der Probe.
+Weiterhin wird der eingenommene Raumwinkel des Detektors benötigt.
+Dabei wird der Raumwinkel über die Geometrie eines Kegels berechnet:
 \begin{align*}
 	\frac{r}{h} = \tan{( \varphi / 2 )} \Leftrightarrow \varphi = 2 \arctan{(\frac{r}{h})} \\
-	\frac{\Omega}{4 \pi} = \sin^2{\frac{\varphi}{2 \cdot 4}} =  \sin^2{ \left( \frac{1}{4} \arctan{(r/h)} \right)} = \SI{0.0069}{sr}
+	\frac{\Omega}{4 \pi} = \sin^2{\frac{\varphi}{2 \cdot 4}} =  \sin^2{ \left( \frac{1}{4} \arctan{(r/h)} \right)} = \SI{0.0069}{sr}.
 	\label{result:raumwinkel}
 \end{align*}
-und
+Die eingesetzten Größen für den Radius der Detektoroberfläche und Höhe des Kegels sind $r = \SI{22.5e-03}{m}$ und $h = \SI{80e-03}{m}$.
+Die gesamte Messzeit des $^{152}\symup{Eu}$-Spektrums beträgt $T=\SI{2134}{s}$.
+Damit kann nun $Q$ wie folgt berechnet werden:
 \begin{equation}
-	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}
+	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}.
 \end{equation}
-
+$P_{E_{\gamma}}$ ist hier die Emissionswahrscheinlichkeit einer $\gamma$-Energie \cite{nucleide}.
+Der Parameter $N_{\text{Peakinhalt}}$ beschreibt nun die gesamte Zahl der Counts, die sich in einem Peak befindet.
+Zur Berechnung der Peakinhalte werden die Peaks einzeln betrachtet und die Messdaten passend zu der erwarteten Gaußverteilung eines Peaks abgeschnitten (vgl. Abb. \ref{fig:einzelnergaussfit_0}).
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{content/images/einzelnergaussfit_0.pdf}
+  \includegraphics[width=0.7\textwidth]{content/images/einzelnergaussfit_0.pdf}
   \caption{Vergrößerung des ersten Peaks mit Ausgleichsfunktion einer Gaußkurve zur Veranschaulichung der Gaußpeaks.}
-  \label{fig:vw}
+  \label{fig:einzelnergaussfit_0}
 \end{figure}
-
+Die Inhalte der Peaks werden durch Aufsummation der Counts im jeweiligen angepassten Datenbereich berechnet.
+Die Ergebnisse zu den jeweiligen Peaks sind in Tabelle \ref{tab:vw} notiert.
 \input{content/tables/vollenergienachweis.tex}
-
-\begin{itemize}
-	\item Unterteilung der Daten in die Abschnitte um die Peaks (channel und counts werden passend abgeschnitten)
-	\item Über die Peaks wird eine Gaußkurve gelegt $f (x) = \frac{a}{\sqrt{2 \pi \sigma^2}} \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)}+b$
-	\item Klappt bei den meisten Peaks ganz gut, aber manchmal ist der Fehler des Parameters $a$ größer als a :|
-	\item Alternative für Inhalt: Aufsummation der Counts in den jeweiligen Intervallen, Fehler über den Poisson-Fehler ($N \pm \sqrt{N}$)
-	\item $Q$ berechnet mit $A$ aus \eqref{result:aktivität}, $\sfrac{\Omega}{4 \pi}$ aus \eqref{result:raumwinkel},
-	gesamte Messzeit $T=\SI{2134}{s}$, Emissionswahrscheinlichkeit $P_{E_{\gamma}}$ aus \cite{nucleide}, Peakinhalt $N_{\text{Peakinhalt}}$
-	\item $Q$ gegen $E$ aufgetragen, $Q=a E^{b} + c$, Parameter:
-\end{itemize}
-\begin{align*}
-	a = \SI{0.113 (55)}{\frac{1}{J}}, && b = \SI{-0.36 (17)}{\nothing}, && c = \SI{-0.0077 (59)}{\nothing}
-\end{align*}
-
+Nun wird $Q$ gegen die Energie $E$ des jeweiligen Peaks aufgetragen.
+Es wird eine Ausgleichsrechnung der Form $Q=a E^{b} + c$ durchgeführt.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
+  \includegraphics[width=0.7\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
   \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.
   Die Fehlerbereiche verschwinden hinter den Datenpunkten und sind zur Übersichtlichkeit nicht aufgeführt.}
   \label{fig:vw}
 \end{figure}
+Die Parameter der Ausgleichsrechnung betragen:
+\begin{align*}
+	a = \SI{0.113 (55)}{\frac{1}{\kilo \electronvolt}}, && b = \SI{-0.36 (17)}{\nothing}, && c = \SI{-0.0077 (59)}{\nothing}.
+\end{align*}
+
+%mit $t = \SI{605484000 (54000)}{s}$
+%und $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ \cite{nucleide}
+%\begin{equation}
+%	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
+%	\label{result:aktivität}
+%\end{equation}
+%mit $r=\SI{22.5e-03}{m}$
+%und $h = \SI{80e-03}{m}$
+%\begin{align*}
+%	\frac{r}{h} = \tan{( \varphi / 2 )} \Leftrightarrow \varphi = 2 \arctan{(\frac{r}{h})} \\
+%	\frac{\Omega}{4 \pi} = \sin^2{\frac{\varphi}{2 \cdot 4}} =  \sin^2{ \left( \frac{1}{4} \arctan{(r/h)} \right)} = \SI{0.0069}{sr}
+%	\label{result:raumwinkel}
+%\end{align*}
+%und
+%\begin{equation}
+%	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}
+%\end{equation}
+
+%\begin{figure}[h!]
+%  \centering
+%  \includegraphics[width=0.7\textwidth]{content/images/einzelnergaussfit_0.pdf}
+%  \caption{Vergrößerung des ersten Peaks mit Ausgleichsfunktion einer Gaußkurve zur Veranschaulichung der Gaußpeaks.}
+%  \label{fig:vw}
+%\end{figure}
+
+%\input{content/tables/vollenergienachweis.tex}
+
+%\begin{itemize}
+%	\item Unterteilung der Daten in die Abschnitte um die Peaks (channel und counts werden passend abgeschnitten)
+%	\item Über die Peaks wird eine Gaußkurve gelegt $f (x) = \frac{a}{\sqrt{2 \pi \sigma^2}} \exp{\left( - \frac{(x-\mu)^2}{2 \sigma^2} \right)}+b$
+%	\item Klappt bei den meisten Peaks ganz gut, aber manchmal ist der Fehler des Parameters $a$ größer als a :|
+%	\item Alternative für Inhalt: Aufsummation der Counts in den jeweiligen Intervallen, Fehler über den Poisson-Fehler ($N \pm \sqrt{N}$)
+%	\item $Q$ berechnet mit $A$ aus \eqref{result:aktivität}, $\sfrac{\Omega}{4 \pi}$ aus \eqref{result:raumwinkel},
+%	gesamte Messzeit $T=\SI{2134}{s}$, Emissionswahrscheinlichkeit $P_{E_{\gamma}}$ aus \cite{nucleide}, Peakinhalt $N_{\text{Peakinhalt}}$
+%	\item $Q$ gegen $E$ aufgetragen, $Q=a E^{b} + c$, Parameter:
+%\end{itemize}
+%\begin{align*}
+%	a = \SI{0.113 (55)}{\frac{1}{J}}, && b = \SI{-0.36 (17)}{\nothing}, && c = \SI{-0.0077 (59)}{\nothing}
+%\end{align*}
+
+%\begin{figure}[h!]
+%  \centering
+%  \includegraphics[width=0.7\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
+%  \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.
+%  Die Fehlerbereiche verschwinden hinter den Datenpunkten und sind zur Übersichtlichkeit nicht aufgeführt.}
+%  \label{fig:vw}
+%\end{figure}
 
 \FloatBarrier
-\subsection{Monoenergetisches Spektrum Cäsium}
+\subsection{Monochromatisches $^{137}\symup{Cs}$-Spektrum}
+In Abbildung \ref{fig:cs_spectrum} ist das volle Spektrum des $^{137}\symup{Cs}$-Strahlers abgebildet.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/images/caesium_vollesspektrum.pdf}
+  \caption{Volles aufgenommenes Spektrum des $^{137}\symup{Cs}$-Strahlers.}
+  \label{fig:cs_spectrum}
+\end{figure}
+Der Photopeak wird über eine Peak-Picking-Funktion ermittelt.
+Dieser ist vergrößert in Abbildung \ref{fig:cs_photopeak} abgebildet.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/images/caesium_peak_1.pdf}
+  \caption{Vergrößerter Photopeak des $^{137}\symup{Cs}$-Strahlers.}
+  \label{fig:cs_photopeak}
+\end{figure}
+An den Peak wird eine Gaußverteilung nach
+\begin{equation*}
+	f(E) = \frac{a}{\sqrt{2 \pi \sigma^2}} \, \exp{\left( - \frac{(E-\mu)^2}{2 \sigma^2} \right)} + b
+\end{equation*}
+gefittet.
+Hierzu wird der augewertete Datenbereich angepasst.
+Die Parameter der Ausgleichsrechnung ergeben sich zu
+\begin{align*}
+	\mu = \SI{661.2327 (51)}{\kilo \electronvolt} && \sigma = \SI{0.9023 (51)}{\kilo \electronvolt} && a = \SI{1868 (9)}{\kilo \electronvolt^2} && b = \SI{6.1 (1)}{\kilo \electronvolt}.
+\end{align*}
+Für den Inhalt des Photopeaks werden die Counts im geplotteten Bereich aufsummiert.
+Der Inhalt beträgt:
+\begin{equation*}
+	N_{\text{Peak}} = \SI{9174 (96)}{\nothing}.
+\end{equation*}
+Die Halbwertsbreite (FWHM) und die Zehntelwertsbreite (FWTM) werden zu folgenden Daten ausgemessen, indem die Energie bei der Hälfte bzw einem Zehntel der Counts aus den Messdaten bestimmt wird:
+\begin{align*}
+	\text{FWHM}_{\text{Daten}} && = && \SI{2.07}{\kilo \electronvolt}\\
+	\text{FWTM}_{\text{Daten}} && = && \SI{3.94}{\kilo \electronvolt}\\
+	\frac{ \text{FWHM}_{\text{Daten}} }{ \text{FWTM}_{\text{Daten}} } && = && \SI{0.53}{\nothing}. \\
+\end{align*}
+Aus der Standardabweichung $\sigma$ lässt sich ein Vergleichswert passend zur gefitteten Gaußverteilung finden:
+\begin{align*}
+	\text{FWHM}_{\text{Fit}} && = && 2 \sqrt{2 \log{(2)}} \sigma  = \SI{2.13}{\kilo \electronvolt}\\
+	\text{FWTM}_{\text{Fit}} && = && 2 \sqrt{2 \log{(10)}} \sigma = \SI{3.87}{\kilo \electronvolt}\\
+	\frac{ \text{FWHM}_{\text{Fit}} }{ \text{FWTM}_{\text{Fit}} } && = && \SI{0.55}{\nothing}. \\
+\end{align*}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{content/images/caesium_kontinuum.pdf}
+  \caption{Vergrößertes Compton-Kontiunuum des $^{137}\symup{Cs}$-Strahlers mit linearen Ausgleichsrechnungen zur Identifitkation der Lage der Compton-Kante.}
+  \label{fig:cs_kontinuum}
+\end{figure}
+
+
 Suche
 \begin{itemize}
 	\item Energie des Strahlers (Photo-Energie -> Gauss fitten? mu entspricht dann dem Channel und der Channel einer Energie)
@@ -123,5 +248,6 @@ Suche
 	\end{align*}
 	\item Theorie liegt bei $E_{\text{Kante}} = \SI{477.3340 (28)}{\kilo \electronvolt}$
 	\item Rückstreulinie ausmessen
+	über Geradenschnittpunkt in Rückstreulinie
 	\item Inhalte des Peaks und des Compton-Kontinuums ausmessen (aufsummieren, aaaaber... Anleitung!)
 \end{itemize}

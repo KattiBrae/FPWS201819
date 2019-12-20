@@ -45,5 +45,15 @@ Q = []
 for i in range(len(content)):
     q = content[i]/(Omegadurch4pi *A *T * possibility[i])
     Q.append(q)
-    print(q)
+#    print(q)
 #print(Q)
+
+
+steigung = 0.20725824
+yachse = -1.22364356
+
+#E = steigung*x+yachse
+E = 195
+
+x = (E-yachse)/steigung
+print(x)

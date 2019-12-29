@@ -240,7 +240,7 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
 #### Arrays für die beiden Geraden-Fits
     arrlinks_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 1700, 2250)
     arrlinks_y = fillYarray(y, arrlinks_x)
-    arrrechts_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 2200, 2400)
+    arrrechts_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 2100, 2400)
     arrrechts_y = fillYarray(y, arrrechts_x)
 
     tmp = []
@@ -287,8 +287,8 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
     print(theo/(const.elementary_charge*1e03))
 
     peaks_x = [0]
-    tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, 1, 0, 464)
-    tmp_y, total = counts(x, y, peaks_x, peakno, 1, 0, 464)
+    tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, 1, 0, 450)
+    tmp_y, total = counts(x, y, peaks_x, peakno, 1, 0, 450)
 #    ax.plot(tmp_x, tmp_y, 'x', color='C4', drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
 
     print('Inhalt Kontinuum!: ' + str(total))

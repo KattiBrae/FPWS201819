@@ -2,11 +2,11 @@
 \subsection{Energiekalibration}
 Die Energiekalibration wird anhand der Vermessung eines $^{152}\symup{Eu}$-Spektrums (Abb. \ref{fig:eu_spectrum}) durchgeführt.
 Die Messdaten werden mit Python 3.7.3 und den Biblitheken \textit{numpy}, \textit{scipy} und \textit{uncertainties} ausgewertet.
-Ausgleichsrechnungen erfolgen mit \textit{scipy.optimize.curve\_fit}.
+Ausgleichsrechnungen erfolgen mit \\\textit{scipy.optimize.curve\_fit}.
 Über eine Peak-Picking-Funktion werden die größten Peaks in den Daten ausfindig gemacht und sind in Tabelle \ref{tab:eu_peaks} notiert.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/spektrum_europium.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/spektrum_europium.pdf}
   \caption{Das aufgenommene Spektrum über $T=\SI{2134}{s}$ von $^{152}\symup{Eu}$ mit markierten Peaks. Dargestellt ist die Zählrate gegen den zugehörigen Channel des MCA.}
   \label{fig:eu_spectrum}
 \end{figure}
@@ -17,14 +17,14 @@ Diese sind in Tabelle \ref{tab:eu_peaks} aufgeführt.
 Zur Kalibration werden die jeweiligen Daten auf den zugehörigen Wert des letzten sichtbaren Peaks normiert.
 Entsprechend werden folgende Rechnungen ausgeführt:
 \begin{align*}
-	\text{rel. Energie } && E_{\text{rel.}} 				&& = && \frac{ E_{\text{Peak}} }{ E_{\text{Peak=9}} } \\
-	\text{rel. Channel } && \text{Channel}_{\text{rel.}} 	&& = && \frac{ \text{Channel} }{ \text{Channel}_{\text{Peak=9}} }. \\
+	\text{rel. Energie } && E_{\text{rel.}} 				&& = && \frac{ E_{\text{Peak}} }{ E (\text{Peak=9}) } \\
+	\text{rel. Channel } && \text{Channel}_{\text{rel.}} 	&& = && \frac{ \text{Channel} }{ \text{Channel} (\text{Peak=9}) }. \\
 \end{align*}
 Die relativen Größen sind in Abbildung \ref{fig:eu_kalibration} gegen die Counts aufgetragen.
 Die drei Emissionsenergien, die im gemessenen Spektrum nicht als Peak ersichtlich sind und auch die geringsten Emissionswahrscheinlichkeiten aufweisen, werden aus den Daten der Literaturwerte entfernt.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/spektrum_europium_kali.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/spektrum_europium_kali.pdf}
   \caption{Die relativen Größen $E_{\text{rel.}}$ und $\text{Channel}_{\text{rel.}}$, normiert auf den letzten sichtbaren Peak des $^{152}\symup{Eu}$-Spektrums, sind gegen die zugehörigen Counts aufgetragen.
   Die Peaks lassen sich nun den Spektrallinien des $^{152}\symup{Eu}$ zuordnen.}
   \label{fig:eu_kalibration}
@@ -40,7 +40,7 @@ Als Parameter der Regression ergeben sich über \textit{curve\_fit}:
 \end{align*}
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/spektrum_europium_kali.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/spektrum_europium_kali.pdf}
   \caption{Ausgleichsrechnung über den Zusammenhang der Channel des MCA und der Energien der $\gamma$-Teilchen.}
   \label{fig:kalibration}
 \end{figure}
@@ -74,7 +74,7 @@ Zwischen dem angegebenen Herstellungsdatum (01.10.2000) \cite{anleitung} der $^{
 Die Halbwertszeit des Isotops beträgt $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ \cite{nucleide}.
 Mit der Anfangsaktivität $A_{0} = \SI{4130 (60)}{Bq}$ ergibt sich über
 \begin{equation}
-	A = A_{0} \exp{\left( - \frac{\ln{(2))}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
+	A = A_{0} \exp{\left( - \frac{\ln{(2)}}{T_{\sfrac{1}{2}}} t \right)} = \SI{1545(29)}{\per \second}
 	\label{result:aktivität}
 \end{equation}
 die aktuelle Aktivität der Probe.
@@ -96,7 +96,7 @@ Der Parameter $N_{\text{Peakinhalt}}$ beschreibt nun die gesamte Zahl der Counts
 Zur Berechnung der Peakinhalte werden die Peaks einzeln betrachtet und die Messdaten passend zu der erwarteten Gaußverteilung eines Peaks abgeschnitten (vgl. Abb. \ref{fig:einzelnergaussfit_0}).
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/einzelnergaussfit_0.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/einzelnergaussfit_0.pdf}
   \caption{Vergrößerung des ersten Peaks mit Ausgleichsfunktion einer Gaußkurve zur Veranschaulichung der Gaußpeaks.}
   \label{fig:einzelnergaussfit_0}
 \end{figure}
@@ -107,7 +107,7 @@ Nun wird $Q$ gegen die Energie $E$ des jeweiligen Peaks aufgetragen.
 Es wird eine Ausgleichsrechnung der Form $Q=a E^{b} + c$ durchgeführt.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
   \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.
   Die Fehlerbereiche verschwinden hinter den Datenpunkten und sind zur Übersichtlichkeit nicht aufgeführt.}
   \label{fig:vw}
@@ -137,7 +137,7 @@ Die Parameter der Ausgleichsrechnung betragen:
 
 %\begin{figure}[h!]
 %  \centering
-%  \includegraphics[width=0.7\textwidth]{content/images/einzelnergaussfit_0.pdf}
+%  \includegraphics[width=0.8\textwidth]{content/images/einzelnergaussfit_0.pdf}
 %  \caption{Vergrößerung des ersten Peaks mit Ausgleichsfunktion einer Gaußkurve zur Veranschaulichung der Gaußpeaks.}
 %  \label{fig:vw}
 %\end{figure}
@@ -159,7 +159,7 @@ Die Parameter der Ausgleichsrechnung betragen:
 
 %\begin{figure}[h!]
 %  \centering
-%  \includegraphics[width=0.7\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
+%  \includegraphics[width=0.8\textwidth]{content/images/vollenergienachweiswahrscheinlichkeit.pdf}
 %  \caption{Ausgleichsrechnung zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$.
 %  Die Fehlerbereiche verschwinden hinter den Datenpunkten und sind zur Übersichtlichkeit nicht aufgeführt.}
 %  \label{fig:vw}
@@ -170,7 +170,7 @@ Die Parameter der Ausgleichsrechnung betragen:
 In Abbildung \ref{fig:cs_spectrum} ist das volle Spektrum des $^{137}\symup{Cs}$-Strahlers abgebildet.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/caesium_vollesspektrum.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/caesium_vollesspektrum.pdf}
   \caption{Volles aufgenommenes Spektrum des $^{137}\symup{Cs}$-Strahlers.}
   \label{fig:cs_spectrum}
 \end{figure}
@@ -178,7 +178,7 @@ Der Photopeak wird über eine Peak-Picking-Funktion ermittelt.
 Dieser ist vergrößert in Abbildung \ref{fig:cs_photopeak} abgebildet.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/caesium_peak_1.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/caesium_peak_1.pdf}
   \caption{Vergrößerter Photopeak des $^{137}\symup{Cs}$-Strahlers.}
   \label{fig:cs_photopeak}
 \end{figure}
@@ -213,7 +213,7 @@ Aus der Standardabweichung $\sigma$ lässt sich ein Vergleichswert passend zur g
 In Abbildung \ref{fig:cs_kontinuum} ist das Compton-Kontinuum des Spektrums vergrößert dargestellt.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.7\textwidth]{content/images/caesium_kontinuum.pdf}
+  \includegraphics[width=0.8\textwidth]{content/images/caesium_kontinuum.pdf}
   \caption{Vergrößertes Compton-Kontinuum des $^{137}\symup{Cs}$-Strahlers mit linearen Ausgleichsrechnungen zur Identifitkation der Lage der Compton-Kante.}
   \label{fig:cs_kontinuum}
 \end{figure}
@@ -221,32 +221,24 @@ In Abbildung \ref{fig:cs_kontinuum} ist das Compton-Kontinuum des Spektrums verg
 Die Parameter der Geraden ergeben sich zu
 \begin{align*}
 	\text{links:}  && a & = & \SI{0.0699 (58)}{\frac{1}{\kilo \electronvolt}}, && b & = & \SI{-11.3 (24)}{\nothing}, \\
-	\text{rechts:} && a & = & \SI{-0.337 (27)}{\frac{1}{\kilo \electronvolt}}, && b & = & \SI{ 178 (13)}{\nothing}. \\
+	\text{rechts:} && a & = & \SI{-0.152 (17)}{\frac{1}{\kilo \electronvolt}}, && b & = & \SI{ 89 (8)}{\nothing}. \\
 \end{align*}
 Der Schnittpunkt, entsprechend die Compton-Kante, liegt über Gleichsetzen der Geradengleichungen bei
 \begin{equation*}
-	E_{\text{CK}} = \SI{460 (4)}{\kilo \electronvolt}.
+	E_{\text{CK, Data}} = \SI{450 (5)}{\kilo \electronvolt}.
 \end{equation*}
 Aus Gleichung \eqref{eq:compton_kante} folgt für die Compton-Kante folgender theoretischer Wert:
 \begin{equation*}
-	E_{\text{Kante}} = \SI{477.3340 (28)}{\kilo \electronvolt}.
+	E_{\text{CK, Theo}} = \SI{477.3340 (28)}{\kilo \electronvolt}.
 \end{equation*}
 Der Inhalt des Compton-Kontinuums als Summation der betreffenden Kanalinhalte bis zur Compton-Kante beträgt
 \begin{equation*}
-	N_{\text{Kontinuum, komplett}} = \SI{42251}{\nothing}. % ohne Wirkungsquerschnitt verrechnet
+	N_{\text{Kontinuum, komplett}} = \SI{40797}{\nothing}. % ohne Wirkungsquerschnitt verrechnet
 \end{equation*}
 
-%\begin{equation*}
-%	 \frac{3}{8} \cdot \frac{8}{3} \pi r^2 \cdot \frac{1}{m_0 (\sfrac{Eg}{m_0})^2}
-%	 \left[ 2 + \frac{E}{(Eg-E)^2}
-%	 \left( \frac{1}{(\sfrac{Eg}{m_0})^2} +
-%	 \left(1- \frac{2}{\sfrac{Eg}{m_0}} \right)
-%	 \frac{Eg-E}{Eg} \right) \right]
-%	 \cdot c+h
-%\end{equation*}
-Rückstreuung:
+Rückstreuung bei $\vartheta = \SI{90}{°}$:
 \begin{equation}
-    {E'}_{\!\gamma} = \frac{E_\gamma}{1 + \frac{E_\gamma}{m_e c^2} \left(1 - \cos\vartheta \right)},
+    {E'}_{\!\gamma} = \frac{E_\gamma}{1 + \frac{E_\gamma}{m_e c^2} \left(1 - \cos\vartheta \right)} = \SI{242.1(11)}{\kilo \electronvolt}
     \label{eq:rückstreu}
 \end{equation}
 Wirkungsquerschnitt ($\varepsilon = E_\gamma / m c^2 << 1$, $\sigma_{Th} = \frac{1}{6 \pi \epsilon_0^2} \frac{e^4}{m_{e}^2 c^4}$):

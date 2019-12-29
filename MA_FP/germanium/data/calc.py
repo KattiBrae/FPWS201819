@@ -54,6 +54,12 @@ yachse = -1.22364356
 
 #E = steigung*x+yachse
 E = 460
-
 x = (E-yachse)/steigung
-print(x)
+#print(x)
+
+print('rückstreuung')
+theta=const.pi
+E = ufloat(460e03*const.elementary_charge, 4e03*const.elementary_charge)
+#E=ufloat(661.2327e03*const.elementary_charge , 51e03*const.elementary_charge)
+Eb =E/(1 + E/(const.m_e*const.c**2)*(1-np.cos(np.pi/2))) /(1e03*const.elementary_charge)
+print(Eb)

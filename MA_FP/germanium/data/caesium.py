@@ -291,7 +291,9 @@ def kontinuum(x, y, peaks_x, peakno, width, amp, off, left, right, steigung, yac
     tmp_y, total = counts(x, y, peaks_x, peakno, 1, 0, 450)
 #    ax.plot(tmp_x, tmp_y, 'x', color='C4', drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
 
-    print('Inhalt Kontinuum!: ' + str(total))
+#    print('Inhalt Kontinuum!: ' + str(total))
+    print('Inhalt: ' + str(total-off))        # Peak-Inhalt
+    print('Fehler Inhalt: ' + str(np.sqrt(total-off)))   # Fehler Peak-Inhalt
 
 
     plt.grid(alpha=0.3)
@@ -319,9 +321,10 @@ def rueckstreupeak(x, y, peaks_x, peakno, width, amp, off, left, right, steigung
         ax.plot(tmp_x, tmp_y, 'x', color=C0mid, drawstyle='steps', markersize=3, markeredgewidth=1, label='Daten')
 
     #### Arrays für die beiden Geraden-Fits
-        arrlinks_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 778, 947)
+        var = 927
+        arrlinks_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, var-130, var+20)
         arrlinks_y = fillYarray(y, arrlinks_x)
-        arrrechts_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, 899, 1067)
+        arrrechts_x = cutDataArrayBetweenTwoValues(channelkomplett, channelkomplett, var-20, var+130)
         arrrechts_y = fillYarray(y, arrrechts_x)
 
         tmp = []
@@ -343,8 +346,8 @@ def rueckstreupeak(x, y, peaks_x, peakno, width, amp, off, left, right, steigung
         ax.fill_between(arrrechts_x, 0, 1, facecolor='C3', alpha=0.1, transform=trans)
 
     #### Beide Geraden-Fits
-        paramslinks, fehlerlinks = fitgerade(ax, arrlinks_x, arrlinks_y, 'C1', steigung*75, 'links')
-        paramsrechts, fehlerrechts = fitgerade(ax, arrrechts_x, arrrechts_y, 'C3', steigung*75, 'rechts')
+        paramslinks, fehlerlinks = fitgerade(ax, arrlinks_x, arrlinks_y, 'C1', steigung*60, 'links')
+        paramsrechts, fehlerrechts = fitgerade(ax, arrrechts_x, arrrechts_y, 'C3', steigung*60, 'rechts')
 
         alinks = ufloat (paramslinks[0], fehlerlinks[0])
         blinks = ufloat (paramslinks[1], fehlerlinks[1])
@@ -438,6 +441,5 @@ if __name__=="__main__":
     peaks_x_halbe_r = [ int(round((steigung*940+yachse)/2)) ]
     kontinuum(x, y, peaks_x_halbe, 0, steigung*1580, 0, steigung*10, 0, 0, steigung, yachse, channelkomplett)
 #    rueckstreupeak(x, y, peaks_x_halbe_r, 0, steigung*1250, 0, steigung*0, 280, -100, steigung, yachse, channelkomplett)
-
 
     print('--- done ---')

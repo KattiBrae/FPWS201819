@@ -53,13 +53,26 @@ steigung = 0.20725824
 yachse = -1.22364356
 
 #E = steigung*x+yachse
-E = 460
+E = 191
 x = (E-yachse)/steigung
 #print(x)
 
-print('rückstreuung')
-theta=const.pi
-E = ufloat(460e03*const.elementary_charge, 4e03*const.elementary_charge)
-#E=ufloat(661.2327e03*const.elementary_charge , 51e03*const.elementary_charge)
-Eb =E/(1 + E/(const.m_e*const.c**2)*(1-np.cos(np.pi/2))) /(1e03*const.elementary_charge)
-print(Eb)
+#print('rückstreuung')
+#theta=const.pi
+#E = ufloat(460e03*const.elementary_charge, 4e03*const.elementary_charge)
+##E=ufloat(661.2327e03*const.elementary_charge , 51e03*const.elementary_charge)
+#Eb =E/(1 + E/(const.m_e*const.c**2)*(1-np.cos(np.pi/2))) /(1e03*const.elementary_charge)
+#print(Eb)
+
+d = 3.9
+
+
+mupho = ufloat(0.00435, 0.00010)
+Ppho=(1- unp.exp(-mupho*d)) * 100
+mucom = ufloat(0.40, 0.01)
+Pcom=(1- unp.exp(-mucom*d)) * 100
+print(Pcom/Ppho)
+
+Npho = ufloat(9174 , 96)
+Ncom = ufloat(40797 , 202)
+print(Ncom/Npho)

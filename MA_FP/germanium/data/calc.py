@@ -53,7 +53,7 @@ steigung = 0.20725824
 yachse = -1.22364356
 
 #E = steigung*x+yachse
-E = 191
+E = 500
 x = (E-yachse)/steigung
 #print(x)
 
@@ -71,8 +71,13 @@ mupho = ufloat(0.00435, 0.00010)
 Ppho=(1- unp.exp(-mupho*d)) * 100
 mucom = ufloat(0.40, 0.01)
 Pcom=(1- unp.exp(-mucom*d)) * 100
-print(Pcom/Ppho)
+#print(Pcom/Ppho)
 
 Npho = ufloat(9174 , 96)
 Ncom = ufloat(40797 , 202)
-print(Ncom/Npho)
+#print(Ncom/Npho)
+
+
+
+
+#print(komplett)

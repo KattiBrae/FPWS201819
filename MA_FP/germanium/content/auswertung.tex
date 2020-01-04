@@ -1,4 +1,4 @@
-\section{Auswertung}
+efficiency\section{Auswertung}
 \subsection{Energiekalibration}
 Die Energiekalibration wird anhand der Vermessung eines $^{152}\symup{Eu}$-Spektrums (Abb. \ref{fig:eu_spectrum}) durchgeführt.
 Die Messdaten werden mit Python 3.7.3 und den Biblitheken \textit{numpy}, \textit{scipy} und \textit{uncertainties} ausgewertet.
@@ -69,6 +69,7 @@ Als Parameter der Regression ergeben sich über \textit{curve\_fit}:
 
 \FloatBarrier
 \subsection{Vollenergienachweiswahrscheinlichkeit}
+\label{kap:vw}
 Zur Bestimmung der Vollenergienachweiswahrscheinlichkeit $Q$ (engl.: \textit{efficiency}) des Detektors wird zunächst die Aktivität der Probe ausgerechnet.
 Zwischen dem angegebenen Herstellungsdatum (01.10.2000) \cite{anleitung} der $^{152}\symup{Eu}$-Probe und dem Versuchstag (09.12.2019) sind $t = \SI{605484000 (54000)}{s}$ vergangen.
 Die Halbwertszeit des Isotops beträgt $T_{\sfrac{1}{2}} = \SI{426.7 (5) e+06}{s}$ \cite{nucleide}.
@@ -87,12 +88,13 @@ Dabei wird der Raumwinkel über die Geometrie eines Kegels berechnet:
 \end{align*}
 Die eingesetzten Größen für den Radius der Detektoroberfläche und Höhe des Kegels sind $r = \SI{22.5e-03}{m}$ und $h = \SI{80e-03}{m}$.
 Die gesamte Messzeit des $^{152}\symup{Eu}$-Spektrums beträgt $T=\SI{2134}{s}$.
-Damit kann nun $Q$ wie folgt berechnet werden:
-\begin{equation}
-	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}.
-\end{equation}
-$P_{E_{\gamma}}$ ist hier die Emissionswahrscheinlichkeit einer $\gamma$-Energie \cite{nucleide}.
-Der Parameter $N_{\text{Peakinhalt}}$ beschreibt nun die gesamte Zahl der Counts, die sich in einem Peak befindet.
+Damit kann nun $Q$ nun über Gleichung \eqref{eqn:efficiency} berechnet werden.
+%\begin{equation}
+%	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}.
+%    \label{eqn:efficiency}
+%\end{equation}
+%$P_{E_{\gamma}}$ ist hier die Emissionswahrscheinlichkeit einer $\gamma$-Energie \cite{nucleide}.
+%Der Parameter $N_{\text{Peakinhalt}}$ beschreibt nun die gesamte Zahl der Counts, die sich in einem Peak befindet.
 Zur Berechnung der Peakinhalte werden die Peaks einzeln betrachtet und die Messdaten passend zu der erwarteten Gaußverteilung eines Peaks abgeschnitten (vgl. Abb. \ref{fig:einzelnergaussfit_0}).
 \begin{figure}[h!]
   \centering
@@ -340,3 +342,31 @@ Das Verhältnis der Inhalte des Photopeaks und des Compton-Kontinuums gibt ebenf
 
 
 \subsection{Aktivität von Barium}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{content/images/barium_markiert.pdf}
+  \caption{Spektrum des $^{133}\symup{Ba}$ mit zugeordneten Literaturwerten \cite{nucleide}.}
+  \label{fig:ba_spectrum}
+\end{figure}
+In Abbildung \ref{fig:ba_spectrum} ist das Spektrum zum $^{133}\symup{Ba}$ dargestellt.
+Die Peaks werden mithilfe einer Peak-Picking-Funktion ermittelt.
+Die Literaturwerte zum Barium \cite{nucleide} sind in Tabelle \ref{tab:barium} aufgeführt.
+Die Werte sind ebenfalls in Abbildung \ref{fig:ba_spectrum} abgebildet.
+
+Nun wird die Aktivität der Probe zur Zeit der Messung bestimmt.
+Hierzu werden die einzelnen Peaks genauer betrachtet, passende Bereiche der Gaußpeaks gewählt und die Inhalte der einzelnen Peaks werden berechnet.
+Die Energien der einzelnen Peaks $E_{\gamma}$, die Emissionswahrscheinlichkeit $P$, die Peakinhalte $N_{\text{Peakinhalt}}$ sind in Tabelle \ref{tab:barium} notiert.
+Über die Ausgleichsrechnung aus Kapitel \ref{kap:vw} werden aus den Energien die Vollenergienachweiswahrscheinlichkeiten $Q$ berechnet.
+Die Gleichung \eqref{eqn:efficency} wird nach der Aktivität $A$ umgestellt und so für jeden Peak eine Aktivität bestimmt.
+%\begin{equation*}
+%	Q = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ A T P_{E_{\gamma}}}.
+%	\Leftrightarrow A = \frac{4 \pi}{\Omega} \frac{N_{\text{Peakinhalt}}}{ Q T P_{E_{\gamma}}}.
+%\end{equation*}
+%Die umgerechneten Q aus den Energien (nach Kap. \ref{kap:vw}) ergeben sich zu den Werten in Tabelle \ref{tab:barium}.
+\input{content/tables/barium.tex}
+Anschließend wird eine finale Aktivität bestimmt, indem die einzelnen Aktivitäten gemittelt werden:
+\begin{equation*}
+    A = \SI{1077 (12)}{\frac{1}{s}}.
+\end{equation*}
+
+\subsection{Bestimmung der Zusammensetzung einer Probe aus Bananenchips}

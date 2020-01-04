@@ -379,10 +379,11 @@ def rueckstreupeak(x, y, peaks_x, peakno, width, amp, off, left, right, steigung
 
         plt.savefig('bananium_rueckstreupeak.pdf')
 
-def markiere_element(ax, name, col, energie):
-    ax.axvline(energie, linewidth=0.1, color='C2', alpha=0.6)
-    ax.plot(energie, 50, 'x', color=col, markersize=8, markeredgewidth=2, )
-    plt.annotate((xy)=(energie, 50), s=name, rotation=25)
+def markiere_element(ax, x, y, name, col, energie):
+#    ax.axvline(energie, linewidth=0.1, color=col, alpha=0.8)
+#    ax.plot(energie, 50, 'x', color=col, markersize=8, markeredgewidth=2, )
+    ax.plot(x, y, 'x', color=col, markersize=8, markeredgewidth=2)
+    plt.annotate((xy)=(x+15, y+1.5), s=name, fontsize = 14, rotation=25)
 
 def spektrum_mit_annotations(x, y, peaksenergie, peakno, peaks_counts):
     fig, ax = plt.subplots()
@@ -391,75 +392,15 @@ def spektrum_mit_annotations(x, y, peaksenergie, peakno, peaks_counts):
 
     ax.fill_between(x, 0, y, step='mid')#, alpha=0.4)
     ax.plot(x, y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten')
-    ax.plot(peaksenergie, peaks_counts, 'x', color='C1', drawstyle='steps', markersize=8, markeredgewidth=2, label='Peaks')
+#    ax.plot(peaksenergie, peaks_counts, 'x', color='black', drawstyle='steps', markersize=3, markeredgewidth=1, label='Peaks')
 
-    markiere_element(ax, '$^{40}$K', 'C2', 1460.822)
-    markiere_element(ax, '$^{40}$K', 'C2', 511)
+    markiere_element(ax, 1460.98323964, 34.0, '$^{40}$K', 'C1', 1460.822)
+    markiere_element(ax, 510.70420924, 18.0, '$^{40}$K', 'C1', 511)
+    markiere_element(ax, 352.35891388, 19.0, '$^{226}$Ra', 'C2', 351.932)
+    markiere_element(ax, 608.944615, 15.0, '$^{226}$Ra', 'C2', 609.312)
+    markiere_element(ax, 238.57414012, 30.0, '$^{212}$Pb', 'C3', 238.632)
+    markiere_element(ax,  74.66,  51.0, '$^{243}$Am', 'C4',  74.66)
 
-
-#50.176399960000005
-#227Th
-#- 50.13 (1)	     8.2 (5)
-#- 79.69 (2)	     1.90 (11)
-#- 93.88 (5)	     1.48 (8)
-
-#58.05221308
-#159Gd
-#- 58.0000 (22)	     2.49 (7)
-#- 363.5430 (18)	 11.78 (5)
-#155Eu
-#- 57.989 (1)	     0.067 (6)
-#- 86.5479 (10)	     30.7 (3)
-#- 105.3083 (10)	 21.1 (6)
-
-#72.76754812,
-#75.254647,
-#77.32722940000001,
-#85.617559,
-#87.6901414,
-#92.66433916000001,
-#93.9078886,
-#99.71111932000001,
-#100.33289404,
-#102.40547644,
-#103.44176764000001,
-#109.45225660000001,
-#114.21919612,
-#123.54581692000001,
-#124.78936636,
-#128.31275644000002,
-#129.34904764,
-#131.83614652,
-#137.22486076,
-#138.05389372000002,
-#140.12647612,
-#145.51519036000002,
-#148.00228924,
-#149.66035516,
-#157.53616828,
-#161.47407484000001,
-#164.16843196000002,
-#166.24101436,
-#174.94586044000002,
-#186.13780540000002,
-#191.73377788000002,
-#197.95152508,
-#201.47491516000002,
-#204.79104700000002,
-#211.42331068000001,
-#218.05557436,
-#230.28381052,
-#238.57414012,
-#253.08221692,
-#258.47093115999996,
-#266.34674428,
-#271.52820027999996,
-#286.6580518,
-#295.36289788,
-#352.35891388,
-#510.70420924,
-#608.944615,
-#1460.98323964
 
     plt.grid(alpha=0.3)
 #    ax.legend(fancybox=True, ncol=1)
@@ -528,6 +469,7 @@ if __name__=="__main__":
                 peaks_counts.append(y[i])
             else:
                 pass
+    print(peaks_counts)
 
 #    vollesspektrum(x, y)
     spektrum_mit_annotations(x, y, peaksenergie, peakno, peaks_counts)

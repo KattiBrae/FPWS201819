@@ -54,7 +54,7 @@ def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
     ax.set_ylabel('Häufigkeit', labelpad=8)
 
 
-    plt.savefig('einzelnergaussfit_%s.pdf' %peakno)
+    plt.savefig('europium_peak_%s.pdf' %peakno)
 
 #    print(total-off)        # Peak-Inhalt
 #    print(np.sqrt(total-off))   # Fehler Peak-Inhalt
@@ -125,7 +125,7 @@ if __name__=="__main__":
                 pass
 
 
-    #gaussfit(x, y, peaks_x, 0, 10,   0, 30, 1, -1)
+    gaussfit(x, y, peaks_x, 0, 10,   0, 30, 1, -1)
     #gaussfit(x, y, peaks_x, 1, 10,   0, 15, 0, -1)
     #gaussfit(x, y, peaks_x, 2, 11,   0, 15, 2, -1)
     #gaussfit(x, y, peaks_x, 3, 10,   0, 10, 4, -2)

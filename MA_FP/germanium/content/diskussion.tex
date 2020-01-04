@@ -1,1 +1,58 @@
-Hier könnte Ihre Werbung stehen.
+\section{Diskussion}
+Die Energiekalibration des Germanium-Detektors mithilfe einer $^{152}\symup{Eu}$-Probe verläuft wie erwartet.
+Die Unsicherheiten der Kalibrierung sind klein (max. $\SI{0.02}{\%}$).\\
+Die Aktivität der Europiumprobe wird zu
+\begin{equation*}
+	A  = \SI{1545(29)}{\per \second}
+\end{equation*}
+bestimmt.
+Die Wahrscheinlichkeit, dass ein Teilchen seine volle Energie im Detektor verliert, ist die Vollenergienachweiswahrscheinlichkeit $Q$ (engl.: \textit{efficiency}).
+Die Ausgleichsrechnung dazu hat eine maximale Unsicherheit in den Parametern von $\SI{76.59}{\%}$.
+Diese Abweichungen erklären sich möglicherweise durch einen ungenau apporoximierten Raumwinkel.\\
+
+Anschließend wird ein monochromatisches Cäsium-Spektrum ($^{137}\symup{Cs}$) untersucht.
+In dem Spektrum wird der Peak, der durch den Photo-Effekt entsteht, genauer betrachtet.
+Die Lage des Peaks wird aus einer Ausgleichsrechnung mit einer Gaußverteilung bestimmt und einmal wird ein Literaturwert nachgeschlagen \cite{nucleide}:
+\begin{align*}
+E_{\text{Photo, Data}} = \SI{661.2327 (51)}{\kilo \electronvolt} && E_{\text{Photo, Theo}} = \SI{661.657 (3)}{\kilo \electronvolt}.
+\end{align*}
+Dabei weichen die Daten zu $\SI{0.06}{\%}$ von der Literatur ab.
+Die Ausgleichsrechnung der Gaußverteilung lässt sich mithilfe des Verhältnisses der Halbwertsbreite (FWHM) und der Zehntelwertsbreite (FWTM) beurteilen.
+Das Verhältnis wird hierzu direkt aus den Daten, ohne Ausgleichsrechnung, und ein zweites Mal aus der Ausgleichsrechnung bestimmt:
+\begin{align*}
+	\frac{ \text{FWHM}_{\text{Daten}} }{ \text{FWTM}_{\text{Daten}} }  = \SI{0.53}{\nothing} && 	\frac{ \text{FWHM}_{\text{Fit}} }{ \text{FWTM}_{\text{Fit}} } = \SI{0.55}{\nothing}. \\
+\end{align*}
+Das Verhältnis der beiden Breiten aus den Daten weicht hier um $\SI{3.64}{\%}$ von der optimalen Gaußverteilung ab.
+Dennoch lässt sich bestätigen, dass die 'Spektrallinien' in den Spektren schmalen Gaußverteilungen entsprechen.\\
+
+Nach dem Photopeak wird nun das Compton-Kontinuum betrachtet.
+Die Compton-Kante aus den Messdaten und der Vergleichswert ergeben sich zu
+\begin{align*}
+	E_{\text{Compton, Data}} = \SI{450 (5)}{\kilo \electronvolt} && E_{\text{Compton, Theo}} = \SI{477.3340 (28)}{\kilo \electronvolt}.
+\end{align*}
+Diese weichen um $\SI{5.73}{\%}$ voneinander ab.\\
+
+Auch der Peak, der sich durch die Rückstreuung der Compton-Wechselwirkung ergibt, lässt sich sowohl aus den Daten bestimmen, als auch berechnen:
+\begin{align*}
+	E_{\text{Rück, Data}} = \SI{191 (18)}{\kilo \electronvolt} && E_{\text{Rück, Theo}} = \SI{242.1(11)}{\kilo \electronvolt}.
+\end{align*}
+Die relative Abweichung von Daten zur Theorie beträgt $\SI{21.11}{\%}$.\\
+
+Weiterhin wird das Verhältnis der beiden Wechselwirkungswahrscheinlichkeiten (Photo/Compton) über zwei verschiedene Rechnungen gebildet.
+Zuerst über die Absorptionskoeffizienten $\mu$ und die Wechselwirkungswahrscheinlichkeiten $P$, anschließend durch das Verhältnis der Inhalte von Photopeak und Compton-Kontinuum:
+\begin{align*}
+	\frac{ P_{\text{Photo} } }{ P_{ \text{Compton} } } = \SI{47.0 (12)}{\nothing} && 	\frac{ N_{\text{Photo}} }{ N_{\text{Kontinuum}} } = \SI{4.45 (5)}{\nothing}.
+\end{align*}
+Zwischen diesen Werten liegt der Faktor $\SI{10.56}{\nothing}$.
+Dieser Unterschied ist unerwartet, es gibt aber auch Möglichkeiten diese Abweichung zu erklären.
+Die Wechselwirkungswahrscheinlichkeiten $P$ beinhalten nur einfache Wechselwirkungen.
+Dennoch sind Wechselwirkungen höherer Ordnungen denkbar und möglich.\\
+
+Die Aktivität von Barium ($^{133}\symup{Ba}$) berechnet sich zu
+\begin{equation*}
+    A = \SI{1077 (12)}{\frac{1}{s}}.
+\end{equation*}
+
+Im Spektrum der Probe aus Bananenchips können die Linien dem Strahler $^{40}\symup{K}$ zugeordnet werden.
+Die Lokalisation der Linien im gemessenen Spektrum weicht maximal $\SI{0.05}{\%}$ von den Literaturwerten ab.\\
+Insgesamt lässt sich sagen, dass der Versuch wenige Fehlerquellen bietet und gut verlaufen ist.

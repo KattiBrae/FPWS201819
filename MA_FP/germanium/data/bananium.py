@@ -396,10 +396,10 @@ def spektrum_mit_annotations(x, y, peaksenergie, peakno, peaks_counts):
 
     markiere_element(ax, 1460.98323964, 34.0, '$^{40}$K', 'C1', 1460.822)
     markiere_element(ax, 510.70420924, 18.0, '$^{40}$K', 'C1', 511)
-    markiere_element(ax, 352.35891388, 19.0, '$^{226}$Ra', 'C2', 351.932)
-    markiere_element(ax, 608.944615, 15.0, '$^{226}$Ra', 'C2', 609.312)
-    markiere_element(ax, 238.57414012, 30.0, '$^{212}$Pb', 'C3', 238.632)
-    markiere_element(ax,  74.66,  51.0, '$^{243}$Am', 'C4',  74.66)
+#    markiere_element(ax, 352.35891388, 19.0, '$^{226}$Ra', 'C2', 351.932)
+#    markiere_element(ax, 608.944615, 15.0, '$^{226}$Ra', 'C2', 609.312)
+#    markiere_element(ax, 238.57414012, 30.0, '$^{212}$Pb', 'C3', 238.632)
+#    markiere_element(ax,  74.66,  51.0, '$^{243}$Am', 'C4',  74.66)
 
 
     plt.grid(alpha=0.3)
@@ -457,7 +457,7 @@ if __name__=="__main__":
        2470, 2944, 7055]
 
     peaksenergie = channelarraytoenergyarray(peaks, steigung, yachse)
-    print(peaksenergie)
+#    print(peaksenergie)
 
 #    peaks_x = [ 3197 ]
     peakno = np.arange(0, len(peaksenergie), 1 )
@@ -469,9 +469,9 @@ if __name__=="__main__":
                 peaks_counts.append(y[i])
             else:
                 pass
-    print(peaks_counts)
+#    print(peaks_counts)
 
-#    vollesspektrum(x, y)
+    vollesspektrum(x, y)
     spektrum_mit_annotations(x, y, peaksenergie, peakno, peaks_counts)
 #    vollesspektrumlog(x, y)
 #    gaussfit(channelkomplett, y, [397,  1339, 1466, 1724, 1857], 0, 8, 0, 15, 0, 0, steigung, yachse)

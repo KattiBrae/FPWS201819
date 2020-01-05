@@ -1,19 +1,19 @@
 \section{Theorie}
 \subsection{Wechselwirkung in Materie}
 Wenn Photonen in den germanium-Detektor einbringen, geben sie ihre Energie hauptsächlich durch drei Effekte an diesem ab. Diese Effekte - Paarbildung, Comptonstreuung und Photoeffekt - werden in den folgenden Unterkapiteln erleutert. Welcher dieser Effekte jedoch auftritt hängt stark von der Kernladungszahl $Z$ des Detektors sowie der Energie $E_\gamma$ der Photonen ab. \\
-Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kann die Anzahl der Wechselwirkungen 
+Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kann die Anzahl der Wechselwirkungen
 \begin{equation}
     N(D) = N_0 n \sigma \symup{d}x
 \end{equation}
 \begin{center}
     \tiny($ \symup{d}x \hat{=} \text{Absorberschichtdicke}$, $n \hat{n} \text{Anzahl der Elektronen pro Volumeneinheit}$)
 \end{center}
-pro Zeiteinheit bestimmt werden. 
+pro Zeiteinheit bestimmt werden.
 Für die Anzahl der wechselwirkenden Photonen ergibt sich damit
 \begin{equation}
     N(D) = N_0 \left( 1 - \exp{- n \sigma D } \right)
 \end{equation}
-wobei die größen $n$ und $\sigma$ zum Extinktionskoeffizient $\mu = n \sigma$ zusammengefasst werden können, dessen Kehrwert die mittlere Reichweite der Photonen im Material angeben. 
+wobei die größen $n$ und $\sigma$ zum Extinktionskoeffizient $\mu = n \sigma$ zusammengefasst werden können, dessen Kehrwert die mittlere Reichweite der Photonen im Material angeben.
 %Die Energieabhängigkeit des Extinktionskoeffizienten ist in Abbildung \ref{fig:ext} dargestellt.
 %\begin{figure}
 %    \centering
@@ -43,23 +43,25 @@ Dabei gibt das Photon mit Wellenlänge $\lambda$ Energie an das Elektron ab, wod
     \tiny {($\Delta \lambda \: \hat{=} \: \lambda - \lambda '$, $ \lambda '\: \hat{=} \:\text{Wellenlänge des Photons nach dem Stoß}$, $h=\: \hat{=} \:\text{Planck'sches Wirkungsquantum}$,$\theta\: \hat{=} \:\text{Streuwinkel}$, $m_\text{e} \: \hat{=} \:\text{Masse des Elektrons}$, $c \: \hat{=} \: \text{Lichtgeschwindigkeit}$)}
 \end{center}
 Da sowohl $m_\text{e}$, $c$, als auch $h$ Konstanten sind, hängt die Wellenlängenänderung und somit auch die Energie des Photons nach dem Stoß allein vom Streuwinkel ab.\\
-Für die Energien $E_{\gamma'}$ des Photons und $E_e$ des Elektrons nach dem Stoß lassen sich mithilfe von Energie- und Impulserhaltung die Relationen 
+Für die Energien $E_{\gamma'}$ des Photons und $E_e$ des Elektrons nach dem Stoß lassen sich mithilfe von Energie- und Impulserhaltung die Relationen
 \begin{align}
-    E_{\gamma'} &= E_\gamma \frac{1}{1+\epsilon (1-cos(\theta))}\\
+    E_{\gamma'} &= E_\gamma \frac{1}{1+\epsilon (1-cos(\theta))}
+    \label{eqn:rueckstreu}\\
     E_e &= E_\gamma \frac{1-cos(\theta)}{1+\epsilon (1-cos(\theta))}
-\end{align} 
+\end{align}
 \begin{center}
     \tiny{($\epsilon = \frac{E_\gamma}{mc^2}$)}
 \end{center}
-herleiten. Bei einem maximalen Streuwinkel von $\theta = \pi$ kommt es zu einem Energieübertrag von 
+herleiten. Bei einem maximalen Streuwinkel von $\theta = \pi$ kommt es zu einem Energieübertrag von
 \begin{equation}
     E_\text{EL} = E_\gamma \frac{2 \epsilon}{1 + 2 \epsilon} < E_\gamma .
+    \label{eqn:compton_kante}
 \end{equation}
 Somit kann das Photon nicht seine gesamte Energie übertragen.
 
 \subsubsection{Paarbildung}
-Paarbildung bezeichnet das Entstehen von Elektron und Positron aus einem einzelnen Photon. Damit dieser Prozess stattfindet, muss für die Energie des Photons $E_\gamma \ge 2m_e \cdot c^2 \approx 1,02 \mathrm{MeV}$ gelten. Zusätzlich kann die Paarbildung nur in Anwesenheit weiterer Stoßpartner stattfinden, da sonst die Impulserhaltung verletzt wird. 
-Handelt es sich bei dem Stoßpartner um einen Atomkern, ist die Rückstoßenergie 
+Paarbildung bezeichnet das Entstehen von Elektron und Positron aus einem einzelnen Photon. Damit dieser Prozess stattfindet, muss für die Energie des Photons $E_\gamma \ge 2m_e \cdot c^2 \approx 1,02 \mathrm{MeV}$ gelten. Zusätzlich kann die Paarbildung nur in Anwesenheit weiterer Stoßpartner stattfinden, da sonst die Impulserhaltung verletzt wird.
+Handelt es sich bei dem Stoßpartner um einen Atomkern, ist die Rückstoßenergie
 \begin{equation}
     E_r = \frac{p^2}{2M}
 \end{equation}
@@ -71,12 +73,12 @@ gering, weshalb das Photon vor dem Stoß lediglich über die Energie
     E_\gamma > 2 \cdot m_\text{e}c^2
 \end{equation}
 verfügen muss. \\
-Falls das Elektron jedoch mit einem Hüllenelektron stößt, ist die Rückstoßenergie $E_r$ größer, weshalb für so einen Fall die Relation 
+Falls das Elektron jedoch mit einem Hüllenelektron stößt, ist die Rückstoßenergie $E_r$ größer, weshalb für so einen Fall die Relation
 \begin{equation}
     E_\gamma > 4 \cdot m_\text{e}c^2
 \end{equation}
 gelten muss. \\
-Die Energie, die nicht zur Erzeugung des Elektron-Positron-Paares benötigt wird, verteilt sich gleichmäßig auf dieses. 
+Die Energie, die nicht zur Erzeugung des Elektron-Positron-Paares benötigt wird, verteilt sich gleichmäßig auf dieses.
 Es kann jedoch passieren, dass das erzeugte Positron mit einem Hüllenelektron annihiliert. Die so erzeugten Photonen können den Detektor ohne weitere Wechselwirkung verlassen, weshalb im Energiespektrum - zusätzlich zu $E_\gamma$ - Linien bei $E_\gamma - m_\text{e}c^2$ und $E_\gamma - 2 m_\text{e}c^2$ beobachtet werden können. \\
 Ein eine schmematische Darstellung der Paarbildung ist in Abbildung \ref{fig:pair} zu sehen.
 \begin{figure}[H]
@@ -88,7 +90,7 @@ Ein eine schmematische Darstellung der Paarbildung ist in Abbildung \ref{fig:pai
 \caption{Schematische Darstellung der Paarbildung}
 \label{fig:pair}
 \end{figure}
-Der Wirkungsquerschnitt ist bei der Paarbildung davon abhängig, wo im Columbfeld diese stattfindet, da es durch die äußeren Schalen des Atoms durch Abschirmungseffekte kommt. In Kernnähe lässt sich der Wirkungsquerschnitt für $\SI{10}{MeV}<E_\text{\gamma}<\SI{25}{MeV}$ zu 
+Der Wirkungsquerschnitt ist bei der Paarbildung davon abhängig, wo im Columbfeld diese stattfindet, da es durch die äußeren Schalen des Atoms durch Abschirmungseffekte kommt. In Kernnähe lässt sich der Wirkungsquerschnitt für $\SI{10}{MeV}<E_\text{\gamma}<\SI{25}{MeV}$ zu
 \begin{equation}
     \sigma_\text{P}=\alpha r^2_\text{e} Z^2\left(\frac{28}{9}\ln(2\epsilon)-\frac{218}{27}\right)\label{eq:s_P}
 \end{equation}
@@ -104,14 +106,14 @@ Dabei muss die Energie des Photons größer als die Bindungsenergie des herauszu
     E_\gamma = E_\text{Bindung}
 \end{equation}
 Findet der Prozess in einer inneren Schale statt, fällt ein Elektron aus einer höheren Schale in das entstandene Loch und entsendet dabei wieder ein Photon. Da somit die gesamte Energie des Photons deponiert wird, ist bei der Messung ein scharfer Peak zu erwarten.  \\
-Für den Wirkungsquerschnitt lässt sich die Relation 
+Für den Wirkungsquerschnitt lässt sich die Relation
 \begin{equation}
     \sigma_\text{Ph} \propto \frac{Z^{\alpha}}{E^{\delta}_\text{\gamma}}
 \end{equation}
 \begin{center}
     \tiny{($ 4 < \alpha < 5 $, $\rho$ ist abhängig von $E_\gamma$. Es gilt $\delta \approx 3{,}5$, ab $E_\gamma$ sinkt $\delta$ jedoch auf $\delta \approx 1$ )}
 \end{center}
-herleiten. 
+herleiten.
 
 \subsection{Der Reinst-Germanium-Detektor}
 \subsubsection{Der Germanium-Detektor als Halbleiter}
@@ -125,7 +127,7 @@ Der Germanium-Detektor ist ein Halbleiterdetektor und stellt im wesentlichen ein
 Die Proportionalität zur Spannung $U$ sorgt dafür, dass ab einer Spannung von $U = \SI{5000}{\volt}$ eine Verarmungszone von  $\SI{3}{\centi \meter}$ entsteht. Jedoch ist einstellbare Spannung durch die Bildung von Elektron-Loch-Paaren Temperatur-bedingt nach oben hin begrenzt, da diese Ladungen die die angelegte Spannung $U$ beschleunigt werden. Dadurch entsteht ein Leckstrom, der die Energieauflösung des Detektors beeinflusst. Um dem entgegen zu wirken, wird der Detektor auf eine Temperatur von ca $\SI{77}{\kelvin}$ heruntergefühlt. Dies geschieht mithilfe von flüssigem Stickstoff. \\
 
 \subsubsection{Funktionsweise}
-Trifft ein geladenes Teilchen oder Photon auf die Elektronen im Detektor, können diese die Energeilücke zwischen Valenz- und Leitungsband überspringen. Ist dies der Fall, bleiben im Valenzband ein frei bewegliche Löcher zurück, es entstehen Elektronen-Loch-Paare. Mit diesen lässt sich ein Ladungsimpuls messen, der proportional zur Energie der Primärelektronen ist. Damit lässt sich die vom Photon deponierte Energie $E_\gamma$ rekonstruieren, die im besten Fall ihre gesamte Energie deponiert haben. 
+Trifft ein geladenes Teilchen oder Photon auf die Elektronen im Detektor, können diese die Energeilücke zwischen Valenz- und Leitungsband überspringen. Ist dies der Fall, bleiben im Valenzband ein frei bewegliche Löcher zurück, es entstehen Elektronen-Loch-Paare. Mit diesen lässt sich ein Ladungsimpuls messen, der proportional zur Energie der Primärelektronen ist. Damit lässt sich die vom Photon deponierte Energie $E_\gamma$ rekonstruieren, die im besten Fall ihre gesamte Energie deponiert haben.
 
 \subsubsection{Auflösungsvermögen}
 Im vom Detektor aufgezeichneten Spektrum eines $\gamma$-Strahlers können zwei Spektrallinien
@@ -135,4 +137,4 @@ Diese Halbwertsbreite wird durch verschiedene Faktoren - dem Leckstrom, Feldinho
 \begin{equation}
     \symup{\Delta}E'^2_{\frac{1}{2}} = \symup{\Delta}E^2_{\frac{1}{2}} + \symup{\Delta}E^2_\text{Leckstrom} + \symup{\Delta}E^2_\text{Feldinhom.} + \symup{\Delta}E^2_\text{Verstärkerrauschen}.
 \end{equation}
-Diese ist auch abhängig von der Saugspannung $U$. Je größer diese ist, desto größer wird auch $\symup{\Delta}E^2_\text{Leckstrom}$ und desdo kleiner wird ${\Delta}E^2_\text{Feldinhom.}$. Aufgrund dessen muss für eine gute Halbwertsbreite $\symup{\Delta}E'^2_{\frac{1}{2}}$ ein Kompromiss zwischen $\symup{\Delta}E^2_\text{Leckstrom}$ und ${\Delta}E^2_\text{Feldinhom.}$ gefunden werden. 
+Diese ist auch abhängig von der Saugspannung $U$. Je größer diese ist, desto größer wird auch $\symup{\Delta}E^2_\text{Leckstrom}$ und desdo kleiner wird ${\Delta}E^2_\text{Feldinhom.}$. Aufgrund dessen muss für eine gute Halbwertsbreite $\symup{\Delta}E'^2_{\frac{1}{2}}$ ein Kompromiss zwischen $\symup{\Delta}E^2_\text{Leckstrom}$ und ${\Delta}E^2_\text{Feldinhom.}$ gefunden werden.

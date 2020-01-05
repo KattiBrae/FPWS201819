@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%   Vorlage für eine Abschlussarbeit   %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Erstellt von Maximilian Nöthe, <maximilian.noethe@tu-dortmund.de>
+% ausgelegt für lualatex und Biblatex mit biber
+
+% Kompilieren mit
+% latexmk --lualatex --output-directory=build thesis.tex
+% oder einfach mit:
+% make
+
+%Das war meine BA
+%\documentclass[
+%%  tucolor,       % remove for less green,
+%  BCOR=12mm,     % 12mm binding corrections, adjust to fit your binding
+%  parskip=half,  % new paragraphs start with half line vertical space
+%  open=any,      % chapters start on both odd and even pages
+%  cleardoublepage=plain,  % no header/footer on blank pages
+%]{tudothesis}
+
+%Das ist ein einfacheres Dokument
+\documentclass[
+  bibliography=totoc,     % Literatur im Inhaltsverzeichnis
+  captions=tableheading,  % Tabellenüberschriften
+  titlepage=firstiscover, % Titelseite ist Deckblatt
+]{scrartcl}
+
+
+% Warning, if another latex run is needed
+\usepackage[aux]{rerunfilecheck}
+
+% just list chapters and sections in the toc, not subsections or smaller
+\setcounter{tocdepth}{2}
+
+%------------------------------------------------------------------------------
+%------------------------------ Fonts, Unicode, Language ----------------------
+%------------------------------------------------------------------------------
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
+
+% german language
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+
+% for english abstract and english titles in the toc
+\setotherlanguages{english}
+
+% intelligent quotation marks, language and nesting sensitive
+\usepackage[autostyle]{csquotes}
+
+% microtypographical features, makes the text look nicer on the small scale
+\usepackage{microtype}
+
+%------------------------------------------------------------------------------
+%------------------------ Math Packages and settings --------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Enable Unicode-Math and follow the ISO-Standards for typesetting math
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+\setmathfont{Latin Modern Math}
+
+% nice, small fracs for the text with \sfrac{}{}
+\usepackage{xfrac}
+
+
+%------------------------------------------------------------------------------
+%---------------------------- Numbers and Units -------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[
+  locale=DE,
+  separate-uncertainty=true,
+  per-mode=symbol-or-fraction,
+]{siunitx}
+\sisetup{math-micro=\text{µ},text-micro=µ}
+\DeclareSIUnit{\nothing}{\relax}
+
+%------------------------------------------------------------------------------
+%-------------------------------- tables  -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{booktabs}       % \toprule, \midrule, \bottomrule, etc
+\usepackage{multirow}
+\usepackage{tabularx}
+
+
+%------------------------------------------------------------------------------
+%-------------------------------- graphics -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage{grffile}
+
+% allow figures to be placed in the running text by default:
+\usepackage{scrhack}
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
+% keep figures and tables in the section
+\usepackage[section, below]{placeins}
+
+
+%------------------------------------------------------------------------------
+%---------------------- customize list environments ---------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{enumitem}
+
+%------------------------------------------------------------------------------
+%------------------------------ Bibliographie ---------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[
+  backend=biber,   % use modern biber backend
+  autolang=hyphen, % load hyphenation rules for if language of bibentry is not
+                   % german, has to be loaded with \setotherlanguages
+                   % in the references.bib use langid={en} for english sources
+  sorting=none,
+]{biblatex}
+\addbibresource{lit.bib}  % the bib file to use
+\DefineBibliographyStrings{german}{andothers = {{et\,al\adddot}}}  % replace u.a. with et al.
+
+%------------------------------------------------------------------------------
+%----------------------    das hab ich hinzugefügt   --------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[version=4]{mhchem}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{ulem}
+\usepackage{color, colortbl}
+\definecolor{Lightgray}{rgb}{0.8, 0.8, 0.8}
+\definecolor{tu}{rgb}{0.196, 0.44, 0.00}
+
+\addto\captionsngerman{%
+  \renewcommand{\figurename}{Abb.}%
+  \renewcommand{\tablename}{Tab.}%
+}
+\usepackage{lscape}
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+% Erweiterung zum Erstellen von Feynman-Diagrammen
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+%------------------------------------------------------------------------------
+%------------------------------ Bibliographie ---------------------------------
+%------------------------------------------------------------------------------
+
+% Last packages, do not change order or insert new packages after these ones
+%\usepackage[pdfusetitle, unicode, linkbordercolor=tugreen]{hyperref}
+\usepackage[pdfusetitle, unicode]{hyperref}
+\usepackage{bookmark}
+\usepackage[shortcuts]{extdash}
+
+
+%------------------------------------------------------------------------------
+%-------------------------    Angaben zur Arbeit   ----------------------------
+%------------------------------------------------------------------------------
+
+%\author{Katharina Brägelmann}
+%\title{Gasadsorption an geladenen Lipidmonolagen}
+%\date{2019}
+%\birthplace{Maastricht}
+%\chair{Lehrstuhl für Experimentelle Physik I}
+%\division{Fakultät Physik}
+%\thesisclass{Bachelor of Science}
+%\submissiondate{01. Juli 2019}
+%\firstcorrector{Prof.~Dr.~Metin Tolan}
+%\secondcorrector{Prof.~Dr.~Heinz Hövel}

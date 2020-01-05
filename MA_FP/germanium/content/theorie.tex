@@ -1,6 +1,8 @@
 \section{Theorie}
 \subsection{Wechselwirkung in Materie}
-Wenn Photonen in den germanium-Detektor einbringen, geben sie ihre Energie hauptsächlich durch drei Effekte an diesem ab. Diese Effekte - Paarbildung, Comptonstreuung und Photoeffekt - werden in den folgenden Unterkapiteln erleutert. Welcher dieser Effekte jedoch auftritt hängt stark von der Kernladungszahl $Z$ des Detektors sowie der Energie $E_\gamma$ der Photonen ab. \\
+Wenn Photonen in den Germanium-Detektor einbringen, geben sie ihre Energie hauptsächlich durch drei Effekte an Diesem ab.
+Diese Effekte - Paarbildung, Comptonstreuung und Photoeffekt - werden in den folgenden Unterkapiteln erläutert.
+Welcher dieser Effekte jedoch auftritt hängt stark von der Kernladungszahl $Z$ des Detektors sowie der Energie $E_\gamma$ der Photonen ab. \\
 Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kann die Anzahl der Wechselwirkungen
 \begin{equation}
     N(D) = N_0 n \sigma \symup{d}x
@@ -11,7 +13,7 @@ Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kan
 pro Zeiteinheit bestimmt werden.
 Für die Anzahl der wechselwirkenden Photonen ergibt sich damit
 \begin{equation}
-    N(D) = N_0 \left( 1 - \exp{(- n \sigma D )} \right) = N_0 \left( 1 - \exp{(- \mu D )} \right)
+    N(D) = N_0 \left( 1 - \exp{(- n \sigma D )} \right) = N_0 \left( 1 - \exp{(- \mu D )} \right),
 \end{equation}
 wobei die größen $n$ und $\sigma$ zum Extinktionskoeffizient $\mu = n \sigma$ zusammengefasst werden können, dessen Kehrwert die mittlere Reichweite der Photonen im Material angeben.
 Die Wahrscheinlichkeit, das ein Photon wechselwirkt ist damit gegeben mit:
@@ -65,7 +67,9 @@ herleiten. Bei einem maximalen Streuwinkel von $\theta = \pi$ kommt es zu einem 
 Somit kann das Photon nicht seine gesamte Energie übertragen.
 
 \subsubsection{Paarbildung}
-Paarbildung bezeichnet das Entstehen von Elektron und Positron aus einem einzelnen Photon. Damit dieser Prozess stattfindet, muss für die Energie des Photons $E_\gamma \ge 2m_e \cdot c^2 \approx 1,02 \mathrm{MeV}$ gelten. Zusätzlich kann die Paarbildung nur in Anwesenheit weiterer Stoßpartner stattfinden, da sonst die Impulserhaltung verletzt wird.
+Paarbildung bezeichnet das Entstehen von Elektron und Positron aus einem einzelnen Photon.
+Damit dieser Prozess stattfindet, muss für die Energie des Photons $E_\gamma \ge 2m_e \cdot c^2 \approx 1,02 \mathrm{MeV}$ gelten.
+Zusätzlich kann die Paarbildung nur in Anwesenheit weiterer Stoßpartner stattfinden, da sonst die Impulserhaltung verletzt wird.
 Handelt es sich bei dem Stoßpartner um einen Atomkern, ist die Rückstoßenergie
 \begin{equation}
     E_r = \frac{p^2}{2M}
@@ -113,6 +117,7 @@ Dabei muss die Energie des Photons größer als die Bindungsenergie des herauszu
     E_\gamma = E_\text{Bindung}
 \end{equation}
 Findet der Prozess in einer inneren Schale statt, fällt ein Elektron aus einer höheren Schale in das entstandene Loch und entsendet dabei wieder ein Photon. Da somit die gesamte Energie des Photons deponiert wird, ist bei der Messung ein scharfer Peak zu erwarten.  \\
+\newpage
 Für den Wirkungsquerschnitt lässt sich die Relation
 \begin{equation}
     \sigma_\text{Ph} \propto \frac{Z^{\alpha}}{E^{\delta}_\text{\gamma}}
@@ -131,7 +136,7 @@ Der Germanium-Detektor ist ein Halbleiterdetektor und stellt im wesentlichen ein
 \begin{center}
 \tiny{($ \epsilon, \epsilon_r \hat{=} \text{Dielektrizitätskonstanten} $, $ n_A \hat{=} \text{Akzeptorendichte} $, $e_0 \hat{=} \text{Elementarladung} $, $d_n \hat{=} \text{Breite der n-Schicht}$, $d_p \hat{=} \text{Breite der p-Schicht}$ )}
 \end{center}
-Die Proportionalität zur Spannung $U$ sorgt dafür, dass ab einer Spannung von $U = \SI{5000}{\volt}$ eine Verarmungszone von  $\SI{3}{\centi \meter}$ entsteht. Jedoch ist einstellbare Spannung durch die Bildung von Elektron-Loch-Paaren Temperatur-bedingt nach oben hin begrenzt, da diese Ladungen die die angelegte Spannung $U$ beschleunigt werden. Dadurch entsteht ein Leckstrom, der die Energieauflösung des Detektors beeinflusst. Um dem entgegen zu wirken, wird der Detektor auf eine Temperatur von ca $\SI{77}{\kelvin}$ heruntergefühlt. Dies geschieht mithilfe von flüssigem Stickstoff. \\
+Die Proportionalität zur Spannung $U$ sorgt dafür, dass ab einer Spannung von $U = \SI{5000}{\volt}$ eine Verarmungszone von  $\SI{3}{\centi \meter}$ entsteht. Jedoch ist einstellbare Spannung durch die Bildung von Elektron-Loch-Paaren Temperatur-bedingt nach oben hin begrenzt, da diese Ladungen die die angelegte Spannung $U$ beschleunigt werden. Dadurch entsteht ein Leckstrom, der die Energieauflösung des Detektors beeinflusst. Um dem entgegen zu wirken, wird der Detektor auf eine Temperatur von ca $\SI{77}{\kelvin}$ heruntergekühlt. Dies geschieht mithilfe von flüssigem Stickstoff. \\
 
 \subsubsection{Funktionsweise}
 Trifft ein geladenes Teilchen oder Photon auf die Elektronen im Detektor, können diese die Energeilücke zwischen Valenz- und Leitungsband überspringen. Ist dies der Fall, bleiben im Valenzband ein frei bewegliche Löcher zurück, es entstehen Elektronen-Loch-Paare. Mit diesen lässt sich ein Ladungsimpuls messen, der proportional zur Energie der Primärelektronen ist. Damit lässt sich die vom Photon deponierte Energie $E_\gamma$ rekonstruieren, die im besten Fall ihre gesamte Energie deponiert haben.
@@ -145,7 +150,7 @@ Diese Halbwertsbreite wird durch verschiedene Faktoren - dem Leckstrom, Feldinho
     \symup{\Delta}E'^2_{\frac{1}{2}} = \symup{\Delta}E^2_{\frac{1}{2}} + \symup{\Delta}E^2_\text{Leckstrom} + \symup{\Delta}E^2_\text{Feldinhom.} + \symup{\Delta}E^2_\text{Verstärkerrauschen}.
 \end{equation}
 Diese ist auch abhängig von der Saugspannung $U$. Je größer diese ist, desto größer wird auch $\symup{\Delta}E^2_\text{Leckstrom}$ und desdo kleiner wird ${\Delta}E^2_\text{Feldinhom.}$. Aufgrund dessen muss für eine gute Halbwertsbreite $\symup{\Delta}E'^2_{\frac{1}{2}}$ ein Kompromiss zwischen $\symup{\Delta}E^2_\text{Leckstrom}$ und ${\Delta}E^2_\text{Feldinhom.}$ gefunden werden. \\
-Die Vollenergienachweiswahrscheinlichkeit $Q$ eines Photons lässt sich über den Zusammenhang 
+Die Vollenergienachweiswahrscheinlichkeit $Q$ eines Photons lässt sich über den Zusammenhang
 \begin{equation}
 Q=\frac{Z}{W A}\frac{4\pi}{\Omega}\frac{1}{t}\text{.}\label{eqn:efficiency}
 \end{equation}
@@ -153,18 +158,17 @@ Q=\frac{Z}{W A}\frac{4\pi}{\Omega}\frac{1}{t}\text{.}\label{eqn:efficiency}
     \tiny{( $W \hat{=} \text{Emissionswahrscheinlichkeit des Strahlers} $, $t \hat{=} \text{Zeit}, A \hat{=} \text{Aktivität} $, $Z \hat{=} \text{Summe aller Impulse eines Peaks}$)}
 \end{center}
 bestimmen.
-Dabei lässt sich die Aktivität $A$ bei bekannter Urspungsaktivität $A_0$ wiefolgt berechnen:
+Dabei lässt sich die Aktivität $A$ bei bekannter Urspungsaktivität $A_0$ wie folgt berechnen:
 \begin{equation}
-A(t) = A_0\cdot \exp\left(\frac{-\ln(2)t}{\tau_{1/2}}\right)\text{,}\label{eqn:A} 
+A(t) = A_0\cdot \exp\left(\frac{-\ln(2)t}{\tau_{1/2}}\right)\text{,}\label{eqn:A}
 \end{equation}
 \begin{center}
     \tiny{( $\tau_{1/2} \hat{=} \text{Halbwertszeit}  $)}
 \end{center}
-Für den Raumwinkel $\Omega$, unter dem die Probe vom Detektor erfasst wird, gilt näherungsweise:
-\begin{equation}
-\frac{\Omega}{4\pi} = \frac{1}{2}\left(1-\frac{a}{\sqrt{a^2+r^2}}\right)\text{.}\label{eqn:Omega}
-\end{equation}
-\begin{center}
-    \tiny{$r \hat{=} \text{Detektorradius}$, $a \hat{=} \text{Abstand zur Probe}$}
-\end{center}
-
+%Für den Raumwinkel $\Omega$, unter dem die Probe vom Detektor erfasst wird, gilt näherungsweise:
+%\begin{equation}
+%\frac{\Omega}{4\pi} = \frac{1}{2}\left(1-\frac{a}{\sqrt{a^2+r^2}}\right)\text{.}\label{eqn:Omega}
+%\end{equation}
+%\begin{center}
+%    \tiny{$r \hat{=} \text{Detektorradius}$, $a \hat{=} \text{Abstand zur Probe}$}
+%\end{center}

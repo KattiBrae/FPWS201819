@@ -1,1 +1,138 @@
-Hier könnte Ihre Werbung stehen.
+\section{Theorie}
+\subsection{Wechselwirkung in Materie}
+Wenn Photonen in den germanium-Detektor einbringen, geben sie ihre Energie hauptsächlich durch drei Effekte an diesem ab. Diese Effekte - Paarbildung, Comptonstreuung und Photoeffekt - werden in den folgenden Unterkapiteln erleutert. Welcher dieser Effekte jedoch auftritt hängt stark von der Kernladungszahl $Z$ des Detektors sowie der Energie $E_\gamma$ der Photonen ab. \\
+Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kann die Anzahl der Wechselwirkungen 
+\begin{equation}
+    N(D) = N_0 n \sigma \symup{d}x
+\end{equation}
+\begin{center}
+    \tiny($ \symup{d}x \hat{=} \text{Absorberschichtdicke}$, $n \hat{n} \text{Anzahl der Elektronen pro Volumeneinheit}$)
+\end{center}
+pro Zeiteinheit bestimmt werden. 
+Für die Anzahl der wechselwirkenden Photonen ergibt sich damit
+\begin{equation}
+    N(D) = N_0 \left( 1 - \exp{- n \sigma D } \right)
+\end{equation}
+wobei die größen $n$ und $\sigma$ zum Extinktionskoeffizient $\mu = n \sigma$ zusammengefasst werden können, dessen Kehrwert die mittlere Reichweite der Photonen im Material angeben. 
+%Die Energieabhängigkeit des Extinktionskoeffizienten ist in Abbildung \ref{fig:ext} dargestellt.
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.8\textwidth]{content/images/sigma.pdf}
+%    \caption{Energieabhängigkeit des Extinktionskoeffizienten $\mu$ für Germanium}
+%    \label{fig:ext}
+%\end{figure}
+%würde ich einfügen wenn ich eine zitierbare quelle hätte
+
+\subsubsection{Comptoneffekt}
+Wie im Feynman-Diagramm in Abbildung \ref{fig:compton} zu sehen ist, beschreibt der Compton-Effekt das elastische Stoßen eines Photons mit einem ruhenden Elektron.
+\begin{figure}[H]
+\centering
+\feynmandiagram [horizontal=f2 to f3] {
+  i1 [particle=\(e\)] f1 -- [fermion] f2  -- [fermion, edge label=\(e\),] f3 -- [fermion] f4 i4 [particle=\(e\)],
+  f2 -- [photon] p1 [particle=\(\gamma\)],
+  f3 -- [photon] p2 [particle=\(\gamma '\)],
+};
+\caption{Feynman-Diagramm zum Comptoneffekt}
+\label{fig:compton}
+\end{figure}
+Dabei gibt das Photon mit Wellenlänge $\lambda$ Energie an das Elektron ab, wodurch es zu einer Wellenlängenänderung des Photons kommt:
+\begin{equation}
+  \Delta \lambda = \frac{h}{mc}\left( 1-\cos{\theta} \right)
+\end{equation}
+\begin{center}
+    \tiny {($\Delta \lambda \: \hat{=} \: \lambda - \lambda '$, $ \lambda '\: \hat{=} \:\text{Wellenlänge des Photons nach dem Stoß}$, $h=\: \hat{=} \:\text{Planck'sches Wirkungsquantum}$,$\theta\: \hat{=} \:\text{Streuwinkel}$, $m_\text{e} \: \hat{=} \:\text{Masse des Elektrons}$, $c \: \hat{=} \: \text{Lichtgeschwindigkeit}$)}
+\end{center}
+Da sowohl $m_\text{e}$, $c$, als auch $h$ Konstanten sind, hängt die Wellenlängenänderung und somit auch die Energie des Photons nach dem Stoß allein vom Streuwinkel ab.\\
+Für die Energien $E_{\gamma'}$ des Photons und $E_e$ des Elektrons nach dem Stoß lassen sich mithilfe von Energie- und Impulserhaltung die Relationen 
+\begin{align}
+    E_{\gamma'} &= E_\gamma \frac{1}{1+\epsilon (1-cos(\theta))}\\
+    E_e &= E_\gamma \frac{1-cos(\theta)}{1+\epsilon (1-cos(\theta))}
+\end{align} 
+\begin{center}
+    \tiny{($\epsilon = \frac{E_\gamma}{mc^2}$)}
+\end{center}
+herleiten. Bei einem maximalen Streuwinkel von $\theta = \pi$ kommt es zu einem Energieübertrag von 
+\begin{equation}
+    E_\text{EL} = E_\gamma \frac{2 \epsilon}{1 + 2 \epsilon} < E_\gamma .
+\end{equation}
+Somit kann das Photon nicht seine gesamte Energie übertragen.
+
+\subsubsection{Paarbildung}
+Paarbildung bezeichnet das Entstehen von Elektron und Positron aus einem einzelnen Photon. Damit dieser Prozess stattfindet, muss für die Energie des Photons $E_\gamma \ge 2m_e \cdot c^2 \approx 1,02 \mathrm{MeV}$ gelten. Zusätzlich kann die Paarbildung nur in Anwesenheit weiterer Stoßpartner stattfinden, da sonst die Impulserhaltung verletzt wird. 
+Handelt es sich bei dem Stoßpartner um einen Atomkern, ist die Rückstoßenergie 
+\begin{equation}
+    E_r = \frac{p^2}{2M}
+\end{equation}
+\begin{center}
+    \tiny{($ M \hat{=} \text{Masse des Atomkerns}$)}
+\end{center}
+gering, weshalb das Photon vor dem Stoß lediglich über die Energie
+\begin{equation}
+    E_\gamma > 2 \cdot m_\text{e}c^2
+\end{equation}
+verfügen muss. \\
+Falls das Elektron jedoch mit einem Hüllenelektron stößt, ist die Rückstoßenergie $E_r$ größer, weshalb für so einen Fall die Relation 
+\begin{equation}
+    E_\gamma > 4 \cdot m_\text{e}c^2
+\end{equation}
+gelten muss. \\
+Die Energie, die nicht zur Erzeugung des Elektron-Positron-Paares benötigt wird, verteilt sich gleichmäßig auf dieses. 
+Es kann jedoch passieren, dass das erzeugte Positron mit einem Hüllenelektron annihiliert. Die so erzeugten Photonen können den Detektor ohne weitere Wechselwirkung verlassen, weshalb im Energiespektrum - zusätzlich zu $E_\gamma$ - Linien bei $E_\gamma - m_\text{e}c^2$ und $E_\gamma - 2 m_\text{e}c^2$ beobachtet werden können. \\
+Ein eine schmematische Darstellung der Paarbildung ist in Abbildung \ref{fig:pair} zu sehen.
+\begin{figure}[H]
+\centering
+\feynmandiagram [horizontal=f2 to f3] {
+  f2  -- [photon, edge label=\(\gamma\),] f3 -- [fermion] f4 [particle=\(e\)],
+  f3 -- [anti fermion] p2 [particle=\(e\)],
+};
+\caption{Schematische Darstellung der Paarbildung}
+\label{fig:pair}
+\end{figure}
+Der Wirkungsquerschnitt ist bei der Paarbildung davon abhängig, wo im Columbfeld diese stattfindet, da es durch die äußeren Schalen des Atoms durch Abschirmungseffekte kommt. In Kernnähe lässt sich der Wirkungsquerschnitt für $\SI{10}{MeV}<E_\text{\gamma}<\SI{25}{MeV}$ zu 
+\begin{equation}
+    \sigma_\text{P}=\alpha r^2_\text{e} Z^2\left(\frac{28}{9}\ln(2\epsilon)-\frac{218}{27}\right)\label{eq:s_P}
+\end{equation}
+\begin{center}
+    \tiny{($\alpha \hat{=} \text{Feinstrukturkonstante}  $)}
+\end{center}
+nähern.
+
+\subsubsection{Photoeffekt}
+Der Photoeffekt beschreibt das Herauslösen eines Hüllenelektrons durch ein Photon. Dieses wird dabei vom Elektron absorbiert. Zusätzlich nimmt ein Elektron aus einer höheren Schale den Platz des herausgelösten Elektrons ein und emmitiert wieder ein Photon.
+Dabei muss die Energie des Photons größer als die Bindungsenergie des herauszulösenden Elektrons sein:
+\begin{equation}
+    E_\gamma = E_\text{Bindung}
+\end{equation}
+Findet der Prozess in einer inneren Schale statt, fällt ein Elektron aus einer höheren Schale in das entstandene Loch und entsendet dabei wieder ein Photon. Da somit die gesamte Energie des Photons deponiert wird, ist bei der Messung ein scharfer Peak zu erwarten.  \\
+Für den Wirkungsquerschnitt lässt sich die Relation 
+\begin{equation}
+    \sigma_\text{Ph} \propto \frac{Z^{\alpha}}{E^{\delta}_\text{\gamma}}
+\end{equation}
+\begin{center}
+    \tiny{($ 4 < \alpha < 5 $, $\rho$ ist abhängig von $E_\gamma$. Es gilt $\delta \approx 3{,}5$, ab $E_\gamma$ sinkt $\delta$ jedoch auf $\delta \approx 1$ )}
+\end{center}
+herleiten. 
+
+\subsection{Der Reinst-Germanium-Detektor}
+\subsubsection{Der Germanium-Detektor als Halbleiter}
+Der Germanium-Detektor ist ein Halbleiterdetektor und stellt im wesentlichen eine Halbleiterdiode da. Als solche besteht der Germanium-Detektor aus einem n- und einem p-dotierten Bereich. Beim Übergang diffundieren Elektronen und Löcher in die jeweils andere Schicht und rekombinieren dort. Somit entsteht eine Ladungsträger verarmte Zone. Jedoch entsteht aufgrund der Raumladungen der Donatoren der n-Schicht und der Akzeptoren in der p-Schicht eine Potentialdifferenz $U_\text{d}$, die der Diffusion entegegen wirkt. Wird nun eine asymmetrische Dotierung gewählt bei der die Donatorendichte $n_D$ deutlich kleiner als die Akzeptorendichte $n_A$ ist, kann die Breite $d$ der Verarmungszone - die typischerweise einige µm beträgt - mithilfe einer angelegten Spannung $U$ auf einige cm verbreitert werden. Die Breite $d$ ist für so einen Fall gegeben durch
+\begin{equation}
+ d = d_n + d_p \approx d_p = \sqrt{\frac{2 \epsilon_r }{e_0 n_A}(U_D + U)}.
+\end{equation}
+\begin{center}
+\tiny{($ \epsilon, \epsilon_r \hat{=} \text{Dielektrizitätskonstanten} $, $ n_A \hat{=} \text{Akzeptorendichte} $, $e_0 \hat{=} \text{Elementarladung} $, $d_n \hat{=} \text{Breite der n-Schicht}$, $d_p \hat{=} \text{Breite der p-Schicht}$ )}
+\end{center}
+Die Proportionalität zur Spannung $U$ sorgt dafür, dass ab einer Spannung von $U = \SI{5000}{\volt}$ eine Verarmungszone von  $\SI{3}{\centi \meter}$ entsteht. Jedoch ist einstellbare Spannung durch die Bildung von Elektron-Loch-Paaren Temperatur-bedingt nach oben hin begrenzt, da diese Ladungen die die angelegte Spannung $U$ beschleunigt werden. Dadurch entsteht ein Leckstrom, der die Energieauflösung des Detektors beeinflusst. Um dem entgegen zu wirken, wird der Detektor auf eine Temperatur von ca $\SI{77}{\kelvin}$ heruntergefühlt. Dies geschieht mithilfe von flüssigem Stickstoff. \\
+
+\subsubsection{Funktionsweise}
+Trifft ein geladenes Teilchen oder Photon auf die Elektronen im Detektor, können diese die Energeilücke zwischen Valenz- und Leitungsband überspringen. Ist dies der Fall, bleiben im Valenzband ein frei bewegliche Löcher zurück, es entstehen Elektronen-Loch-Paare. Mit diesen lässt sich ein Ladungsimpuls messen, der proportional zur Energie der Primärelektronen ist. Damit lässt sich die vom Photon deponierte Energie $E_\gamma$ rekonstruieren, die im besten Fall ihre gesamte Energie deponiert haben. 
+
+\subsubsection{Auflösungsvermögen}
+Im vom Detektor aufgezeichneten Spektrum eines $\gamma$-Strahlers können zwei Spektrallinien
+nur dann unterschieden werden, wenn ihre Mittelwerte mindestens um die Halbwertsbreite
+$\Delta E_{1/2}$ entfernt voneinander liegen. \\
+Diese Halbwertsbreite wird durch verschiedene Faktoren - dem Leckstrom, Feldinhomogenitäten und dem Verstärkerrauschen - beeinflusst. Für die Halbwertsbreite gilt dann
+\begin{equation}
+    \symup{\Delta}E'^2_{\frac{1}{2}} = \symup{\Delta}E^2_{\frac{1}{2}} + \symup{\Delta}E^2_\text{Leckstrom} + \symup{\Delta}E^2_\text{Feldinhom.} + \symup{\Delta}E^2_\text{Verstärkerrauschen}.
+\end{equation}
+Diese ist auch abhängig von der Saugspannung $U$. Je größer diese ist, desto größer wird auch $\symup{\Delta}E^2_\text{Leckstrom}$ und desdo kleiner wird ${\Delta}E^2_\text{Feldinhom.}$. Aufgrund dessen muss für eine gute Halbwertsbreite $\symup{\Delta}E'^2_{\frac{1}{2}}$ ein Kompromiss zwischen $\symup{\Delta}E^2_\text{Leckstrom}$ und ${\Delta}E^2_\text{Feldinhom.}$ gefunden werden. 

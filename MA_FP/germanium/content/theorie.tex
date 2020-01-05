@@ -1,6 +1,6 @@
 \section{Theorie}
 \subsection{Wechselwirkung in Materie}
-Wenn Photonen in den Germanium-Detektor einbringen, geben sie ihre Energie hauptsächlich durch drei Effekte an Diesem ab.
+Wenn Photonen in den Germanium-Detektor eindringen, geben sie ihre Energie hauptsächlich durch drei Effekte an diesen ab.
 Diese Effekte - Paarbildung, Comptonstreuung und Photoeffekt - werden in den folgenden Unterkapiteln erläutert.
 Welcher dieser Effekte jedoch auftritt hängt stark von der Kernladungszahl $Z$ des Detektors sowie der Energie $E_\gamma$ der Photonen ab. \\
 Mithilfe des Wirkungsquerschnitts $\sigma$ und der Anzahl der Photonen $N_0$ kann die Anzahl der Wechselwirkungen
@@ -15,10 +15,10 @@ Für die Anzahl der wechselwirkenden Photonen ergibt sich damit
 \begin{equation}
     N(D) = N_0 \left( 1 - \exp{(- n \sigma D )} \right) = N_0 \left( 1 - \exp{(- \mu D )} \right),
 \end{equation}
-wobei die größen $n$ und $\sigma$ zum Extinktionskoeffizient $\mu = n \sigma$ zusammengefasst werden können, dessen Kehrwert die mittlere Reichweite der Photonen im Material angeben.
+wobei die Größen $n$ und $\sigma$ zum Extinktionskoeffizient $\mu = n \sigma$ zusammengefasst werden können, dessen Kehrwert die mittlere Reichweite der Photonen im Material angeben.
 Die Wahrscheinlichkeit, das ein Photon wechselwirkt ist damit gegeben mit:
 \begin{equation}
-    P(D) = 1 - \exp{(- n \sigma D )}=  1 - \exp{(- \mu D )}.
+    P(D) = 1 - \exp{(- n \sigma D )}=  1 - \exp{(- \mu D )}. \label{eqn:WW_wahrscheinlichkeit}
 \end{equation}
 
 %Die Energieabhängigkeit des Extinktionskoeffizienten ist in Abbildung \ref{fig:ext} dargestellt.
@@ -99,7 +99,7 @@ Ein eine schmematische Darstellung der Paarbildung ist in Abbildung \ref{fig:pai
 \caption{Schematische Darstellung der Paarbildung}
 \label{fig:pair}
 \end{figure}
-Der Wirkungsquerschnitt ist bei der Paarbildung davon abhängig, wo im Columbfeld diese stattfindet, da es durch die äußeren Schalen des Atoms durch Abschirmungseffekte kommt. In Kernnähe lässt sich der Wirkungsquerschnitt für $\SI{10}{MeV}<E_\text{\gamma}<\SI{25}{MeV}$ zu
+Der Wirkungsquerschnitt ist bei der Paarbildung davon abhängig, wo im Columbfeld diese stattfindet, da es durch die äußeren Schalen des Atoms zu Abschirmungseffekte kommt. In Kernnähe lässt sich der Wirkungsquerschnitt für $\SI{10}{MeV}<E_\text{\gamma}<\SI{25}{MeV}$ zu
 \begin{equation}
     \sigma_\text{P}=\alpha r^2_\text{e} Z^2\left(\frac{28}{9}\ln(2\epsilon)-\frac{218}{27}\right)\label{eq:s_P}
 \end{equation}
@@ -136,10 +136,10 @@ Der Germanium-Detektor ist ein Halbleiterdetektor und stellt im wesentlichen ein
 \begin{center}
 \tiny{($ \epsilon, \epsilon_r \hat{=} \text{Dielektrizitätskonstanten} $, $ n_A \hat{=} \text{Akzeptorendichte} $, $e_0 \hat{=} \text{Elementarladung} $, $d_n \hat{=} \text{Breite der n-Schicht}$, $d_p \hat{=} \text{Breite der p-Schicht}$ )}
 \end{center}
-Die Proportionalität zur Spannung $U$ sorgt dafür, dass ab einer Spannung von $U = \SI{5000}{\volt}$ eine Verarmungszone von  $\SI{3}{\centi \meter}$ entsteht. Jedoch ist einstellbare Spannung durch die Bildung von Elektron-Loch-Paaren Temperatur-bedingt nach oben hin begrenzt, da diese Ladungen die die angelegte Spannung $U$ beschleunigt werden. Dadurch entsteht ein Leckstrom, der die Energieauflösung des Detektors beeinflusst. Um dem entgegen zu wirken, wird der Detektor auf eine Temperatur von ca $\SI{77}{\kelvin}$ heruntergekühlt. Dies geschieht mithilfe von flüssigem Stickstoff. \\
+Die Proportionalität zur Spannung $U$ sorgt dafür, dass ab einer Spannung von $U = \SI{5000}{\volt}$ eine Verarmungszone von  $\SI{3}{\centi \meter}$ entsteht. Jedoch ist einstellbare Spannung durch die Bildung von Elektron-Loch-Paaren Temperatur-bedingt nach oben hin begrenzt, da diese Ladungen durch die angelegte Spannung $U$ beschleunigt werden. Dadurch entsteht ein Leckstrom, der die Energieauflösung des Detektors beeinflusst. Um dem entgegen zu wirken, wird der Detektor auf eine Temperatur von ca $\SI{77}{\kelvin}$ heruntergekühlt. Dies geschieht mithilfe von flüssigem Stickstoff. \\
 
 \subsubsection{Funktionsweise}
-Trifft ein geladenes Teilchen oder Photon auf die Elektronen im Detektor, können diese die Energeilücke zwischen Valenz- und Leitungsband überspringen. Ist dies der Fall, bleiben im Valenzband ein frei bewegliche Löcher zurück, es entstehen Elektronen-Loch-Paare. Mit diesen lässt sich ein Ladungsimpuls messen, der proportional zur Energie der Primärelektronen ist. Damit lässt sich die vom Photon deponierte Energie $E_\gamma$ rekonstruieren, die im besten Fall ihre gesamte Energie deponiert haben.
+Trifft ein geladenes Teilchen oder Photon auf die Elektronen im Detektor, können diese die Energielücke zwischen Valenz- und Leitungsband überspringen. Ist dies der Fall, bleiben im Valenzband frei bewegliche Löcher zurück und es entstehen Elektronen-Loch-Paare. Mit diesen lässt sich ein Ladungsimpuls messen, der proportional zur Energie der Primärelektronen ist. Damit lässt sich die vom Photon deponierte Energie $E_\gamma$ rekonstruieren, die im besten Fall ihre gesamte Energie deponiert haben.
 
 \subsubsection{Auflösungsvermögen}
 Im vom Detektor aufgezeichneten Spektrum eines $\gamma$-Strahlers können zwei Spektrallinien
@@ -152,7 +152,7 @@ Diese Halbwertsbreite wird durch verschiedene Faktoren - dem Leckstrom, Feldinho
 Diese ist auch abhängig von der Saugspannung $U$. Je größer diese ist, desto größer wird auch $\symup{\Delta}E^2_\text{Leckstrom}$ und desdo kleiner wird ${\Delta}E^2_\text{Feldinhom.}$. Aufgrund dessen muss für eine gute Halbwertsbreite $\symup{\Delta}E'^2_{\frac{1}{2}}$ ein Kompromiss zwischen $\symup{\Delta}E^2_\text{Leckstrom}$ und ${\Delta}E^2_\text{Feldinhom.}$ gefunden werden. \\
 Die Vollenergienachweiswahrscheinlichkeit $Q$ eines Photons lässt sich über den Zusammenhang
 \begin{equation}
-Q=\frac{Z}{W A}\frac{4\pi}{\Omega}\frac{1}{t}\text{.}\label{eqn:efficiency}
+Q=\frac{Z}{W A}\frac{4\pi}{\Omega}\frac{1}{t}\text{.}\label{eqn:efficency}
 \end{equation}
 \begin{center}
     \tiny{( $W \hat{=} \text{Emissionswahrscheinlichkeit des Strahlers} $, $t \hat{=} \text{Zeit}, A \hat{=} \text{Aktivität} $, $Z \hat{=} \text{Summe aller Impulse eines Peaks}$)}

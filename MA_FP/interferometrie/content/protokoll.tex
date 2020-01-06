@@ -1,0 +1,46 @@
+\input{lade.tex}
+\begin{document}
+\setlength{\parindent}{0em}
+
+
+\input{titelseite.tex}
+%\pagenumbering{arabic}
+\tableofcontents
+%\input{lit.bib}
+
+%\newpage
+\section{Zielsetzung}
+\input{zielsetzung.txt}
+
+
+\section{Theorie}
+\input{theorie.tex}
+\newpage
+
+
+\section{Aufbau und Durchführung}
+\input{durchführung.tex}
+\newpage
+\FloatBarrier
+
+\section{Auswertung}
+\input{auswertung.tex}
+\newpage
+\FloatBarrier
+
+\section{Diskussion}
+\input{diskussion.tex}
+
+
+\nocite{*}
+\printbibliography
+\label{LastPage}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\textwidth]{OMD1.pdf}
+%  \caption{Originale Messdaten}
+%  \label{OMD}
+%\end{figure}
+
+
+\end{document}

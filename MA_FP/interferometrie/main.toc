@@ -3,9 +3,12 @@
 \select@language {german}
 \contentsline {section}{\numberline {1}Zielführung}{3}{section.1}% 
 \contentsline {section}{\numberline {2}Theoretische Grundlagen}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Interferenz und Kohärenz}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Polarisation}{3}{subsection.2.2}% 
 \contentsline {section}{\numberline {3}Aufbau und Durchführung des Versuchs}{3}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Grundsätzliches Konzept des Aufbaus}{3}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Durchführung}{5}{subsection.3.2}% 
-\contentsline {paragraph}{\nonumberline Justage}{5}{section*.6}% 
-\contentsline {paragraph}{\nonumberline Kontrastmessung}{6}{section*.7}% 
-\contentsline {paragraph}{\nonumberline Messung des Brechungsindex von Glas}{6}{section*.8}% 
+\contentsline {subsection}{\numberline {3.2}Durchführung}{7}{subsection.3.2}% 
+\contentsline {paragraph}{\nonumberline Justage}{7}{section*.6}% 
+\contentsline {paragraph}{\nonumberline Kontrastmessung}{7}{section*.7}% 
+\contentsline {paragraph}{\nonumberline Messung des Brechungsindex von Glas}{7}{section*.8}% 
+\contentsline {paragraph}{\nonumberline Messung des Brechungsindex von Luft}{7}{section*.9}% 

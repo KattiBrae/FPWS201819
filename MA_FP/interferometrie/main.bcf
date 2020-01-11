@@ -1995,17 +1995,21 @@
     <bcf:datasource type="file" datatype="bibtex">lit.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">teachspin</bcf:citekey>
-    <bcf:citekey order="2">teachspin</bcf:citekey>
-    <bcf:citekey order="3">anleitung</bcf:citekey>
-    <bcf:citekey order="4">thorlabs</bcf:citekey>
-    <bcf:citekey order="5">thorlabs</bcf:citekey>
+    <bcf:citekey order="1">diss-busk</bcf:citekey>
+    <bcf:citekey order="2">diss-busk</bcf:citekey>
+    <bcf:citekey order="3">edmund</bcf:citekey>
+    <bcf:citekey order="4">edmund</bcf:citekey>
+    <bcf:citekey order="5">teachspin</bcf:citekey>
     <bcf:citekey order="6">teachspin</bcf:citekey>
-    <bcf:citekey order="7">teachspin</bcf:citekey>
-    <bcf:citekey order="8">teachspin</bcf:citekey>
-    <bcf:citekey order="9">teachspin</bcf:citekey>
+    <bcf:citekey order="7">anleitung</bcf:citekey>
+    <bcf:citekey order="8">thorlabs</bcf:citekey>
+    <bcf:citekey order="9">thorlabs</bcf:citekey>
     <bcf:citekey order="10">teachspin</bcf:citekey>
     <bcf:citekey order="11">teachspin</bcf:citekey>
+    <bcf:citekey order="12">teachspin</bcf:citekey>
+    <bcf:citekey order="13">teachspin</bcf:citekey>
+    <bcf:citekey order="14">teachspin</bcf:citekey>
+    <bcf:citekey order="15">teachspin</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

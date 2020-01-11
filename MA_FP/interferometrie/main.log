@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.8)  11 JAN 2020 14:45
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.6.8)  11 JAN 2020 15:12
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.144 seconds
+luaotfload | main : initialization completed in 0.168 seconds
 (./preamble.tex
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
@@ -450,24 +450,24 @@ Lua module: polyglossia 2013/05/11 1.3 Polyglossia)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/polyglossia/gloss-german.ldf
 File: gloss-german.ldf polyglossia: module for german
 Module polyglossia Info: Language data for german
+(polyglossia)            hyphenation	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            loader	loadhyph-de-1901.tex
 (polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            hyphenation	
+(polyglossia)            synonyms	table: 0x7f8f3e103ad0
 (polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	table: 0x7f8be44718a0
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns: hyph-de-1901.pat.txt on input line 6
 Module polyglossia Info: Language german was not yet loaded; created with id 4 o
 n input line 6
 Module polyglossia Info: Language german already loaded; id is 4 on input line 6
 
 Module polyglossia Info: Language data for ngerman
+(polyglossia)            hyphenation	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            loader	loadhyph-de-1996.tex
 (polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            hyphenation	
+(polyglossia)            synonyms	table: 0x7f8f3e13ca30
 (polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	table: 0x7f8be4471a20
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns: hyph-de-1996.pat.txt on input line 68
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 8 
 on input line 68
@@ -2289,29 +2289,25 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 68.
 
-
-LaTeX Warning: Command \L invalid in math mode on input line 104.
-
-Missing character: There is no Ł (U+0141) in font cmmi6!
 [5]) (./content/durchfuehrung.tex
-<content/images/interferometer_aufbau.pdf, id=105, 348.2895pt x 292.66087pt>
+<content/images/interferometer_aufbau.pdf, id=104, 348.2895pt x 292.66087pt>
 File: content/images/interferometer_aufbau.pdf Graphic file (type pdf)
 <use content/images/interferometer_aufbau.pdf>
 Package luatex.def Info: content/images/interferometer_aufbau.pdf  used on input
  line 6.
 (luatex.def)             Requested size: 355.5182pt x 298.73788pt.
-<content/images/pbsc.pdf, id=111, 244.62442pt x 163.13257pt>
+<content/images/pbsc.pdf, id=110, 244.62442pt x 163.13257pt>
 File: content/images/pbsc.pdf Graphic file (type pdf)
 <use content/images/pbsc.pdf>
 Package luatex.def Info: content/images/pbsc.pdf  used on input line 16.
 (luatex.def)             Requested size: 146.39134pt x 97.62888pt.
-<content/images/interferometer_1.pdf, id=115, 595.59898pt x 499.96938pt>
+<content/images/interferometer_1.pdf, id=114, 595.59898pt x 499.96938pt>
 File: content/images/interferometer_1.pdf Graphic file (type pdf)
 <use content/images/interferometer_1.pdf>
 Package luatex.def Info: content/images/interferometer_1.pdf  used on input line
  23.
 (luatex.def)             Requested size: 209.12686pt x 175.54881pt.
-<content/images/interferometer_2.pdf, id=118, 594.77562pt x 498.341pt>
+<content/images/interferometer_2.pdf, id=117, 594.77562pt x 498.341pt>
 File: content/images/interferometer_2.pdf Graphic file (type pdf)
 <use content/images/interferometer_2.pdf>
 Package luatex.def Info: content/images/interferometer_2.pdf  used on input line
@@ -2322,7 +2318,7 @@ Overfull \hbox (4.86179pt too wide) in paragraph at lines 22--36
 []$[]$ |  $[]$ 
  []
 
-<content/images/interferometer_teil.pdf, id=122, 580.05989pt x 499.67538pt>
+<content/images/interferometer_teil.pdf, id=121, 580.05989pt x 499.67538pt>
 File: content/images/interferometer_teil.pdf Graphic file (type pdf)
 <use content/images/interferometer_teil.pdf>
 Package luatex.def Info: content/images/interferometer_teil.pdf  used on input l
@@ -2334,15 +2330,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[6]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7<./content/images/interferometer_aufbau.pdf><./content/images/pbsc.pdf>]
+[7<./content/images/interferometer_aufbau.pdf><./content/images/pbsc.pdf>]
 [8<./content/images/interferometer_1.pdf><./content/images/interferometer_2.pdf>
 ] [9<./content/images/interferometer_teil.pdf>]) (./content/auswertung.tex)
-(./content/diskussion.tex) [10
-
-]
+(./content/diskussion.tex)
 Overfull \hbox (76.48395pt too wide) in paragraph at lines 26--26
 []\TU/lmr/m/n/10.95 Inc. Teach-Spin. |   [].
  []
@@ -2354,7 +2349,7 @@ Overfull \hbox (4.35638pt too wide) in paragraph at lines 26--26
 nVDg /
  []
 
-[11]
+[10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
  (./main.aux
@@ -2364,9 +2359,9 @@ Module polyglossia Info: Language ngerman already loaded; id is 8 on input line
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 350F10703C0FEC391E195B890D54CCA7;11643.
+(rerunfilecheck)             Checksum: 453466E80A3B1AD5065232F420C9FA40;11723.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: AE88B5E644B5FE4D61B461DE930B38BB;1545.
+(rerunfilecheck)             Checksum: 166FB248AB8C482D6FB90E589F16B650;1543.
 
 
 LaTeX Warning: There were undefined references.
@@ -2383,15 +2378,15 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 29.
 )
 
 Here is how much of LuaTeX's memory you used:
- 58348 strings out of 494291
+ 58349 strings out of 494291
  100000,2373549 words of node,token memory allocated
- 735 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 24 attribute, 83 glue_spec
-, 24 attribute_list, 2 write, 2 pdf_action nodes
-   avail lists: 1:11,2:660,3:154,4:113,5:292,6:32,7:3987,8:120,9:321,10:25,11:44
+ 743 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 26 attribute, 83 glue_spec
+, 26 attribute_list, 2 write, 2 pdf_action nodes
+   avail lists: 1:11,2:768,3:166,4:116,5:310,6:34,7:4191,8:123,9:401,10:25,11:44
 3
- 60730 multiletter control sequences out of 65536+600000
- 143 fonts using 43301563 bytes
+ 60731 multiletter control sequences out of 65536+600000
+ 143 fonts using 43301875 bytes
  81i,17n,109p,9103b,3366s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regul
 ar.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmroman6-reg
@@ -2407,10 +2402,10 @@ entype/public/lm/lmroman10-regular.otf></usr/local/texlive/2019/texmf-dist/fonts
 /opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2019/texmf-dist/fo
 nts/opentype/public/lm/lmsans10-bold.otf></usr/local/texlive/2019/texmf-dist/fon
 ts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (11 pages, 1062291 bytes).
+Output written on main.pdf (10 pages, 1063164 bytes).
 
-PDF statistics: 493 PDF objects out of 1000 (max. 8388607)
- 370 compressed objects within 4 object streams
+PDF statistics: 488 PDF objects out of 1000 (max. 8388607)
+ 366 compressed objects within 4 object streams
  43 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -11,9 +11,9 @@
 \contentsline {paragraph}{\nonumberline Brechungsindex von Glas}{6}{section*.5}% 
 \contentsline {section}{\numberline {3}Aufbau und Durchführung des Versuchs}{6}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Grundsätzliches Konzept des Aufbaus}{6}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Durchführung}{10}{subsection.3.2}% 
-\contentsline {paragraph}{\nonumberline Justage}{10}{section*.10}% 
+\contentsline {subsection}{\numberline {3.2}Durchführung}{9}{subsection.3.2}% 
+\contentsline {paragraph}{\nonumberline Justage}{9}{section*.10}% 
 \contentsline {paragraph}{\nonumberline Kontrastmessung}{10}{section*.11}% 
 \contentsline {paragraph}{\nonumberline Messung des Brechungsindex von Glas}{10}{section*.12}% 
 \contentsline {paragraph}{\nonumberline Messung des Brechungsindex von Luft}{10}{section*.13}% 
-\contentsline {section}{\nonumberline Literatur}{11}{section*.14}% 
+\contentsline {section}{\nonumberline Literatur}{10}{section*.14}% 

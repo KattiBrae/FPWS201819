@@ -97,22 +97,25 @@ Damit liegt dem Kontrast auch eine $\phi$-Abhängigkeit zugrunde:
 So haben sie einen Brechungsindex, der mit dem Gasdruck und der Temperatur skaliert.
 Im Vergleich zu einer Lichtwelle, die durch das Vakuum läuft, ergibt sich für die Lichtwelle in Gas eine Phasenverschiebung $\Delta \delta$.
 Somit lässt sich bei zwei Lichtwellen, von denen eine über die Länge $L$ durch eine evakuierte Kammer läuft und die andere über die Länge $L$ weiter durch das Gas verläuft, die Phasenverschiebung in Abhängigkeit des Brechungsindex $n$ des Gases ausdrücken:
-\begin{equation}
+\begin{equation*}
 	\Delta \delta = \frac{2 \pi L}{\lambda_{0}} (n-1) .
-\end{equation}
+\end{equation*}
 \begin{center}
-	\tiny{$\L \widehat{=} \text{Länge der Kammer}, \lambda_{0}{=} \text{Vakuum-Wellenlänge}, n \widehat{=} Brechungsindex des Gases$}
+	\tiny{$L \widehat{=} \text{Länge der Kammer}, \lambda_{0}{=} \text{Vakuum-Wellenlänge}, n \widehat{=} \text{Brechungsindex des Gases}$}
 \end{center}
 Die Anzahl der Interferenzmaxima in einem Intervall verschiedener Phasenverschiebungen $\Delta \delta$ berechnet sich wie folgt:
-\begin{equation*}
+\begin{equation}
 	M = \frac{\Delta \delta}{2 \pi} \Rightarrow M = \frac{L (n-1)}{\lambda_{0}} \Leftrightarrow n = \frac{M \lambda_{0}}{L} +1.
-%	\label{eqn:brechungsindex_gas}
-\end{equation*}
+	\label{eqn:brechungsindex_gas}
+\end{equation}
 Der Brechungsindex ist über das Lorentz-Lorenz-Gesetz mit dem Druck und der Temperatur des Gases verbunden und kann über eine Taylorentwicklung um $n\approx 1$ wie folg genähert werden:
 \begin{equation}
 	\frac{n^2-1}{n^2+2} = \frac{A p }{R T} \approx  \frac{2}{3} (n-1) + \mathcal{O}(n^2) \quad \Leftrightarrow n(p) \approx \frac{3A p}{2R T} +1.
 	\label{eqn:gas}
 \end{equation}
+\begin{center}
+	\tiny{$A \widehat{=} \text{Refraktivität}, R{=} \text{universelle Gaskonstante}, T \widehat{=} \text{Temperatur}$}
+\end{center}
 
 \paragraph{Brechungsindex von Glas}
 Wird ein Lichtstrahl durch eine planparallele Platte geschickt, wird er zweimal um den gleichen Winkel in gegensätzliche Richungen gebrochen und behält so global seine Ausbreitungsrichtung bei, wird jedoch seitlich verschoben.
@@ -121,9 +124,13 @@ Läuft ein Teilstahl durch eine planparallele Platte, und ein zweiter Teilstrahl
 \begin{equation*}
 	\Delta \delta = \frac{2 \pi T}{\lambda_0} \left[ \frac{n-1}{2n} \, \theta^2 + \mathcal{O}(\theta^4) \right].
 \end{equation*}
-Im Falle dieses Versuchs sind es zwei um konstant $\alpha = \SI{20}{°}$ gegeneinander gekippte Glasplatten, die um den Drehwinkel $\theta$ gedreht werden.
+Im Falle dieses Versuchs sind es zwei um konstant $\theta_0 = \SI{20}{°}$ gegeneinander gekippte Glasplatten, die um den Drehwinkel $\theta$ gedreht werden.
 Die Interferenzmaxima über einen Winkelbereich liegen bei
 \begin{equation*}
-	M = 2 \, \cdot \frac{\Delta \delta}{2 \pi} = 2 \cdot \frac{T}{\lambda_{0}} \frac{n-1}{2n} \,  \left( (\theta+\alpha)^2 - (\theta-\alpha)^2 \right).
+	M = 2 \, \cdot \frac{\Delta \delta}{2 \pi} = 2 \cdot \frac{T}{\lambda_{0}} \frac{n-1}{2n} \,  \left( (\theta+\frac{\theta_0}{2})^2 - (\theta-\frac{\theta_0}{2})^2 \right).
 \end{equation*}
+Nach $n(\theta)$ umgestellt ergibt sich
+\begin{equation}
+	n (\theta) = \frac{2 \frac{T}{\lambda_0} \theta_0 \, \theta}{2 \frac{T}{\lambda_0} \theta_0 \, \theta - M} = \frac{1}{1- \frac{M \lambda_0}{2T \theta_0 \, \theta}}
+\end{equation}
 \FloatBarrier

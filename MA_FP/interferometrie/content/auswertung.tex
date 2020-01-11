@@ -26,11 +26,28 @@ Es ergeben sich die folgenden Fit-Parameter:
   \delta &=  0,916 \pm 0.025
 \end{align}
 
-\subsection{Bestimmung des Brechungsindex von Luft}
-Der Brechungsindex für Luft ergibt sich aus dem Zusammenhang
+\subsection{Bestimmung des Brechungsindex von Glas}
+Die Bestimmung des Brechungsindex $n$ für Glas erfolgt mit dem in Gleichung \ref{eqn:brechungsindex_glas} aufgestellten Zusammenhang zwischen der Anzahl der Interferenzmaxima $M$ und $n$.
+Bei einer Rotation um $\SI{11}{\degree}$ und einer Wandstärke $T = \SI{1}{\milli \meter} $ wurden die in Tabelle \ref{tab:M} zu sehenden Anzahl an Interferenzmaxima gemessen.
+\input{content/tables/Glas.tex}
+
+Damit folgt für den Brechungsindex von Glas
 \begin{equation}
-    n = \frac{N \cdot \lambda}{L} + 1 .
+    n_\text{Glas} = 1,549 \pm 0,011 .
 \end{equation}
-\begin{center}
-    \tiny{($L \hat{=} \text{Länge der Gaszelle} = 10 \si{\centi \meter} $, $ N \hat{=} \text{Anzahl der Nulldurchgänge} $)} \label{eqn:n}
-\end{center}
+
+\subsection{Bestimmung des Brechungsindex von Luft}
+Mit der Gleichung \ref{eqn:brechungsindex_gas} und den in Tabellen \ref{tab:brechungsindex_gas1}, \ref{tab:brechungsindex_gas2} und \ref{tab:brechungsindex_gas3} zu sehenden Messwerten lässt sich der Brechungsindex von Luft für jede Messreihe berechnen. Dabei beträgt die Länge der Gaszelle $L = \SI{10}{\centi \meter}$.
+\input{content/tables/Druck_n1.tex}
+\input{content/tables/Druck_n2.tex}
+\input{content/tables/Druck_n3.tex}
+Für jede dieser Messreihen lässt sich ein Mittelwert $\bar{n}_i$ für den Brechungsindex bestimmen:
+\begin{align}
+    \bar{n}_1 &= 1.15065 \pm 0,00015 \\
+    \bar{n}_2 &= 1,15761 \pm 0,00016 \\
+    \bar{n}_3 &= 1,17819 \pm 0,00018
+\end{align}
+Insgesamt folgt damit ein Mittelwert $\bar{n}$ von
+\begin{equation}
+   \bar{n} = 1,16215 \pm 0,00016
+\end{equation}

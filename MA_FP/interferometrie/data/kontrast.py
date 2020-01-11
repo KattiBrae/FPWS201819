@@ -82,16 +82,27 @@ T = 0.001 # in m
 p, m1, m2, m3 = np.genfromtxt('Druck.txt',unpack=True, skip_header = 2)
 
 n_m1 = Brechung(m1, lambdavac, L)
+for i in range(len(n_m1)):
+    print('n_m1 = ',n_m1[i])
 n_m1 = sum(n_m1)/len(n_m1)
-print('n_m1 = ',n_m1)
+print('n_m1_med = ',n_m1)
+print('\n')
+
 
 n_m2 = Brechung(m2, lambdavac, L)
+for i in range(len(n_m2)):
+    print('n_m2 = ',n_m2[i])
 n_m2 = sum(n_m2)/len(n_m2)
-print('n_m2 = ',n_m2)
+print('n_m2_med = ',n_m2)
+print('\n')
+
 
 n_m3 = Brechung(m3, lambdavac, L)
+for i in range(len(n_m3)):
+    print('n_m3 = ',n_m3[i])
 n_m3 = sum(n_m3)/len(n_m3)
-print('n_m3 = ',n_m3)
+print('n_m3_med = ',n_m3)
+print('\n')
 
 n_ges= (n_m1+n_m2+n_m3)/3
 print('n_ges = ', n_ges)

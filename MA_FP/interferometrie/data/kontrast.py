@@ -1,94 +1,14 @@
-def channel(x, y, peaks_x, peakno, width, left, right):
-    tmp_x = []
-    for j in range(len(peaks_x)):
-        if (j == peakno):
-            for i in range(len(y)):
-                if (x[i] >= peaks_x[j]-width+left) and (x[i] <= peaks_x[j]+width+right):
-                    tmp_x.append(x[i])
-                else:
-                    pass
-    mean = np.mean(tmp_x)
-    sigma = np.std(tmp_x)
-#    print(mean, sigma)
-    return (tmp_x, mean, sigma)
+def Kontrast(phi, delta, a):
+    return a*np.abs(np.sin(2*np.radians(phi)-delta))
 
-def counts(x, y, peaks_x, peakno, width, left, right):
-    tmp_y = []
-    for j in range(len(peaks_x)):
-        if (j == peakno):
-            for i in range(len(y)):
-                if (x[i] >= peaks_x[j]-width+left) and (x[i] <= peaks_x[j]+width+right):
-                    tmp_y.append(y[i])
-                else:
-                    pass
-    total = sum(tmp_y)
-    return (tmp_y, total)
-
-def gaussfit(x, y, peaks_x, peakno, width, amp, off, left, right):
-    fig, ax = plt.subplots()
-
-    tmp_x, mean, sigma = channel(x, y, peaks_x, peakno, width, left, right)
-    tmp_y, total = counts(x, y, peaks_x, peakno, width, left, right)
-
-
-
-    def gaus(x,a,mu,std,c):
-        return a/np.sqrt((2*const.pi*std**2)) * np.exp(-(x-mu)**2/(2*std**2))+c
-
-    params,var = curve_fit(gaus,x,y,p0=[amp,mean,sigma,off], maxfev=5000)
-    fehler = np.sqrt(np.diag(var))
-    #print(params, fehler)
-
-
-
-    plt.grid(alpha=0.3)
-
-    x_new = np.linspace(tmp_x[0], tmp_x[-1], 5000, endpoint=True)
-#    ax.step(tmp_x,tmp_y, where='mid', color='C0', alpha=0.6)
-    ax.fill_between(tmp_x, 0, tmp_y, step='mid', alpha=0.4)
-    ax.plot(tmp_x, tmp_y, 'x', color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten')
-    ax.plot(x_new,gaus(x_new,*params),'-', color='C1', label='Normalverteilung')
-
-    ax.legend(fancybox=True, ncol=1)
-    ax.set_xlabel('Channel', labelpad=2)
-    ax.set_ylabel('Häufigkeit', labelpad=8)
-
-
-    plt.savefig('europium_peak_%s.pdf' %peakno)
-
-#    print(total-off)        # Peak-Inhalt
-#    print(np.sqrt(total-off))   # Fehler Peak-Inhalt
-
-def vollE(E, Q, dQ):
-
-    def f(E,a,b,c):
-        return a*E**(b)+c
-
-    params,var = curve_fit(f,E,Q, p0=[7,-1,0], maxfev=5000)
-    fehler = np.sqrt(np.diag(var))
-    print(params, fehler)
-
-
-
-    x_new = np.linspace(E[0], E[-1], 5000, endpoint=True)
-    plt.plot(x_new,f(x_new,*params),'-', color='C1', label='Ausgleichsrechnung nach: $Q = aE^{b}+c$')
-    plt.errorbar(E, Q, yerr=dQ, fmt="none", capsize=5, capthick=1, ms=5, color='C2', label='Unsicherheit')
-    plt.plot(E, Q, 'x', markersize=8, markeredgewidth=2, label='Daten')
-
-
-    plt.legend(fancybox=True, ncol=1)
-    plt.xlabel('$E$ in keV', labelpad=2)
-    plt.ylabel('$Q$', labelpad=8)
-
-    plt.grid(alpha=0.3)
-
-    plt.savefig('vollenergienachweiswahrscheinlichkeit.pdf')
-
-
+def Brechung(M,lambda_vac,L):
+	return (M*lambda_vac)/L+1
 
 if __name__=="__main__":
+    import pandas as pd
     import numpy as np
     import sympy
+    import matplotlib as mpl
     import matplotlib.pyplot as plt
     import matplotlib.patches as mpatches
     from matplotlib import transforms
@@ -96,6 +16,7 @@ if __name__=="__main__":
     from scipy.optimize import curve_fit
     from pylab import figure, axes, pie, title, show
     from numpy import NaN, Inf, arange, isscalar, asarray, array
+    from scipy.stats import linregress
     import sys
     import scipy.signal as sig
     from scipy.stats import norm
@@ -105,29 +26,24 @@ if __name__=="__main__":
     from uncertainties import ufloat
     from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
     from math import exp, log, sin, atan
+    import uncertainties.unumpy as unp
+    
 
 
     plt.rcParams['figure.figsize'] = (10, 7)
     plt.rcParams['font.size'] = 16
     plt.rcParams['lines.linewidth'] = 2
 
-    x, a, b = np.loadtxt('kontrast.txt', unpack=True,delimiter=',')
+    x, a, b = np.genfromtxt('kontrast.txt', unpack=True, skip_header = 2)
     y = []
     y = (a-b)/(a+b)
-#    x = np.arange(0, len(y), 1 )
-#    peaks_x = [  594,  1187, 1667, 1988, 2149, 3765, 4655, 5245, 5371, 6801]
-#    peakno = np.arange(0, len(peaks_x), 1 )
-#
-#    peaks_counts = []
-#    for i in range(len(x)):
-#        for j in range(len(peaks_x)):
-#            if ( i == peaks_x[j]):
-#                peaks_counts.append(y[i])
-#            else:
-#                pass
+
+    x_plot = np.linspace(0, 180, 10000)
+    params, covariance_matrix = curve_fit(Kontrast, x, y)
 
 
     plt.plot(x, y, 'x', color='C0', markersize=8, markeredgewidth=2, label='Daten')
+    plt.plot(x_plot, Kontrast(x_plot, *params), color='C1', label='Fit')
     plt.legend(fancybox=True, ncol=1)
     plt.xlabel('$\phi$ in Grad', labelpad=2)
     plt.ylabel('Kontrast', labelpad=8)
@@ -136,27 +52,47 @@ if __name__=="__main__":
 
     plt.savefig('kontrast.pdf')
 
+    uncertainties = np.sqrt(np.diag(covariance_matrix))
+    A = unp.uarray(params[0], uncertainties[0])
+    delta = unp.uarray(params[1], uncertainties[1])
 
-#    gaussfit(x, y, peaks_x, 0, 10,   0, 30, 1, -1)
-    #gaussfit(x, y, peaks_x, 1, 10,   0, 15, 0, -1)
-    #gaussfit(x, y, peaks_x, 2, 11,   0, 15, 2, -1)
-    #gaussfit(x, y, peaks_x, 3, 10,   0, 10, 4, -2)
-    #gaussfit(x, y, peaks_x, 4, 11,   0, 10, 0, -3)
-    #gaussfit(x, y, peaks_x, 5, 15,   0,  1, 0, -3)
-    #gaussfit(x, y, peaks_x, 6, 14,   0,  1, 2, +1)
-    #gaussfit(x, y, peaks_x, 7, 13,   0,  1, 0, -1)
-    #gaussfit(x, y, peaks_x, 8, 15,   0,  1, 0, -1)
-    #gaussfit(x, y, peaks_x, 9, 20,   0,  1, 0, -6)
-
-#    E, possibility = np.loadtxt('europium_literatur.txt', unpack=True,delimiter=' , ')
-#    Q, dQ = np.loadtxt('Q.txt', unpack=True, delimiter=',')
-
-#    Q = []
-#    for i in range(len(tmp)):
-#        Q.append(ufloat(tmp[i], dtmp[i]))
-#    print(Q)
-
-#    vollE(E, Q, dQ)
-
-
+    print('A = ', A)
+    print('Delta = ', delta)
     print('--- done ---')
+
+#-----Brechungsindex-----#
+#----------Glas----------#
+M = np.array([39,36,37,36,37,36,37,38,38,41])
+Lambda = 632.99e-9
+Theta = np.radians(11)
+Theta_0 = np.radians(10)
+T = 1e-3
+
+n = (1 - Lambda * M / (2 * T * Theta_0 * Theta))**-1
+n_mean = ufloat(np.mean(n), np.std(n)/ np.sqrt(len(n)))
+#np.savetxt("data/Brechungsindex_Glas.txt", np.array([M, n]).T, header = "#Nulldurchgänge Brechungsindex")
+
+print('n_Glas:',n_mean)
+print('--- done ---')
+#------Luft------#
+lambdavac = 632.99 *10**-6
+L = unp.uarray(0.1,0.0001) #in mm
+T = 0.001 # in m
+
+p, m1, m2, m3 = np.genfromtxt('Druck.txt',unpack=True, skip_header = 2)
+
+n_m1 = Brechung(m1, lambdavac, L)
+n_m1 = sum(n_m1)/len(n_m1)
+print('n_m1 = ',n_m1)
+
+n_m2 = Brechung(m2, lambdavac, L)
+n_m2 = sum(n_m2)/len(n_m2)
+print('n_m2 = ',n_m2)
+
+n_m3 = Brechung(m3, lambdavac, L)
+n_m3 = sum(n_m3)/len(n_m3)
+print('n_m3 = ',n_m3)
+
+n_ges= (n_m1+n_m2+n_m3)/3
+print('n_ges = ', n_ges)
+print('--- done ---')

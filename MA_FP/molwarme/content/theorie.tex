@@ -10,7 +10,9 @@ Die spezifische Wärmekapazität, oder auch Molwärme, $c_{\text{m}}$ ist nach d
 Im Festkörper sind die Atome in gitterförmigen Kristallstrukturen angeordnet.
 Die Temperatur eines Materials bedeutet mikroskopisch, dass die Atome in der Gitterstruktur schwingen und so Energie speichern.
 Diese Gitterschwingungen werden \textit{Phononen} genannt.
-Ein Phonon beschreibt also eine wellenförmige Anregung des Gitters mit einer Energie (eine Mode).
+Ein Phonon beschreibt also eine wellenförmige Anregung des Gitters mit einer zugeordeten Energie (eine Mode).
+%Energie, also auch Frequenz $\omega$, hängen von der Wellenzahl $k$ ab.
+%Dies ist die sognenannte Dispersionsrelation $\omega(k)$.
 Phononen verschiedener Energien (verschiedene Moden) können sich überlagern.
 Die Energie eines Teilchens beträgt
 \begin{equation*}
@@ -40,7 +42,8 @@ Bei höheren Temperaturen (je nach Material z.B. $T \gtrapprox \SI{200}{K}$) pas
 
 \FloatBarrier
 \subsection{Einstein-Modell}
-Im Einstein-Modell wird angenommen, dass alle Phononen eine Energie (eine Mode) haben, also alle mit einer Frequenz schwingen.
+Im Einstein-Modell wird angenommen, dass alle Phononen eine Energie (eine Mode) haben, also alle mit einer Frequenz $\omega$ schwingen.
+Alle Teilchen liegen also im gleichen Zustand und die Zustandsdichte $D(\omega)$ ist entsprechend eine $\delta$-Funktion.
 Die Gesamtenergie der Teilchen im Gitter lässt sich mit einer Planck-Verteilung der Besetzungszahl der Phononen berechnen:
 \begin{equation*}
 	\langle U \rangle = \frac{1}{\exp{\left( \frac{ \hbar \omega }{ k_{\text{B}} T } \right)} - 1}.
@@ -52,7 +55,25 @@ Die Gesamtenergie der Teilchen im Gitter lässt sich mit einer Planck-Verteilung
 Die Wärmekapazität entspricht so
 \begin{equation*}
 	C_{\text{V}} = \frac{\partial U}{\partial T} \bigg{\vert}_{V} = 3 R \left( \frac{\hbar \omega}{k_{\text{B}} T} \right)^2
-	\frac{ \exp{\left( \frac{ \hbar \omega }{ k_{\text{B}} T } \right)} }{ \left( \exp{\left( \frac{ \hbar \omega }{ k_{\text{B}} T } \right)} - 1 \right)^2 } =
+	\frac{ \exp{\left( \frac{ \hbar \omega }{ k_{\text{B}} T } \right)} }{ \left[ \exp{\left( \frac{ \hbar \omega }{ k_{\text{B}} T } \right)} - 1 \right]^2 } =
 	3 R \left( \frac{\hbar \omega}{k_{\text{B}} T} \right)^2
-	\frac{ \exp{\left( \frac{ \Omega_{\text{E}} }{ T } \right)} }{ \left( \exp{\left( \frac{ \Omega_{\text{E}} }{ T } \right)} - 1 \right)^2 }
+	\frac{ \exp{\left( \frac{ \Theta_{\text{E}} }{ T } \right)} }{ \left[ \exp{\left( \frac{ \Theta_{\text{E}} }{ T } \right)} - 1 \right]^2 }
 \end{equation*}
+mit der sogenannten Einstein-Temperatur
+\begin{equation*}
+	\Theta_{\text{E}} = \frac{\hbar \omega}{k_{\text{B}}}.
+\end{equation*}
+Die Einstein-Temperatur ist somit durch die Schwingungsfrequenz $\omega$ eine materialabhängige Konstante.
+Durch die Annahme, dass nur eine Mode vorhanden ist, entspricht das Modell bei sehr tiefen Temperaturen und geringen Frequenzen nicht der Realität.
+Das Einstein-Modell passt jedoch sehr gut zu Anregungen mit optischen Phononen.
+
+\subsection{Debye-Modell}
+Das Debye-Modell geht von einer linearen Zustandsdichte $D(\omega) \propto \omega$ aus.
+Die Phononen haben also eine kontinuierliche Energieverteilung.
+Die Gesamtenergie lässt sich über Integration der Zustandsdichte $D(\omega)$ und der gemittelten Besetzungszahl über die erste Brillouin-Zone zu folgendem berechnen:
+\begin{equation*}
+	U = \frac{3 V \hbar}{2 \pi^2 v_{\text{s}}^3} \int_{0}^{\omega_{\text{D}}} \! \frac{ \omega^3 }{ \exp{ \left(  \frac{\hbar \omega}{k_{\text{B}} T} - 1  \right)} } \, d\omega
+	  = \frac{3 V \hbar}{2 \pi^2 v_{\text{s}}^3} \int_{0}^{\omega_{\text{D}}} \! \frac{ \omega^3 }{ \exp{ \left(  \frac{\Theta_{\text{D}}}{ T} - 1  \right)} } \, d\omega
+\end{equation*}
+
+\FloatBarrier

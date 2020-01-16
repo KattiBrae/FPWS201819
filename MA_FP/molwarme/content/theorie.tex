@@ -8,7 +8,7 @@ Die spezifische Wärmekapazität, oder auch Molwärme, $c_{\text{mol}}$ ist nach
 	\tiny{$n \, \widehat{=}$ Stoffmenge des Materials, $V \, \widehat{=}$ konstantes Volumen }
 \end{center}
 Allgemein wird ein Teil der zugeführten Wärme in Volumenarbeit (Ausdehnung) umgesetzt und die Wärmekapazitäten bei konstantem Volumen $C_{\text{V}}$ und bei konstantem Druck $C_{\text{p}}$ unterscheiden sich.
-Festkörper dehnen sich weniger stark aus als Gase und die Wärmekapazitäten $C_{\text{V}}$ und $C_{\text{p}}$ sind annähernd gleich.
+Festkörper dehnen sich weniger stark aus als Gase und die Wärmekapazitäten $C_{\text{V}}$ und $C_{\text{p}}$ sind im Festkörper annähernd gleich.
 
 \subsection{Klassische Näherung}
 Im Festkörper sind die Atome in gitterförmigen Kristallstrukturen angeordnet.
@@ -19,7 +19,7 @@ Die Energie eines Teilchens beträgt dann
 	U = \sum_{i=x,y,z} \bigg( \underbrace{ \,\,\, \frac{1}{2}mv_{\text{i}}^2 \,\,\, }_{\substack{\text{kin. Energie}}} + \underbrace{ \,\,\, \frac{1}{2} D i^2 \,\,\, }_{\substack{\text{pot. Energie}}} \bigg).
 \end{equation*}
 \begin{center}
-	\tiny{$m \widehat{=}$ Masse des Teilchens, $v \widehat{=}$ Geschwindigkeit des Teilchens, $D \widehat{=}$ Federkonstante}
+	\tiny{$m \widehat{=}$ Masse des Teilchens, $v \widehat{=}$ Geschwindigkeit des Teilchens, $D \widehat{=}$ Kopplungskonstante (Federkonstante)}
 \end{center}
 Im klassischen Modell wird die Gesamtenergie der Atome durch das Äquipartitionstheorem statistisch zu gleichen Teilen zu kinetischer und potenzieller Energie aufgeteilt mit je $E_{\text{kin}} = E_{\text{pot}} = 1/2 k_{\text{B}} T $.
 Die Gesamtenergie beträgt bei je drei Freiheitsgraden pro Teilchen und einer Teilchenanzahl $N$ entsprechend
@@ -27,7 +27,7 @@ Die Gesamtenergie beträgt bei je drei Freiheitsgraden pro Teilchen und einer Te
 	U = 2 \cdot \frac{3}{2} N k_{\text{B}} T.
 \end{equation*}
 \begin{center}
-	\tiny{$k_{\text{B}} \widehat{=}$ Boltzmann-Konstante, $T \widehat{=}$ Temperatur}
+	\tiny{$N\widehat{=}$ Teilchenzahl, $k_{\text{B}} \widehat{=}$ Boltzmann-Konstante, $T \widehat{=}$ Temperatur}
 \end{center}
 Somit liegt die Wärmekapazität $C_{\text{V}}$ bei
 \begin{equation}
@@ -52,12 +52,12 @@ Im Graph der Dispersionsrelation $\omega(k)$ (Abb. \ref{fig:disp}) lassen sich d
 Die optischen Phononen gilt näherungsweise $\omega(k) \approx \text{const.}$, während für die akustischen Phononen im Zentrum der Brillouin-Zone eher $\omega(k) \propto k $ gilt.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\textwidth]{content/images/phononen.pdf}
-    \caption{Darstellungen der Dispersionsrelation einer zweiatomigen linearen Kette aus Atomen \cite{grossmarx}.}
+	\includegraphics[width=0.75\textwidth]{content/images/phononen.pdf}
+    \caption{Darstellungen der Dispersionsrelation einer zweiatomigen linearen Kette aus Atomen \cite{grossmarx}, modifiziert.}
     \label{fig:disp}
 \end{figure}
 
-Im Einstein-Modell wird angenommen, dass alle Phononen eine Energie (eine Mode) haben, also alle mit einer Frequenz $\omega$ schwingen.
+Im Einstein-Modell wird angenommen, dass alle Phononen eine Energie (eine Mode) haben, also alle mit einer Frequenz $\omega_{\text{E}}$ schwingen.
 Alle Teilchen liegen also im gleichen Zustand und die Zustandsdichte $D(\omega)$ ist entsprechend eine $\delta$-Funktion.
 %Die Gesamtenergie der Teilchen im Gitter lässt sich mit einer Maxwell-Boltzmann-Verteilung der Besetzungszahl der Phononen berechnen:
 %\begin{equation*}
@@ -86,6 +86,7 @@ mit der sogenannten Einstein-Temperatur
 \begin{equation*}
 	\Theta_{\text{E}} = \frac{\hbar \omega_{\text{E}}}{k_{\text{B}}}.
 \end{equation*}
+
 Für große Temperaturen ($T \gg \Theta_{\text{E}}$) ergibt sich über die Taylor-Entwicklung der Exponentialfunktion das Dulong-Petit-Gesetz (Gleichung \eqref{eqn:dulongpetit}).
 Die Einstein-Temperatur ist somit durch die Schwingungsfrequenz $\omega$ eine materialabhängige Konstante.
 Durch die Annahme, dass nur eine Mode vorhanden ist, entspricht das Modell bei sehr tiefen Temperaturen und geringen Frequenzen nicht der Realität.
@@ -97,9 +98,13 @@ Die Phononen haben also eine kontinuierliche Energieverteilung.
 Die Gesamtenergie lässt sich über Integration der Zustandsdichte $D(\omega)$ und der gemittelten Besetzungszahl über die erste Brillouin-Zone zu folgendem berechnen:
 \begin{equation}
 	U = \frac{3 V \hbar}{2 \pi^2 v_{\text{s}}^3} \int_{0}^{\omega_{\text{D}}} \! \frac{ \omega^3 }{ \exp{ \left(  \frac{\hbar \omega}{k_{\text{B}} T} - 1  \right)} } \, d\omega
-	= \frac{3 V \hbar}{2 \pi^2 v_{\text{s}}^3} \int_{0}^{\omega_{\text{D}}} .
+	= \frac{3 V k_{\text{B}}^4 T^4}{2 \pi^2 v_{\text{s}}^3 \hbar^3} \int_{0}^{x_{\text{D}}} \frac{x^3}{\exp{(x)}-1} \,dx.
 	\label{eqn:udebye}
 \end{equation}
+\begin{center}
+	\tiny{$ v_{\text{s}} \widehat{=}$ Schallgeschwindigkeit in dem Festkörper}
+\end{center}
+
 Hierbei wird die Debye-Temperatur $\Theta_{\text{D}}$ in folgender Substitution definiert:
 \begin{equation*}
 	x = \frac{\hbar \omega}{k_{\text{B}} T} = \frac{\Theta_{\text{D}}}{T} \Leftrightarrow  \Theta_{\text{D}} = \frac{\hbar \omega}{k_{\text{B}}} = T x.
@@ -108,14 +113,18 @@ Hierbei wird die Debye-Temperatur $\Theta_{\text{D}}$ in folgender Substitution 
 Anschaulich beschreibt sie die Energie der Mode höchster Energie, die angeregt wird.
 Die Ableitung der Inneren Energie nach der Temperatur liefert die Wärmekapazität:
 \begin{equation*}
-	C_{\text{V}} = \frac{\partial U}{\partial T} \bigg{\vert}_{V} = 9 N k_{\text{B}} \left( \frac{\Theta_{\text{D}}}{T} \right)^3 \int_{0}^{x_{\text{D}}} \! \frac{ x^4 \exp{(x)}}{ \left[ \exp{ (x) } - 1  \right]^2}  \, dx
+	C_{\text{V}} = \frac{\partial U}{\partial T} \bigg{\vert}_{V} = 9 N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3 \int_{0}^{x_{\text{D}}} \! \frac{ x^4 \exp{(x)}}{ \left[ \exp{ (x) } - 1  \right]^2}  \, dx.
 \end{equation*}
-Für große $T$ resp. kleine $x$ ergibt sich über die Näherung mit der Taylor-Entwicklung $\exp(x) \approx 1 + x $
+Für große $T$ resp. kleine $x$ ergibt sich über die Näherung mit der Taylor-Entwicklung $\exp(x) \approx 1 + x $ wieder Gleichung \eqref{eqn:dulongpetit}:
 \begin{equation*}
-	C_{\text{V}} \approx 3 N k_{\text{B}} \left( \frac{\Theta_{\text{D}}}{T} \right)^3 x_{\text{D}}^3= 3 N k_{\text{B}} = 3 R.
+	C_{\text{V}} \approx 3 N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3 x_{\text{D}}^3= 3 N k_{\text{B}} = 3 R.
 \end{equation*}
-Für niedrige Temperaturen ($T \ll \Theta_{\text{D}}$) lässt sich das Integral in Gleichung \eqref{eqn:udebye} numerisch lösen:
+Für niedrige Temperaturen ($T \ll \Theta_{\text{D}}$) lässt sich das Integral in Gleichung \eqref{eqn:udebye} numerisch lösen und die Innere Energie beträgt dann:
 \begin{equation*}
-	C_{\text{V}} = 9 N k_{\text{B}} \left( \frac{\Theta_{\text{D}}}{T} \right)^3 \frac{\pi^4}{15}
+	U = 9 N k_{\text{B}} T \left( \frac{T}{\Theta_{\text{D}}} \right)^3 \frac{\pi^4}{15} = \frac{3 \pi^4}{5} N k_{\text{B}} T \left( \frac{T}{\Theta_{\text{D}}} \right)^3.
+\end{equation*}
+Daraus folgt das sogenannte $T^3$-Gesetz der Wärmekapazität:
+\begin{equation*}
+	C_{\text{V}} = \frac{\partial U}{\partial T} \bigg{\vert}_{V} = \frac{12 \pi^4}{5} N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3 \approx 234 N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3
 \end{equation*}
 \FloatBarrier

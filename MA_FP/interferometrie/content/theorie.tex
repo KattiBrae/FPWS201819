@@ -52,9 +52,9 @@ Entsprechen interferieren s-polarisiertes und p-polarisiertes Licht nicht mitein
 
 \FloatBarrier
 \subsection{Kontrast und Intensität}
-Um die Qualität eines Interferenzbildes eines Interferometers anzugeben, wird der Kontrast $V$ (auch Sichtbarkeit, eng. \textit{visibility}) eingeführt:
+Um die Qualität eines Interferenzbildes eines Interferometers anzugeben, wird der Kontrast $K$ (auch Sichtbarkeit, eng. \textit{visibility}) eingeführt:
 \begin{equation}
-	V = \frac{I_{\text{max}} - I_{\text{min}}} {I_{\text{max}} + I_{\text{min}}}.
+	K = \frac{I_{\text{max}} - I_{\text{min}}} {I_{\text{max}} + I_{\text{min}}}.
 	\label{eqn:kontrastohnewinkel}
 \end{equation}
 Hierbei ist $I_{\text{max}}$ die Intensiät eines Intensitätsmaximums des Interferenzbildes, $I_{\text{min}}$ entsprechend die Intensität der Interferenz am Minimum.
@@ -86,7 +86,7 @@ ergibt sich die Intensität eines Minimums ($\delta = n \pi$, $n \in \mathbb{Z}$
 \end{equation*}
 Damit liegt dem Kontrast auch eine $\phi$-Abhängigkeit zugrunde:
 \begin{equation}
-	V(\phi) \propto = 2 \cos{(\phi)} \sin{(\phi)} = \sin{(2\phi)}. % \frac{(1+2\cos{(\phi)} \sin{(\phi)}) - (1-2\cos{(\phi)} \sin{(\phi)})} {(1+\cos{(\phi)} \sin{(\phi)}) + (1-2\cos{(\phi)} \sin{(\phi)})} \quad
+	K(\phi) \propto = | 2 \cos{(\phi)} \sin{(\phi)} | = |\sin{(2\phi)}|. % \frac{(1+2\cos{(\phi)} \sin{(\phi)}) - (1-2\cos{(\phi)} \sin{(\phi)})} {(1+\cos{(\phi)} \sin{(\phi)}) + (1-2\cos{(\phi)} \sin{(\phi)})} \quad
 	\label{eqn:kontrastmitwinkel}
 \end{equation}
 
@@ -108,29 +108,32 @@ Die Anzahl der Interferenzmaxima in einem Intervall verschiedener Phasenverschie
 	M = \frac{\Delta \delta}{2 \pi} \Rightarrow M = \frac{L (n-1)}{\lambda_{0}} \Leftrightarrow n = \frac{M \lambda_{0}}{L} +1.
 	\label{eqn:brechungsindex_gas}
 \end{equation}
-Der Brechungsindex ist über das Lorentz-Lorenz-Gesetz mit dem Druck und der Temperatur des Gases verbunden und kann über eine Taylorentwicklung um $n\approx 1$ wie folg genähert werden:
-\begin{equation}
-	\frac{n^2-1}{n^2+2} = \frac{A p }{R T} \approx  \frac{2}{3} (n-1) + \mathcal{O}(n^2) \quad \Leftrightarrow n(p) \approx \frac{3A p}{2R T} +1.
-	\label{eqn:gas}
-\end{equation}
-\begin{center}
-	\tiny{$A \widehat{=} \text{Refraktivität}, R{=} \text{universelle Gaskonstante}, T \widehat{=} \text{Temperatur}$}
-\end{center}
+%Der Brechungsindex ist über das Lorentz-Lorenz-Gesetz mit dem Druck und der Temperatur des Gases verbunden und kann über eine Taylorentwicklung um $n\approx 1$ wie folg genähert werden:
+%\begin{equation}
+%	\frac{n^2-1}{n^2+2} = \frac{A p }{R T} \approx  \frac{2}{3} (n-1) + \mathcal{O}(n^2) \quad \Leftrightarrow n(p) \approx \frac{3A p}{2R T} +1.
+%	\label{eqn:gas}
+%\end{equation}
+%\begin{center}
+%	\tiny{$A \widehat{=} \text{Refraktivität}, R{=} \text{universelle Gaskonstante}, T \widehat{=} \text{Temperatur}$}
+%\end{center}
 
 \paragraph{Brechungsindex von Glas}
 Wird ein Lichtstrahl durch eine planparallele Platte geschickt, wird er zweimal um den gleichen Winkel in gegensätzliche Richungen gebrochen und behält so global seine Ausbreitungsrichtung bei, wird jedoch seitlich verschoben.
 Die Brechung ist abhängig vom Drehwinkel $\theta$.
 Läuft ein Teilstahl durch eine planparallele Platte, und ein zweiter Teilstrahl nicht, ergibt sich eine Phasenverschiebung zwischen den beiden Strahlen:
 \begin{equation*}
-	\Delta \delta = \frac{2 \pi T}{\lambda_0} \left[ \frac{n-1}{2n} \, \theta^2 + \mathcal{O}(\theta^4) \right].
+	\Delta \delta = \frac{2 \pi D}{\lambda_0} \left[ \frac{n-1}{2n} \, \theta^2 + \mathcal{O}(\theta^4) \right].
 \end{equation*}
+\begin{center}
+	\tiny{$D \widehat{=} \text{Dicke der Platte}$}
+\end{center}
 Im Falle dieses Versuchs sind es zwei um konstant $\theta_0 = \SI{20}{°}$ gegeneinander gekippte Glasplatten, die um den Drehwinkel $\theta$ gedreht werden.
 Die Interferenzmaxima über einen Winkelbereich liegen bei
 \begin{equation*}
-	M = 2 \, \cdot \frac{\Delta \delta}{2 \pi} = 2 \cdot \frac{T}{\lambda_{0}} \frac{n-1}{2n} \,  \left( (\theta+\frac{\theta_0}{2})^2 - (\theta-\frac{\theta_0}{2})^2 \right).
+	M = 2 \, \cdot \frac{\Delta \delta}{2 \pi} = 2 \cdot \frac{D}{\lambda_{0}} \frac{n-1}{2n} \,  \left( (\theta+\frac{\theta_0}{2})^2 - (\theta-\frac{\theta_0}{2})^2 \right).
 \end{equation*}
 Nach $n(\theta)$ umgestellt ergibt sich
 \begin{equation}
-	n (\theta) = \frac{2 \frac{T}{\lambda_0} \theta_0 \, \theta}{2 \frac{T}{\lambda_0} \theta_0 \, \theta - M} = \frac{1}{1- \frac{M \lambda_0}{2T \theta_0 \, \theta}} \label{eqn:brechungsindex_glas}
+	n (\theta) = \frac{2 \frac{D}{\lambda_0} \theta_0 \, \theta}{2 \frac{D}{\lambda_0} \theta_0 \, \theta - M} = \frac{1}{1- \frac{M \lambda_0}{2D \theta_0 \, \theta}} \label{eqn:brechungsindex_glas}
 \end{equation}
 \FloatBarrier

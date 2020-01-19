@@ -115,9 +115,9 @@ Hierbei wird die Debye-Temperatur $\Theta_{\text{D}}$ in folgender Substitution 
 \end{equation*}
 Anschaulich beschreibt sie die Energie der Mode höchster Energie, die angeregt wird.
 Die Ableitung der Inneren Energie nach der Temperatur liefert die Wärmekapazität:
-\begin{equation*}
-	C_{\text{V}} = \frac{\partial U}{\partial T} \bigg{\vert}_{V} = 9 N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3 \int_{0}^{x_{\text{D}}} \! \frac{ x^4 \exp{(x)}}{ \left[ \exp{ (x) } - 1  \right]^2}  \, dx.
-\end{equation*}
+\begin{equation}
+	C_{\text{V}} = \frac{\partial U}{\partial T} \bigg{\vert}_{V} = 9 N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3 \int_{0}^{x_{\text{D}}} \! \frac{ x^4 \exp{(x)}}{ \left[ \exp{ (x) } - 1  \right]^2}  \, dx. \label{eqn:debeye}
+\end{equation}
 Für große $T$ resp. kleine $x$ ergibt sich über die Näherung mit der Taylor-Entwicklung $\exp(x) \approx 1 + x $ wieder Gleichung \eqref{eqn:dulongpetit}:
 \begin{equation*}
 	C_{\text{V}} \approx 3 N k_{\text{B}} \left( \frac{T}{\Theta_{\text{D}}} \right)^3 x_{\text{D}}^3= 3 N k_{\text{B}} = 3 R.

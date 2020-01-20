@@ -11,8 +11,8 @@ Da sich die Bestimmung der Molwärme bei konstanten Volumen experimentell schwie
 bestimmt. Die zur Berechnung benötigten Daten befinden sich in Tabelle \ref{tab:cp}. Von dem gemessenen Widerstand der Probe lässt sich über den Zusammenhang
 \begin{equation}
     T=\SI{0.00134}{\kelvin\per\ohm\squared}R^2+\SI{2.296}{\kelvin\per\ohm}R+\SI{30.13}{\kelvin}
-\end{equation} 
-auf die Temperatur $T$ schließen. 
+\end{equation}
+auf die Temperatur $T$ schließen.
 \input{content/tables/data.tex}
 In Tabelle \ref{tab:alpha} befinden sich lineare Ausdehnungskoeffizienten zu gegebenen Temperaturen. Um den linearen Ausdehnungskoeffizienten genauer an die gemessene Temperatur anzugleichen, wurde eine Ausgleichsrechnung der Form
 \begin{equation}
@@ -32,7 +32,7 @@ durchgeführt. Der Fit befindet sich in Abbildung \ref{fig:alpha}.
 Für die Fitparameter folgt
 \begin{align}
     m &=  -873 \pm 4 \\
-    b &=  19.411 \pm 0.029 .
+    b &=  19.411 \pm 0.029 \si{\kelvin} .
 \end{align}
 
 In Abbildung \ref{fig:cvcp} sind abschließend die berechneten Werte für $C_V$ und $C_p$ gegen die Temperatur aufgetragen. Dabei berechnet sich $C_V$ für ein gegebenes $C_p$ über die Gleichung
@@ -50,7 +50,7 @@ In Abbildung \ref{fig:cvcp} sind abschließend die berechneten Werte für $C_V$ 
 \end{figure}
 
 \subsection{Bestimmung der Debeye-Temperatur}
-Mithilfe Gleichung \ref{eqn:debeye} kann die Debeye-temperatur für ein gegebenes Material bestimmt werden. 
+Mithilfe Gleichung \ref{eqn:debeye} kann die Debeye-temperatur für ein gegebenes Material bestimmt werden.
 Durch die Forderung
 \begin{equation}
 	\int_0^{\omega_D} Z(\omega)d\omega = \frac{L^3}{2\pi^2}\omega^2\left(\frac{1}{v_\text{l}^3}+\frac{2}{v_{\text{t}}^3}\right)d\omega. \overset{!}{=} = 3 N_L
@@ -59,7 +59,7 @@ Durch die Forderung
 \begin{center}
     \tiny{($N_L \hat{=} \text{Loschmditsche Zahl}$, $L \hat{=} \text{Länge der Probe}$, $v_t \hat{=} \text{transversale Schallgeschwindigkeit}$, $v_l \hat{=} \text{longitudinale Schallgeschwindigkeit}$)}
 \end{center}
-folgt 
+folgt
 \begin{equation}
     \left[\frac{18\pi^2N_L}{L^3}\left(\frac{1}{v_\text{l}^3}+\frac{2}{v_\text{tr}^3}\right)^{-1} \right]^{\frac{1}{3}} = \omega_D.
 \end{equation}
@@ -73,19 +73,19 @@ Da die Länge der Probe nicht bekannt, muss dieser Faktor eliminiert werden. Mit
 \end{center}
 folgt mit $m = \SI{342}{\gram} $, $v_l = \SI{4,7}{\kilo \meter \per \second} $ und $v_t = \SI{2,26}{\kilo \meter \per \second}$ :
 \begin{equation}
-    \theta_{\mathrm{D},2}=\frac{\hbar}{k_{\mathrm{B}}}\sqrt[3]{\frac{18\pi^2N_A\rho}{M}\left(v_{\mathrm{long}}^{-3}+2v_{\mathrm{trans}}^{-3}\right)^{-1}}=\SI{332}{\kelvin}. 
+    \theta_{\mathrm{D},2}=\frac{\hbar}{k_{\mathrm{B}}}\sqrt[3]{\frac{18\pi^2N_A\rho}{M}\left(v_{\mathrm{long}}^{-3}+2v_{\mathrm{trans}}^{-3}\right)^{-1}}=\SI{332}{\kelvin}.
 \end{equation}
 
-Experimentell wird die Debeye-Temperatur $\sigma_D$ mithilfe der in Abbildung \ref{fig:deb} zu sehenden Tabelle bestimmt. Für ein gegebenes $C_V$ kann dort der entsprechende Wert $\frac{\theta_D}{T}$ abgelesen werden. Über den Zusammenhang 
+Experimentell wird die Debeye-Temperatur $\sigma_D$ mithilfe der in Abbildung \ref{fig:deb} zu sehenden Tabelle bestimmt. Für ein gegebenes $C_V$ kann dort der entsprechende Wert $\frac{\theta_D}{T}$ abgelesen werden. Über den Zusammenhang
 \begin{equation}
     \theta_D = \frac{\theta_D}{T} \cdot T
 \end{equation}
-kann damit auf die Debeye-Temperatur geschlossen werden. 
-Wie in Abbildung \ref{fig:cvcp} zu sehen ist, ist der Verlauf zwischen $\SI{84}{\kelvin}$ und $\SI{170}{\kelvin}$ annähernd linear, weshalb in diesem Bereich die Debeye-Temperatur bestimmt wird. 
+kann damit auf die Debeye-Temperatur geschlossen werden.
+Wie in Abbildung \ref{fig:cvcp} zu sehen ist, ist der Verlauf zwischen $\SI{84}{\kelvin}$ und $\SI{170}{\kelvin}$ annähernd linear, weshalb in diesem Bereich die Debeye-Temperatur bestimmt wird.
 Eine Mittelung über alle Werte ergibt:
 \begin{equation}
     \theta_{D_{exp}} = 327 \pm 30 \si{\kelvin}.
-\end{equation} 
+\end{equation}
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{content/images/table1.png}

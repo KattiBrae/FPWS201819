@@ -385,6 +385,7 @@ def plot(x, y, filename):
 
 
     ax.plot(x, y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten %s' %filename)
+    plt.yscale('log')
 
 
     plt.grid(alpha=0.3)

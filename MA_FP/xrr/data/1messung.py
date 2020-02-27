@@ -1,3 +1,14 @@
+def cutDataArrayBetweenTwoValues(countingup, beingcut, uG, oG): # cuts off data from array before start and after stop of measurement // schneidet am Array die Werte vor und nach der Messung ab
+        ############################## takeListsMakeArrays calling cutDataArrayBetweenTwoValues
+    A = []                                                                              # hier wird abgespeichert
+    for i in countingup:                                                          # für alle Indices in der Liste date
+        if i >= uG and i <= oG:                      # wenn der Wert von date beim Index kleiner ist als der start oder größer ist als der stop
+            A.append(i)                                                              # speichere den Wert von dem Datensatz in A
+        else:
+            pass
+
+    return (A)
+
 def plot(x, y, filename):
     fig, ax = plt.subplots()
     l=1.54e-10
@@ -6,7 +17,7 @@ def plot(x, y, filename):
     plt.yscale('log')
 
 ### Messdaten
-    ax.plot(q, y, '-', linewidth=0.7, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
+    ax.plot(q, y, '-', linewidth=0.7, color='C8', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
 
 ### Diffuse Messung
     a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
@@ -18,11 +29,11 @@ def plot(x, y, filename):
     for i in range(len(y)):
         tmp = y[i]-b[i]
         z.append(tmp)
-    ax.plot(a, z, '-', linewidth=0.7, color='C2', markersize=8, markeredgewidth=2, label='Korrigierte Daten (diffus)')
+    ax.plot(a, z, '-', linewidth=0.7, color='C0', markersize=8, markeredgewidth=2, label='Korrigierte Daten (diffus)')
 
 
 ### Korrigierte Daten korrigiert um Geometriefaktor
-    alpha = 0.5729673448571527
+    alpha = 0.5
     m = []
     for i in range(len(x)):
         if (x[i] <= 0.5729673448571527):
@@ -32,11 +43,45 @@ def plot(x, y, filename):
             tmp = y[i]
             m.append(tmp)
     ax.plot(q, m, '-', linewidth=0.7, color='C3', markersize=8, markeredgewidth=2, label='Korrigiert um Geometriefaktor')
-
 ### Reflektivität idealglatte OF
 #    def glatt(x,max,alpha):
 #        return (max-l*(x-alpha))/(max+l*(x-alpha))
 #    ax.plot(q, glatt(x,max(m),alpha), '-', linewidth=0.7, color='C4', markersize=8, markeredgewidth=2, label='Idealglatt')
+
+### Peaks
+    # logarithmiere die Daten und finde die Minima
+    logm = []
+    for i in range(len(m)):
+        if (m[i] != 0):
+            tmp = np.log10(m[i])
+            logm.append(tmp)
+        else:
+            logm.append(0)
+#    ax.plot(q, logm, '-', linewidth=0.7, color='blue', markersize=8, markeredgewidth=2) # logarithmieren funzt!
+    neglogm = []
+    for i in range(len(logm)):
+        tmp = -logm[i]
+        neglogm.append(tmp)
+#    ax.plot(q, neglogm, '-', linewidth=0.7, color='blue', markersize=8, markeredgewidth=2) # umdrehen funzt!
+    peakfinder = sig.find_peaks(neglogm, prominence = 0.07)
+#    print(peakfinder)
+
+    peak_array = [ 66,  76,  86,  96, 106, 116, 127, 137, 147, 158, 169, 179,
+       190, 200, 211, 221, 232, 241,# 245, 252, 263, 266, 275, 278, 283,
+#       285, 292, 294, 299, 304, 306, 312, 314, 316, 320, 326, 328, 331,
+#       335, 338, 340, 344, 346, 349, 352, 355, 359, 363, 365, 368, 370,
+#       372, 375, 377, 380, 382, 385, 390, 393, 396, 398, 402, 404, 408,
+#       413, 415, 421, 423, 426, 429, 433, 435, 438, 442, 445, 448, 453,
+#       455, 459, 462, 465, 469, 472, 478, 483, 489, 494, 7
+       ]
+
+    peak_x = []
+    peak_y = []
+    for i in peak_array:
+        peak_x.append(q[i])
+        peak_y.append(m[i])
+    ax.plot(peak_x, peak_y, 'x', linewidth=0.7, color='C2', markersize=8, markeredgewidth=1.5, label='Verwendete Minima') # umdrehen funzt!
+
 
 
     plt.grid(alpha=0.3)

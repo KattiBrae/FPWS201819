@@ -5,12 +5,15 @@ def plot(x, y, filename):
 
     plt.yscale('log')
 
+### Messdaten
     ax.plot(q, y, '-', linewidth=0.7, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
 
+### Diffuse Messung
     a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
     a = 4 * np.pi /l *np.sin(a*np.pi/180)
     ax.plot(a, b, '-', linewidth=0.7, color='C1', markersize=8, markeredgewidth=2, label='diffuse Messung')
 
+### Daten um diffuse Messsung korrigiert
     z = []
     for i in range(len(y)):
         tmp = y[i]-b[i]
@@ -18,7 +21,7 @@ def plot(x, y, filename):
     ax.plot(a, z, '-', linewidth=0.7, color='C2', markersize=8, markeredgewidth=2, label='Korrigierte Daten (diffus)')
 
 
-
+### Korrigierte Daten korrigiert um Geometriefaktor
     alpha = 0.5729673448571527
     m = []
     for i in range(len(x)):
@@ -29,6 +32,11 @@ def plot(x, y, filename):
             tmp = y[i]
             m.append(tmp)
     ax.plot(q, m, '-', linewidth=0.7, color='C3', markersize=8, markeredgewidth=2, label='Korrigiert um Geometriefaktor')
+
+### Reflektivität idealglatte OF
+#    def glatt(x,max,alpha):
+#        return (max-l*(x-alpha))/(max+l*(x-alpha))
+#    ax.plot(q, glatt(x,max(m),alpha), '-', linewidth=0.7, color='C4', markersize=8, markeredgewidth=2, label='Idealglatt')
 
 
     plt.grid(alpha=0.3)

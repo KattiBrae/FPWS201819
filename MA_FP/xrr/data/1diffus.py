@@ -381,11 +381,26 @@ def rueckstreupeak(x, y, peaks_x, peakno, width, amp, off, left, right, steigung
 
 def plot(x, y, filename):
     fig, ax = plt.subplots()
-
-
-
-    ax.plot(x, y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten %s' %filename)
     plt.yscale('log')
+
+    ax.plot(x, y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten %s' %filename)
+
+    a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
+    z = y-b
+    ax.plot(x, z, '-', linewidth=0.0000000000000001, color='C1', drawstyle='steps', markersize=8, markeredgewidth=2, label='Korrigierte Daten (diffus) %s' %filename)
+
+
+
+    a = 0.5729673448571527
+    m = []
+    for i in range(len(x)):
+        if (x[i] <= 0.5729673448571527):
+            tmp = y[i] * (np.sin(x[i]))/(np.sin(a))
+            m.append(tmp)
+        else:
+            tmp = y[i]
+            m.append(tmp)
+    ax.plot(x, m, '-', linewidth=0.0000000000000001, color='C2', drawstyle='steps', markersize=8, markeredgewidth=2, label='Korrigiert um Geometriefaktor %s' %filename)
 
 
     plt.grid(alpha=0.3)
@@ -419,11 +434,11 @@ if __name__=="__main__":
     plt.rcParams['figure.figsize'] = (10, 7)
     plt.rcParams['font.size'] = 16
     plt.rcParams['lines.linewidth'] = 2
-
     filename = 'Diffus'
 
     x, y = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
 
     plot(x, y, filename)
+
 
     print('--- done ---')

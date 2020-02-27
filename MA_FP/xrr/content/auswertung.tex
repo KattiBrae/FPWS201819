@@ -1,4 +1,17 @@
 \section{Auswertung}
 \begin{itemize}
-	\item messung - diffus abgebildet
+	\item Gauss an Detektorfunktion -> FWHM, max. Intensität
+	\begin{equation*}
+		\frac{a}{\sqrt{2 \pi \sigma^2}} \, \exp{\left(-\frac{\left(x-\mu \right)^2}{2 \sigma^2}\right)}+c
+	\end{equation*}
+	\begin{align}
+		Amp && \mu && \sigma && c \\
+		1.02109927e+05 && 4.73463215e-04 && 4.34837954e-02 && 1.35592289e+04 \\
+		1.08925087e+03 && 4.71014525e-04 && 4.93489841e-04 && 2.24293788e+03 \\
+	\end{align}
+	\item messung - diffus abgebildet\\
+	Geometriewinkel $\alpha = \arcsin{\left( \frac{d}{D}\right)} = \SI{0.5729673448571527}{°}$ mit $d=\SI{0.2}{mm}$ und $D=\SI{0.02}{m}$\\
+	Für kleinere Winkel als den Geometriewinkel ($\alpha_i < \alpha_G$) gilt $G = \frac{\sin{(\alpha_i)}}{\sin{(\alpha_G)}}$ für größere Winkel gilt $G=1$\\
+	Geometriewinkel in die Daten eingebezogen, abgebildet
+	\item $q_z=\frac{4\pi}{\lambda}\sin{(\alpha_i)}$, $\lambda = \SI{1.54e-10}{m}$
 \end{itemize}

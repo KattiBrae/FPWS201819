@@ -1,14 +1,39 @@
 def plot(x, y, filename):
     fig, ax = plt.subplots()
+    l=1.54e-10
+    q = 4 * np.pi /l *np.sin(x*np.pi/180)
 
-
-
-    ax.plot(x, y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='korrigierte Daten' )
     plt.yscale('log')
+
+    ax.plot(q, y, '-', linewidth=0.7, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
+
+    a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
+    a = 4 * np.pi /l *np.sin(a*np.pi/180)
+    ax.plot(a, b, '-', linewidth=0.7, color='C1', markersize=8, markeredgewidth=2, label='diffuse Messung')
+
+    z = []
+    for i in range(len(y)):
+        tmp = y[i]-b[i]
+        z.append(tmp)
+    ax.plot(a, z, '-', linewidth=0.7, color='C2', markersize=8, markeredgewidth=2, label='Korrigierte Daten (diffus)')
+
+
+
+    alpha = 0.5729673448571527
+    m = []
+    for i in range(len(x)):
+        if (x[i] <= 0.5729673448571527):
+            tmp = y[i] * (np.sin(x[i]))/(np.sin(alpha))
+            m.append(tmp)
+        else:
+            tmp = y[i]
+            m.append(tmp)
+    ax.plot(q, m, '-', linewidth=0.7, color='C3', markersize=8, markeredgewidth=2, label='Korrigiert um Geometriefaktor')
+
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
-    ax.set_xlabel('Winkel', labelpad=2)
+    ax.set_xlabel('q in ' +r'$\frac{1}{m}$', labelpad=2)
     ax.set_ylabel('Intensität', labelpad=8)
 
     plt.savefig('plot_%s.pdf' %filename)
@@ -41,9 +66,6 @@ if __name__=="__main__":
     filename = 'Messung'
 
     x, y = np.loadtxt('1416_messung_iguess.txt', unpack=True,delimiter=' , ')
-    a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
-    y = y-b
-
     plot(x, y, filename)
 
     print('--- done ---')

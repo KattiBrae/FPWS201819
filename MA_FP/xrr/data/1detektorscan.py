@@ -379,11 +379,63 @@ def rueckstreupeak(x, y, peaks_x, peakno, width, amp, off, left, right, steigung
 
         plt.savefig('bananium_rueckstreupeak.pdf')
 
+def gaussfit(x, y, peaks_x, width, amp, off, left, right):
+    fig, ax = plt.subplots()
+    tmp_x = x
+    tmp_y = y
+    mean = np.mean(tmp_x)
+    sigma = np.std(tmp_x)
+
+    def gauss(x,a,mu,std,c):
+        return a/np.sqrt((2*const.pi*std**2)) * np.exp(-(x-mu)**2/(2*std**2))+c
+
+    params,var = curve_fit(gauss,x,y,p0=[amp,mean,sigma,off], maxfev=1000000000)
+    fehler = np.sqrt(np.diag(var))
+    print('----------------------------')
+    print('Params: ')
+    print(params)
+    print('Fehler: ')
+    print(fehler)
+    print('----------------------------')
+
+#### Plot Daten
+    ax.fill_between(tmp_x, 0, tmp_y, step='mid', alpha=0.4)
+#    ax.plot(tmp_x, tmp_y, 'x', color='C2', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten')
+
+### Plot Halbwertsbreite
+    mean=params[1]
+    std=params[2]
+
+    counthwb = gauss(mean,*params)
+    print('Mean: ' + str(mean))
+    print('Bla: ' + str(counthwb))
+
+    FWHM = 2*np.sqrt(2*np.log(2))*std
+    FWHM_x = [mean-FWHM/2, mean+FWHM/2]
+    FWHM_y = [counthwb/2, counthwb/2]
+
+    print('----------------------------')
+    print('FWHM Fit: ' + str(FWHM))
+    print('----------------------------')
+
+#### Plot Halbwertsbreite, Zehntelwertsbreite
+    ax.plot(FWHM_x, FWHM_y, '-', color='C2')
+    ax.annotate((xy)=(mean -0.33, gauss(mean, *params)/2 ) , fontsize= 12, color='C2', s='Halbwertsbreite: \n0.10°' , rotation=0)
+#    ax.axvspan(mean-FWHM/2, mean+FWHM/2, facecolor='C2', alpha=0.1)
+#    ax.plot(FWTM_x, FWTM_y, '-', color='C2')
+#    ax.annotate((xy)=(mean -0.5, gauss(mean, *params)/10 +5) , fontsize=12, color='C3', s='Zehntelwertsbreite: \n19 Channel \n3.94 keV ', rotation=0)
+
+#### Plot Fit
+    x_new = np.linspace(tmp_x[0], tmp_x[-1], 5000, endpoint=True)
+    ax.plot(x_new,gauss(x_new,*params),'-', color='C1', label='Normalverteilung')
+    ax.annotate((xy)=(mean - 0.3, gauss(mean, *params)-40000) , fontsize= 12, color='C1', s='Max. Intensität: \n950367 counts (Fit)' , rotation=0)
+    ax.annotate((xy)=(mean + 0.1, gauss(mean, *params)-40000) , fontsize= 12, color='C0', s='Max. Intensität: \n959913 counts (Daten)' , rotation=0)
+
 def plot(x, y, filename):
     fig, ax = plt.subplots()
 
 
-
+    gaussfit(x, y, 0, 0.3, 1000000, 0, 0, 0)
     ax.plot(x, y, '-', linewidth=0.0000000000000001, color='C0', drawstyle='steps', markersize=8, markeredgewidth=2, label='Daten %s' %filename)
 
 

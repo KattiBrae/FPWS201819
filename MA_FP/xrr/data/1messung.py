@@ -37,7 +37,7 @@ def plot(x, y, filename):
     m = []
     for i in range(len(x)):
         if (x[i] <= 0.5729673448571527):
-            tmp = y[i] * (np.sin(x[i]))/(np.sin(alpha))
+            tmp = y[i] / (np.sin(x[i]))/(np.sin(alpha))
             m.append(tmp)
         else:
             tmp = y[i]

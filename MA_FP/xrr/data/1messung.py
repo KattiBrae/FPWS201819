@@ -17,19 +17,19 @@ def plot(x, y, filename):
     plt.yscale('log')
 
 ### Messdaten
-    ax.plot(q, y, '-', linewidth=0.7, color='C8', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
+    ax.plot(q, y, '-', color='C8', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
 
 ### Diffuse Messung
     a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
     a = 4 * np.pi /l *np.sin(a*np.pi/180)
-    ax.plot(a, b, '-', linewidth=0.7, color='C1', markersize=8, markeredgewidth=2, label='diffuse Messung')
+    ax.plot(a, b, '-', color='C1', markersize=8, markeredgewidth=2, label='Diffuse Messung')
 
 ### Daten um diffuse Messsung korrigiert
     z = []
     for i in range(len(y)):
         tmp = y[i]-b[i]
         z.append(tmp)
-    ax.plot(a, z, '-', linewidth=0.7, color='C0', markersize=8, markeredgewidth=2, label='Korrigierte Daten (diffus)')
+    ax.plot(a, z, '-', color='C0', markersize=8, markeredgewidth=2, label='Daten um diffuse Messung korrigiert')
 
 
 ### Korrigierte Daten korrigiert um Geometriefaktor
@@ -37,16 +37,17 @@ def plot(x, y, filename):
     m = []
     for i in range(len(x)):
         if (x[i] <= 0.5729673448571527):
-            tmp = y[i] / (np.sin(x[i]))/(np.sin(alpha))
+            tmp = y[i] / ((np.sin(x[i]))/(np.sin(alpha)))
             m.append(tmp)
         else:
             tmp = y[i]
             m.append(tmp)
-    ax.plot(q, m, '-', linewidth=0.7, color='C3', markersize=8, markeredgewidth=2, label='Korrigiert um Geometriefaktor')
+    ax.plot(q, m, '-', color='C3', markersize=8, markeredgewidth=2, label='Daten um Geometriefaktor korrigiert')
+
 ### Reflektivität idealglatte OF
 #    def glatt(x,max,alpha):
 #        return (max-l*(x-alpha))/(max+l*(x-alpha))
-#    ax.plot(q, glatt(x,max(m),alpha), '-', linewidth=0.7, color='C4', markersize=8, markeredgewidth=2, label='Idealglatt')
+#    ax.plot(q, glatt(x,max(m),alpha), '-',color='C4', markersize=8, markeredgewidth=2, label='Idealglatt')
 
 ### Peaks
     # logarithmiere die Daten und finde die Minima
@@ -57,12 +58,12 @@ def plot(x, y, filename):
             logm.append(tmp)
         else:
             logm.append(0)
-#    ax.plot(q, logm, '-', linewidth=0.7, color='blue', markersize=8, markeredgewidth=2) # logarithmieren funzt!
+#    ax.plot(q, logm, '-',color='blue', markersize=8, markeredgewidth=2) # logarithmieren funzt!
     neglogm = []
     for i in range(len(logm)):
         tmp = -logm[i]
         neglogm.append(tmp)
-#    ax.plot(q, neglogm, '-', linewidth=0.7, color='blue', markersize=8, markeredgewidth=2) # umdrehen funzt!
+#    ax.plot(q, neglogm, '-',color='blue', markersize=8, markeredgewidth=2) # umdrehen funzt!
     peakfinder = sig.find_peaks(neglogm, prominence = 0.07)
 #    print(peakfinder)
 
@@ -80,8 +81,25 @@ def plot(x, y, filename):
     for i in peak_array:
         peak_x.append(q[i])
         peak_y.append(m[i])
-    ax.plot(peak_x, peak_y, 'x', linewidth=0.7, color='C2', markersize=8, markeredgewidth=1.5, label='Verwendete Minima') # umdrehen funzt!
 
+    abstandderpeaks = []
+    for i in peak_array:
+        if (i<241):
+            tmp = q[i+1]-q[i]
+            abstandderpeaks.append(tmp)
+        else:
+            pass
+    mittelwert = np.mean(abstandderpeaks)
+    fehler = np.std(abstandderpeaks)
+    schichtdicke = 2*np.pi/ufloat(mittelwert, fehler)
+    print('Mittelwert der Abstände: ' + str(mittelwert) + ' ; \t Schichtdicke (Kehrwert): ' + str(schichtdicke))
+
+    ax.plot(peak_x, peak_y, 'x', color='C2', markersize=8, markeredgewidth=1.5, label='Verwendete Minima, Schichtdicke: ' + str(schichtdicke) + 'm') # umdrehen funzt!
+
+### Kritischer Winkel Totalreflexion
+    u = 39 # Ende des Plateaus
+    print('Kritischer Winkel ' + str(x[u]))
+    ax.plot(q[u], m[u], 'x', color='black', markersize=8, markeredgewidth=1, label='Kritischer Winkel Totalreflexion: ' + str(x[u]) + '°')
 
 
     plt.grid(alpha=0.3)
@@ -113,8 +131,8 @@ if __name__=="__main__":
     from scipy.stats import norm
 
     plt.rcParams['figure.figsize'] = (10, 7)
-    plt.rcParams['font.size'] = 16
-    plt.rcParams['lines.linewidth'] = 2
+    plt.rcParams['font.size'] = 12
+    plt.rcParams['lines.linewidth'] = 1
 
     filename = 'Messung'
 

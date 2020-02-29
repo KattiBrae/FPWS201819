@@ -1,56 +1,29 @@
-def cutDataArrayBetweenTwoValues(countingup, beingcut, uG, oG): # cuts off data from array before start and after stop of measurement // schneidet am Array die Werte vor und nach der Messung ab
-        ############################## takeListsMakeArrays calling cutDataArrayBetweenTwoValues
-    A = []                                                                              # hier wird abgespeichert
-    for i in countingup:                                                          # für alle Indices in der Liste date
-        if i >= uG and i <= oG:                      # wenn der Wert von date beim Index kleiner ist als der start oder größer ist als der stop
-            A.append(i)                                                              # speichere den Wert von dem Datensatz in A
-        else:
-            pass
-
-    return (A)
-
-def plot(x, y, filename):
-    fig, ax = plt.subplots()
-    l=1.54e-10
+def von_winkel_zu_q(x):
     q = 4 * np.pi /l *np.sin(x*np.pi/180)
-
-    plt.yscale('log')
-
-### Messdaten
-    ax.plot(q, y, '-', color='C8', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
-
-### Diffuse Messung
+    return q
+def lade_diffuse_messung():
     a, b = np.loadtxt('1501_diffus.txt', unpack=True,delimiter=' , ')
-    a = 4 * np.pi /l *np.sin(a*np.pi/180)
-    ax.plot(a, b, '-', color='C1', markersize=8, markeredgewidth=2, label='Diffuse Messung')
-
-### Daten um diffuse Messsung korrigiert
-    z = []
-    for i in range(len(y)):
-        tmp = y[i]-b[i]
-        z.append(tmp)
-    ax.plot(a, z, '-', color='C0', markersize=8, markeredgewidth=2, label='Daten um diffuse Messung korrigiert')
-
-
-### Korrigierte Daten korrigiert um Geometriefaktor
+    qdiffus = von_winkel_zu_q(a)
+    return qdiffus, b
+def korrektur_diffuse_messung(counts, b):
+    korrigierte_counts = []
+    for i in range(len(counts)):
+        tmp = counts[i]-b[i]
+        korrigierte_counts.append(tmp)
+    return korrigierte_counts
+def korrektur_geometriefaktor():
     alpha = 0.5
     m = []
     for i in range(len(x)):
-        if (x[i] <= 0.5729673448571527):
+        if (x[i] <= alpha):
             tmp = y[i] / ((np.sin(x[i]))/(np.sin(alpha)))
             m.append(tmp)
         else:
             tmp = y[i]
             m.append(tmp)
-    ax.plot(q, m, '-', color='C3', markersize=8, markeredgewidth=2, label='Daten um Geometriefaktor korrigiert')
-
-### Reflektivität idealglatte OF
-#    def glatt(x,max,alpha):
-#        return (max-l*(x-alpha))/(max+l*(x-alpha))
-#    ax.plot(q, glatt(x,max(m),alpha), '-',color='C4', markersize=8, markeredgewidth=2, label='Idealglatt')
-
-### Peaks
-    # logarithmiere die Daten und finde die Minima
+    return m
+def finde_minima(m, q):
+### Logarithmiere die Daten zur Basis 10
     logm = []
     for i in range(len(m)):
         if (m[i] != 0):
@@ -58,15 +31,14 @@ def plot(x, y, filename):
             logm.append(tmp)
         else:
             logm.append(0)
-#    ax.plot(q, logm, '-',color='blue', markersize=8, markeredgewidth=2) # logarithmieren funzt!
+### Negatives VZ um mit find_peaks arbeiten zu können
     neglogm = []
     for i in range(len(logm)):
         tmp = -logm[i]
         neglogm.append(tmp)
-#    ax.plot(q, neglogm, '-',color='blue', markersize=8, markeredgewidth=2) # umdrehen funzt!
+### Peaks finden
     peakfinder = sig.find_peaks(neglogm, prominence = 0.07)
-#    print(peakfinder)
-
+### Peaks in den Einträgen:
     peak_array = [ 66,  76,  86,  96, 106, 116, 127, 137, 147, 158, 169, 179,
        190, 200, 211, 221, 232, 241,# 245, 252, 263, 266, 275, 278, 283,
 #       285, 292, 294, 299, 304, 306, 312, 314, 316, 320, 326, 328, 331,
@@ -74,14 +46,16 @@ def plot(x, y, filename):
 #       372, 375, 377, 380, 382, 385, 390, 393, 396, 398, 402, 404, 408,
 #       413, 415, 421, 423, 426, 429, 433, 435, 438, 442, 445, 448, 453,
 #       455, 459, 462, 465, 469, 472, 478, 483, 489, 494, 7
-       ]
+       ] ### Manuell eingekürzt, da Minima bei großen q sehr unscharf
 
     peak_x = []
     peak_y = []
     for i in peak_array:
         peak_x.append(q[i])
         peak_y.append(m[i])
+    return peak_x, peak_y, peak_array
 
+def berechne_schichtdicke(q, peak_array):
     abstandderpeaks = []
     for i in peak_array:
         if (i<241):
@@ -92,23 +66,84 @@ def plot(x, y, filename):
     mittelwert = np.mean(abstandderpeaks)
     fehler = np.std(abstandderpeaks)
     schichtdicke = 2*np.pi/ufloat(mittelwert, fehler)
-    print('Mittelwert der Abstände: ' + str(mittelwert) + ' ; \t Schichtdicke (Kehrwert): ' + str(schichtdicke))
+    return schichtdicke
 
-    ax.plot(peak_x, peak_y, 'x', color='C2', markersize=8, markeredgewidth=1.5, label='Verwendete Minima, Schichtdicke: ' + str(schichtdicke) + 'm') # umdrehen funzt!
+def plotallgraphs(x, counts):
+    fig, ax = plt.subplots()
+    q = von_winkel_zu_q(x)
+
+### Messdaten
+    ax.plot(q, counts, linestyle='dashed', linewidth=0.5, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
+
+### Diffuse Messung
+    a,b = lade_diffuse_messung()
+    ax.plot(a, b, linestyle='-', linewidth=0.8, color='C0', markersize=8, markeredgewidth=2, label='Diffuse Messung')
+
+### Daten um diffuse Messsung korrigiert
+    counts_korrigiert_diffus = korrektur_diffuse_messung(counts, b)
+    ax.plot(a, counts_korrigiert_diffus, linestyle='-', linewidth=0.8, color='C1', markersize=8, markeredgewidth=2, label='Daten um diffuse Messung korrigiert')
+
+### Korrigierte Daten korrigiert um Geometriefaktor
+    counts_korrigiert_geometriefaktor = korrektur_geometriefaktor()
+    counts_final = counts_korrigiert_geometriefaktor
+    ax.plot(q, counts_final, linestyle='-', color='C3', markersize=8, markeredgewidth=2, label='Daten um Geometriefaktor korrigiert')
+
+### Peaks
+    minimum_x, minimum_y, peak_array = finde_minima(counts_final, q)
+    schichtdicke = berechne_schichtdicke(q, peak_array)
+    ax.plot(minimum_x, minimum_y, '+', color='indigo', markersize=8, markeredgewidth=1.5) # umdrehen funzt!
+    ax.annotate((xy)=(q[100]+100000000, counts_final[100]+10000), fontsize=9, color='indigo', s='Verwendete Minima zur Berechnung \nder Schichtdicke: ' + r'$(8.8244 \pm 0.0005) \,10^{-7}$ m' , rotation=0)
+#    print('Schichtdicke' + str(schichtdicke))
 
 ### Kritischer Winkel Totalreflexion
     u = 39 # Ende des Plateaus
-    print('Kritischer Winkel ' + str(x[u]))
-    ax.plot(q[u], m[u], 'x', color='black', markersize=8, markeredgewidth=1, label='Kritischer Winkel Totalreflexion: ' + str(x[u]) + '°')
+    ax.plot(q[u], counts_final[u], 'x', color='black', markersize=3, markeredgewidth=0.8, )
+    ax.annotate(s='Kritischer Winkel \nTotalreflexion: ' + str(x[u]) + '°', xy=(q[u], counts_final[u]), xytext=(q[u]+100000000, counts_final[u]+30000000), arrowprops={'arrowstyle': '->'}, fontsize=9, color='black', va='center')
+
+### Parratt-Plot
+    params,var = curve_fit(parratt, q, counts_final)
+    fehler = np.sqrt(np.diag(var))
+    q_new = np.linspace(q[u], q[-1], 500000000, endpoint=True)
+    ax.plot(q_new,parratt(q_new,*params), linestyle='dashdot', linewidth=2, color='black', label='Parratt-Fit')
 
 
+### Fresnel-Reflektivität
+#    q = 4 * np.pi /l *np.sin(x*np.pi/180)
+#    x = 180/np.pi*np.arcsin(l*q/(4*np.pi))
+#    def fresnel(q, a, b):
+#        return a*((q[u])/(2*q))**4+b
+#
+#    params,var = curve_fit(fresnel,q,m)
+#    fehler = np.sqrt(np.diag(var))
+#    q_new = np.linspace(q[u], q[-1], 5000, endpoint=True)
+##    ax.plot(q_new,fresnel(q_new,*params),'-', color='black', label='Normalverteilung')
+
+### Plot-Basics
+    plt.yscale('log')
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
     ax.set_xlabel('q in ' +r'$\frac{1}{m}$', labelpad=2)
     ax.set_ylabel('Intensität', labelpad=8)
 
-    plt.savefig('plot_%s.pdf' %filename)
+    plt.savefig('plot_messung_allegraphen.pdf')
 
+
+def parratt(x, n_2, n_3, sigma_1, sigma_2, z):
+    k = (2*np.pi)/l         # Betrag Wellenvektor allg.
+    ki = k * np.sin(x)      # Brauchen wir wohl gar nicht
+    kz_1 = k * np.sqrt(n_1**2 - (np.cos(x))**2)
+    kz_2 = k * np.sqrt(n_2**2 - (np.cos(x))**2) # Drei mal die gleiche Formel für verschiedene Brechungsindices 1, 2, 3
+    kz_3 = k * np.sqrt(n_3**2 - (np.cos(x))**2)
+
+    r_1_2 = (kz_1-kz_2)/(kz_1+kz_2)*np.exp(-2*kz_1*kz_2*sigma_1**2)     # r was in Gleichung 10 in der Lehrstuhlversuch-Anleitung steht
+    r_2_3 = (kz_2-kz_3)/(kz_2+kz_3)*np.exp(-2*kz_2*kz_3*sigma_2**2)     #
+
+    x_2 = np.exp(2 * cm.sqrt(-1) * kz_2 * z) * r_2_3                    # Hinterer Teil der Gleichung 10
+    x_1 = (r_1_2+x_2)/(1+r_1_2*x_2)                                     # Gleichung 10 zusammengefasst
+
+    amp = 1e06
+    hoffentlichpassts = amp*(np.abs(x_1))**2
+    return hoffentlichpassts
 
 if __name__=="__main__":
     import numpy as np
@@ -129,14 +164,20 @@ if __name__=="__main__":
     from math import exp, log, sin, atan
     import scipy.constants as const
     from scipy.stats import norm
+    import cmath as cm
 
     plt.rcParams['figure.figsize'] = (10, 7)
     plt.rcParams['font.size'] = 12
     plt.rcParams['lines.linewidth'] = 1
 
-    filename = 'Messung'
+    n_1=1      #Luft
+    n_2=1-1e-6 #Schicht
+    n_3=1-2e-6 #Substrat
+    l=1.54e-10
+
 
     x, y = np.loadtxt('1416_messung_iguess.txt', unpack=True,delimiter=' , ')
-    plot(x, y, filename)
+
+    plotallgraphs(x, y)
 
     print('--- done ---')

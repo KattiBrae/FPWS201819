@@ -1,3 +1,12 @@
+def lighten_color(color, amount=0.5):
+    import matplotlib.colors as mc
+    import colorsys
+    try:
+        c = mc.cnames[color]
+    except:
+        c = color
+    c = colorsys.rgb_to_hls(*mc.to_rgb(c))
+    return colorsys.hls_to_rgb(c[0], 1 - amount * (1 - c[1]), c[2])
 def von_winkel_zu_q(x):
     q = 4 * np.pi /l *np.sin(x*np.pi/180)
     return q
@@ -92,7 +101,9 @@ def plotallgraphs(x, counts):
     minimum_x, minimum_y, peak_array = finde_minima(counts_final, q)
     schichtdicke = berechne_schichtdicke(q, peak_array)
     ax.plot(minimum_x, minimum_y, '+', color='indigo', markersize=8, markeredgewidth=1.5) # umdrehen funzt!
-    ax.annotate((xy)=(q[100]+100000000, counts_final[100]+10000), fontsize=9, color='indigo', s='Verwendete Minima zur Berechnung \nder Schichtdicke: ' + r'$(8.8244 \pm 0.0005) \,10^{-7}$ m' , rotation=0)
+    lightindigo = lighten_color('indigo', 0.3)
+    ax.annotate(s='Verwendete Minima zur \nBerechnung der Schichtdicke. \nSchichtdicke: ' + r'(%.2f' %(schichtdicke.n * 1e10) + '$\pm$' + r'%.2f)' %(schichtdicke.s * 1e10) + r'$10^{-10}$ m', xy=(q[peak_array[0]]+2e07, counts_final[peak_array[0]]+1e04), xytext=(q[100]+300000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
+    ax.annotate(s=' ', xy=(q[peak_array[-1]], counts_final[peak_array[-1]]+1e01), xytext=(q[100]+1000000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
 #    print('Schichtdicke' + str(schichtdicke))
 
 ### Kritischer Winkel Totalreflexion
@@ -101,10 +112,11 @@ def plotallgraphs(x, counts):
     ax.annotate(s='Kritischer Winkel \nTotalreflexion: ' + str(x[u]) + '°', xy=(q[u], counts_final[u]), xytext=(q[u]+100000000, counts_final[u]+30000000), arrowprops={'arrowstyle': '->'}, fontsize=9, color='black', va='center')
 
 ### Parratt-Plot
-    params,var = curve_fit(parratt, q, counts_final)
-    fehler = np.sqrt(np.diag(var))
-    q_new = np.linspace(q[u], q[-1], 500000000, endpoint=True)
-    ax.plot(q_new,parratt(q_new,*params), linestyle='dashdot', linewidth=2, color='black', label='Parratt-Fit')
+    z2 = l/(2*schichtdicke.n)
+#    params,var = curve_fit(parratt, q, counts_final, p0=[1-25*10**(-7), 1-70*10**(-7), 75*10**(-11), 35*10**(-11), z2])
+    #fehler = np.sqrt(np.diag(var))
+    #q_new = np.linspace(q[u], q[-1], 5000000, endpoint=True)
+    #ax.plot(q_new,parratt(q_new,*params), linestyle='dashdot', linewidth=2, color='black', label='Parratt-Fit')
 
 
 ### Fresnel-Reflektivität

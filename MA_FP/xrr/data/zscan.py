@@ -7,42 +7,34 @@ def lighten_color(color, amount=0.5):
         c = color
     c = colorsys.rgb_to_hls(*mc.to_rgb(c))
     return colorsys.hls_to_rgb(c[0], 1 - amount * (1 - c[1]), c[2])
-def mitte_der_Sprungstelle(y):
+def max_min_xy(x,y):
     max_y = max(y)
-    min_y = min(y)
-#    peakfinder = sig.find_peaks(y, prominence = 0.07)
-    mitte = (max_y - min_y)/2+min_y
-    return (mitte)
-def max_min_x(x,y):
-    max_y = max(y)
-    min_y = min(y)
     for i in range(len(y)):
         if (y[i] == max_y):
             max_x = x[i]
-        elif (y[i] == min_y):
-            min_x = x[i]
+            min_x = x[i+5]
+            min_y = y[i+5]
         else:
             pass
-    return (max_x, min_x)
+    return (max_y, min_y, max_x, min_x)
 def diff_max_min_x(max_x, min_x):
     return (min_x-max_x)
-
 def plotallgraphs(x, y):
     fig, ax = plt.subplots()
-    lightC0 = lighten_color('C0', 0.2)
-    lightC1 = lighten_color('C1', 0.6)
-    start = 22
-    stopp = 29
-    max_x, min_x = max_min_x(x,y)
-    diff_in_x = diff_max_min_x(max_min_x(x,y))
+    lightC0 = lighten_color('C0', 1)
+    lightC1 = lighten_color('C1', 1)
 
-    ax.fill_between(x, 0, y, color=lightC0, step='mid')#, alpha=0.4)
-    ax.plot(x, y, 'x', color='C0', markersize=6, markeredgewidth=1.5, label='1. Z-Scan')
+    max_y, min_y, max_x, min_x = max_min_xy(x,y)
+    diff_in_x = diff_max_min_x(max_x, min_x)
 
-#    hier jetzt vertikale linie, oder fill between, die die horizontale differenz aufzeigt!
-    ax.fill_between(x=, 0, color=lightC1, )#, alpha=0.4)
+    ax.fill_between(x, 0, y, color=lightC0, step='mid', alpha=0.3)     # Daten blau hinterlegt
+    ax.plot(x+(x[1]-x[0])/2, y, '-', drawstyle='steps', color=lightC0, linewidth=0.1, alpha=0.4)    # Umrandung der hinterlegten Daten
+    ax.fill_between([max_x, min_x], 0, max_y, color=lightC1, alpha=0.25)    # Strahlbreite orange hinterlegt
+    ax.plot([max_x, min_x], [5e05, 5e05], '-', color='C1', label='Strahlbreite')    # Strahlbreite als Balken
+    ax.plot(x, y, 'x', color='C0', markersize=6, markeredgewidth=1.5, label='1. z-Scan')    # Daten als blaue Kreuze
+    ax.annotate(s='Strahlbreite: \n' + r'%.2f' %(diff_in_x) + 'mm = ' + r'%.2f $\cdot 10^{-3}$ m' %(diff_in_x), xy=(0.18, 5e05), va='center', color='C1',  rotation=0)
+    ax.annotate(s=' ', xy=(max_x-1.35e-02, 5e05), xytext=(min_x+2.9e-02, 5e05), ha='center', va='center', arrowprops={'arrowstyle': '<->', 'color':'C1'}, color='C1',  rotation=0)
 
-    ax.annotate(s='Strahlbreite: ' + r'%.4f' %(diff_in_x) + 'mm', xy=(0.25, 5e05), fontsize=9, color='C1',  rotation=0)
 
 
 
@@ -51,7 +43,7 @@ def plotallgraphs(x, y):
     ax.set_xlabel('Höhe z / mm', labelpad=2)
     ax.set_ylabel('Intensität', labelpad=8)
 
-    plt.savefig('plot_zscan.pdf')
+    plt.savefig('done_plot_zscan.pdf')
 
 
 if __name__=="__main__":

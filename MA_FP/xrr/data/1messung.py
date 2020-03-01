@@ -113,10 +113,10 @@ def plotallgraphs(x, counts):
 
 ### Parratt-Plot
     z2 = l/(2*schichtdicke.n)
-#    params,var = curve_fit(parratt, q, counts_final, p0=[1-25*10**(-7), 1-70*10**(-7), 75*10**(-11), 35*10**(-11), z2])
+    params,var = curve_fit(parratt, q, counts_final[40:501], p0=[1-1e-06, 1-2e-06, 75*10**(-11), 35*10**(-11), z2])
     #fehler = np.sqrt(np.diag(var))
-    #q_new = np.linspace(q[u], q[-1], 5000000, endpoint=True)
-    #ax.plot(q_new,parratt(q_new,*params), linestyle='dashdot', linewidth=2, color='black', label='Parratt-Fit')
+    q_new = np.linspace(q[u], q[-1], 5000000, endpoint=True)
+    ax.plot(q_new,parratt(q_new, n_2, n_3, 75e-11, 35e-11, z2), linestyle='dashdot', linewidth=2, color='black', label='Parratt-Fit')
 
 
 ### Fresnel-Reflektivität

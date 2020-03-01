@@ -76,59 +76,77 @@ def berechne_schichtdicke(q, peak_array):
     fehler = np.std(abstandderpeaks)
     schichtdicke = 2*np.pi/ufloat(mittelwert, fehler)
     return schichtdicke
-
+def replace_zero_in_array_with_something_very_close_to_zero(x, replacement):
+    A = []
+    for i in range(len(x)):
+        if (x[i] == 0):
+            tmp = replacement
+            A.append(tmp)
+        else:
+            tmp = x[i]
+            A.append(tmp)
+    return A
 def plotallgraphs(x, counts):
     fig, ax = plt.subplots()
     q = von_winkel_zu_q(x)
 
 ### Messdaten
-    ax.plot(q, counts, linestyle='dashed', linewidth=0.5, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
+#    ax.plot(q, counts, linestyle='dashed', linewidth=0.5, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
 
 ### Diffuse Messung
     a,b = lade_diffuse_messung()
-    ax.plot(a, b, linestyle='-', linewidth=0.8, color='C0', markersize=8, markeredgewidth=2, label='Diffuse Messung')
+#    ax.plot(a, b, linestyle='-', linewidth=0.8, color='C0', markersize=8, markeredgewidth=2, label='Diffuse Messung')
 
 ### Daten um diffuse Messsung korrigiert
     counts_korrigiert_diffus = korrektur_diffuse_messung(counts, b)
-    ax.plot(a, counts_korrigiert_diffus, linestyle='-', linewidth=0.8, color='C1', markersize=8, markeredgewidth=2, label='Daten um diffuse Messung korrigiert')
+#    ax.plot(a, counts_korrigiert_diffus, linestyle='-', linewidth=0.8, color='C1', markersize=8, markeredgewidth=2, label='Daten um diffuse Messung korrigiert')
 
 ### Korrigierte Daten korrigiert um Geometriefaktor
     counts_korrigiert_geometriefaktor = korrektur_geometriefaktor()
     counts_final = counts_korrigiert_geometriefaktor
-    ax.plot(q, counts_final, linestyle='-', color='C3', markersize=8, markeredgewidth=2, label='Daten um Geometriefaktor korrigiert')
+#    ax.plot(q, counts_final, linestyle='-', color='C3', markersize=8, markeredgewidth=2, label='Daten um Geometriefaktor korrigiert')
 
 ### Peaks
     minimum_x, minimum_y, peak_array = finde_minima(counts_final, q)
     schichtdicke = berechne_schichtdicke(q, peak_array)
-    ax.plot(minimum_x, minimum_y, '+', color='indigo', markersize=8, markeredgewidth=1.5) # umdrehen funzt!
+#    ax.plot(minimum_x, minimum_y, '+', color='indigo', markersize=8, markeredgewidth=1.5) # umdrehen funzt!
     lightindigo = lighten_color('indigo', 0.3)
-    ax.annotate(s='Verwendete Minima zur \nBerechnung der Schichtdicke. \nSchichtdicke: ' + r'(%.2f' %(schichtdicke.n * 1e10) + '$\pm$' + r'%.2f)' %(schichtdicke.s * 1e10) + r'$10^{-10}$ m', xy=(q[peak_array[0]]+2e07, counts_final[peak_array[0]]+1e04), xytext=(q[100]+300000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
-    ax.annotate(s=' ', xy=(q[peak_array[-1]], counts_final[peak_array[-1]]+1e01), xytext=(q[100]+1000000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
+#    ax.annotate(s='Verwendete Minima zur \nBerechnung der Schichtdicke. \nSchichtdicke: ' + r'(%.2f' %(schichtdicke.n * 1e10) + '$\pm$' + r'%.2f)' %(schichtdicke.s * 1e10) + r'$10^{-10}$ m', xy=(q[peak_array[0]]+2e07, counts_final[peak_array[0]]+1e04), xytext=(q[100]+300000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
+#    ax.annotate(s=' ', xy=(q[peak_array[-1]], counts_final[peak_array[-1]]+1e01), xytext=(q[100]+1000000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
 #    print('Schichtdicke' + str(schichtdicke))
 
 ### Kritischer Winkel Totalreflexion
     u = 39 # Ende des Plateaus
-    ax.plot(q[u], counts_final[u], 'x', color='black', markersize=3, markeredgewidth=0.8, )
-    ax.annotate(s='Kritischer Winkel \nTotalreflexion: ' + str(x[u]) + '°', xy=(q[u], counts_final[u]), xytext=(q[u]+100000000, counts_final[u]+30000000), arrowprops={'arrowstyle': '->'}, fontsize=9, color='black', va='center')
+#    ax.plot(q[u], counts_final[u], 'x', color='black', markersize=3, markeredgewidth=0.8, )
+#    ax.annotate(s='Kritischer Winkel \nTotalreflexion: ' + str(x[u]) + '°', xy=(q[u], counts_final[u]), xytext=(q[u]+100000000, counts_final[u]+30000000), arrowprops={'arrowstyle': '->'}, fontsize=9, color='black', va='center')
 
 ### Parratt-Plot
-    z2 = l/(2*schichtdicke.n)
-    params,var = curve_fit(parratt, q, counts_final[40:501], p0=[1-1e-06, 1-2e-06, 75*10**(-11), 35*10**(-11), z2])
-    #fehler = np.sqrt(np.diag(var))
-    q_new = np.linspace(q[u], q[-1], 5000000, endpoint=True)
-    ax.plot(q_new,parratt(q_new, n_2, n_3, 75e-11, 35e-11, z2), linestyle='dashdot', linewidth=2, color='black', label='Parratt-Fit')
+#    z2 = l/(2*schichtdicke.n)
+#    z2 = 500e-10
+#    z2 = l
+
+#    ax.plot(q, parratt(x, n_2, n_3, sigma_1, sigma_2, z2), linestyle='dashdot', linewidth=2, color='blue', label='Parratt-Funktion')
 
 
-### Fresnel-Reflektivität
-#    q = 4 * np.pi /l *np.sin(x*np.pi/180)
-#    x = 180/np.pi*np.arcsin(l*q/(4*np.pi))
-#    def fresnel(q, a, b):
-#        return a*((q[u])/(2*q))**4+b
+    params,var = curve_fit(parratt, q[40:500], counts_final[40:500], p0=[n_2, n_3, sigma_1, sigma_2, z2])
+    fehler = np.sqrt(np.diag(var))
+    q_new = np.linspace(q[0], q[-1], 1e05, endpoint=True)
+    ax.plot(q_new,parratt(q_new, *params), linestyle='dashdot', linewidth=1, color='black', label='Parratt-Fit')
+
+
+
+### alles, was geplottet wird
+#    ax.plot(q, counts, linestyle='dashed', linewidth=0.5, color='C0', markersize=8, markeredgewidth=2, label='Unkorrigierte Daten')
+#    ax.plot(a, b, linestyle='-', linewidth=0.8, color='C0', markersize=8, markeredgewidth=2, label='Diffuse Messung')
+#    ax.plot(a, counts_korrigiert_diffus, linestyle='-', linewidth=0.8, color='C1', markersize=8, markeredgewidth=2, label='Daten um diffuse Messung korrigiert')
+    ax.plot(q, counts_final, linestyle='-', color='C3', markersize=8, markeredgewidth=2, label='Daten um Geometriefaktor korrigiert')
+#    ax.plot(minimum_x, minimum_y, '+', color='indigo', markersize=8, markeredgewidth=1.5)
+#    ax.plot(q[u], counts_final[u], 'x', color='black', markersize=3, markeredgewidth=0.8)
 #
-#    params,var = curve_fit(fresnel,q,m)
-#    fehler = np.sqrt(np.diag(var))
-#    q_new = np.linspace(q[u], q[-1], 5000, endpoint=True)
-##    ax.plot(q_new,fresnel(q_new,*params),'-', color='black', label='Normalverteilung')
+#    ax.annotate(s='Verwendete Minima zur \nBerechnung der Schichtdicke. \nSchichtdicke: ' + r'(%.2f' %(schichtdicke.n * 1e10) + '$\pm$' + r'%.2f)' %(schichtdicke.s * 1e10) + r'$10^{-10}$ m', xy=(q[peak_array[0]]+2e07, counts_final[peak_array[0]]+1e04), xytext=(q[100]+300000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
+#    ax.annotate(s=' ', xy=(q[peak_array[-1]], counts_final[peak_array[-1]]+1e01), xytext=(q[100]+1000000000, counts_final[100]+30000), arrowprops={'arrowstyle': '->', 'color':lightindigo}, fontsize=9, color='indigo',  rotation=0)
+#    ax.annotate(s='Kritischer Winkel \nTotalreflexion: ' + str(x[u]) + '°', xy=(q[u], counts_final[u]), xytext=(q[u]+100000000, counts_final[u]+30000000), arrowprops={'arrowstyle': '->'}, fontsize=9, color='black', va='center')
+
 
 ### Plot-Basics
     plt.yscale('log')
@@ -136,16 +154,17 @@ def plotallgraphs(x, counts):
     ax.legend(fancybox=True, ncol=1)
     ax.set_xlabel('q in ' +r'$\frac{1}{m}$', labelpad=2)
     ax.set_ylabel('Intensität', labelpad=8)
-
     plt.savefig('plot_messung_allegraphen.pdf')
 
 
 def parratt(x, n_2, n_3, sigma_1, sigma_2, z):
+#    x = replace_zero_in_array_with_something_very_close_to_zero(x, 0.1)
+
     k = (2*np.pi)/l         # Betrag Wellenvektor allg.
     ki = k * np.sin(x)      # Brauchen wir wohl gar nicht
-    kz_1 = k * np.sqrt(n_1**2 - (np.cos(x))**2)
-    kz_2 = k * np.sqrt(n_2**2 - (np.cos(x))**2) # Drei mal die gleiche Formel für verschiedene Brechungsindices 1, 2, 3
-    kz_3 = k * np.sqrt(n_3**2 - (np.cos(x))**2)
+    kz_1 = k * np.sqrt(abs(n_1**2 - (np.cos(x))**2))
+    kz_2 = k * np.sqrt(abs(n_2**2 - (np.cos(x))**2)) # Drei mal die gleiche Formel für verschiedene Brechungsindices 1, 2, 3
+    kz_3 = k * np.sqrt(abs(n_3**2 - (np.cos(x))**2))
 
     r_1_2 = (kz_1-kz_2)/(kz_1+kz_2)*np.exp(-2*kz_1*kz_2*sigma_1**2)     # r was in Gleichung 10 in der Lehrstuhlversuch-Anleitung steht
     r_2_3 = (kz_2-kz_3)/(kz_2+kz_3)*np.exp(-2*kz_2*kz_3*sigma_2**2)     #
@@ -154,7 +173,7 @@ def parratt(x, n_2, n_3, sigma_1, sigma_2, z):
     x_1 = (r_1_2+x_2)/(1+r_1_2*x_2)                                     # Gleichung 10 zusammengefasst
 
     amp = 1e06
-    hoffentlichpassts = amp*(np.abs(x_1))**2
+    hoffentlichpassts = abs((np.abs(x_1))**2)
     return hoffentlichpassts
 
 if __name__=="__main__":
@@ -186,10 +205,15 @@ if __name__=="__main__":
     n_2=1-1e-6 #Schicht
     n_3=1-2e-6 #Substrat
     l=1.54e-10
-
+    sigma_1 = 8e-10
+    sigma_2 = 3e-10
+    z2 = 10e-10
+    offset = 1e10
 
     x, y = np.loadtxt('1416_messung_iguess.txt', unpack=True,delimiter=' , ')
 
     plotallgraphs(x, y)
+
+
 
     print('--- done ---')

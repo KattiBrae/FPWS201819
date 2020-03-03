@@ -24,14 +24,20 @@ from scipy.stats import norm
 #print(a)
 #a = 0.5729673448571527 #degrees
 
-detek_ai, detek_counts = np.loadtxt('1239_detektorscan1.txt', unpack=True,delimiter=' , ')
-print('Max. Detektor-Scan \t' + str(max(detek_counts)))
+#detek_ai, detek_counts = np.loadtxt('1239_detektorscan1.txt', unpack=True,delimiter=' , ')
+#print('Max. Detektor-Scan \t' + str(max(detek_counts)))
+#
+#zscan_z, zscan_counts = np.loadtxt('1242_zscan1.txt', unpack=True,delimiter=' , ')
+#print('Max. z-Scan \t\t' + str(max(zscan_counts)))
+#
+#rocking_ai, rocking_counts = np.loadtxt('1219_rock1.txt', unpack=True,delimiter=' , ')
+#print('Max. rocking-Scan \t' + str(max(rocking_counts)))
+#
+#messung_ai, messung_counts = np.loadtxt('1416_messung_iguess.txt', unpack=True,delimiter=' , ')
+#print('Max. Messung \t\t' + str(max(messung_counts)))
+#
 
-zscan_z, zscan_counts = np.loadtxt('1242_zscan1.txt', unpack=True,delimiter=' , ')
-print('Max. z-Scan \t\t' + str(max(zscan_counts)))
-
-rocking_ai, rocking_counts = np.loadtxt('1219_rock1.txt', unpack=True,delimiter=' , ')
-print('Max. rocking-Scan \t' + str(max(rocking_counts)))
-
-messung_ai, messung_counts = np.loadtxt('1416_messung_iguess.txt', unpack=True,delimiter=' , ')
-print('Max. Messung \t\t' + str(max(messung_counts)))
+exp  = 0.208
+theo = 0.22
+relabw = (exp-theo)/theo *100
+print(relabw)

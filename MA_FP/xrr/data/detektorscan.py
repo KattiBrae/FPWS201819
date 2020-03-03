@@ -54,7 +54,8 @@ def gaussfit(x, y, peaks_x, width, amp, off, left, right):
 
 #### Plot Halbwertsbreite
     ax.plot(FWHM_x, FWHM_y, '-', color='C2')
-    ax.annotate((xy)=(mean -0.5, gauss(mean, *params)/2 ) , fontsize= 12, color='C2', s='Halbwertsbreite: 0.10° \nKleinwinkelnäherung ' + r'$sin(\alpha_i)\approx \alpha_i$' +'', rotation=0)
+#    ax.annotate((xy)=(mean -0.5, gauss(mean, *params)/2 ) , fontsize= 12, color='C2', s='Halbwertsbreite: 0.10° \nKleinwinkelnäherung ' + r'$sin(\alpha_i)\approx \alpha_i$' +'', rotation=0)
+    ax.annotate((xy)=(mean -0.5, gauss(mean, *params)/2 ) , fontsize= 12, color='C2', s='Halbwertsbreite: 0.10°', rotation=0)
 
 #### Plot Fit
     x_new = np.linspace(tmp_x[0], tmp_x[-1], 5000, endpoint=True)

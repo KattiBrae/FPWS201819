@@ -30,18 +30,18 @@ def plotallgraphs(x, y):
     ax.fill_between(x, 0, y, color=lightC0, step='mid', alpha=0.3)     # Daten blau hinterlegt
     ax.plot(x+(x[1]-x[0])/2, y, '-', drawstyle='steps', color=lightC0, linewidth=0.1, alpha=0.4)    # Umrandung der hinterlegten Daten
     ax.fill_between([max_x, min_x], 0, max_y, color=lightC1, alpha=0.25)    # Strahlbreite orange hinterlegt
-    ax.plot([max_x, min_x], [5e05, 5e05], '-', color='C1', label='Strahlbreite')    # Strahlbreite als Balken
+    ax.plot([max_x, min_x], [0.5, 0.5], '-', color='C1', label='Strahlbreite')    # Strahlbreite als Balken
     ax.plot(x, y, 'x', color='C0', markersize=6, markeredgewidth=1.5, label='1. z-Scan')    # Daten als blaue Kreuze
-    ax.annotate(s='Strahlbreite: \n' + r'%.2f' %(diff_in_x) + 'mm = ' + r'%.2f $\cdot 10^{-3}$ m' %(diff_in_x), xy=(0.18, 5e05), va='center', color='C1',  rotation=0)
-    ax.annotate(s=' ', xy=(max_x-1.35e-02, 5e05), xytext=(min_x+2.9e-02, 5e05), ha='center', va='center', arrowprops={'arrowstyle': '<->', 'color':'C1'}, color='C1',  rotation=0)
-
-
+    ax.annotate(s='Strahlbreite: \n' + r'%.2f' %(diff_in_x) + 'mm = ' + r'%.2f $\cdot 10^{-3}$ m' %(diff_in_x), xy=(0.18, 0.5), va='center', color='C1',  rotation=0)
+    ax.annotate(s=' ', xy=(max_x-1.35e-02, 0.5), xytext=(min_x+2.9e-02, 0.5), ha='center', va='center', arrowprops={'arrowstyle': '<->', 'color':'C1'}, color='C1',  rotation=0)
+    ax.annotate((xy)=(max_x+0.22, max_y-0.0155), va='center', color='C2', s='Globale max. Intensität der \nJustage: 995661 counts (Daten) \n' + r'$\rightarrow$' + ' für die Normierung' , fontsize=10, rotation=0)
 
 
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
     ax.set_xlabel('Höhe z / mm', labelpad=2)
-    ax.set_ylabel('Intensität', labelpad=8)
+    ax.set_ylabel('Reflektivität', labelpad=8)
+    fig.tight_layout()
 
     plt.savefig('done_plot_zscan.pdf')
 
@@ -71,7 +71,9 @@ if __name__=="__main__":
     plt.rcParams['lines.linewidth'] = 1
 
     x, y = np.loadtxt('1242_zscan1.txt', unpack=True,delimiter=' , ')
-
+    print(max(y))
+### Normierung
+    y = y/995661
     plotallgraphs(x, y)
 
 

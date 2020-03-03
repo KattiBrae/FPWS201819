@@ -19,14 +19,15 @@ def plotallgraphs(x, y):
 #    ax.plot(x+(x[1]-x[0])/2, y, '-', drawstyle='steps', color=lightC0, linewidth=0.1, alpha=0.4)    # Umrandung der hinterlegten Daten
     ax.plot(x, y, 'x', color='C0', markersize=6, markeredgewidth=1.5, label='1. rocking-Scan')    # Daten als blaue Kreuze
 #    ax.axvline(x[links], color=lightC1, alpha=0.3), ax.axvline(x[rechts], color=lightC1, alpha=0.3)
-    ax.annotate(s='Geometriewinkel: \n' + r'%.2f' %(x[links]) + '°', xy=(x[links], y[links]), xytext=(x[links]-0.5, y[links]+1.5e05), arrowprops={'arrowstyle': '->', 'color':lightC1}, va='center', ha='left', color='C1',  rotation=0)
-    ax.annotate(s='Geometriewinkel: \n' + r'%.2f' %(x[rechts]) + '°', xy=(x[rechts], y[rechts]), xytext=(x[rechts]+0.5, y[rechts]+1.5e05), arrowprops={'arrowstyle': '->', 'color':lightC1}, va='center', ha='right', color='C1',  rotation=0)
+    ax.annotate(s='Geometriewinkel: \n' + r'%.2f' %(x[links]) + '°', xy=(x[links], y[links]), xytext=(x[links]-0.5, y[links]+0.25), arrowprops={'arrowstyle': '->', 'color':lightC1}, va='center', ha='left', color='C1',  rotation=0)
+    ax.annotate(s='Geometriewinkel: \n' + r'%.2f' %(x[rechts]) + '°', xy=(x[rechts], y[rechts]), xytext=(x[rechts]+0.5, y[rechts]+0.25), arrowprops={'arrowstyle': '->', 'color':lightC1}, va='center', ha='right', color='C1',  rotation=0)
 
 #    plt.yscale('log')
     plt.grid(alpha=0.3)
     ax.legend(fancybox=True, ncol=1)
     ax.set_xlabel('Winkel ' + r'$\alpha_i$', labelpad=2)
-    ax.set_ylabel('Intensität', labelpad=8)
+    ax.set_ylabel('Reflektivität', labelpad=8)
+    fig.tight_layout()
     plt.savefig('done_plot_rockingscan.pdf')
 
 if __name__=="__main__":
@@ -55,6 +56,8 @@ if __name__=="__main__":
 
     x, y = np.loadtxt('1219_rock1.txt', unpack=True,delimiter=' , ')
 
+### Normierung
+    y = y/995661
     plotallgraphs(x, y)
 
     print('--- done ---')

@@ -30,8 +30,7 @@ $\lambda=\SI{1.54}{\angstrom}$. Ein Bild der verwendeten Röntgenröhre befindet
 \subsection{Justage}
 \paragraph{Detektorscan}
 Um den Detektorscan durchzuführen, wird zunächst die Probe aus dem Strahlengang entfernt. 
-Dabei werden Röntgenröhre und Detektor so zueinander eingestellt,
-dass sie einen Winkel von $\SI{0}{\degree}$ einschließen. Um nun die tatsächliche Nulllage des Detektors zu finden, wird seine Lage um wenige Grad varriert, bis die Intensität des Primärstrahles ein durchläuft Maximum durchläuft, welches für die folgenden Schritte als neue Nullposition des Detektors verwendet wird. 
+Dabei werden Röntgenröhre und Detektor auf die Position $\SI{0}{\degree}$ gefahren. Um nun die tatsächliche Nulllage des Detektors zu finden, wird seine Lage um wenige Grad varriert, bis die Intensität des Primärstrahles ein durchläuft Maximum durchläuft, welches für die folgenden Schritte als neue Nullposition des Detektors verwendet wird. 
 
 %  Z-Scan #1
 \paragraph{Erster Z-Scan}
@@ -39,7 +38,7 @@ In diesem Schritt wird die Probenjustage angepasst. Dabei wird die z-Position de
 
 % Rocking-Scan 0 grad
 \paragraph{Erster Rockingscan}
-Nachdem in den vorherigen Schritten die zu untersuchende Probe parallel zur Strahlachse ausgerichtet wurde, erfolgt nun der Rockingscan. Bei diesem Röntgenröhre und Detektor um die Probe bewegt, wobei der Winkel zwischen Detektor und Probe bei Konstant $2\Theta = \SI{0}{\degree}$ bleibt. Die Drehung erfolgt dabei im Winkelbereich zwischen $\SI{-1}{\degree}$ und $\SI{1}{\degree}$. Aus dem daraus folgendem Intensitätsverlauf wird das Maximum ausgelesen und für die weiteren Schritte verwendet. 
+Nachdem in den vorherigen Schritten die zu untersuchende Probe parallel zur Strahlachse ausgerichtet wurde, erfolgt nun der Rockingscan. Bei diesem werden Röntgenröhre und Detektor um die Probe bewegt, wobei der Winkel zwischen Detektor und Probe bei Konstant $2\Theta = \SI{0}{\degree}$ bleibt. Die Drehung erfolgt dabei im Winkelbereich zwischen $\SI{-1}{\degree}$ und $\SI{1}{\degree}$. Aus dem daraus folgendem Intensitätsverlauf wird das Maximum ausgelesen und für die weiteren Schritte verwendet. 
 
 % Z-Scan #2
 \paragraph{Zweiter Z-Scan}
@@ -67,6 +66,6 @@ Nachdem das Maximum gefunden wurde, werden die Motoren entsprechend angesteuert.
 
 \subsection{Messung}
 \label{subsec:messung}
-Nachdem die Justage des D8-Diffraktometer durchgeführt wurde, wird ein sogenannter Reflektivitätsscan durchgeführt. Bei diesem sind der Einfallswinkel $\alpha_i$ und der Winkel zwischen Probe und Detektor $\alpha_{\text{f}}$ gleich. Im verwendeten wird hierbei ein Scanbereich von $\SI{0}{\degree}$ bis
-$\SI{5}{\degree}$ eingestellt und vermeessen. Dazu wird eine Schrittweite $\SI{0.05}{\degree}$ verwendet, wobei als Messzeit pro Datenpunkt $\SI{5}{\second}$ gewählt wird. \\
+Nachdem die Justage des D8-Diffraktometer durchgeführt wurde, wird ein sogenannter Reflektivitätsscan durchgeführt. Bei diesem sind der Einfallswinkel $\alpha_i$ und der Winkel zwischen Probe und Detektor $\alpha_{\text{f}}$ gleich. Hierbei wird ein Scanbereich von $\SI{0}{\degree}$ bis
+$\SI{5}{\degree}$ eingestellt und vermessen. Dazu wird eine Schrittweite von $\SI{0.05}{\degree}$ verwendet, wobei als Messzeit pro Datenpunkt $\SI{5}{\second}$ gewählt wird. \\
 Zusätzlich wird ein sogenannter diffuser Scan durchgeführt, der den Anteil der gestreuten Intensität an der Reflektivität bestimmt. Dieser Scan wird mit dem Unterschied durchgeführt, dass die Differenz hier $\Delta a = | \alpha_i - \alpha_{\text{f}} | =  \SI{0,1}{\degree} $ beträgt.

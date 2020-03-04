@@ -72,10 +72,11 @@ Dabei sind die interferierenden Wellen allgemein wie folgt definiert:
 	&	I 					 	\propto	 \langle |\vec{E}_{1} + \vec{E}_{2}|^2 \rangle = \langle |\underbrace{ \, E_{1}^2 \, }_{\substack{I_1}} + \underbrace{ \, E_{2}^2 \, }_{\substack{I_2}} + \underbrace{ \, 2 \, \vec{E}_{1} \! \cdot \! \vec{E}_{2} \, }_{\substack{\text{\tiny{Interferenzterm}}}} |\rangle \\
   	&	I_{1} 	\propto	 \langle E_1^2 \rangle = E_0^2  \cos^2{(\phi)}\\ % =\int^{\frac{2 \pi}{\omega}}_{0} \! E_0^2 \cos^2{(\phi)} \cos^2{(\omega t)} dt
 	&	I_2 	\propto	 \langle E_2^2 \rangle = E_0^2  \sin^2{(\phi)} \\
-	&	I_{\text{Int.}}	\propto	 \pm 2 E_0^2  \sin{(\phi)} \cos{(\phi)}\\
+	&	I_{\text{Int.}}	\propto	 \pm 2 E_0^2  \sin{(\phi)} \cos{(\phi + \delta)}\\
 %  		I_{1}				&& 	\propto	 \langle E_1^2 \rangle = E_0^2 \pi \cos^2{(\phi)} 											&& \\ % =\int^{\frac{2 \pi}{\omega}}_{0} \! E_0^2 \cos^2{(\phi)} \cos^2{(\omega t)} dt
 %		I_{2}				&& 	\propto	 \langle E_2^2 \rangle = E_0^2 \pi \sin^2{(\phi)} 											&& | \delta = n \pi, n \in \mathbb{Z} \\ %\int^{\frac{2 \pi}{\omega}}_{0} \! E_0^2 \sin^2{(\phi)} \cos^2{(\omega t + \delta)} dt
-%  		I_{\text{Int.}} 	&& 	\propto	 \langle 2 E_1 E_2 \rangle &&\\ %= \langle 2 E_0^2 \sin{(\phi)} \cos{(\phi)} \cos{(\omega t )} \cos{(\omega t + \delta)}\rangle 															&& \\
+%  		I_{\text{Int.}} 	&& 	\propto	 \langle 2 E_1 E_2 \rangle &&\\
+%		= \langle 2 E_0^2 \sin{(\phi)} \cos{(\phi)} \cos{(\omega t )} \cos{(\omega t + \delta)}\rangle 															&& \\
 %		I_{\text{Int.}}		 	\propto	 \langle 2 E_0^2 \sin{(\phi)} \cos{(\phi)} \cos{(\omega t )} \bigl[ \cos{(\omega t)} \cos{(\delta )} - \sin{(\omega t)} \sin{(\delta)} \bigr]\rangle 								&& | \cos{(\delta)}= \pm 1, \sin{(\delta)}=0 \\
 %		 										&& \\ %\pm \int^{\frac{2 \pi}{\omega}}_{0} \! 2 E_0^2 \sin{(\phi)} \cos{(\phi)} \cos^2{(\omega t )} dt =
 \end{align*}
@@ -127,13 +128,13 @@ Läuft ein Teilstahl durch eine planparallele Platte, und ein zweiter Teilstrahl
 \begin{center}
 	\tiny{$D \widehat{=} \text{Dicke der Platte}$}
 \end{center}
-Im Falle dieses Versuchs sind es zwei um konstant $\theta_0 = \SI{20}{°}$ gegeneinander gekippte Glasplatten, die um den Drehwinkel $\theta$ gedreht werden.
+Im Falle dieses Versuchs sind es zwei um konstant $\uptheta_0 = \SI{20}{°}$ gegeneinander gekippte Glasplatten, die um den Drehwinkel $\theta$ gedreht werden.
 Die Interferenzmaxima über einen Winkelbereich liegen bei
 \begin{equation*}
-	M = 2 \, \cdot \frac{\Delta \delta}{2 \pi} = 2 \cdot \frac{D}{\lambda_{0}} \frac{n-1}{2n} \,  \left( (\theta+\frac{\theta_0}{2})^2 - (\theta-\frac{\theta_0}{2})^2 \right).
+	M = \frac{\Delta \delta}{2 \pi} = \frac{D}{\lambda_{0}} \frac{n-1}{2n} \,  \left( (\theta+\frac{\uptheta_0}{2})^2 - (\theta-\frac{\uptheta_0}{2})^2 \right).
 \end{equation*}
 Nach $n(\theta)$ umgestellt ergibt sich
 \begin{equation}
-	n (\theta) = \frac{2 \frac{D}{\lambda_0} \theta_0 \, \theta}{2 \frac{D}{\lambda_0} \theta_0 \, \theta - M} = \frac{1}{1- \frac{M \lambda_0}{2D \theta_0 \, \theta}} \label{eqn:brechungsindex_glas}
+	n (\theta) = \frac{1}{1- \frac{\lambda_0 M}{ \uptheta_0 \, \theta D}} \label{eqn:brechungsindex_glas}
 \end{equation}
 \FloatBarrier

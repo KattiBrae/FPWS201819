@@ -28,8 +28,8 @@ x_plot = np.linspace(90, 550, 1000)
 p_with, U_with = np.genfromtxt('../content/data/tables/Txt/creichweite.txt',unpack=True)
 p_without, U_without = np.genfromtxt('../content/data/tables/Txt/reichweite_ohnefolie2.txt',unpack=True)
 
-params_w, covariance_matrix_w = curve_fit(linear, p_with[2:], U_with[2:])
-params_wo, covariance_matrix_wo = curve_fit(linear, p_without[2:], U_without[2:])
+params_w, covariance_matrix_w = curve_fit(linear, p_with[2:-7], U_with[2:-7])
+params_wo, covariance_matrix_wo = curve_fit(linear, p_without[2:-1], U_without[2:-1])
 
 plt.plot(p_with, U_with, 'kx', label=r"Wertepaare mit Folie")
 plt.plot(p_without, U_without, 'bx', label=r"Wertepaare ohne Folie")
@@ -44,6 +44,7 @@ print("Params without Foil b=", params_wo[1] , "+-", np.sqrt(np.diag(covariance_
 plt.xlabel('p / mbar')
 plt.ylabel('U / V')
 plt.legend(loc='best')
+plt.ylim(bottom=0)
 plt.savefig('../content/data/plots/gerade.pdf')
 E_a = 5.4865 *10**6 * const.e
 kappa, b_wo = func.avg_loss(E_a, params_wo, covariance_matrix_wo)

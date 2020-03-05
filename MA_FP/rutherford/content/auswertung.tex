@@ -13,9 +13,9 @@ Mit der in Oktober 1994 gemessenden Aktiviät $A_0 = \SI{330}{\kilo\becquerel}$,
     A_\text{theo} = \SI{3.170(10)e5}{\kilo\becquerel} .
 \end{equation}
 Um die Aktivität experimentell zu bestimmen, wird zunächst eine Nullmessung im Vakuum von $\SI{87,7}{\milli \bar}$ durchgeführt. Dabei wurden innerhalb von $t=\SI{68}{\second}$ $N=1064(32)$ Ereignisse registriert, wobei sich die Unsicherheit $\sigma_N$ aus der Poissonverteilung ergibt.
-Mit diesen Werten folgt für die Aktivität
+Mit diesen Werten folgt für die Aktivität pro Raumwinkelelement
 \begin{equation}
-    \frac{\Omega}{4 \pi } \cdot  A_\text{exp} = A_\text{exp0} = \frac{N}{t} = \SI{15.64(48)}{\kilo\becquerel} ,
+    \frac{\Omega}{4 \pi } \cdot  A_\text{exp} = \frac{N}{t} = \SI{15.64(48)}{\kilo\becquerel} ,
 \end{equation}
 wobei die Unsicherheit $\sigma_{ A_\text{exp}} = \frac{\sigma_N}{t}$ aus der Gaußschen Fehlerfortpflanzung folgt.
 Dies ist jedoch lediglich die Aktivität, die im Raumwinkelelement $\frac{\Omega}{4 \pi}$ erfasst wurde. Wenn davon ausgegangen wird, dass die auf dem Detektor aktive Fläche Teil einer Kugel mit $r = \SI{101}{\milli \meter}$ entspricht - wobei $r$ den Abstand zwischen Detektor und Quelle darstellt.
@@ -28,14 +28,10 @@ Somit folgt für die Aktivität
 \begin{equation}
     A_\text{exp} = \SI{501(15)}{\kilo\becquerel} .
 \end{equation}
-Auch hier folgt die Unsicherheit aus der Gaußschen Fehlerfortpflanzung:
-\begin{equation}
-    \sigma_\text{Aexp} =  \frac {\sigma_\text{Aexp}}{\frac{\Omega}{4 \pi }}
-\end{equation}
 
 \FloatBarrier
 \subsection{Bestimmung der Foliendicke mittels Energieverlustmessung}
-Die Foliendichte wird mithilfe eines Oszilloskops bestimmt. Mit diesem werden die Spannungen $U$ einzlener Impulse bei verschiedenen Drücken $p$ aufgenommen. Diese Messung wird einmal mit und einmal ohne eingebauter Goldfolie durchgeführt. Die Messwerte befinden sich in den Tabellen \ref{tab:mit} und \ref{tab:ohne2}.
+Die Foliendichte wird mithilfe eines Oszilloskops bestimmt. Mit diesem werden die Spannungen $U$ einzelner Impulse bei verschiedenen Drücken $p$ aufgenommen. Diese Messung wird einmal mit und einmal ohne eingebauter Goldfolie durchgeführt. Die Messwerte befinden sich in den Tabellen \ref{tab:mit} und \ref{tab:ohne2}.
 \input{data/tables/Tex/creichweite.tex}
 \input{data/tables/Tex/reichweite_ohnefolie2.tex}
 Um von den in den Tabellen \ref{tab:mit} und \ref{tab:ohne2} auf die Foliendicke schließen zu können, wird zunächst eine Ausgleichsrechnung der Form
@@ -45,10 +41,10 @@ Um von den in den Tabellen \ref{tab:mit} und \ref{tab:ohne2} auf die Foliendicke
 durchgeführt.
 Daraus ergeben sich die Parameter
 \begin{align*}
-    a_\text{ohne} &= (-0,895 \pm 240) \cdot 10^{-2} \si{\volt\per\milli\per\bar} \\
+    a_\text{ohne} &= (-0.050 \pm 0.006) \cdot 10^{-2} \si{\volt\per\milli\per\bar} \\
     b_\text{ohne} &= (7,421 \pm 0,575) \si{\milli\bar} \\
-    a_\text{mit} &=  (-5,048 \pm 0,517) \cdot 10^{-2} \si{\volt\per\milli\per\bar} \\
-    b_\text{mit} &=  (16,144 \pm 0,948) \si{{\milli\bar}} . \\
+    a_\text{mit} &=  (-0.054 \pm 0.005) \cdot 10^{-2} \si{\volt\per\milli\per\bar} \\
+    b_\text{mit} &=  (16.143 \pm 0.948) \si{{\milli\bar}} . \\
 \end{align*}
 Dabei gehören die Parameter mit dem Index $\texttt{ohne}$ zu Versuchsreihe ohne eingesetzter Goldfolie, während die Parameter mit dem Index $\texttt{mit}$ zu Versuchsreihe mit eingesetzter Goldfolie gehören. Die dazugehörigen Graphen befinden sich in Abbildung \ref{fig:geraden}.
 \begin{figure}[H]
@@ -66,7 +62,7 @@ Damit folgt
 wobei die Unsicherheit $\sigma_\kappa$ aus der Gaußschen Fehlerfortpflanzung $\sigma_\kappa = \frac{E_\alpha}{b_\text{ohne}}\sigma_{b_\text{ohne}}$ folgt. \\
 Der Energieverlust beträgt somit
 \begin{equation}
-    \Delta E = \kappa \cdot (b_\text{ohne}-b_\text{mit}) = \SI{2,96(25)}{\mega \electronvolt}
+    \Delta E = \kappa \cdot (b_\text{ohne}-b_\text{mit}) = \SI{0,95(35)}{\mega \electronvolt}
 \end{equation}
 deren Unsicherheit $\sigma_E$ aus der Gaußschen Fehlerfortpflanzung
 \begin{align*}
@@ -79,7 +75,7 @@ Zusammen mit Formel \eqref{eqn:bethebloch} und
 \end{equation*}
 folgt für die Dicke $d$ der Folie
 \begin{equation*}
-    d = \SI{6,5(5)}{\micro \meter}
+    d = \SI{2,2(8)}{\micro \meter}
 \end{equation*}
 
 \FloatBarrier

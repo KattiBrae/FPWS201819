@@ -76,7 +76,7 @@ print('n_Glas:',n_mean)
 print('--- done ---')
 #------Luft------#
 lambdavac = 632.99 *10**-6
-L = unp.uarray(0.1,0.0001) #in mm
+L = unp.uarray(100,0.1) #in mm
 T = 0.001 # in m
 
 p, m1, m2, m3 = np.genfromtxt('Druck.txt',unpack=True, skip_header = 2)

@@ -41,13 +41,27 @@ Mit der Gleichung \ref{eqn:brechungsindex_gas} und den in Tabellen \ref{tab:brec
 \input{content/tables/Druck_n1.tex}
 \input{content/tables/Druck_n2.tex}
 \input{content/tables/Druck_n3.tex}
-Für jede dieser Messreihen lässt sich ein Mittelwert $\bar{n}_i$ für den Brechungsindex bestimmen:
-\begin{align}
-    \bar{n}_1 &= 1.15065 \pm 0,00015 \\
-    \bar{n}_2 &= 1,15761 \pm 0,00016 \\
-    \bar{n}_3 &= 1,17819 \pm 0,00018
-\end{align}
-Insgesamt folgt damit ein Mittelwert $\bar{n}$ von
+Mithilfe dieser Werte kann anschließend, wie in Abbildung \ref{fig:n} zu sehen,  eine lineare Regression der Form 
 \begin{equation}
-   \bar{n} = 1,16215 \pm 0,00016
+    f(x, a, b) = a \cdot x + b
 \end{equation}
+durchgeführt werden. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{data/Plots/Brechungsindex.pdf}
+    \caption{Brechungsindices aufgetragen gegen den Druck. }
+    \label{fig:n}
+\end{figure}
+Es ergeben sich die in Tabelle \ref{tab:fit} zu sehenden Fitparameter.
+\input{content/tables/fit.tex}
+Damit ergeben sich mithilfe des Lorentz-Lorenz Gesetz bei einem Druck von $p = \SI{1013}{\milli \bar}$ folgende Brechungsindices:
+\begin{align}                                 
+    n_\text{Luft, 1} = 1.00029910 \pm 0,00000530   \\
+    n_\text{Luft, 2} = 1.00030161 \pm 0,00000408   \\
+    n_\text{Luft, 3} = 1.00033588 \pm 0,00001182  
+\end{align}
+Eine Mittelung über alle Werte ergibt folglich:
+\begin{equation}
+    n_\text{Luft} = 1.000312 \pm 0.000005
+\end{equation}
+

@@ -38,6 +38,8 @@ if __name__=="__main__":
     y = []
     y = (a-b)/(a+b)
 
+    print("Kontraste: ", y)
+
     x_plot = np.linspace(0, 180, 10000)
     params, covariance_matrix = curve_fit(Kontrast, x, y)
 

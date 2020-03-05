@@ -62,13 +62,22 @@ Damit folgt der Zusammenhang
    \tiny{ ($\vec{q} = \vec{k_2}-\vec{k_1}$, $ q_z = 2k \sin{\alpha_1} $ ) }
 \end{center}
 Handelt es sich nun bei dem zu betrachtenem System um - wie in Abbild \ref{fig:layer} dargestellt - ein System mit N+1 Schichten, kann die Reflektivität mithilfe des rekursiven Parratt-Algorithmus berechnet werden. Dieser trifft die Annahme, dass es sich bei der untersten Schicht um eine unendlich dicke Schicht handelt, sodass an dieser keine Transmission stattfindet.
-
+Mathematisch wird der Parratt-Algorithmus beschrieben durch
+\begin{equation}
+    X_j=\frac{R_j}{T_j}=\exp(-2ik_{z,j}z_j)\cdot\frac{r_{j,j+1}+X_{j+1}\exp(2ik_{z,j+1}z_j)}{1+r_{j,j+1}X_{j+1}\exp(2ik_{z,j+1}z_j)}.
+    \label{eqn:parratt}
+\end{equation}
+\begin{center}
+    \tiny{($r_{j,j+1} \hat{=} \text{Fresnelreflektivität der j-ten Grenzfläche.}$ )}    
+\end{center}
+An der untersten Grenzfläche $Z_N$ findet keine Reflektion mehr statt. Damit ist $R_{N+1} = 0$. Mit dieser Startbedingung können die Verhältnisse der reflektierten und transmittierten rekursiv von unten nach oben berechnet werden. 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.8 \textwidth]{content/images/layers.png}
     \caption{Beispielhafte Darstellung eines Mehrschichtensystems mit N+1 Schichten \cite{e1}. }
     \label{fig:layer}
 \end{figure}
+
 
 
 \subsection{Rauigkeit}

@@ -84,7 +84,7 @@ dT = delta(T1)
 cp= (Mcu/mcu) * (U * I/1000.0 * dt)/dT
 cv = cp - (9 * (f(T2, m, b)*10**(-6))**2 * K * V0 * T2)
 
-print_arr(cp, 'C_p')
+#print_arr(cp, 'C_p')
 cp1 = noms(cp)
 cv1 = noms(cv)
 
@@ -101,7 +101,7 @@ plt.savefig("plots/plot_Cv.pdf")
 plt.close()
 
 TT = (T2[1:])
-Cvv = (cv)
+Cvv = (cv[1:])
 Td = unp.uarray(np.zeros(20),0)
 Cvd = unp.uarray(np.zeros(20),0)
 for i in range(len(TT)):
@@ -109,13 +109,16 @@ for i in range(len(TT)):
 		Td[i] = TT[i]
 		Cvd[i] = Cvv[i]		
 #Td und Cvd sind die in Frage kommenden Werte, deb die dazugehörigen Debye Funktionswerte die ich per Hand rausgesucht habe. con.R ist die allgemeine Gaskonstante
-print_arr(Td, "Temp")
-deb = np.array([13.1,3.5,3.2,2.9,2.7,2.9,2.7,2.7,2.7,2.7,2.7,3.0,2.7,2.5,2.5,3.0,2.5,2.5,2.3,2.3])
+#print_arr(Td, "Temp")
+deb = np.array([3.5,3.2,2.9,2.7,2.9,2.7,2.7,2.7,2.7,2.7,3.0,2.7,2.5,3.0,2.5,2.5,2.3,2.3,2.3,2.3])
 
 #theta_D ist thD
 
-thD = (deb*Td**3*9*con.R/Cvd)**(1/3)
-
+thD = Td * deb
+print("\n")
+print_arr(Cvd, "CV")
+print("\n")
+print_arr(thD, "thD")
 
 MthD = ufloat(np.mean(noms(thD)),np.std(noms(thD))/np.sqrt(len(noms(thD))))
 print(MthD)

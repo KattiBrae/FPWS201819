@@ -21,10 +21,10 @@ An die Daten wird mit \textit{ipython 3.6.8} und \textit{scipy.optimize.curve\_f
 gefittet.
 Die Parameter ergeben sich zu
 \begin{align*}
-	a		= & \SI{102.109927 \pm 1.08925087 e+03}{counts} \\
-	b		= & \SI{13.5592289 \pm 2.24293788 e+03}{counts} \\
-	\mu 	= & \SI{4.73463215 \pm 4.71014525 e-04}{°} \\
-	\sigma 	= & \SI{4.34837954 \pm 0.0493489841 e-02}{°}. \\
+	& a	       = && \SI{102.109927 \pm 1.08925087 e+03}{counts} && \\
+	& b	       = && \SI{13.5592289 \pm 2.24293788 e+03}{counts} && \\
+	& \mu 	   = && \SI{4.73463215 \pm 4.71014525 e-04}{°}      && \\
+	& \sigma   = && \SI{4.34837954 \pm 0.0493489841 e-02}{°}.   && \\
 \end{align*}
 Innerhalb aus den Daten wird die Halbwertsbreite (FWHM) zu folgendem Wert berechnet:
 \begin{equation*}
@@ -67,8 +67,8 @@ Hier werden aus den Daten zwei Werte für den Geometriewinkel abgelesen.
 Dazu werden die Werte gewählt, bei denen sich die Intensität relevant von 0 unterscheidet.
 Diese werden anschließend gemittelt:
 \begin{align*}
-	a_g 			= & [0.44°, 0.56°] \\
-	\overline{a_g}	= & \SI{0.50}{°}. \\
+	& a_g 			   = && [0.44°, 0.56°] && \\
+	& \overline{a_g}   = && \SI{0.50}{°}.  && \\
 \end{align*}
 
 \subsection{Auswertung der Vermessung eines mit Polystyrol beschichteten Silicium-Wafers}
@@ -92,26 +92,26 @@ abgeschätzt.
   \includegraphics[width=\textwidth]{content/images/done_plot_messung.pdf}
   \caption{Vermessung der Reflektivität des PS-Si-Wafers in Abhängigkeit des Wellenvektorübertrags $q$.
   Zur Übersichtlichkeit sind die Graphen der Datenaufbereitung nach unten verschoben, sonst verschwinden sie über große Teile der Abbildung unter den anderen Graphen.}
-  \label{fig:detek}
+  \label{fig:messung}
 \end{figure}
 Sämtliche Graphen und die verwendeten Minima sind in Abbildung \ref{fig:messung} dargestellt.
 Die Graphen zu den jeweiligen Aufbereitungsschritten sind zur Übersichtlichkeit mit einem dem Faktor $0.1$ multipliziert und aufgetragen.\\
-Zur weiteren Bestimmung der interessanten Größen wird eine Theoriekurve nach dem Parratt-Algorithmus konstruiert (Anhang \ref{anh:parratt}).
+Zur weiteren Bestimmung der interessanten Größen wird eine Theoriekurve nach dem Parratt-Algorithmus konstruiert (Anhang \ref{sec:anhang}).
 Die Parameter der Theoriekurve sind die Brechungsindices $n_i$ der drei beteiligten Materialien (Luft, PS, Si), die Rauigkeiten $\sigma_i$ der beiden Grenzflächen (Luft-PS, PS-Si) und die Schichtdicke $z$.
 Manuell werden diese Parameter angepasst, um die Theoriekurve den Daten zu nähern.
 Die gewählten Parameter liegen bei:
 \begin{align*}
-	\text{Luft}   			&& n_1      	&= \SI{1.0}{\nothing}			&&  \\
-	\text{PS}   			&& n_2      	&= 1 -\SI{0.7e-06}{\nothing}	&&  \\
-	\text{Si}  		 		&& n_3      	&= 1 -\SI{6.6e-06}{\nothing}	&&  \\
-	\text{Luft-PS}   		&& \sigma_1 	&= \SI{8.1e-10}{m}				&&  \\
-	\text{PS-Si}   			&& \sigma_2 	&= \SI{5.7e-10}{m}				&&  \\
-	\text{PS-Schichtdicke}  && z 			&= \SI{870e-10}{m}.				&&  \\
+	& \text{ Luft }   			  && n_1      	= && \SI{1.0}{\nothing}			    &&  \\
+	& \text{ PS }   			  && n_2      	= && 1 -\SI{0.7e-06}{\nothing}	    &&  \\
+	& \text{ Si }  		 		  && n_3      	= && 1 -\SI{6.6e-06}{\nothing}	    &&  \\
+	& \text{ Luft-PS }   		  && \sigma_1 	= && \SI{8.1e-10}{m}				&&  \\
+	& \text{ PS-Si }   			  && \sigma_2 	= && \SI{5.7e-10}{m}				&&  \\
+	& \text{ PS-Schichtdicke }    && z 			= && \SI{870e-10}{m}.				&&  \\
 \end{align*}
 Aus den Korrekturtermen $\delta$ (in $n = 1 - \delta$) lassen sich die kritischen Winkel der Totalreflexion der beiden Materialien berechnen (Gleichung \eqref{eqn:alphacrit}):
 \begin{align}
-	\text{PS}	&& \alpha_c &= \SI{0.068}{°} 	&& \\
-	\text{Si}	&& \alpha_c &= \SI{0.208}{°}. 	&& \\
+	& \text{ PS }	&& \alpha_c = && \SI{0.068}{°} 	    && \\
+	& \text{ Si }	&& \alpha_c = && \SI{0.208}{°}. 	&& \\
 \end{align}
 %\begin{itemize}
 %	\item z-scan: Strahlbreite abgemessen!

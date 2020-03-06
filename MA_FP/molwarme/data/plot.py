@@ -81,15 +81,19 @@ def delta(temp):
 dt = delta(temp)
 dT = delta(T1)
 
+
 cp= (Mcu/mcu) * (U * I/1000.0 * dt)/dT
 cv = cp - (9 * (f(T2, m, b)*10**(-6))**2 * K * V0 * T2)
 
-#print_arr(cp, 'C_p')
+cp = cp[1:]
+cv = cv[1:]
+
+print_arr(cp, 'C_p')
 cp1 = noms(cp)
 cv1 = noms(cv)
 
-plt.errorbar(noms(T1),noms(cp), xerr=err(T1), yerr=err(cp),fmt='bx', linewidth=1, label='Werte für $C_{\mathrm{P}}$')
-plt.errorbar(noms(T1),noms(cv), xerr=err(T1), yerr=err(cv),fmt='mx', linewidth=1 , label='Werte für $C_{\mathrm{V}}$')
+plt.errorbar(noms(T1[1:]),noms(cp), xerr=err(T1[1:]), yerr=err(cp),fmt='bx', linewidth=1, label='Werte für $C_{\mathrm{P}}$')
+plt.errorbar(noms(T1[1:]),noms(cv), xerr=err(T1[1:]), yerr=err(cv),fmt='mx', linewidth=1 , label='Werte für $C_{\mathrm{V}}$')
 plt.legend(loc='best')
 plt.tight_layout()
 plt.grid()
@@ -110,15 +114,15 @@ for i in range(len(TT)):
 		Cvd[i] = Cvv[i]		
 #Td und Cvd sind die in Frage kommenden Werte, deb die dazugehörigen Debye Funktionswerte die ich per Hand rausgesucht habe. con.R ist die allgemeine Gaskonstante
 #print_arr(Td, "Temp")
-deb = np.array([3.5,3.2,2.9,2.7,2.9,2.7,2.7,2.7,2.7,2.7,3.0,2.7,2.5,3.0,2.5,2.5,2.3,2.3,2.3,2.3])
+deb = np.array([3.5, 3.2,2.9,2.7,2.9,2.7,2.7,2.7,2.7,2.7,3.0,2.7,2.5,3.0,2.5,2.5,2.3,2.3,2.3,2.3])
 
 #theta_D ist thD
 
 thD = Td * deb
-print("\n")
-print_arr(Cvd, "CV")
-print("\n")
-print_arr(thD, "thD")
+#print("\n")
+#print_arr(Cvd, "CV")
+#print("\n")
+#print_arr(thD, "thD")
 
 MthD = ufloat(np.mean(noms(thD)),np.std(noms(thD))/np.sqrt(len(noms(thD))))
 print(MthD)

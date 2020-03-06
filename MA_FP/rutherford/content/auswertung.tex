@@ -87,24 +87,37 @@ Im folgenden wird der differentielle Wirkungsquerschnitt einer $\SI{2}{\micro \m
     \label{eqn:dsdO_exp}
 \end{equation}
 \begin{center}
-    \tiny{($n$ $\hat=$ Teilchendichte, $d$ $\hat=$ Teilchendichte, $\Omega = \frac{\pi r^2}{R^2} \hat{=}$ Vom Detektor abgedeckter Raumwinkel )}
+    \tiny{($n$ $\hat=$ Teilchendichte, $d$ $\hat=$ Dicke der Folie, $\Omega = \frac{\pi r^2}{R^2} \hat{=}$ Vom Detektor abgedeckter Raumwinkel )}
 \end{center}
 bestimmen. \\
-Mit der bereits bestimmten Aktivität $\SI{15.64(48)}{\kilo\becquerel}$ ergeben sich die Werte in Tabelle \ref{tab:diffWQ}. \\
+Dabei lässt sich die Teilchendichte $n$ mithilfe der molaren Masse $M$ und und Dichte $\rho$ von Gold bestimmen:
+\begin{equation}
+    n =  \frac{\rho}{M} \cdot N_A \approx \SI{5,9 \cdot 10^{28}}{\meter}^{-2}
+\end{equation}
+\begin{center}
+    \tiny{($\rho = \SI{19,3}{\gram \per \centi \per \meter^3 } $ \cite{Elemente16}, $M = \SI{196,97}{\gram \per \mol } $ \cite{Elemente16}, $ N \hat{=} \text{Avogadro-Konstante} $ )}
+\end{center}
+
+Da die $\alpha$-Teilchen durch eine Schlitzblende mit $r = \SI{2}{\milli \meter} $ fliegt und bis zur Goldfolie eine Strecke von $R = \SI{4,1}{\centi \meter}$ zurücklegt, gilt für den Raumwinkel:
+\begin{equation}
+    \Omega = \frac{\pi r^2}{R^2} = \pi \cdot \left( \frac{2}{41} \right)^2 .
+\end{equation}
+
+Mit der bereits bestimmten Aktivität $\SI{15.64(48)}{\kilo\becquerel}$ pro Raumwinkelelementelement und einer Dicke von $\SI{2}{\micro \meter}$ ergeben sich die Werte in Tabelle \ref{tab:diffWQ}, wobei sich die theoretischen Wert aus Gleichung \eqref{eqn:rutherford} ergben. \\
 Die gemessenen und theoretischen Werte sind zusätzlich in Abbildung \ref{fig:ruther} gegenübergestellt.
 \input{data/tables/Tex/diffWQ.tex}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{data/plots/Rutherford.pdf}
-    \caption{Differentieller und theoretischer Wirkungsquerschnitt $\frac{\symup{d}\sigma}{\symup{d}\Omega}$ gegen den Winkel $\theta$ aufgetragen. Die Unsicherheit wurde mit dem Faktor 100 multipliziert, damit dieser noch sichtbar ist.}
+    \caption{Differentieller und theoretischer Wirkungsquerschnitt $\frac{\symup{d}\sigma}{\symup{d}\Omega}$ gegen den Winkel $\theta$ aufgetragen. Die Unsicherheit ist dabei so gering, dass sie unter den Datenpunkten verschwindet.}
     \label{fig:ruther}
 \end{figure}
 
 \FloatBarrier
 
 \subsection{Untersuchung des Einflusses der Mehrfachstreuung}
-Um zu untersuchen, ob bei dickeren Folien Mehrfachstreuung auftritt, wird die Intensität $I$ für zwei verschieden dicke Goldfolien an einem festen Winkel $\theta$ gemessen. \\
+Um zu untersuchen, ob bei dickeren Folien Mehrfachstreuung auftritt, wird die Intensität $I$ für zwei verschieden dicke Goldfolien an einem festen Winkel $\theta = \SI{1}{\degree}  $ gemessen. \\
 Mit den in Tabelle \ref{tab:foliendicke} gemessenden Werten ergeben sich die folgenden Wirkungsquerschnitte
 \begin{align*}
     \left(\frac{\symup{d}\sigma}{\symup{d}\Omega}\right)_\text{\SI{2}{\micro \meter}} &= \SI{1,076(31)e-22}{\meter}^2 \\
@@ -114,7 +127,7 @@ Mit den in Tabelle \ref{tab:foliendicke} gemessenden Werten ergeben sich die fol
 \FloatBarrier
 
 \subsection{Z-Abhängigkeit des Wirkungsquerschnittes}
-Um die Z-Abhängigkeit der Intensität zu bestimmen, wird die Intensität einer Streung an Gold, Aluminium und Bismut bei gleichem Winkel $\vartheta$ bestimmt. Wie bereits in Kapitel \ref{chap:dsdO} wird hier der der differentielle Wirkungsquerschnitt $(\frac{\symup{d}\sigma}{\symup{d}\Omega}$ mithilfe von Gleichung \ref{eqn:dsdO_exp} bestimmt.
+Um die Z-Abhängigkeit der Intensität zu bestimmen, wird die Intensität einer Streung an Gold, Aluminium und Bismut bei gleichem Winkel $\vartheta \SI{4,2}{\degree} $ bestimmt. Wie bereits in Kapitel \ref{chap:dsdO} wird hier der der differentielle Wirkungsquerschnitt $(\frac{\symup{d}\sigma}{\symup{d}\Omega}$ mithilfe von Gleichung \ref{eqn:dsdO_exp} bestimmt.
 Die dazu benötigten Teilchendichten befinden sich in Tabelle \ref{tab:zWerte}.
 \input{data/tables/Tex/zWerte.tex}
 Die aus diesen Daten bestimmten differentiellen Wirkungsquerschnitte werden daraufhin mit den mithilfe von Gleichung \eqref{eqn:bethebloch} berechneten theoretischen differentiellen Wirkungsquerschnitte berechnet.

@@ -1,6 +1,6 @@
 Material Ordnungszahl Dicke Ereignisse Zeit Grad
 - - mu_meter - s °
-Aluminium 19 3 523 300 4.2
+Platin 78 3 523 300 4.2
 Bismut 79 2 551 300 4.2
 Gold 83 4 3515 300 4.2
 

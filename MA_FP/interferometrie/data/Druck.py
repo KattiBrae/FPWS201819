@@ -88,7 +88,7 @@ n_atm_miriam = np.array([
         ])
 
 print(fit_parameter[:,0],"\n", fit_parameter[:,1],"\n", n_atm_miriam)
-n_mean = fit_parameter[:,0] * 1013/(293.15*const.R) + fit_parameter[:,1]
+n_mean = fit_parameter[:,0] * 1013/(287.15*const.R) + fit_parameter[:,1]
 print("Lorentz-Lorenz:",n_mean)
 print("mean:", np.mean(n_mean) )
 n_lit = 1.000277

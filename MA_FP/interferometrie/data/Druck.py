@@ -3,6 +3,7 @@ import pandas as pd
 import uncertainties as unc
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from scipy import constants as const
 from uncertainties import unumpy as unp
 from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
@@ -26,7 +27,7 @@ print(T-273.15)
 #### für n wird die Steigung #Nulldurchgänge/Druck benötigt
 #### Steigung für #Nulldurchgänge/Druck ########
 def f(x,m,b):
-    return m * x + b
+    return m * x/(293.15*const.R) + b
 x = np.linspace(min(Druck), max(Druck), 1000)
 
 ##### Miriams Rechungen sind näher am Literaturwert
@@ -87,7 +88,7 @@ n_atm_miriam = np.array([
         ])
 
 print(fit_parameter[:,0],"\n", fit_parameter[:,1],"\n", n_atm_miriam)
-n_mean = fit_parameter[:,0] * 1013 + fit_parameter[:,1]
+n_mean = fit_parameter[:,0] * 1013/(293.15*const.R) + fit_parameter[:,1]
 print("Lorentz-Lorenz:",n_mean)
 print("mean:", np.mean(n_mean) )
 n_lit = 1.000277

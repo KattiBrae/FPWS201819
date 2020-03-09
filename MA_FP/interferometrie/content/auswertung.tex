@@ -41,12 +41,12 @@ Mit der Gleichung \ref{eqn:brechungsindex_gas} und den in Tabellen \ref{tab:brec
 \input{content/tables/Druck_n1.tex}
 \input{content/tables/Druck_n2.tex}
 \input{content/tables/Druck_n3.tex}
-Mithilfe dieser Werte kann anschließend, wie in Abbildung \ref{fig:n} zu sehen,  eine lineare Regression der Form 
+Mithilfe dieser Werte kann anschließend, wie in Abbildung \ref{fig:n} zu sehen,  eine lineare Regression der Form
 \begin{equation}
     f(x, a, b) = a \cdot \frac{x}{T \cdot R} + b
     \label{eqn:fit}
 \end{equation}
-durchgeführt werden. Dabei gehen die Temperatur $T = \SI{20,5}{\celsius} $ und die universelle Gaskonstante $R$ als Konstanten in den Fit ein. 
+durchgeführt werden. Dabei gehen die Temperatur $T = \SI{20,5}{\celsius} $ und die universelle Gaskonstante $R$ als Konstanten in den Fit ein.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{data/Plots/Brechungsindex.pdf}
@@ -56,23 +56,23 @@ durchgeführt werden. Dabei gehen die Temperatur $T = \SI{20,5}{\celsius} $ und 
 Es ergeben sich die in Tabelle \ref{tab:fit} zu sehenden Fitparameter.
 \input{content/tables/fit.tex}
 Damit ergeben sich mithilfe des Lorentz-Lorenz Gesetz bei einem Druck von $p = \SI{1013}{\milli \bar}$ folgende Brechungsindices:
-\begin{align}                                 
-    n(p = \SI{1013}{\milli \bar}, \SI{20,5}{\celsius} )_\text{Luft, 1} = 1.00029910 \pm 0,00000530   \\
-    n(p = \SI{1013}{\milli \bar}, \SI{20,5}{\celsius} )_\text{Luft, 2} = 1.00030161 \pm 0,00000408   \\
-    n(p = \SI{1013}{\milli \bar}, \SI{20,5}{\celsius} )_\text{Luft, 3} = 1.00033588 \pm 0,00001182  
+\begin{align}
+    n(\SI{20,5}{\celsius} )_\text{1} = 1.00029910 \pm 0,00000530   \\
+    n(\SI{20,5}{\celsius} )_\text{2} = 1.00030161 \pm 0,00000408   \\
+    n(\SI{20,5}{\celsius} )_\text{3} = 1.00033588 \pm 0,00001182
 \end{align}
 Eine Mittelung über alle Werte ergibt folglich:
 \begin{equation}
-    n(p = \SI{1013}{\milli \bar}, \SI{20,5}{\celsius} )_\text{Luft} = 1.000312 \pm 0.000005
+    n(\SI{20,5}{\celsius} ) = 1.000312 \pm 0.000005
 \end{equation}
-Mithilfe von Gleichung \eqref{eqn:fit} werden daraufhin die Brechungsindices für $T = \SI{15}{\celsius}$
+Mithilfe von Gleichung \eqref{eqn:fit} werden daraufhin die Brechungsindices für $T = \SI{15}{\celsius}$ und $p = \SI{1013}{\milli \bar}$
 berechnet:
-\begin{align}                                 
-    n(p = \SI{1013}{\milli \bar}, \SI{15}{\celsius} )_\text{Luft, 1} = 1,00030555 \pm 0,00000539 \\
-    n(p = \SI{1013}{\milli \bar}, \SI{15}{\celsius} )_\text{Luft, 2} = 1.00030786 \pm 0,00000415 \\
-    n(p = \SI{1013}{\milli \bar}, \SI{15}{\celsius} )_\text{Luft, 3} = 1.00034273 \pm 0,00001201
+\begin{align}
+    n(\SI{15}{\celsius} )_\text{1} = 1,00030555 \pm 0,00000539 \\
+    n(\SI{15}{\celsius} )_\text{2} = 1.00030786 \pm 0,00000415 \\
+    n(\SI{15}{\celsius} )_\text{3} = 1.00034273 \pm 0,00001201
 \end{align}
 Eine Mittelung über diese Werte ergibt:
 \begin{equation}
-    n(p = \SI{1013}{\milli \bar}, \SI{15}{\celsius} )_\text{Luft} = 1.000319 \pm 0.000005
+    n(\SI{15}{\celsius} ) = 1.000319 \pm 0.000005
 \end{equation}
